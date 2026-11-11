@@ -8,7 +8,7 @@ import os, re, math, bisect
 from collections import defaultdict, deque
 import numpy as np
 import pandas as pd
-from engine import ROOT, DATA, PARAMS, k_factor, expected, norm, WTA_SECOND_LEVELS, TD_FROM
+from engine import ROOT, DATA, PARAMS, k_factor, expected, norm, WTA_SECOND_LEVELS, TD_FROM, AVANT, recent_frames
 
 # ---------- pays des tournois (pour l'avantage du domicile) ----------
 COUNTRY = {
@@ -133,13 +133,8 @@ def load_all(tour):
         if tour == "wta":
             c = c[c.tourney_level.astype(str).isin(WTA_SECOND_LEVELS) | c["round"].astype(str).str.match(r"^Q\d")]
         fr.append(c.assign(main=False, exact_date=False))
-    for name in [f"{tour}_2026.csv", f"{tour}_live.csv"]:
-        f = os.path.join(DATA, name)
-        if os.path.exists(f):
-            x = pd.read_csv(f, low_memory=False)
-            if name.endswith("_2026.csv"):
-                x = x[x.tourney_date >= TD_FROM]
-            fr.append(x.assign(main=True, exact_date=True))
+    for x in recent_frames(tour):
+        fr.append(x.assign(exact_date=True))
     d = pd.concat(fr, ignore_index=True)
     for c in KEEP:
         if c not in d:
@@ -155,6 +150,7 @@ def load_all(tour):
     d.loc[d["round"].str.match(r"^Q\d"), "main"] = False
     d["main"] = d["main"].astype(bool)
     d["tourney_date"] = d.tourney_date.astype(int)
+    d = d[d.tourney_date < AVANT]
     d["best_of"] = pd.to_numeric(d.best_of, errors="coerce").fillna(3).astype(int)
     # date approximative du match (Sackmann ne donne que le début du tournoi)
     def mdate(r):

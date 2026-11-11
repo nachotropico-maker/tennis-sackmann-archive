@@ -17,7 +17,35 @@ DATA = os.path.join(ROOT, "agent", "data")
 PARAMS = {"atp": {"w_surface": 0.40, "scale": 0.92, "poids_secondaire": 0.6},
           "wta": {"w_surface": 0.30, "scale": 0.86, "poids_secondaire": 0.6}}
 WTA_SECOND_LEVELS = ["C", "Q", "125", "W100", "W75", "I"]
-TD_FROM = 20260608  # résultats tennis-data utilisés à partir de cette date (après Roland-Garros)
+TD_FROM = 20260608  # données récentes (export saison, sinon tennis-data) utilisées à partir de cette date
+# AGENT_AVANT=AAAAMMJJ : ignore les matchs à partir de cette date (pour recalculer un pronostic sans voir le résultat)
+AVANT = int(os.environ.get("AGENT_AVANT", "99999999"))
+
+
+def recent_frames(tour):
+    """Matchs depuis TD_FROM : export saison s'il existe (avec Challengers et stats), sinon tennis-data ; puis résultats du jour."""
+    out = []
+    saison = os.path.join(DATA, f"{tour}_saison.csv")
+    last = 0
+    if os.path.exists(saison):
+        x = pd.read_csv(saison, low_memory=False)
+        x = x[x.tourney_date >= TD_FROM]
+        # le dernier jour de l'export est souvent incomplet : on le laisse aux résultats du jour (live)
+        last = int(x.tourney_date.max())
+        out.append(x[x.tourney_date < last])
+        last -= 1
+    else:
+        f = os.path.join(DATA, f"{tour}_2026.csv")
+        if os.path.exists(f):
+            x = pd.read_csv(f, low_memory=False)
+            x = x[x.tourney_date >= TD_FROM].assign(main=True)
+            last = int(x.tourney_date.max())
+            out.append(x)
+    f = os.path.join(DATA, f"{tour}_live.csv")
+    if os.path.exists(f):
+        x = pd.read_csv(f, low_memory=False)
+        out.append(x[x.tourney_date > last].assign(main=True))
+    return out
 SURFACES = ["Hard", "Clay", "Grass"]
 COLS = ["tourney_name", "surface", "tourney_level", "tourney_date", "match_num",
         "winner_id", "winner_name", "loser_id", "loser_name", "score", "round"]
@@ -49,13 +77,7 @@ def load_matches(tour):
             if tour == "wta":
                 c = c[c.tourney_level.astype(str).isin(WTA_SECOND_LEVELS) | c["round"].astype(str).str.match(r"^Q\d")]
             frames.append(c.assign(main=False))
-    for name in [f"{tour}_2026.csv", f"{tour}_live.csv"]:
-        f = os.path.join(DATA, name)
-        if os.path.exists(f):
-            x = pd.read_csv(f, low_memory=False)
-            if name.endswith("_2026.csv"):  # l'archive Sackmann couvre 2026 jusqu'à Roland-Garros inclus
-                x = x[x.tourney_date >= TD_FROM]
-            frames.append(x.assign(main=True))
+    frames += recent_frames(tour)
     d = pd.concat(frames, ignore_index=True)
     for c in COLS:
         if c not in d:

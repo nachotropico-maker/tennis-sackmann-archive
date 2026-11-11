@@ -23,7 +23,7 @@ Un appel `db_write` doit rester sous 64 Ko : découper si besoin (au plus 10 mat
 
 1. **Préparer** : `git clone https://github.com/nachotropico-maker/tennis-sackmann-archive` (profondeur 1), puis `pip install pandas` si besoin.
    Travailler dans `agent/`.
-2. **Résultats d'hier** : `db_query` sur `matchs` avec `date == hier`. Pour chaque match, trouver le vainqueur et le score
+2. **Résultats d'hier** : `db_query` sur `matchs` avec `date == hier`. Pour chaque match (y compris ceux dont le résultat est déjà rempli), trouver le vainqueur et le score
    avec l'outil de scores sportifs (`fetch_sports_data`, tennis), sinon par recherche web sur des sources fiables (sites ATP/WTA, ESPN, presse).
    - Écrire `resultat: {vainqueur, score}` et `correct` (le favori a-t-il gagné ?) dans chaque document `matchs/{id}`.
    - Abandon en cours de match : compter le vainqueur officiel et ajouter « ab. » au score. Forfait avant le match : `resultat: {vainqueur: null, score: "forfait"}`, `correct: null`.
@@ -70,5 +70,10 @@ Un appel `db_write` doit rester sous 64 Ko : découper si besoin (au plus 10 mat
    Si le push est refusé, le dire dans le compte rendu : les résultats restent dans la page, mais l'Elo ne les gardera pas d'un jour à l'autre.
 9. **Compte rendu** : envoyer à l'utilisateur un court message en français : bilan d'hier (x/y pronostics justes), nombre de matchs du jour,
    les 2 ou 3 matchs les plus intéressants, et tout problème rencontré.
+
+Mise à niveau mensuelle : quand l'utilisateur fournit un nouvel export de saison (fichiers « 2026-atp-season.csv » / « 2026-wta-season.csv »),
+lancer `python agent/import_saison.py atp fichier` et `python agent/import_saison.py wta fichier`, puis commit et push.
+Pour recalculer un pronostic sans voir les résultats d'un jour déjà joué : `AGENT_AVANT=AAAAMMJJ python agent/predict.py ...`.
+Ne jamais modifier la probabilité d'un match déjà commencé ou terminé : le bilan doit refléter ce qui avait été annoncé.
 
 Jour sans match du circuit principal : écrire quand même `jours/{date}` avec `matchs: 0` et un résumé d'une phrase.
