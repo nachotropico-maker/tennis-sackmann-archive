@@ -43,7 +43,7 @@ def main(path):
                 r["id_vainqueur"], r["id_perdant"] = (a, b) if r["vainqueur"] == r["joueur_a"] else (b, a)
                 append_live(r)
     log = pd.DataFrame([{k: r.get(k) for k in ["date", "id", "tour", "tournoi", "joueur_a", "joueur_b",
-                                                "proba_a", "vainqueur", "score"]} for r in rows])
+                                                "proba_a", "proba_modele", "ajustement", "vainqueur", "score"]} for r in rows])
     if os.path.exists(LOG):
         old = pd.read_csv(LOG)
         log = pd.concat([old[~old.id.isin(log.id)], log], ignore_index=True)
@@ -71,6 +71,18 @@ def write_stats(log):
                         "annonce": round(float(q[x.index].mean()), 3), "reel": round(float(x.fav_ok.mean()), 3)})
     stats = {"global": summ(d), "atp": summ(d[d.tour == "atp"]), "wta": summ(d[d.tour == "wta"]),
              "par_jour": by_day, "calibration": cal}
+    # le modèle seul (sans l'ajustement de l'agent), pour vérifier que les ajustements aident
+    if "proba_modele" in d and d.proba_modele.notna().any():
+        m = d[d.proba_modele.notna()].copy()
+        ok = ((m.proba_modele >= 0.5) & (m.y == 1)) | ((m.proba_modele < 0.5) & (m.y == 0))
+        adj = m[m.ajustement.fillna(0) != 0]
+        okf = adj.fav_ok
+        okm = ((adj.proba_modele >= 0.5) & (adj.y == 1)) | ((adj.proba_modele < 0.5) & (adj.y == 0))
+        stats["modele_seul"] = {"matchs": int(len(m)), "taux": round(float(ok.mean()), 3),
+                                "brier": round(float(((m.proba_modele - m.y) ** 2).mean()), 4)}
+        stats["ajustements"] = {"matchs": int(len(adj)), "justes_avec": int(okf.sum()), "justes_sans": int(okm.sum()),
+                                "brier_avec": round(float(((adj.proba_a - adj.y) ** 2).mean()), 4) if len(adj) else None,
+                                "brier_sans": round(float(((adj.proba_modele - adj.y) ** 2).mean()), 4) if len(adj) else None}
     json.dump(stats, open(os.path.join(DATA, "stats.json"), "w"), ensure_ascii=False, indent=1)
     print(json.dumps(stats["global"]))
 

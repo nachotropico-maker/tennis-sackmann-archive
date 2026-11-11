@@ -17,6 +17,7 @@ DATA = os.path.join(ROOT, "agent", "data")
 PARAMS = {"atp": {"w_surface": 0.40, "scale": 0.92, "poids_secondaire": 0.6},
           "wta": {"w_surface": 0.30, "scale": 0.86, "poids_secondaire": 0.6}}
 WTA_SECOND_LEVELS = ["C", "Q", "125", "W100", "W75", "I"]
+TD_FROM = 20260608  # résultats tennis-data utilisés à partir de cette date (après Roland-Garros)
 SURFACES = ["Hard", "Clay", "Grass"]
 COLS = ["tourney_name", "surface", "tourney_level", "tourney_date", "match_num",
         "winner_id", "winner_name", "loser_id", "loser_name", "score", "round"]
@@ -37,7 +38,7 @@ def expected(ra, rb):
 
 def load_matches(tour):
     frames = []
-    for y in range(1995, 2026):
+    for y in range(1995, 2027):
         f = os.path.join(ROOT, tour, f"{tour}_matches_{y}.csv")
         if os.path.exists(f):
             frames.append(pd.read_csv(f, low_memory=False).assign(main=True))
@@ -51,7 +52,10 @@ def load_matches(tour):
     for name in [f"{tour}_2026.csv", f"{tour}_live.csv"]:
         f = os.path.join(DATA, name)
         if os.path.exists(f):
-            frames.append(pd.read_csv(f, low_memory=False).assign(main=True))
+            x = pd.read_csv(f, low_memory=False)
+            if name.endswith("_2026.csv"):  # l'archive Sackmann couvre 2026 jusqu'à Roland-Garros inclus
+                x = x[x.tourney_date >= TD_FROM]
+            frames.append(x.assign(main=True))
     d = pd.concat(frames, ignore_index=True)
     for c in COLS:
         if c not in d:
