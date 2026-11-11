@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent Tennis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Plan : tableau d'affichage de court. Vert de court, encre sombre, jaune balle pour le seul favori.
+   Mise en page : en-tête + onglets, puis une colonne de cartes de match, détail dépliable. */
+:root{
+  --bg:#F3F5F0; --surface:#FFFFFF; --ink:#16211C; --muted:#5D6A63; --line:#DCE3DB;
+  --accent:#1E5B45; --accent-soft:#E3EEE7; --ball:#CFDE3E;
+  --hard:#2F6DB5; --clay:#BF5430; --grass:#3E8739;
+  --good:#2C7A4B; --bad:#B0442D; --wait:#8A8F5A;
+  --display:"Barlow Condensed", "Arial Narrow", sans-serif;
+  --body:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1512; --surface:#17201B; --ink:#E6ECE7; --muted:#9BA9A1; --line:#28342D;
+    --accent:#72C79E; --accent-soft:#1D2D25; --ball:#D8E65A;
+    --hard:#6EA3E0; --clay:#E58460; --grass:#77BE6C;
+    --good:#6CC28E; --bad:#E57F67; --wait:#B9BD84; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1512; --surface:#17201B; --ink:#E6ECE7; --muted:#9BA9A1; --line:#28342D;
+  --accent:#72C79E; --accent-soft:#1D2D25; --ball:#D8E65A;
+  --hard:#6EA3E0; --clay:#E58460; --grass:#77BE6C;
+  --good:#6CC28E; --bad:#E57F67; --wait:#B9BD84; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--body);font-variant-numeric:tabular-nums}
+a{color:var(--accent)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:980px;margin:0 auto;padding:20px 16px 64px;display:flex;flex-direction:column;gap:18px}
+header.top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand svg{flex:none}
+h1{font:700 34px/1 var(--display);letter-spacing:.5px;margin:0;text-transform:uppercase}
+.sub{color:var(--muted);font-size:13px;margin-top:4px}
+.fresh{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:3px 10px;font-size:12.5px;color:var(--muted)}
+.chip b{color:var(--ink);font-weight:600}
+nav.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);overflow-x:auto}
+nav.tabs a{font:600 17px/1 var(--display);text-transform:uppercase;letter-spacing:.6px;text-decoration:none;color:var(--muted);padding:10px 12px;border-bottom:3px solid transparent;white-space:nowrap}
+nav.tabs a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--accent)}
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface)}
+.seg button{border:0;background:none;padding:6px 12px;cursor:pointer;font-size:13.5px}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--surface)}
+.daynav{display:flex;align-items:center;gap:8px}
+.iconbtn{border:1px solid var(--line);background:var(--surface);border-radius:8px;width:34px;height:34px;cursor:pointer;display:grid;place-items:center}
+.iconbtn:disabled{opacity:.35;cursor:default}
+.daytitle{font:600 22px/1.1 var(--display);text-transform:uppercase;letter-spacing:.4px;min-width:200px;text-align:center}
+.summary{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;display:grid;gap:10px}
+.summary p{margin:0;max-width:68ch}
+.kpis{display:flex;flex-wrap:wrap;gap:18px}
+.kpi .v{font:700 26px/1 var(--display)}
+.kpi .l{font-size:12px;color:var(--muted)}
+.cards{display:grid;gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.card .head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;padding:10px 14px;border-bottom:1px solid var(--line);font-size:13px;color:var(--muted)}
+.card .head .t{color:var(--ink);font-weight:600}
+.surf{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;padding:2px 8px;border-radius:999px;color:#fff;font-weight:500}
+.surf.Hard{background:var(--hard)} .surf.Clay{background:var(--clay)} .surf.Grass{background:var(--grass)}
+:root[data-theme="dark"] .surf, .dark-surf{color:#0F1512}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .surf{color:#0F1512}}
+.body{padding:12px 14px;display:grid;gap:10px}
+.players{display:grid;gap:6px}
+.pl{display:grid;grid-template-columns:18px 1fr auto auto;align-items:center;gap:10px}
+.pl .name{font-weight:600;font-size:16px}
+.pl .name.fav{font-weight:700}
+.pl .elo{font-size:12.5px;color:var(--muted)}
+.pl .pct{font:700 22px/1 var(--display);min-width:56px;text-align:right}
+.ball{width:12px;height:12px;border-radius:50%;background:var(--ball);box-shadow:inset -2px -2px 0 rgba(0,0,0,.12)}
+.bar{height:8px;border-radius:999px;background:var(--line);display:flex;overflow:hidden}
+.bar span{display:block;height:100%}
+.bar .a{background:var(--accent)} .bar .b{background:var(--muted);opacity:.45}
+.meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+.pill{font-size:12px;font-weight:600;padding:3px 9px;border-radius:999px;border:1px solid var(--line)}
+.pill.c0{background:var(--accent-soft);color:var(--ink)}
+.res{font-size:12.5px;font-weight:600;padding:3px 9px;border-radius:999px}
+.res.ok{background:color-mix(in srgb,var(--good) 18%,transparent);color:var(--good)}
+.res.ko{background:color-mix(in srgb,var(--bad) 16%,transparent);color:var(--bad)}
+.res.wait{color:var(--muted);border:1px dashed var(--line)}
+details.why{border-top:1px solid var(--line)}
+details.why summary{cursor:pointer;padding:10px 14px;font-weight:600;font-size:14px;color:var(--accent);list-style:none;display:flex;align-items:center;gap:6px}
+details.why summary::-webkit-details-marker{display:none}
+details.why summary::before{content:"+";font:700 18px/1 var(--display);width:14px}
+details.why[open] summary::before{content:"–"}
+.why .in{padding:0 14px 14px;display:grid;gap:12px}
+.lecture{margin:0;max-width:70ch}
+.why ul{margin:0;padding-left:18px;display:grid;gap:4px}
+.ftab{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left}
+th{font-weight:600;color:var(--muted);font-size:12.5px}
+td.n,th.n{text-align:right}
+.note{font-size:12.5px;color:var(--muted)}
+.empty{background:var(--surface);border:1px dashed var(--line);border-radius:12px;padding:28px 18px;text-align:center;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;gap:10px}
+.panel h2{font:600 20px/1.1 var(--display);text-transform:uppercase;letter-spacing:.4px;margin:0;text-wrap:balance}
+.panel h3{font-size:14px;margin:0}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.tile .v{font:700 32px/1 var(--display)}
+.tile .l{font-size:12.5px;color:var(--muted);margin-top:4px}
+.calrow{display:grid;grid-template-columns:80px 1fr 90px;gap:10px;align-items:center;font-size:13px}
+.caltrack{position:relative;height:14px;background:var(--line);border-radius:4px}
+.caltrack .r{position:absolute;left:0;top:0;bottom:0;background:var(--accent);border-radius:4px}
+.caltrack .e{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--ink)}
+input[type=search]{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:7px 10px;min-width:200px;color:var(--ink)}
+.rk td.bar-cell{width:38%}
+.mini{height:6px;background:var(--line);border-radius:999px;overflow:hidden}
+.mini span{display:block;height:100%;background:var(--accent)}
+.steps{display:grid;gap:10px;margin:0;padding:0;list-style:none;counter-reset:s}
+.steps li{display:grid;grid-template-columns:30px 1fr;gap:10px;counter-increment:s}
+.steps li::before{content:counter(s);font:700 20px/30px var(--display);text-align:center;background:var(--accent-soft);border-radius:8px;height:30px}
+.prose p{margin:0 0 8px;max-width:70ch}
+.chat{display:flex;flex-direction:column;gap:12px}
+.chat-head{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.chat-head p{margin:0;color:var(--muted);font-size:13px;max-width:60ch}
+.btn{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:7px 12px;cursor:pointer;font-size:13.5px}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--surface);font-weight:600}
+.btn:disabled{opacity:.5;cursor:default}
+.msgs{display:flex;flex-direction:column;gap:10px;min-height:260px}
+.msg{max-width:min(720px,92%);padding:10px 14px;border-radius:14px;line-height:1.55;font-size:14.5px}
+.msg.u{align-self:flex-end;background:var(--accent);color:var(--surface);border-bottom-right-radius:4px;white-space:pre-wrap}
+.msg.a{align-self:flex-start;background:var(--surface);border:1px solid var(--line);border-bottom-left-radius:4px}
+.msg.a p{margin:0 0 8px}.msg.a p:last-child{margin:0}
+.msg.a ul{margin:4px 0 8px;padding-left:18px}
+.msg.a .who{display:flex;gap:6px;align-items:center;font:600 12px/1 var(--body);color:var(--muted);margin-bottom:6px}
+.msg.err{border-color:var(--bad)}
+.sugg{display:flex;flex-wrap:wrap;gap:8px}
+.sugg button{border:1px solid var(--line);background:var(--accent-soft);color:var(--ink);border-radius:999px;padding:6px 12px;cursor:pointer;font-size:13px}
+.composer{display:flex;gap:8px;align-items:flex-end;position:sticky;bottom:0;background:var(--bg);padding:8px 0 4px}
+.composer textarea{flex:1;resize:none;min-height:44px;max-height:160px;border:1px solid var(--line);border-radius:12px;padding:11px 12px;font:inherit;background:var(--surface);color:var(--ink)}
+.thinking{color:var(--muted);font-style:italic}
+.steps3{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline;font-size:13.5px;background:var(--accent-soft);border-radius:8px;padding:8px 10px}
+.cchip{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:1px 8px;color:var(--muted)}
+.adj{margin:0;font-size:13.5px;border-left:3px solid var(--ball);padding-left:10px}
+.imps{display:grid;gap:6px}
+.imps h3{font-size:13.5px;margin:0}
+.imp{display:grid;grid-template-columns:minmax(150px,1.3fr) 1fr auto;gap:10px;align-items:center;font-size:13px}
+.itrack{position:relative;height:10px;background:var(--line);border-radius:999px}
+.itrack::after{content:"";position:absolute;left:50%;top:-3px;bottom:-3px;width:1px;background:var(--muted)}
+.itrack .ia{position:absolute;left:50%;top:0;bottom:0;background:var(--accent);border-radius:0 999px 999px 0}
+.itrack .ib{position:absolute;right:50%;top:0;bottom:0;background:var(--clay);border-radius:999px 0 0 999px}
+.iv{font-size:12.5px;color:var(--muted);white-space:nowrap}
+.wtable td:first-child{width:55%}
+@media (max-width:520px){.imp{grid-template-columns:1fr auto}.imp .itrack{grid-column:1 / -1;order:3}}
+.loading{color:var(--muted);font-size:13px}
+@media (max-width:520px){.pl{grid-template-columns:14px 1fr auto}.pl .elo{display:none}.daytitle{min-width:0;font-size:19px}}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="var(--ball)"/><path d="M6 12c8 3 10 13 6 22M34 28c-8-3-10-13-6-22" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+      <div>
+        <h1>Agent Tennis</h1>
+        <div class="sub">Pronostics ATP &amp; WTA expliqués, mis à jour chaque matin</div>
+      </div>
+    </div>
+    <div class="fresh" id="fresh"><span class="chip">Chargement des données…</span></div>
+  </header>
+
+  <nav class="tabs" aria-label="Sections">
+    <a href="#discuter" data-view="discuter">Discuter</a>
+    <a href="#jour" data-view="jour">Matchs du jour</a>
+    <a href="#bilan" data-view="bilan">Bilan</a>
+    <a href="#classements" data-view="classements">Classements Elo</a>
+    <a href="#methode" data-view="methode">Méthode</a>
+  </nav>
+
+  <main id="view" aria-live="polite"></main>
+</div>
+
+<script>
+const SURF = {Hard:"Dur", Clay:"Terre battue", Grass:"Gazon"};
+const MONTHS = ["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."];
+const DAYS = ["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"];
+const state = {view:"jour", tour:"all", day:null, days:[], matches:{}, bilan:null, modele:null, rank:{}, rankTour:"atp", rankSurf:"global", q:"", db:null, err:null, loaded:false};
+
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const pct = x => x == null ? "–" : Math.round(x * 100) + " %";
+function fmtDay(iso){ if(!iso) return ""; const [y,m,d] = iso.split("-").map(Number); const dt = new Date(y,m-1,d); return `${DAYS[dt.getDay()]} ${d} ${MONTHS[m-1]}`; }
+function fmtNum(n){ if(n==null) return ""; const s=String(n); return `${+s.slice(6,8)} ${MONTHS[+s.slice(4,6)-1]} ${s.slice(0,4)}`; }
+
+/* ---------- vues ---------- */
+function render(){
+  document.querySelectorAll("nav.tabs a").forEach(a => a.setAttribute("aria-current", a.dataset.view === state.view ? "page" : "false"));
+  const v = document.getElementById("view");
+  renderFresh();
+  if(!state.loaded && state.view !== "discuter"){ v.innerHTML = `<p class="loading">${state.err ? esc(state.err) : "Chargement des pronostics…"}</p>`; return; }
+  if(state.view === "discuter"){ renderChat(v); return; }
+  v.innerHTML = ({jour:viewDay, bilan:viewBilan, classements:viewRank, methode:viewMethode}[state.view] || viewDay)();
+  bind();
+}
+
+function renderFresh(){
+  const f = document.getElementById("fresh"), m = state.modele;
+  if(!m){ f.innerHTML = `<span class="chip">${state.loaded ? "Pas encore de données" : "Chargement des données…"}</span>`; return; }
+  f.innerHTML = `<span class="chip">Résultats intégrés jusqu'au <b>${esc(fmtNum(m.donnees_jusqu_a))}</b></span>
+    <span class="chip">Mise à jour <b>${esc(m.mise_a_jour || "")}</b></span>
+    <span class="chip">Prochaine : <b>${esc(m.prochaine || "chaque matin, 8 h 40")}</b></span>`;
+}
+
+function tourSeg(){
+  return `<div class="seg" role="group" aria-label="Circuit">
+    ${[["all","Tous"],["atp","ATP"],["wta","WTA"]].map(([k,l]) => `<button data-tour="${k}" aria-pressed="${state.tour===k}">${l}</button>`).join("")}
+  </div>`;
+}
+
+function viewDay(){
+  if(!state.days.length) return `<div class="empty">Aucun pronostic enregistré pour l'instant. La première mise à jour automatique arrive demain matin.</div>`;
+  const i = state.days.findIndex(d => d.date === state.day);
+  const d = state.days[i] || state.days[0];
+  let ms = (state.matches[d.date] || []).filter(m => state.tour === "all" || m.tour === state.tour);
+  ms.sort((a,b) => (a.heure||"").localeCompare(b.heure||""));
+  const played = ms.filter(m => m.resultat && m.resultat.vainqueur);
+  const ok = played.filter(m => m.correct).length;
+  const tight = ms.filter(m => m.proba_a != null && Math.max(m.proba_a,1-m.proba_a) < .55).length;
+  return `
+  <div class="toolbar">
+    <div class="daynav">
+      <button class="iconbtn" id="prev" aria-label="Jour précédent" ${i >= state.days.length-1 ? "disabled" : ""}>‹</button>
+      <div class="daytitle">${esc(fmtDay(d.date))}</div>
+      <button class="iconbtn" id="next" aria-label="Jour suivant" ${i <= 0 ? "disabled" : ""}>›</button>
+    </div>
+    ${tourSeg()}
+  </div>
+  <section class="summary">
+    ${d.resume ? `<p>${esc(d.resume)}</p>` : ""}
+    <div class="kpis">
+      <div class="kpi"><div class="v">${ms.length}</div><div class="l">matchs analysés</div></div>
+      <div class="kpi"><div class="v">${tight}</div><div class="l">matchs serrés (&lt; 55 %)</div></div>
+      <div class="kpi"><div class="v">${played.length ? ok + "/" + played.length : "–"}</div><div class="l">pronostics justes</div></div>
+    </div>
+  </section>
+  <div class="cards">${ms.length ? ms.map(card).join("") : `<div class="empty">Pas de match ${state.tour === "all" ? "" : state.tour.toUpperCase() + " "}ce jour-là.</div>`}</div>`;
+}
+
+function card(m){
+  if(m.proba_a == null){
+    return `<article class="card"><div class="head"><span class="t">${esc(m.tournoi)}</span><span>${esc(m.tour_tableau||"")}</span></div>
+      <div class="body"><div>${esc(m.joueur_a)} – ${esc(m.joueur_b)}</div><div class="note">${esc(m.note || "Pas de prédiction.")}</div></div></article>`;
+  }
+  const pa = m.proba_a, pb = 1 - pa, favA = pa >= .5;
+  const fa = m.facteurs_a || {}, fb = m.facteurs_b || {};
+  const r = m.resultat && m.resultat.vainqueur
+    ? `<span class="res ${m.correct ? "ok" : "ko"}">${m.correct ? "✓ Pronostic juste" : "✗ Pronostic raté"} · ${esc(m.resultat.vainqueur.split(" ").slice(-1)[0])} ${esc(m.resultat.score||"")}</span>`
+    : `<span class="res wait">Résultat en attente</span>`;
+  const row = (n, p, f, fav) => `<div class="pl">
+      <span>${fav ? '<span class="ball" title="Favori du modèle"></span>' : ""}</span>
+      <span class="name ${fav ? "fav" : ""}">${esc(n)}</span>
+      <span class="elo">Elo ${esc(f.elo)}</span>
+      <span class="pct">${pct(p)}</span></div>`;
+  const pctv = v => v == null ? "–" : v + " %";
+  const ln = s => esc(String(s).split(" ").slice(-1)[0]);
+  const facts = [
+    ["Elo sur cette surface", fa.elo, fb.elo],
+    ["Elo global", fa.elo_global, fb.elo_global],
+    ["Forme (10 derniers matchs)", fa.forme_10, fb.forme_10],
+    ["Bilan sur la surface (12 mois)", fa.bilan_surface_12m, fb.bilan_surface_12m],
+    ["Évolution de l'Elo (30 jours)", fa.tendance_30j == null ? "–" : (fa.tendance_30j>0?"+":"")+fa.tendance_30j, fb.tendance_30j == null ? "–" : (fb.tendance_30j>0?"+":"")+fb.tendance_30j],
+    ["Matchs joués (7 jours)", fa.matchs_7j, fb.matchs_7j],
+    ["Minutes de jeu (7 jours, estimées)", fa.minutes_7j, fb.minutes_7j],
+    ["Points gagnés au service (12 mois)", pctv(fa.service_12m), pctv(fb.service_12m)],
+    ["Points gagnés au retour (12 mois)", pctv(fa.retour_12m), pctv(fb.retour_12m)],
+    ["Tie-breaks gagnés (12 mois, lissé)", pctv(fa.tie_breaks_12m), pctv(fb.tie_breaks_12m)],
+    ["Sets décisifs gagnés (12 mois, lissé)", pctv(fa.sets_decisifs_12m), pctv(fb.sets_decisifs_12m)],
+    ["Matchs sur cette surface (base)", fa.matchs_surface, fb.matchs_surface],
+  ];
+  const imp = (m.impacts || []).slice(0, 8);
+  const maxImp = Math.max(1, ...imp.map(x => Math.abs(x.pts)));
+  const impHtml = imp.length ? `<div class="imps"><h3>Ce qui fait pencher la balance</h3>${imp.map(x => {
+      const who = x.pts > 0 ? ln(m.joueur_a) : ln(m.joueur_b);
+      const w = Math.abs(x.pts) / maxImp * 50;
+      return `<div class="imp"><span class="il">${esc(x.libelle)}</span>
+        <span class="itrack"><span class="${x.pts > 0 ? "ia" : "ib"}" style="width:${w}%"></span></span>
+        <span class="iv">${x.pts > 0 ? "+" : "−"}${Math.abs(x.pts).toFixed(1)} pt · ${who}</span></div>`; }).join("")}</div>` : "";
+  const steps = m.proba_modele != null ? `<div class="steps3">
+      <span>Elo seul <b>${pct(m.proba_elo)}</b></span><span aria-hidden="true">→</span>
+      <span>Tous les critères <b>${pct(m.proba_modele)}</b></span>
+      ${m.ajustement ? `<span aria-hidden="true">→</span><span>Ajustement de l'agent <b>${m.ajustement > 0 ? "+" : "−"}${Math.abs(m.ajustement)} pts</b></span>` : ""}
+      <span aria-hidden="true">→</span><span>Final <b>${pct(m.proba_a)}</b></span>
+      <span class="note">(chances de ${ln(m.joueur_a)})</span></div>` : "";
+  const adj = m.ajustement && m.ajustement_raison ? `<p class="adj"><b>Ajustement de l'agent (${m.ajustement > 0 ? "+" : "−"}${Math.abs(m.ajustement)} pts pour ${ln(m.joueur_a)}) :</b> ${esc(m.ajustement_raison)}</p>` : "";
+  return `<article class="card">
+    <div class="head">
+      <span><span class="t">${esc(m.tournoi)}</span> · ${esc(m.categorie||"")} · ${esc(m.tour_tableau||"")}</span>
+      <span style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span class="surf ${esc(m.surface)}">${esc(SURF[m.surface]||m.surface)}${m.conditions ? " " + esc(m.conditions === "indoor" ? "indoor" : "extérieur") : ""}</span>${m.court && m.court.vitesse ? `<span class="cchip">Court ${esc(m.court.vitesse)}</span>` : ""}${m.court && m.court.altitude_m ? `<span class="cchip">${esc(m.court.altitude_m)} m</span>` : ""}${m.meteo && m.meteo.court ? `<span class="cchip">${esc(m.meteo.court)}</span>` : ""}${m.heure ? `<span>${esc(m.heure)}</span>` : ""}</span>
+    </div>
+    <div class="body">
+      <div class="players">${row(m.joueur_a, pa, fa, favA)}${row(m.joueur_b, pb, fb, !favA)}</div>
+      <div class="bar" aria-hidden="true"><span class="a" style="width:${pa*100}%"></span><span class="b" style="width:${pb*100}%"></span></div>
+      <div class="meta"><span class="pill c0">${esc(m.confiance)}</span>${r}</div>
+    </div>
+    <details class="why">
+      <summary>Pourquoi ce pronostic ?</summary>
+      <div class="in">
+        ${m.lecture ? `<p class="lecture">${esc(m.lecture)}</p>` : ""}
+        ${steps}${adj}${cond(m)}${impHtml}
+        ${(m.raisons||[]).length ? `<ul>${m.raisons.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
+        <div class="ftab"><table>
+          <thead><tr><th>Critère</th><th class="n">${ln(m.joueur_a)}</th><th class="n">${ln(m.joueur_b)}</th></tr></thead>
+          <tbody>${facts.map(([l,a,b]) => `<tr><td>${l}</td><td class="n">${esc(a ?? "–")}</td><td class="n">${esc(b ?? "–")}</td></tr>`).join("")}
+          <tr><td>Face-à-face (total · surface)</td><td class="n" colspan="2">${esc(m.h2h ? m.h2h.total + " · " + m.h2h.surface : "–")}</td></tr></tbody>
+        </table></div>
+        <p class="note">La probabilité combine tous les critères chiffrés, avec des poids appris sur 2012-2022. Les points indiquent de combien chaque critère déplace les chances par rapport à un match où il serait neutre.</p>
+      </div>
+    </details>
+  </article>`;
+}
+
+function cond(m){
+  const c = m.court || {}, w = m.meteo || {};
+  const parts = [];
+  if(c.vitesse) parts.push(`court ${esc(c.vitesse)} (${String(c.aces_pct).replace(".", ",")} % d'aces en ${esc(c.annee_reference)}, contre ${String(c.moyenne_surface_pct).replace(".", ",")} % en moyenne sur cette surface)`);
+  if(c.altitude_m) parts.push(`altitude ${esc(c.altitude_m)} m : balle plus rapide`);
+  if(m.conditions === "indoor") parts.push("indoor : pas d'effet météo");
+  else if(w.resume) parts.push(esc(w.resume));
+  return parts.length ? `<p class="note"><b>Conditions :</b> ${parts.join(" · ")}.</p>` : "";
+}
+
+function viewBilan(){
+  const b = state.bilan, mo = state.modele || {};
+  const bt = mo.backtest || {};
+  let live = `<div class="empty">Le bilan en conditions réelles commence avec les premiers résultats enregistrés.</div>`;
+  if(b && b.global && b.global.matchs){
+    const g = b.global;
+    live = `<div class="tiles">
+      <div class="tile"><div class="v">${pct(g.taux)}</div><div class="l">pronostics justes (${g.reussis}/${g.matchs})</div></div>
+      <div class="tile"><div class="v">${b.atp && b.atp.matchs ? pct(b.atp.taux) : "–"}</div><div class="l">ATP · ${b.atp ? b.atp.matchs : 0} matchs</div></div>
+      <div class="tile"><div class="v">${b.wta && b.wta.matchs ? pct(b.wta.taux) : "–"}</div><div class="l">WTA · ${b.wta ? b.wta.matchs : 0} matchs</div></div>
+      <div class="tile"><div class="v">${g.brier != null ? g.brier.toFixed(3) : "–"}</div><div class="l">score de Brier (plus bas = mieux ; 0,250 = hasard)</div></div>
+    </div>
+    ${b.ajustements && b.ajustements.matchs ? `<div class="panel"><h2>Les ajustements de l'agent aident-ils ?</h2>
+      <p>Sur ${b.ajustements.matchs} match${b.ajustements.matchs > 1 ? "s" : ""} ajusté${b.ajustements.matchs > 1 ? "s" : ""} : ${b.ajustements.justes_avec} pronostic${b.ajustements.justes_avec > 1 ? "s" : ""} juste${b.ajustements.justes_avec > 1 ? "s" : ""} avec l'ajustement, ${b.ajustements.justes_sans} sans. Score de Brier : ${b.ajustements.brier_avec} avec, ${b.ajustements.brier_sans} sans (plus bas = mieux).</p></div>` : ""}
+    <div class="panel"><h2>Réussite jour après jour</h2>${chart(b.par_jour || [])}</div>
+    <div class="panel"><h2>Calibration</h2><p class="note">Barre : taux réel de victoire du favori. Trait : probabilité annoncée. Plus ils coïncident, plus les pourcentages sont fiables.</p>${calib(b.calibration || [])}</div>`;
+  }
+  const ref = (bt.atp && bt.wta) ? `<div class="panel"><h2>Référence : test sur l'historique</h2>
+    <p class="note">Poids appris sur 2012-2022, puis test sur ${esc(bt.periode || "2023 – 2026")} : des matchs que le modèle n'avait jamais vus.</p>
+    <div class="ftab"><table><thead><tr><th></th><th class="n">ATP</th><th class="n">WTA</th></tr></thead><tbody>
+      <tr><td><b>Modèle complet (tous les critères)</b></td><td class="n"><b>${pct(bt.atp.complet)}</b></td><td class="n"><b>${pct(bt.wta.complet)}</b></td></tr>
+      <tr><td>Elo seul, mêmes matchs</td><td class="n">${pct(bt.atp.elo)}</td><td class="n">${pct(bt.wta.elo)}</td></tr>
+      <tr><td>Modèle complet en Grand Chelem</td><td class="n">${pct(bt.atp.complet_gc)}</td><td class="n">${pct(bt.wta.complet_gc)}</td></tr>
+      <tr><td>Modèle complet sur 2026</td><td class="n">${pct(bt.atp.complet_2026)}</td><td class="n">${pct(bt.wta.complet_2026)}</td></tr>
+      <tr><td>Bookmakers sur ces mêmes matchs 2026</td><td class="n">${pct(bt.atp.marche)}</td><td class="n">${pct(bt.wta.marche)}</td></tr>
+    </tbody></table></div></div>` : "";
+  const w = mo.poids || {};
+  const wt = (w.atp && w.wta) ? `<div class="panel"><h2>Ce qui pèse le plus</h2>
+    <p class="note">Impact moyen de chaque critère sur la probabilité, en points de pourcentage (test 2023-2026).</p>
+    <div class="ftab"><table class="wtable"><thead><tr><th>Critère</th><th class="n">ATP</th><th class="n">WTA</th></tr></thead><tbody>
+    ${Object.keys(w.atp).sort((a,b) => (w.atp[b] + w.wta[b]) - (w.atp[a] + w.wta[a])).map(k => `<tr><td>${esc(k)}</td><td class="n">${w.atp[k].toFixed(1)}</td><td class="n">${w.wta[k].toFixed(1)}</td></tr>`).join("")}
+    </tbody></table></div></div>` : "";
+  return `<h2 class="sr" style="position:absolute;left:-9999px">Bilan</h2>${live}${ref}${wt}`;
+}
+
+function chart(rows){
+  if(!rows.length) return `<p class="note">Pas encore assez de jours.</p>`;
+  const W = 640, H = 200, P = {l:36, r:12, t:12, b:28};
+  let cum = 0, n = 0;
+  const pts = rows.map(r => { cum += r.reussis; n += r.matchs; return {d:r.date, day:r.taux, cum:cum/n}; });
+  const x = i => P.l + (pts.length === 1 ? (W-P.l-P.r)/2 : i * (W-P.l-P.r) / (pts.length-1));
+  const y = v => P.t + (1 - v) * (H-P.t-P.b);
+  const line = pts.map((p,i) => `${i?"L":"M"}${x(i).toFixed(1)},${y(p.cum).toFixed(1)}`).join("");
+  const area = line + `L${x(pts.length-1).toFixed(1)},${y(0)}L${x(0).toFixed(1)},${y(0)}Z`;
+  const grid = [0,.25,.5,.75,1].map(v => `<line x1="${P.l}" x2="${W-P.r}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${P.l-6}" y="${y(v)+4}" text-anchor="end" font-size="11" fill="var(--muted)">${v*100}%</text>`).join("");
+  const dots = pts.map((p,i) => `<circle cx="${x(i)}" cy="${y(p.day)}" r="3" fill="var(--muted)" opacity=".6"><title>${fmtDay(p.d)} : ${pct(p.day)}</title></circle>`).join("");
+  const last = pts[pts.length-1];
+  const lbl = [0, pts.length-1].filter((v,i,a) => a.indexOf(v) === i).map(i => `<text x="${x(i)}" y="${H-8}" text-anchor="${i===0?"start":"end"}" font-size="11" fill="var(--muted)">${fmtDay(pts[i].d)}</text>`).join("");
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Taux de réussite cumulé">
+    ${grid}<path d="${area}" fill="var(--accent)" opacity=".12"/><path d="${line}" fill="none" stroke="var(--accent)" stroke-width="2.5"/>
+    ${dots}<circle cx="${x(pts.length-1)}" cy="${y(last.cum)}" r="5" fill="var(--accent)"/>
+    <text x="${Math.min(x(pts.length-1), W-P.r-4)}" y="${y(last.cum)-10}" text-anchor="end" font-size="12" font-weight="600" fill="var(--ink)">${pct(last.cum)} cumulé</text>${lbl}</svg>
+    <p class="note">Ligne : taux cumulé. Points : taux de chaque jour.</p>`;
+}
+
+function calib(rows){
+  if(!rows.length) return `<p class="note">Pas encore de données.</p>`;
+  return rows.map(r => `<div class="calrow"><span>${esc(r.tranche)}</span>
+    <div class="caltrack"><span class="r" style="width:${r.reel*100}%"></span><span class="e" style="left:${r.annonce*100}%"></span></div>
+    <span class="note">${pct(r.reel)} réel · ${r.matchs} m.</span></div>`).join("");
+}
+
+function viewRank(){
+  const rows = (state.rank[state.rankTour] || []);
+  if(!rows.length) return `<div class="empty">Classements indisponibles pour l'instant.</div>`;
+  const key = state.rankSurf;
+  const q = state.q.trim().toLowerCase();
+  const sorted = [...rows].sort((a,b) => b[key] - a[key]).map((r,i) => ({...r, rang:i+1}));
+  const shown = sorted.filter(r => !q || r.nom.toLowerCase().includes(q));
+  const max = sorted[0][key], min = sorted[sorted.length-1][key];
+  return `<div class="toolbar">
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <div class="seg" role="group" aria-label="Circuit">${[["atp","ATP"],["wta","WTA"]].map(([k,l]) => `<button data-rt="${k}" aria-pressed="${state.rankTour===k}">${l}</button>`).join("")}</div>
+        <div class="seg" role="group" aria-label="Surface">${[["global","Global"],["dur","Dur"],["terre","Terre"],["gazon","Gazon"]].map(([k,l]) => `<button data-rs="${k}" aria-pressed="${key===k}">${l}</button>`).join("")}</div>
+      </div>
+      <label for="q" style="position:absolute;left:-9999px">Chercher un joueur</label>
+      <input type="search" id="q" placeholder="Chercher un joueur…" value="${esc(state.q)}">
+    </div>
+    <div class="panel ftab"><table class="rk">
+      <thead><tr><th class="n">#</th><th>${state.rankTour === "atp" ? "Joueur" : "Joueuse"}</th><th class="n">Elo ${key === "global" ? "global" : key}</th><th class="bar-cell"></th><th class="n">Global</th><th class="n">Dur</th><th class="n">Terre</th><th class="n">Gazon</th></tr></thead>
+      <tbody>${shown.map(r => `<tr><td class="n">${r.rang}</td><td>${esc(r.nom)}</td><td class="n"><b>${r[key]}</b></td>
+        <td class="bar-cell"><div class="mini"><span style="width:${Math.max(4,(r[key]-min)/(max-min)*100)}%"></span></div></td>
+        <td class="n">${r.global}</td><td class="n">${r.dur}</td><td class="n">${r.terre}</td><td class="n">${r.gazon}</td></tr>`).join("")}</tbody>
+    </table></div>
+    <p class="note">Elo par surface = ${state.rankTour === "atp" ? "40" : "30"} % du niveau sur la surface + ${state.rankTour === "atp" ? "60" : "70"} % du niveau global. Joueurs actifs ces 200 derniers jours, au moins 20 matchs.</p>`;
+}
+
+function viewMethode(){
+  const mo = state.modele || {};
+  return `<div class="grid2">
+    <section class="panel prose"><h2>Le socle : l'Elo</h2>
+      <p>Chaque joueur a une note Elo : elle monte quand il gagne, d'autant plus que l'adversaire était fort, et baisse quand il perd. L'agent tient une note globale et une note par surface (dur, terre, gazon), mélangées à 40/60 pour l'ATP et 30/70 pour la WTA.</p>
+      <p>Les matchs de Challenger et de qualifications comptent aussi, à 60 % de leur poids. Testé sur l'historique, ce choix améliore les prédictions sans surcoter les joueurs qui passent leur saison en Challenger.</p>
+    </section>
+    <section class="panel prose"><h2>Tous les critères, pesés par les données</h2>
+      <p>Autour de l'Elo, le modèle prend en compte 20 critères : tendance, service et retour sur 12 mois, balles de break, style × vitesse du court, forme pondérée par l'adversaire, tie-breaks, sets décisifs, titre récent, matchs, sets et minutes des 7 derniers jours, abandon récent, longue pause, format en 5 sets, fin de tournoi, Grand Chelem, face-à-face récent sur la surface et jeu à domicile.</p>
+      <p>Leur poids n'est pas fixé à la main : il est appris sur 2012-2022, puis vérifié sur 2023-2026. Un critère utile pèse lourd ; un critère qui n'apporte rien tombe près de zéro au lieu de fausser le résultat.</p>
+      <p>Bon à savoir : un joueur très chanceux dans les tie-breaks ou les sets décisifs est légèrement pénalisé, car cette réussite se maintient rarement.</p>
+    </section>
+    <section class="panel prose"><h2>L'ajustement de l'agent</h2>
+      <p>Certaines choses ne se mesurent pas dans les données : une blessure annoncée le matin, la météo, l'enjeu d'un match. L'agent peut alors ajuster la probabilité, de 5 points au maximum, toujours avec une raison vérifiée et affichée.</p>
+      <p>Le bilan compare le modèle seul et le modèle ajusté : si les ajustements n'aident pas, on le verra.</p>
+    </section>
+    <section class="panel"><h2>La mise à jour de chaque matin</h2>
+      <ol class="steps">
+        <li><span>Récupère les résultats de la veille et note chaque pronostic juste ou raté.</span></li>
+        <li><span>Intègre ces résultats et recalcule notes et critères.</span></li>
+        <li><span>Récupère le programme du jour (ATP, WTA, Grands Chelems, Masters).</span></li>
+        <li><span>Calcule les probabilités, vérifie l'actualité (forfaits, blessures) et ajuste si besoin.</span></li>
+        <li><span>Rédige l'explication de chaque match et met à jour cette page.</span></li>
+      </ol>
+    </section>
+    <section class="panel prose"><h2>Limites connues</h2>
+      <p>Statistiques de service et durée des matchs disponibles jusqu'en mai 2026 seulement : depuis, les minutes sont estimées à partir du nombre de sets. Challengers connus jusqu'en mai 2026. Pas de données de météo ni de session jour ou nuit.</p>
+    </section>
+    <section class="panel prose"><h2>Sources</h2>
+      <p>Historique : base de Jeff Sackmann (licence CC BY-NC-SA 4.0), résultats 2026 de tennis-data.co.uk, puis résultats ajoutés chaque matin. Programme et actualité : flux de scores et pages officielles des tournois.</p>
+      <p class="note">${mo.version ? "Version du modèle : " + esc(mo.version) + ". " : ""}Ces pronostics servent à comprendre le tennis. Ce ne sont pas des conseils de pari.</p>
+    </section>
+  </div>`;
+}
+
+
+/* ---------- discussion avec l'agent ---------- */
+const chat = { turns: [], busy: false, ctl: null, uid: null, sample: null, ready: false, unavailable: null, loadedDay: null, dbVersionOk: true };
+function parisDay(){ return new Intl.DateTimeFormat("fr-CA", {timeZone:"Europe/Paris", year:"numeric", month:"2-digit", day:"2-digit"}).format(new Date()); }
+
+function md(t){
+  const e = esc(t).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
+  const out = []; let list = null;
+  for(const line of e.split("\n")){
+    const m = line.match(/^\s*[-•*]\s+(.*)$/);
+    if(m){ if(!list){ list = []; } list.push(`<li>${m[1]}</li>`); continue; }
+    if(list){ out.push(`<ul>${list.join("")}</ul>`); list = null; }
+    if(line.trim()) out.push(`<p>${line}</p>`);
+  }
+  if(list) out.push(`<ul>${list.join("")}</ul>`);
+  return out.join("");
+}
+
+function chatContext(){
+  const day = state.days[0];
+  const lines = [];
+  const pc = x => x == null ? "?" : Math.round(x*100) + " %";
+  for(const d of state.days.slice(0, 4)){
+    const ms = state.matches[d.date] || [];
+    lines.push(`\n## Journée du ${d.date}${d.resume ? " — " + d.resume : ""}`);
+    for(const m of ms){
+      if(m.proba_a == null) continue;
+      const imp = (m.impacts || []).slice(0, 5).map(x => `${x.libelle} ${x.pts > 0 ? "+" : ""}${x.pts} pt (${x.pts > 0 ? m.joueur_a : m.joueur_b})`).join(" ; ");
+      const fa = m.facteurs_a || {}, fb = m.facteurs_b || {};
+      lines.push(`- ${m.tournoi} (${m.categorie || ""}, ${m.tour_tableau || ""}, ${m.surface}${m.conditions ? " " + m.conditions : ""}${m.court && m.court.vitesse ? ", court " + m.court.vitesse : ""}${m.heure ? ", " + m.heure + " heure de Paris" : ""}) : ${m.joueur_a} contre ${m.joueur_b}. Chances de ${m.joueur_a} : Elo seul ${pc(m.proba_elo)}, modèle complet ${pc(m.proba_modele)}, final ${pc(m.proba_a)}${m.ajustement ? " (ajustement agent " + m.ajustement + " pts : " + (m.ajustement_raison || "") + ")" : ""}. Favori : ${m.favori} (${m.confiance}). Impacts : ${imp || "aucun notable"}. Facteurs ${m.joueur_a} : Elo surface ${fa.elo}, forme ${fa.forme_10}, service ${fa.service_12m} %, retour ${fa.retour_12m} %, bilan surface 12 mois ${fa.bilan_surface_12m}, matchs 7 j ${fa.matchs_7j}. Facteurs ${m.joueur_b} : Elo surface ${fb.elo}, forme ${fb.forme_10}, service ${fb.service_12m} %, retour ${fb.retour_12m} %, bilan surface 12 mois ${fb.bilan_surface_12m}, matchs 7 j ${fb.matchs_7j}. Face-à-face ${m.h2h ? m.h2h.total + " (surface " + m.h2h.surface + ")" : "?"}. Lecture de l'agent : ${m.lecture || ""}${m.resultat && m.resultat.vainqueur ? ` RÉSULTAT : ${m.resultat.vainqueur} gagne ${m.resultat.score || ""} — pronostic ${m.correct ? "juste" : "raté"}.` : " Résultat : pas encore joué ou pas encore enregistré."}`);
+    }
+  }
+  const b = state.bilan, mo = state.modele || {}, bt = mo.backtest || {};
+  const rk = t => (state.rank[t] || []).slice(0, 120).map((r, i) => `${i+1}. ${r.nom} (global ${r.global}, dur ${r.dur}, terre ${r.terre}, gazon ${r.gazon})`).join("\n");
+  return `Tu es « l'Agent Tennis », l'assistant d'analyse ATP et WTA de cette application. Tu réponds en français, de façon claire, chaleureuse et précise, comme un analyste de tennis qui explique ses choix. Réponses courtes par défaut (3 à 8 phrases), listes à puces si utile, **gras** pour les noms et chiffres clés.
+
+Règles :
+- Appuie-toi d'abord sur les DONNÉES DE L'APPLICATION ci-dessous (pronostics, facteurs, résultats, classements Elo, bilan, méthode). Cite les chiffres exacts.
+- Pour expliquer un pronostic, pars de l'Elo puis des critères qui pèsent le plus (les « impacts », en points de pourcentage).
+- Si une question porte sur un match, un joueur ou une information absente de ces données (programme d'un autre jour, blessure, actualité), dis-le clairement ; tu peux donner un avis de connaissance générale en le signalant comme tel, sans inventer de chiffres ni de résultats.
+- Les probabilités servent à comprendre le tennis : ne donne jamais de conseil de pari, de mise ni de cote.
+- Le modèle : Elo global + Elo par surface (ATP 40 % surface, WTA 30 %), Challengers comptés à 60 %, plus 20 critères aux poids appris sur 2012-2022 (service et retour 12 mois, balles de break, forme pondérée, tie-breaks, sets décisifs, matchs/sets/minutes des 7 derniers jours, pause, abandon, titre récent, 5 sets, fin de tournoi, Grand Chelem, face-à-face récent, domicile, style × vitesse du court). Ajustement de l'agent : ±5 points maximum, seulement sur information vérifiée (blessure, météo extrême, enjeu). Mise à jour chaque matin vers 8 h 40.
+- Nous sommes le ${parisDay()} (heure de Paris).
+
+# DONNÉES DE L'APPLICATION
+Résultats intégrés jusqu'au ${mo.donnees_jusqu_a || "?"} ; version : ${mo.version || "?"}.
+Test historique (${bt.periode || "?"}) : ATP modèle complet ${pc(bt.atp && bt.atp.complet)} (Elo seul ${pc(bt.atp && bt.atp.elo)}, Grands Chelems ${pc(bt.atp && bt.atp.complet_gc)}, bookmakers 2026 ${pc(bt.atp && bt.atp.marche)}) ; WTA ${pc(bt.wta && bt.wta.complet)} (Elo seul ${pc(bt.wta && bt.wta.elo)}, bookmakers 2026 ${pc(bt.wta && bt.wta.marche)}).
+Bilan en conditions réelles : ${b && b.global ? `${b.global.reussis}/${b.global.matchs} pronostics justes` : "pas encore de résultats"}.
+${lines.join("\n")}
+
+## Classement Elo ATP (120 premiers)
+${rk("atp")}
+
+## Classement Elo WTA (120 premières)
+${rk("wta")}`;
+}
+
+function chatDoc(){ return state.db && chat.uid ? state.db.collection("data/users/" + chat.uid).doc("discussion-" + parisDay()) : null; }
+
+async function chatInit(){
+  if(chat.ready) return; chat.ready = true;
+  try { chat.sample = await claude.use("sample"); } catch(e){ chat.sample = null; }
+  if(!chat.sample){ chat.unavailable = "La discussion n'est pas disponible ici. Ouvre la page dans claude.ai, connecté à ton compte."; renderIfChat(); return; }
+  try { const u = await claude.use("user"); chat.uid = u ? await u.id() : null; } catch(e){ chat.uid = null; }
+  const ref = chatDoc();
+  chat.loadedDay = parisDay();
+  if(ref){
+    try { const snap = await ref.get(); if(snap.exists){ const d = snap.data(); chat.turns = Array.isArray(d.turns) ? d.turns.map(t => ({role: t.role, content: t.content})) : []; } } catch(e){}
+    // nettoyage : on ne garde que la discussion du jour
+    try {
+      const all = await state.db.collection("data/users/" + chat.uid).get();
+      for(const d of all.docs){ if(d.id.startsWith("discussion-") && d.id !== "discussion-" + parisDay()){ await state.db.collection("data/users/" + chat.uid).doc(d.id).delete(); } }
+    } catch(e){}
+  }
+  renderIfChat();
+}
+function renderIfChat(){ if(state.view === "discuter") render(); }
+
+async function saveChat(){
+  const ref = chatDoc(); if(!ref || !chat.dbVersionOk) return;
+  try { await ref.set({ date: parisDay(), turns: chat.turns.slice(-40) }); } catch(e){ chat.dbVersionOk = false; }
+}
+
+function renderChat(v){
+  const hadFocus = document.activeElement && document.activeElement.id === "chatin";
+  chatInit();
+  if(chat.loadedDay && chat.loadedDay !== parisDay()){ chat.turns = []; chat.loadedDay = parisDay(); }
+  const sugg = ["Quels sont les pronostics du jour ?", "Explique-moi le match le plus serré", "Comment fonctionne ton modèle ?", "Quel est ton bilan jusqu'ici ?", "Qui est le meilleur joueur sur terre battue ?"];
+  const bubbles = chat.turns.map(t => t.role === "user"
+    ? `<div class="msg u">${esc(t.content)}</div>`
+    : `<div class="msg a${t.err ? " err" : ""}"><div class="who"><svg width="14" height="14" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="var(--ball)"/></svg>Agent Tennis</div>${t.pending && !t.content ? `<span class="thinking">L'agent réfléchit…</span>` : md(t.content)}</div>`).join("");
+  v.innerHTML = `<section class="chat">
+    <div class="chat-head"><p>Pose tes questions sur les matchs, les joueurs, les classements ou la méthode. La conversation repart à zéro chaque jour à minuit (heure de Paris).</p>
+      <button class="btn" id="newchat" ${chat.busy || !chat.turns.length ? "disabled" : ""}>Nouvelle conversation</button></div>
+    ${chat.unavailable ? `<div class="empty">${esc(chat.unavailable)}</div>` : ""}
+    <div class="msgs" id="msgs">${bubbles || `<div class="msg a"><div class="who"><svg width="14" height="14" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="var(--ball)"/></svg>Agent Tennis</div><p>Bonjour ! Je connais les pronostics du jour avec leurs explications, les résultats récents, les classements Elo ATP et WTA et le fonctionnement du modèle. Que veux-tu savoir ?</p></div>`}</div>
+    ${!chat.turns.length ? `<div class="sugg">${sugg.map(q => `<button data-q="${esc(q)}">${esc(q)}</button>`).join("")}</div>` : ""}
+    <form class="composer" id="composer">
+      <label for="chatin" style="position:absolute;left:-9999px">Ton message</label>
+      <textarea id="chatin" rows="1" placeholder="Écris ta question…" ${chat.unavailable ? "disabled" : ""}></textarea>
+      ${chat.busy ? `<button type="button" class="btn" id="stop">Arrêter</button>` : `<button class="btn primary" id="send" ${chat.unavailable ? "disabled" : ""}>Envoyer</button>`}
+    </form>
+  </section>`;
+  const ta = document.getElementById("chatin");
+  if(ta){
+    ta.value = chat.draft || "";
+    ta.oninput = () => { chat.draft = ta.value; ta.style.height = "auto"; ta.style.height = Math.min(160, ta.scrollHeight) + "px"; };
+    ta.onkeydown = e => { if(e.key === "Enter" && !e.shiftKey){ e.preventDefault(); sendChat(ta.value); } };
+  }
+  document.getElementById("composer").onsubmit = e => { e.preventDefault(); sendChat(ta.value); };
+  const st = document.getElementById("stop"); if(st) st.onclick = () => chat.ctl && chat.ctl.abort();
+  const nc = document.getElementById("newchat"); if(nc) nc.onclick = async () => { chat.turns = []; await saveChat(); render(); };
+  document.querySelectorAll("[data-q]").forEach(b => b.onclick = () => sendChat(b.dataset.q));
+  const box = document.getElementById("msgs"); if(box && chat.turns.length) box.lastElementChild.scrollIntoView({block:"end"});
+  if(hadFocus && ta) ta.focus();
+}
+
+async function sendChat(text){
+  text = (text || "").trim();
+  if(!text || chat.busy || !chat.sample) return;
+  chat.draft = "";
+  chat.turns.push({ role: "user", content: text });
+  const reply = { role: "assistant", content: "", pending: true };
+  chat.turns.push(reply);
+  chat.busy = true; render();
+  const history = chat.turns.filter(t => !t.pending && !t.err).slice(-20).map(t => ({ role: t.role, content: t.content }));
+  const input = [{ role: "user", content: chatContext() }, { role: "assistant", content: "Compris. Je réponds en m'appuyant sur ces données." }, ...history];
+  chat.ctl = new AbortController();
+  const bubble = () => document.querySelector("#msgs .msg.a:last-child");
+  try {
+    const { text: out } = await chat.sample(input, { cache: false, signal: chat.ctl.signal, onText: ({ text }) => {
+      reply.content = text; const b = bubble();
+      if(b){ b.innerHTML = `<div class="who"><svg width="14" height="14" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="var(--ball)"/></svg>Agent Tennis</div>` + md(text); b.scrollIntoView({block:"end"}); }
+    }});
+    reply.content = out; reply.pending = false;
+    await saveChat();
+  } catch(e){
+    reply.pending = false;
+    const msgs = { not_granted: "Tu n'as pas autorisé la page à utiliser Claude. Recharge la page pour autoriser.", rate_limited: "Trop de questions d'un coup : réessaie dans un instant.", sampling_disabled: "Claude n'est pas disponible pour ce compte.", session_expired: "Ta session a expiré : reconnecte-toi à claude.ai.", refused: "Je ne peux pas répondre à cette question telle quelle. Reformule-la.", cancelled: "" };
+    if(e && e.code === "cancelled"){ reply.content = (e.text || "") + (e.text ? "\n\n(réponse interrompue)" : "(réponse interrompue)"); }
+    else { reply.content = (e && e.code !== "refused" && e.text ? e.text + "\n\n" : "") + (msgs[e && e.code] ?? "Petit souci de connexion. Réessaie."); reply.err = true; }
+    if(e && ["not_granted","sampling_disabled","not_declared","capability_disabled"].includes(e.code)) chat.unavailable = msgs[e.code] || "La discussion n'est pas disponible ici.";
+  } finally {
+    chat.busy = false; chat.ctl = null; render();
+  }
+}
+
+/* ---------- interactions ---------- */
+function bind(){
+  document.querySelectorAll("[data-tour]").forEach(b => b.onclick = () => { state.tour = b.dataset.tour; render(); });
+  const p = document.getElementById("prev"), n = document.getElementById("next");
+  const i = state.days.findIndex(d => d.date === state.day);
+  if(p) p.onclick = () => { if(i < state.days.length-1){ state.day = state.days[i+1].date; loadMatches(state.day); } };
+  if(n) n.onclick = () => { if(i > 0){ state.day = state.days[i-1].date; loadMatches(state.day); } };
+  document.querySelectorAll("[data-rt]").forEach(b => b.onclick = () => { state.rankTour = b.dataset.rt; render(); });
+  document.querySelectorAll("[data-rs]").forEach(b => b.onclick = () => { state.rankSurf = b.dataset.rs; render(); });
+  const q = document.getElementById("q");
+  if(q) q.oninput = () => { state.q = q.value; const pos = q.selectionStart; render(); const nq = document.getElementById("q"); nq.focus(); nq.setSelectionRange(pos,pos); };
+}
+
+function route(){
+  const h = (location.hash || "#jour").slice(1);
+  state.view = ["discuter","jour","bilan","classements","methode"].includes(h) ? h : "jour";
+  render();
+}
+window.addEventListener("hashchange", route);
+
+/* ---------- données ---------- */
+const subs = {};
+function loadMatches(date){
+  render();
+  if(state.matches[date] || subs[date] || !state.db) return;
+  subs[date] = state.db.collection("matchs").where("date", "==", date).onSnapshot(
+    s => { state.matches[date] = s.docs.map(d => d.data()); render(); },
+    () => { state.matches[date] = []; render(); });
+}
+
+(async function init(){
+  route();
+  const timer = setTimeout(() => { if(!state.loaded){ state.err = "Les données ne répondent pas encore. Réessaie dans un instant."; render(); } }, 10000);
+  let db = null;
+  try { db = await claude.use("db"); } catch(e) { db = null; }
+  if(!db){ clearTimeout(timer); state.err = "Connecte-toi à claude.ai pour voir les pronostics."; render(); return; }
+  state.db = db;
+  db.collection("jours").orderBy("date", "desc").limit(120).onSnapshot(s => {
+    clearTimeout(timer);
+    state.days = s.docs.map(d => d.data());
+    if(!state.day || !state.days.some(d => d.date === state.day)) state.day = state.days[0] && state.days[0].date;
+    state.loaded = true;
+    state.days.slice(0, 4).forEach(d => loadMatches(d.date));
+    if(state.day) loadMatches(state.day); else render();
+  }, e => { clearTimeout(timer); state.loaded = true; state.err = null; render(); });
+  db.doc("meta/bilan").onSnapshot(s => { state.bilan = s.exists ? s.data() : null; render(); }, () => {});
+  db.doc("meta/modele").onSnapshot(s => { state.modele = s.exists ? s.data() : null; render(); }, () => {});
+  ["atp","wta"].forEach(t => db.doc("classements/" + t).onSnapshot(s => { state.rank[t] = s.exists ? (s.data().lignes || []) : []; if(state.view === "classements") render(); }, () => {}));
+})();
+</script>
+</body>
+</html>
