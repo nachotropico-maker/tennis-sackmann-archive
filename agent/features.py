@@ -48,6 +48,21 @@ COUNTRY = {
 }
 
 
+# Tournois en altitude (mètres) : balle plus rapide, plus d'aces. Affiché et utilisable par l'agent ;
+# l'effet est déjà en partie capté par le taux d'aces du tournoi.
+ALTITUDE = {"bogota": 2640, "quito": 2850, "guadalajara": 1560, "gstaad": 1050, "kitzbuhel": 760, "madrid": 650,
+            "mutua madrid": 650, "monterrey": 540, "sofia": 550, "munich": 520, "bmw open": 520, "san luis potosi": 1860,
+            "budapest": 100, "johannesburg": 1750}
+
+
+def tourney_altitude(name):
+    n = norm(name)
+    for k, v in ALTITUDE.items():
+        if k in n and v >= 500:
+            return v
+    return None
+
+
 def tourney_country(name):
     n = norm(name)
     for k, c in COUNTRY.items():
@@ -246,12 +261,32 @@ class State:
                 "spw": spw, "rpw": rpw, "orient": (spw - ms) / 0.04 - (rpw - mr) / 0.04,
                 "bps": bps_r, "bpc": bpc_r, "trend": trend}
 
+    def speed_lookup(self, tourney, year):
+        """Taux d'aces du même tournoi l'année précédente. Accepte « Stockholm Open » pour « Stockholm »."""
+        n = norm(tourney)
+        t = self.speed.get((n, year - 1))
+        if t:
+            return t
+        cands = [k for k in self.speed if k[1] == year - 1 and k[0] and (k[0] in n or n in k[0])]
+        return self.speed[max(cands, key=lambda k: len(k[0]))] if cands else None
+
     def speed_z(self, tourney, surf, year):
-        t = self.speed.get((norm(tourney), year - 1))
+        t = self.speed_lookup(tourney, year)
         m = self.speed_surf.get((surf, year - 1))
         if not t or not m or t[1] < 2000 or m[1] == 0:
             return 0.0
         return math.log((t[0] / t[1] + 1e-4) / (m[0] / m[1] + 1e-4))
+
+    def court_info(self, tourney, surf, year):
+        """Vitesse estimée du court (taux d'aces de l'édition précédente comparé à la moyenne de la surface)."""
+        t = self.speed_lookup(tourney, year)
+        m = self.speed_surf.get((surf, year - 1))
+        if not t or not m or t[1] < 2000 or m[1] == 0:
+            return None
+        r = (t[0] / t[1]) / (m[0] / m[1])
+        label = "lent" if r < 0.85 else "rapide" if r > 1.15 else "moyen"
+        return {"vitesse": label, "aces_pct": round(t[0] / t[1] * 100, 1), "moyenne_surface_pct": round(m[0] / m[1] * 100, 1),
+                "annee_reference": year - 1}
 
     def features(self, a, b, surf, day, best_of, rnd, level, country, tourney):
         p = min(max(self.p_elo(a, b, surf), 1e-4), 1 - 1e-4)

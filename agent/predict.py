@@ -7,7 +7,7 @@ Sortie : même liste enrichie de la probabilité, des facteurs et des raisons, +
 """
 import json, sys, os, math, datetime
 from engine import Model, DATA
-from features import build, FEATURES, LABELS, tourney_country
+from features import build, FEATURES, LABELS, tourney_country, tourney_altitude
 
 ROUND_CODES = {"1er tour": "R1", "2e tour": "R2", "3e tour": "R3", "8e de finale": "R16", "huitième": "R16",
                "quart": "QF", "demi": "SF", "finale": "F", "groupes": "RR", "qualif": "Q1"}
@@ -43,7 +43,9 @@ def score_full(st, poids, a, b, m, day):
     lvl = m.get("niveau") or code_level(m.get("categorie", ""))
     bo = int(m.get("sets_gagnants_max", 0) or (5 if (lvl == "G" and m["tour"] == "atp") else 3))
     country = m.get("pays") or tourney_country(m.get("tournoi", ""))
-    f, pa, pb, p_elo = st.features(a, b, m.get("surface", "Hard"), day, bo, rnd, lvl, country, m.get("tournoi", ""))
+    # « reference_vitesse » : tournoi joué sur les mêmes courts, si le tournoi du jour est nouveau (ex. WTA Finals à Indian Wells)
+    tname = m.get("reference_vitesse") or m.get("tournoi", "")
+    f, pa, pb, p_elo = st.features(a, b, m.get("surface", "Hard"), day, bo, rnd, lvl, country, tname)
     # Les Challengers ne sont connus que jusqu'à fin mai 2026 : pour un joueur qui joue surtout en Challenger,
     # une « longue pause » peut n'être qu'un trou dans les données. On neutralise alors ce critère.
     for q, pid in ((pa, a), (pb, b)):
@@ -64,7 +66,12 @@ def score_full(st, poids, a, b, m, day):
     extra = lambda q: {"service_12m": round(q["spw"] * 100, 1), "retour_12m": round(q["rpw"] * 100, 1),
                        "minutes_7j": round(q["min7"] * 100), "sets_7j": q["s7"],
                        "tie_breaks_12m": round(q["tb"] * 100), "sets_decisifs_12m": round(q["dec"] * 100)}
-    return p, p_elo, impacts, extra(pa), extra(pb)
+    year = datetime.date.fromordinal(day).year
+    court = st.court_info(tname, m.get("surface", "Hard"), year) or {}
+    alt = m.get("altitude_m") or tourney_altitude(m.get("tournoi", ""))
+    if alt:
+        court["altitude_m"] = alt
+    return p, p_elo, impacts, extra(pa), extra(pb), court
 
 SURF_FR = {"Hard": "dur", "Clay": "terre battue", "Grass": "gazon"}
 
@@ -131,7 +138,7 @@ def main(inp, out):
         if t not in fulls:
             fulls[t] = full_model(t)
         st, poids = fulls[t]
-        p, p_elo, impacts, xa, xb = score_full(st, poids, a, b, m, day)
+        p, p_elo, impacts, xa, xb, court = score_full(st, poids, a, b, m, day)
         fa, fb = md.player_facts(a, surf, today), md.player_facts(b, surf, today)
         fa.update(xa); fb.update(xb)
         h = md.h2h(a, b, surf)
@@ -148,7 +155,7 @@ def main(inp, out):
             "proba_a": round(p, 3),
             "favori": md.names[a] if p >= 0.5 else md.names[b],
             "confiance": confidence(p),
-            "facteurs_a": fa, "facteurs_b": fb, "h2h": h, "impacts": impacts,
+            "facteurs_a": fa, "facteurs_b": fb, "h2h": h, "impacts": impacts, "court": court,
             "raisons": rs,
         })
         res.append(m)

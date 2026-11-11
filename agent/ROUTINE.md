@@ -37,29 +37,38 @@ Un appel `db_write` doit rester sous 64 Ko : découper si besoin (au plus 10 mat
    Sources : `fetch_sports_data` (tennis, scores : statut `scheduled`) et les programmes officiels (« order of play ») trouvés par recherche web.
    Pour chaque match : `tour, tournoi, categorie, surface, conditions, tour_tableau, heure` (heure de Paris), `joueur_a, joueur_b`,
    `code_tour` (R128, R64, R32, R16, QF, SF, F ou RR), `niveau` (G Grand Chelem, M Masters/WTA 1000, A 250/500, F Finals),
-   `pays` (code à 3 lettres du pays du tournoi, ex. FRA, USA, SWE), `sets_gagnants_max` (5 pour les Grands Chelems masculins, sinon 3), et un `id`
+   `pays` (code à 3 lettres du pays du tournoi, ex. FRA, USA, SWE), `sets_gagnants_max` (5 pour les Grands Chelems masculins, sinon 3),
+   facultatif `reference_vitesse` (nom d'un tournoi joué sur les mêmes courts quand le tournoi est nouveau ou déménagé,
+   ex. « Indian Wells » pour les WTA Finals 2026), facultatif `altitude_m` (si le lieu est en altitude et absent de la liste de `features.py`), et un `id`
    de la forme `AAAA-MM-JJ-tour-tournoi-nomA-nomB` (minuscules, tirets, sans accents).
    Les matchs dont un joueur est encore à déterminer sont laissés de côté.
 4. **Calcul** : écrire la liste dans `jour.json` et lancer `python agent/predict.py jour.json sortie.json` (environ 1 minute).
    Le script recalcule l'Elo et les 20 critères (historique + résultats ajoutés), applique les poids de `agent/data/poids.json`
    et renvoie pour chaque match `proba_elo`, `proba_modele`, les `impacts` de chaque critère (en points), les facteurs et des raisons.
    Ne pas relancer `fit.py` (réapprentissage des poids) sans demande de l'utilisateur.
-5. **Actualité, ajustement et explication** : pour chaque match, vérifier par une recherche web rapide l'actualité
+   Chaque match ressort aussi avec `court` : vitesse estimée (lent / moyen / rapide, d'après le taux d'aces de l'édition précédente) et altitude.
+5. **Météo** (tournois en extérieur seulement ; en indoor, ne rien faire) : pour chaque lieu, récupérer la prévision du jour
+   avec l'outil météo (`weather_fetch`) ou, à défaut, une recherche web. Écrire dans chaque match `meteo` :
+   `{resume}` (une courte phrase en français : ciel, température à l'heure du match, vent et pluie si notables) et `{court}` (ex. « 29 °C, soleil »).
+   Conditions extrêmes = plus de 32 °C, vent de plus de 30 km/h ou forte probabilité de pluie : à mentionner dans la lecture.
+6. **Actualité, ajustement et explication** : pour chaque match, vérifier par une recherche web rapide l'actualité
    (blessure ou gêne annoncée, abandon récent, forfait, conditions météo extrêmes, enjeu particulier : qualification, élimination déjà acquise).
    - **Ajustement de l'agent** : seulement si une information vérifiée, absente des données, change vraiment la donne.
      `ajustement` = nombre entier de points de pourcentage pour joueur_a, entre -5 et +5 (0 par défaut, et c'est le cas le plus fréquent).
      `ajustement_raison` = une phrase qui cite le fait vérifié. `proba_a` = `proba_modele` + `ajustement`/100, borné entre 0,03 et 0,97 ;
      recalculer `favori` et `confiance` en conséquence (Serré < 55 %, Léger avantage < 65 %, Favori net < 80 %, sinon Large favori).
-     Ne jamais ajuster sur une intuition, une rumeur ou un critère déjà calculé (forme, fatigue, face-à-face…).
+     Ne jamais ajuster sur une intuition, une rumeur ou un critère déjà calculé (forme, fatigue, face-à-face, vitesse du court…).
+     Météo extrême : ajustement possible (au plus 3 points) seulement si l'un des joueurs a un problème physique connu
+     ou un historique net dans ces conditions ; sinon, la mentionner dans la lecture sans ajuster.
    - **Lecture** : 2 à 3 phrases en français, fondées sur `impacts` (les 2 ou 3 critères qui pèsent le plus, avec les chiffres des facteurs)
      et sur l'actualité vérifiée. Les nombres s'écrivent à la française (virgule décimale).
-6. **Publier** : écrire chaque match dans `matchs/{id}` (avec `date`, `lecture`, `resultat: null`, `correct: null`),
+7. **Publier** : écrire chaque match dans `matchs/{id}` (avec `date`, `lecture`, `resultat: null`, `correct: null`),
    puis `jours/{date}` avec un `resume` de 2 à 3 phrases, puis mettre à jour `meta/modele`
    (`donnees_jusqu_a` = valeur `meta` de `sortie.json`, `mise_a_jour` = « 12 nov. à 8 h 45 » par exemple, `prochaine` = demain 8 h 40).
    Le lundi, mettre aussi à jour `classements/atp` et `classements/wta`.
-7. **Sauvegarder** : `git add agent/data && git commit -m "Résultats du AAAA-MM-JJ" && git push`.
+8. **Sauvegarder** : `git add agent/data && git commit -m "Résultats du AAAA-MM-JJ" && git push`.
    Si le push est refusé, le dire dans le compte rendu : les résultats restent dans la page, mais l'Elo ne les gardera pas d'un jour à l'autre.
-8. **Compte rendu** : envoyer à l'utilisateur un court message en français : bilan d'hier (x/y pronostics justes), nombre de matchs du jour,
+9. **Compte rendu** : envoyer à l'utilisateur un court message en français : bilan d'hier (x/y pronostics justes), nombre de matchs du jour,
    les 2 ou 3 matchs les plus intéressants, et tout problème rencontré.
 
 Jour sans match du circuit principal : écrire quand même `jours/{date}` avec `matchs: 0` et un résumé d'une phrase.
