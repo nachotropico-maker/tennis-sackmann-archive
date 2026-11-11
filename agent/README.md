@@ -14,10 +14,14 @@ Page de résultats : https://claude.ai/artifact/BsY8JZsWu9VTGpaWPXJPJo
 | | ATP | WTA |
 | --- | --- | --- |
 | Poids de l'Elo surface | 40 % | 30 % |
-| Facteur de calibration | 0,76 | 0,76 |
-| Pronostics justes, test 2024 – nov. 2026 | 64,0 % | 64,8 % |
-| Grands Chelems | 70,1 % | 69,8 % |
-| Bookmakers 2026 (même période) | 67,6 % | 68,9 % |
+| Poids des Challengers / qualifications | 60 % | 60 % |
+| Facteur de calibration | 0,92 | 0,86 |
+| Pronostics justes, test 2024 – nov. 2026 | 65,1 % | 65,3 % |
+| Grands Chelems | 71,5 % | 70,5 % |
+| Modèle sur les matchs 2026 | 65,3 % | 66,2 % |
+| Bookmakers 2026 (mêmes matchs) | 67,6 % | 68,9 % |
+
+`python agent/backtest.py` refait ce test.
 
 Réglages choisis sur 2015-2023, testés sur des matchs jamais vus (2024 – 8 nov. 2026).
 Les critères affichés mais non calculés (forme, fatigue, retour de titre, face-à-face) n'entreront dans la probabilité

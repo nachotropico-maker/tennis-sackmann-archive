@@ -13,7 +13,10 @@ import pandas as pd
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "agent", "data")
-PARAMS = {"atp": {"w_surface": 0.40, "scale": 0.76}, "wta": {"w_surface": 0.30, "scale": 0.76}}
+# Challengers / qualifications / ITF de haut niveau comptés à 60 % (test nov. 2026 : +1,6 pt ATP, +0,5 pt WTA)
+PARAMS = {"atp": {"w_surface": 0.40, "scale": 0.92, "poids_secondaire": 0.6},
+          "wta": {"w_surface": 0.30, "scale": 0.86, "poids_secondaire": 0.6}}
+WTA_SECOND_LEVELS = ["C", "Q", "125", "W100", "W75", "I"]
 SURFACES = ["Hard", "Clay", "Grass"]
 COLS = ["tourney_name", "surface", "tourney_level", "tourney_date", "match_num",
         "winner_id", "winner_name", "loser_id", "loser_name", "score", "round"]
@@ -37,16 +40,24 @@ def load_matches(tour):
     for y in range(1995, 2026):
         f = os.path.join(ROOT, tour, f"{tour}_matches_{y}.csv")
         if os.path.exists(f):
-            frames.append(pd.read_csv(f, low_memory=False))
+            frames.append(pd.read_csv(f, low_memory=False).assign(main=True))
+    for y in range(2000, 2027):  # matchs « secondaires » : Challengers, qualifications (ATP) / qualifs + ITF haut niveau (WTA)
+        f = os.path.join(ROOT, tour, f"{tour}_matches_qual_chall_{y}.csv" if tour == "atp" else f"{tour}_matches_qual_itf_{y}.csv")
+        if os.path.exists(f):
+            c = pd.read_csv(f, low_memory=False)
+            if tour == "wta":
+                c = c[c.tourney_level.astype(str).isin(WTA_SECOND_LEVELS) | c["round"].astype(str).str.match(r"^Q\d")]
+            frames.append(c.assign(main=False))
     for name in [f"{tour}_2026.csv", f"{tour}_live.csv"]:
         f = os.path.join(DATA, name)
         if os.path.exists(f):
-            frames.append(pd.read_csv(f, low_memory=False))
+            frames.append(pd.read_csv(f, low_memory=False).assign(main=True))
     d = pd.concat(frames, ignore_index=True)
     for c in COLS:
         if c not in d:
             d[c] = np.nan
-    d = d[COLS].copy()
+    d = d[COLS + ["main"]].copy()
+    d.loc[d["round"].astype(str).str.match(r"^Q\d"), "main"] = False
     d["score"] = d.score.fillna("").astype(str)
     d = d[~d.score.str.contains("W/O|DEF|Walkover|unfinished", case=False)]
     d = d[d.surface.isin(["Hard", "Clay", "Grass", "Carpet"])]
@@ -54,7 +65,8 @@ def load_matches(tour):
     for c in ["winner_id", "loser_id"]:
         d[c] = d[c].astype(str).str.replace(r"\.0$", "", regex=True)
     d["tourney_date"] = d.tourney_date.astype(int)
-    d = d.sort_values(["tourney_date", "match_num"], kind="stable").reset_index(drop=True)
+    d["main"] = d["main"].astype(bool)
+    d = d.sort_values(["tourney_date", "main", "match_num"], kind="stable").reset_index(drop=True)
     return d
 
 
@@ -66,7 +78,8 @@ class Model:
         self._run()
 
     def _run(self):
-        g, s, ng, ns, last, names = {}, {}, {}, {}, {}, {}
+        g, s, ng, ns, last, names, nmain = {}, {}, {}, {}, {}, {}, {}
+        sec = self.p["poids_secondaire"]
         hist = []  # (date, pid, elo global après le match) pour la tendance
         for r in self.m.itertuples(index=False):
             w, l, sf = r.winner_id, r.loser_id, r.surf
@@ -74,23 +87,27 @@ class Model:
             gw, gl = g.get(w, 1500), g.get(l, 1500)
             sw, sl = s.get((w, sf), 1500), s.get((l, sf), 1500)
             eg, es = expected(gw, gl), expected(sw, sl)
-            g[w] = gw + k_factor(ng.get(w, 0)) * (1 - eg)
-            g[l] = gl - k_factor(ng.get(l, 0)) * (1 - eg)
-            s[(w, sf)] = sw + k_factor(ns.get((w, sf), 0)) * (1 - es)
-            s[(l, sf)] = sl - k_factor(ns.get((l, sf), 0)) * (1 - es)
+            mu = 1.0 if r.main else sec
+            g[w] = gw + mu * k_factor(ng.get(w, 0)) * (1 - eg)
+            g[l] = gl - mu * k_factor(ng.get(l, 0)) * (1 - eg)
+            s[(w, sf)] = sw + mu * k_factor(ns.get((w, sf), 0)) * (1 - es)
+            s[(l, sf)] = sl - mu * k_factor(ns.get((l, sf), 0)) * (1 - es)
+            if r.main:
+                nmain[w] = nmain.get(w, 0) + 1; nmain[l] = nmain.get(l, 0) + 1
             ng[w] = ng.get(w, 0) + 1; ng[l] = ng.get(l, 0) + 1
             ns[(w, sf)] = ns.get((w, sf), 0) + 1; ns[(l, sf)] = ns.get((l, sf), 0) + 1
             last[w] = last[l] = r.tourney_date
-            if r.tourney_date >= 20250101:
+            if r.tourney_date >= 20250101 and r.main:
                 hist.append((r.tourney_date, w, g[w])); hist.append((r.tourney_date, l, g[l]))
-        self.g, self.s, self.ng, self.ns, self.last, self.names = g, s, ng, ns, last, names
+        self.g, self.s, self.ng, self.ns, self.last, self.names, self.nmain = g, s, ng, ns, last, names, nmain
+        self.main = self.m[self.m.main]  # les facteurs explicatifs ne regardent que le circuit principal
         self.hist = pd.DataFrame(hist, columns=["date", "pid", "elo"])
         self.data_through = int(self.m.tourney_date.max())
         # index des noms pour la correspondance
         self.by_norm = {}
         for pid, n in names.items():
             key = norm(n)
-            if key not in self.by_norm or ng.get(pid, 0) > ng.get(self.by_norm[key], 0):
+            if key not in self.by_norm or ng.get(pid, 0) > ng.get(self.by_norm[key], 0):  # homonymes : le plus actif
                 self.by_norm[key] = pid
 
     # ---------- correspondance des noms ----------
@@ -129,7 +146,7 @@ class Model:
 
     # ---------- facteurs explicatifs ----------
     def player_facts(self, pid, surf, today):
-        m = self.m
+        m = self.main
         mine = m[(m.winner_id == pid) | (m.loser_id == pid)]
         last10 = mine.tail(10)
         wins10 = int((last10.winner_id == pid).sum())
@@ -157,7 +174,7 @@ class Model:
         return {
             "elo": round(self.mix(pid, surf)),
             "elo_global": round(self.g.get(pid, 1500)),
-            "matchs_surface": int(self.ns.get((pid, surf), 0)),
+            "matchs_surface": int(((m.winner_id == pid) | (m.loser_id == pid)).loc[m.surf == surf].sum()),
             "forme_10": f"{wins10}-{len(last10) - wins10}",
             "matchs_7j": recent7,
             "bilan_surface_12m": f"{yr_w}-{len(yr) - yr_w}",
@@ -166,7 +183,7 @@ class Model:
         }
 
     def h2h(self, a, b, surf):
-        m = self.m
+        m = self.main
         x = m[((m.winner_id == a) & (m.loser_id == b)) | ((m.winner_id == b) & (m.loser_id == a))]
         xs = x[x.surf == surf]
         return {"total": f"{int((x.winner_id == a).sum())}-{int((x.winner_id == b).sum())}",
@@ -174,7 +191,7 @@ class Model:
 
     def rankings(self, n=150, active_since=None):
         cutoff = active_since or int((pd.Timestamp(str(self.data_through)) - pd.Timedelta(days=200)).strftime("%Y%m%d"))
-        act = [p for p in self.g if self.last.get(p, 0) >= cutoff and self.ng.get(p, 0) >= 20]
+        act = [p for p in self.g if self.last.get(p, 0) >= cutoff and self.nmain.get(p, 0) >= 20]
         rows = [{"nom": self.names[p], "global": round(self.g[p]),
                  "dur": round(self.mix(p, "Hard")), "terre": round(self.mix(p, "Clay")),
                  "gazon": round(self.mix(p, "Grass"))} for p in act]
