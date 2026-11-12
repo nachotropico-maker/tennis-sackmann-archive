@@ -1,0 +1,8 @@
+date,id,tour,tournoi,joueur_a,joueur_b,proba_a,proba_modele,ajustement,vainqueur,score
+2026-11-11,2026-11-11-atp-stockholm-fritz-norrie,atp,Stockholm Open,Taylor Fritz,Cameron Norrie,0.767,0.767,0,Taylor Fritz,7-5 6-3
+2026-11-11,2026-11-11-atp-stockholm-gojo-humbert,atp,Stockholm Open,Borna Gojo,Ugo Humbert,0.366,0.366,0,Ugo Humbert,6-2 6-4
+2026-11-11,2026-11-11-atp-stockholm-kecmanovic-rune,atp,Stockholm Open,Miomir Kecmanovic,Holger Rune,0.256,0.256,0,Holger Rune,2-6 6-1 6-4
+2026-11-11,2026-11-11-atp-stockholm-shevchenko-ruud,atp,Stockholm Open,Alexander Shevchenko,Casper Ruud,0.192,0.192,0,Alexander Shevchenko,6-7 6-4 6-3
+2026-11-11,2026-11-11-atp-stockholm-sonego-tabilo,atp,Stockholm Open,Lorenzo Sonego,Alejandro Tabilo,0.349,0.349,0,Alejandro Tabilo,7-6 6-7 7-5
+2026-11-11,2026-11-11-wta-finals-sabalenka-andreeva,wta,WTA Finals,Aryna Sabalenka,Mirra Andreeva,0.667,0.667,0,Mirra Andreeva,6-4 6-0
+2026-11-11,2026-11-11-wta-finals-svitolina-muchova,wta,WTA Finals,Elina Svitolina,Karolina Muchova,0.511,0.511,0,Elina Svitolina,3-6 6-2 6-2
