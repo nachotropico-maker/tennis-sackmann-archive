@@ -258,31 +258,39 @@ class State:
                 "bps": bps_r, "bpc": bpc_r, "trend": trend}
 
     def speed_lookup(self, tourney, year):
-        """Taux d'aces du même tournoi l'année précédente. Accepte « Stockholm Open » pour « Stockholm »."""
+        """Taux d'aces du même tournoi l'année précédente, et l'année de référence. Accepte « Stockholm Open » pour
+        « Stockholm ». Le Masters du Canada alterne entre Montréal et Toronto : on prend l'édition d'il y a 2 ans
+        (même ville)."""
         n = norm(tourney)
+        if any(k in n for k in ("canada", "montreal", "toronto")):
+            for ref in (year - 2, year - 4):
+                c = [k for k in self.speed if k[1] == ref and k[0] and any(v in k[0] for v in ("canada", "montreal", "toronto"))]
+                if c:
+                    return self.speed[c[0]], ref
+            return None, None
         t = self.speed.get((n, year - 1))
         if t:
-            return t
+            return t, year - 1
         cands = [k for k in self.speed if k[1] == year - 1 and k[0] and (k[0] in n or n in k[0])]
-        return self.speed[max(cands, key=lambda k: len(k[0]))] if cands else None
+        return (self.speed[max(cands, key=lambda k: len(k[0]))], year - 1) if cands else (None, None)
 
     def speed_z(self, tourney, surf, year):
-        t = self.speed_lookup(tourney, year)
-        m = self.speed_surf.get((surf, year - 1))
+        t, ref = self.speed_lookup(tourney, year)
+        m = self.speed_surf.get((surf, ref))
         if not t or not m or t[1] < 2000 or m[1] == 0:
             return 0.0
         return math.log((t[0] / t[1] + 1e-4) / (m[0] / m[1] + 1e-4))
 
     def court_info(self, tourney, surf, year):
         """Vitesse estimée du court (taux d'aces de l'édition précédente comparé à la moyenne de la surface)."""
-        t = self.speed_lookup(tourney, year)
-        m = self.speed_surf.get((surf, year - 1))
+        t, ref = self.speed_lookup(tourney, year)
+        m = self.speed_surf.get((surf, ref))
         if not t or not m or t[1] < 2000 or m[1] == 0:
             return None
         r = (t[0] / t[1]) / (m[0] / m[1])
         label = "lent" if r < 0.85 else "rapide" if r > 1.15 else "moyen"
         return {"vitesse": label, "aces_pct": round(t[0] / t[1] * 100, 1), "moyenne_surface_pct": round(m[0] / m[1] * 100, 1),
-                "annee_reference": year - 1}
+                "annee_reference": ref}
 
     def features(self, a, b, surf, day, best_of, rnd, level, country, tourney):
         p = min(max(self.p_elo(a, b, surf), 1e-4), 1 - 1e-4)
