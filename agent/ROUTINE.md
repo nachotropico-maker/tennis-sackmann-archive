@@ -10,7 +10,7 @@ Langue : tout ce qui est écrit dans la base de la page est en **français**.
 
 | Chemin | Contenu |
 | --- | --- |
-| `matchs/{id}` | un match : `id, date (AAAA-MM-JJ), tour (atp/wta), tournoi, categorie, surface (Hard/Clay/Grass), conditions (indoor/outdoor), tour_tableau, heure, joueur_a, joueur_b, proba_elo, proba_modele, ajustement, ajustement_raison, proba_a (probabilité finale), favori, confiance, facteurs_a, facteurs_b, h2h, impacts[], raisons[], lecture, resultat {vainqueur, score} ou null, correct (true/false/null)` |
+| `matchs/{id}` | un match : `id, date (AAAA-MM-JJ), tour (atp/wta), tournoi, categorie, surface (Hard/Clay/Grass), conditions (indoor/outdoor), tour_tableau, heure, joueur_a, joueur_b, proba_elo, proba_modele, ajustement, ajustement_raison, contexte[] ({joueur, type, fait, source, date}), proba_a (probabilité finale), favori, confiance, facteurs_a, facteurs_b, h2h, impacts[], raisons[], lecture, resultat {vainqueur, score} ou null, correct (true/false/null)` |
 | `jours/{date}` | `date, matchs (nombre), resume` (2 à 3 phrases sur la journée) |
 | `meta/bilan` | contenu de `agent/data/stats.json` |
 | `meta/modele` | `donnees_jusqu_a, mise_a_jour, prochaine, version, backtest` (garder `backtest` tel quel) |
@@ -51,17 +51,29 @@ Un appel `db_write` doit rester sous 64 Ko : découper si besoin (au plus 10 mat
    avec l'outil météo (`weather_fetch`) ou, à défaut, une recherche web. Écrire dans chaque match `meteo` :
    `{resume}` (une courte phrase en français : ciel, température à l'heure du match, vent et pluie si notables) et `{court}` (ex. « 29 °C, soleil »).
    Conditions extrêmes = plus de 32 °C, vent de plus de 30 km/h ou forte probabilité de pluie : à mentionner dans la lecture.
-6. **Actualité, ajustement et explication** : pour chaque match, vérifier par une recherche web rapide l'actualité
-   (blessure ou gêne annoncée, abandon récent, forfait, conditions météo extrêmes, enjeu particulier : qualification, élimination déjà acquise).
+6. **Enquête sur le contexte, ajustement et explication** : c'est une étape à part entière, pas une formalité.
+   Pour **chaque joueur de chaque match**, faire au moins une recherche web ciblée (nom + tournoi + « injury », « blessure »,
+   « press conference », « conférence de presse », actualité des 7 derniers jours), et noter ce qu'on trouve dans 4 domaines :
+   - **physique** : blessure, douleur, strapping, temps mort médical, abandon ou forfait récent, maladie, retour de blessure ;
+   - **mental** (confiance) : série de défaites, déclarations en conférence de presse (fatigue, démotivation, envie),
+     changement d'entraîneur, saison décevante ou au contraire euphorie après une grosse victoire ;
+   - **enjeu** : match sans enjeu (déjà éliminé ou déjà qualifié), qualification en jeu, place dans la Race ou le top 10,
+     titre ou gros résultat à défendre, joueur à domicile, remplaçant appelé au dernier moment ;
+   - **logistique** (calendrier) : match fini tard la veille, long voyage ou décalage horaire, tableau de double en parallèle.
+   Écrire dans chaque match `contexte` = liste de `{joueur, type (physique/mental/enjeu/logistique), fait, source, date}` :
+   `fait` = une phrase courte et factuelle en français, `source` = l'URL https de l'article, `date` = date de l'info (AAAA-MM-JJ).
+   Seulement des faits vérifiés et sourcés, datant de moins de 30 jours (sauf une blessure toujours en cours). Pas de rumeur,
+   pas d'impression personnelle (« semble fatigué »), pas de chiffre déjà calculé par le modèle. Liste vide si rien de notable.
+   Ces faits apparaissent sur la carte du match et dans la lecture ; ils servent aussi à décider de l'ajustement.
    - **Ajustement de l'agent** : seulement si une information vérifiée, absente des données, change vraiment la donne.
      `ajustement` = nombre entier de points de pourcentage pour joueur_a, entre -5 et +5 (0 par défaut, et c'est le cas le plus fréquent).
      `ajustement_raison` = une phrase qui cite le fait vérifié. `proba_a` = `proba_modele` + `ajustement`/100, borné entre 0,03 et 0,97 ;
      recalculer `favori` et `confiance` en conséquence (Serré < 55 %, Léger avantage < 65 %, Favori net < 80 %, sinon Large favori).
-     Ne jamais ajuster sur une intuition, une rumeur ou un critère déjà calculé (forme, fatigue, face-à-face, vitesse du court…).
+     S'appuyer sur `contexte` (blessure en cours, match sans enjeu…). Ne jamais ajuster sur une intuition, une rumeur ou un critère déjà calculé (forme, fatigue, face-à-face, vitesse du court…).
      Météo extrême : ajustement possible (au plus 3 points) seulement si l'un des joueurs a un problème physique connu
      ou un historique net dans ces conditions ; sinon, la mentionner dans la lecture sans ajuster.
    - **Lecture** : 2 à 3 phrases en français, fondées sur `impacts` (les 2 ou 3 critères qui pèsent le plus, avec les chiffres des facteurs)
-     et sur l'actualité vérifiée. Les nombres s'écrivent à la française (virgule décimale).
+     et sur le `contexte` vérifié (le citer s'il compte). Les nombres s'écrivent à la française (virgule décimale).
 7. **Publier** : écrire chaque match dans `matchs/{id}` (avec `date`, `lecture`, `resultat: null`, `correct: null`),
    puis `jours/{date}` avec un `resume` de 2 à 3 phrases, puis mettre à jour `meta/modele`
    (`donnees_jusqu_a` = valeur `meta` de `sortie.json`, `mise_a_jour` = « 12 nov. à 8 h 45 » par exemple, `prochaine` = demain 8 h 40).

@@ -96,6 +96,10 @@ details.why summary::-webkit-details-marker{display:none}
 details.why summary::before{content:"+";font:700 18px/1 var(--display);width:14px}
 details.why[open] summary::before{content:"–"}
 .why .in{padding:0 14px 14px;display:grid;gap:12px}
+.ctx{list-style:none;margin:0;padding:10px 12px;display:grid;gap:6px;background:color-mix(in srgb,var(--accent) 7%,transparent);border-radius:10px;font-size:14px}
+.ctx li{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.ctag{font:600 11px/1 var(--display);text-transform:uppercase;letter-spacing:.5px;padding:4px 6px;border-radius:5px;border:1px solid var(--line);color:var(--muted);flex:none}
+.ctx a{color:var(--accent);font-size:12.5px}
 .lecture{margin:0;max-width:70ch}
 .why ul{margin:0;padding-left:18px;display:grid;gap:4px}
 .ftab{overflow-x:auto}
@@ -296,6 +300,9 @@ function card(m){
       ${m.ajustement ? `<span aria-hidden="true">→</span><span>Ajustement de l'agent <b>${m.ajustement > 0 ? "+" : "−"}${Math.abs(m.ajustement)} pts</b></span>` : ""}
       <span aria-hidden="true">→</span><span>Final <b>${pct(m.proba_a)}</b></span>
       <span class="note">(chances de ${ln(m.joueur_a)})</span></div>` : "";
+  const CTAG = {physique: "Physique", mental: "Confiance", enjeu: "Enjeu", logistique: "Calendrier"};
+  const safe = u => /^https:\/\//.test(u || "") ? u : "";
+  const ctx = (m.contexte||[]).length ? `<ul class="ctx" aria-label="Contexte vérifié">${m.contexte.map(c => `<li><span class="ctag">${esc(CTAG[c.type] || c.type || "Info")}</span><span><b>${c.joueur ? ln(c.joueur) : ""}</b>${c.joueur ? " : " : ""}${esc(c.fait)}${safe(c.source) ? ` <a href="${esc(safe(c.source))}" target="_blank" rel="noopener">source</a>` : ""}</span></li>`).join("")}</ul>` : "";
   const adj = m.ajustement && m.ajustement_raison ? `<p class="adj"><b>Ajustement de l'agent (${m.ajustement > 0 ? "+" : "−"}${Math.abs(m.ajustement)} pts pour ${ln(m.joueur_a)}) :</b> ${esc(m.ajustement_raison)}</p>` : "";
   return `<article class="card">
     <div class="head">
@@ -306,6 +313,7 @@ function card(m){
       <div class="players">${row(m.joueur_a, pa, fa, favA)}${row(m.joueur_b, pb, fb, !favA)}</div>
       <div class="bar" aria-hidden="true"><span class="a" style="width:${pa*100}%"></span><span class="b" style="width:${pb*100}%"></span></div>
       <div class="meta"><span class="pill c0">${esc(m.confiance)}</span>${r}</div>
+      ${ctx}
     </div>
     <details class="why">
       <summary>Pourquoi ce pronostic ?</summary>
@@ -485,7 +493,7 @@ function chatContext(){
       if(m.proba_a == null) continue;
       const imp = (m.impacts || []).slice(0, 5).map(x => `${x.libelle} ${x.pts > 0 ? "+" : ""}${x.pts} pt (${x.pts > 0 ? m.joueur_a : m.joueur_b})`).join(" ; ");
       const fa = m.facteurs_a || {}, fb = m.facteurs_b || {};
-      lines.push(`- ${m.tournoi} (${m.categorie || ""}, ${m.tour_tableau || ""}, ${m.surface}${m.conditions ? " " + m.conditions : ""}${m.court && m.court.vitesse ? ", court " + m.court.vitesse : ""}${m.heure ? ", " + m.heure + " heure de Paris" : ""}) : ${m.joueur_a} contre ${m.joueur_b}. Chances de ${m.joueur_a} : Elo seul ${pc(m.proba_elo)}, modèle complet ${pc(m.proba_modele)}, final ${pc(m.proba_a)}${m.ajustement ? " (ajustement agent " + m.ajustement + " pts : " + (m.ajustement_raison || "") + ")" : ""}. Favori : ${m.favori} (${m.confiance}). Impacts : ${imp || "aucun notable"}. Facteurs ${m.joueur_a} : Elo surface ${fa.elo}, forme ${fa.forme_10}, service ${fa.service_12m} %, retour ${fa.retour_12m} %, bilan surface 12 mois ${fa.bilan_surface_12m}, matchs 7 j ${fa.matchs_7j}. Facteurs ${m.joueur_b} : Elo surface ${fb.elo}, forme ${fb.forme_10}, service ${fb.service_12m} %, retour ${fb.retour_12m} %, bilan surface 12 mois ${fb.bilan_surface_12m}, matchs 7 j ${fb.matchs_7j}. Face-à-face ${m.h2h ? m.h2h.total + " (surface " + m.h2h.surface + ")" : "?"}. Lecture de l'agent : ${m.lecture || ""}${m.resultat && m.resultat.vainqueur ? ` RÉSULTAT : ${m.resultat.vainqueur} gagne ${m.resultat.score || ""} — pronostic ${m.correct ? "juste" : "raté"}.` : " Résultat : pas encore joué ou pas encore enregistré."}`);
+      lines.push(`- ${m.tournoi} (${m.categorie || ""}, ${m.tour_tableau || ""}, ${m.surface}${m.conditions ? " " + m.conditions : ""}${m.court && m.court.vitesse ? ", court " + m.court.vitesse : ""}${m.heure ? ", " + m.heure + " heure de Paris" : ""}) : ${m.joueur_a} contre ${m.joueur_b}. Chances de ${m.joueur_a} : Elo seul ${pc(m.proba_elo)}, modèle complet ${pc(m.proba_modele)}, final ${pc(m.proba_a)}${m.ajustement ? " (ajustement agent " + m.ajustement + " pts : " + (m.ajustement_raison || "") + ")" : ""}. Favori : ${m.favori} (${m.confiance}). Impacts : ${imp || "aucun notable"}. Facteurs ${m.joueur_a} : Elo surface ${fa.elo}, forme ${fa.forme_10}, service ${fa.service_12m} %, retour ${fa.retour_12m} %, bilan surface 12 mois ${fa.bilan_surface_12m}, matchs 7 j ${fa.matchs_7j}. Facteurs ${m.joueur_b} : Elo surface ${fb.elo}, forme ${fb.forme_10}, service ${fb.service_12m} %, retour ${fb.retour_12m} %, bilan surface 12 mois ${fb.bilan_surface_12m}, matchs 7 j ${fb.matchs_7j}. Face-à-face ${m.h2h ? m.h2h.total + " (surface " + m.h2h.surface + ")" : "?"}. Contexte vérifié : ${(m.contexte||[]).map(c => (c.joueur ? c.joueur + " : " : "") + c.fait).join(" ; ") || "rien de notable"}. Lecture de l'agent : ${m.lecture || ""}${m.resultat && m.resultat.vainqueur ? ` RÉSULTAT : ${m.resultat.vainqueur} gagne ${m.resultat.score || ""} — pronostic ${m.correct ? "juste" : "raté"}.` : " Résultat : pas encore joué ou pas encore enregistré."}`);
     }
   }
   const b = state.bilan, mo = state.modele || {}, bt = mo.backtest || {};
