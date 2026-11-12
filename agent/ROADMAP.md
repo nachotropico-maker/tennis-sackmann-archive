@@ -2,7 +2,7 @@
 
 À reprendre en décembre, quand les tableaux de la United Cup seront connus.
 
-1. **Premier match de la saison** : les favoris se font-ils plus souvent surprendre à la reprise de janvier
+1. **Premier match de la saison** (entry list United Cup 2027 : data/united_cup_2027_entry_list.csv) : les favoris se font-ils plus souvent surprendre à la reprise de janvier
    (United Cup, Brisbane, Hong Kong, Auckland, Adélaïde) ? Test sur toutes les reprises depuis 2012.
    Exemple : Fritz battu par Baez à la United Cup 2026 alors qu'il était donné à 88 %.
 2. **Chaleur en Australie** : joueurs en difficulté au-delà de 35 °C ; effet du toit fermé.

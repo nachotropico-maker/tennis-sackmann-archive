@@ -1,0 +1,112 @@
+equipe,tete_de_serie,circuit,joueur,classement_entree,type_classement
+Czechia,WTA 1,ATP,Jiri Lehecka,15,S
+Czechia,WTA 1,ATP,Dalibor Svrcina,112,S
+Czechia,WTA 1,ATP,Petr Nouza,40,D
+Czechia,WTA 1,WTA,Linda Noskova,8,S
+Czechia,WTA 1,WTA,Laura Samson,119,S
+Czechia,WTA 1,WTA,Jesika Maleckova,53,D
+USA,ATP 1,ATP,Ben Shelton,4,S
+USA,ATP 1,ATP,Keegan Smith,189,S
+USA,ATP 1,ATP,Christian Harrison,4,D
+USA,ATP 1,WTA,Coco Gauff,4,S
+USA,ATP 1,WTA,Varvara Lepchenko,216,S
+USA,ATP 1,WTA,Nicole Melichar-Martinez,8,D
+Poland,WTA 2,ATP,Hubert Hurkacz,30,S
+Poland,WTA 2,ATP,Maks Kasnikowski,207,S
+Poland,WTA 2,ATP,Jan Zielinski,39,D
+Poland,WTA 2,WTA,Maja Chwalinska,12,S
+Poland,WTA 2,WTA,Martyna Kubka,141,S
+Poland,WTA 2,WTA,Katarzyna Piter,57,D
+Italy,ATP 2,ATP,Flavio Cobolli,6,S
+Italy,ATP 2,ATP,Andrea Pellegrino,141,S
+Italy,ATP 2,ATP,Filippo Romano,166,D
+Italy,ATP 2,WTA,Elisabetta Cocciaretto,74,S
+Italy,ATP 2,WTA,Nuria Brancaccio,220,S
+Italy,ATP 2,WTA,Angelica Moratelli,94,D
+Belgium,WTA 3,ATP,Alexander Blockx,28,S
+Belgium,WTA 3,ATP,Gauthier Onclin,170,S
+Belgium,WTA 3,ATP,Sander Gille,77,D
+Belgium,WTA 3,WTA,Elise Mertens,14,S
+Belgium,WTA 3,WTA,Polina Bakhmutkina,1069,S
+Belgium,WTA 3,WTA,Magali Kempen,33,D
+France,ATP 3,ATP,Arthur Fils,7,S
+France,ATP 3,ATP,Geoffrey Blancaneaux,444,S
+France,ATP 3,ATP,Manuel Guinard,19,D
+France,ATP 3,WTA,Diane Parry,34,S
+France,ATP 3,WTA,Leolia Jeanjean,89,S
+France,ATP 3,WTA,Fiona Ferro,98,S
+Switzerland,WTA 4,ATP,Jerome Kym,143,S
+Switzerland,WTA 4,ATP,Leandro Riedi,245,S
+Switzerland,WTA 4,ATP,Jakub Paul,59,D
+Switzerland,WTA 4,WTA,Belinda Bencic,20,S
+Switzerland,WTA 4,WTA,Susan Bandecchi,167,S
+Switzerland,WTA 4,WTA,Naima Karamoko,81,D
+Spain,ATP 4,ATP,Rafael Jodar,11,S
+Spain,ATP 4,ATP,Nikolas Sanchez Izquierdo,151,S
+Spain,ATP 4,ATP,Benjamin Winter Lopez,115,D
+Spain,ATP 4,WTA,Paula Badosa,57,S
+Spain,ATP 4,WTA,Leyre Romero Gormaz,111,S
+Spain,ATP 4,WTA,Yvonne Cavalle-Reimers,93,D
+Greece,WTA 5,ATP,Stefanos Tsitsipas,36,S
+Greece,WTA 5,ATP,Ioannis Xilas,499,S
+Greece,WTA 5,WTA,Maria Sakkari,29,S
+Greece,WTA 5,WTA,Despina Papamichail,231,S
+Greece,WTA 5,WTA,Sapfo Sakellaridi,133,D
+Canada,ATP 5,ATP,Felix Auger-Aliassime,14,S
+Canada,ATP 5,ATP,Alexis Galarneau,192,S
+Canada,ATP 5,ATP,Cleeve Harper,152,D
+Canada,ATP 5,WTA,Victoria Mboko,21,S
+Canada,ATP 5,WTA,Kayla Cross,208,S
+Canada,ATP 5,WTA,Gabriela Dabrowski,3,D
+Great Britain,Combined 1,ATP,Arthur Fery,33,S
+Great Britain,Combined 1,ATP,Jan Choinski,110,S
+Great Britain,Combined 1,ATP,Neal Skupski,3,D
+Great Britain,Combined 1,WTA,Emma Raducanu,38,PS
+Great Britain,Combined 1,WTA,Francesca Jones,99,S
+Great Britain,Combined 1,WTA,Olivia Nicholls,31,D
+Denmark,Combined 2,ATP,Holger Rune,14,PS
+Denmark,Combined 2,ATP,Elmer Moller,148,S
+Denmark,Combined 2,ATP,Johannes Ingildsen,163,D
+Denmark,Combined 2,WTA,Clara Tauson,58,S
+Denmark,Combined 2,WTA,Emma Kamper,584,S
+Australia,Combined 3,ATP,Rinky Hijikata,59,S
+Australia,Combined 3,ATP,Alex Bolt,171,S
+Australia,Combined 3,ATP,Marc Polmans,23,D
+Australia,Combined 3,WTA,Talia Gibson,36,S
+Australia,Combined 3,WTA,Daria Saville,157,PS
+Australia,Combined 3,WTA,Ellen Perez,20,D
+Croatia,Combined 4,ATP,Dino Prizmic,89,S
+Croatia,Combined 4,ATP,Mate Dodig,136,D
+Croatia,Combined 4,ATP,Mate Pavic,9,D
+Croatia,Combined 4,WTA,Donna Vekic,39,S
+Croatia,Combined 4,WTA,Lucija Ciric Bagaric,405,S
+Germany,Combined 5,ATP,Yannick Hanfmann,67,S
+Germany,Combined 5,ATP,Florian Broska,318,S
+Germany,Combined 5,ATP,Kevin Krawietz,11,D
+Germany,Combined 5,WTA,Tamara Korpatsch,62,S
+Germany,Combined 5,WTA,Mona Barthel,197,S
+Germany,Combined 5,WTA,Mina Hodzic,286,S
+Argentina,Combined 6,ATP,Tomas Martin Etcheverry,29,S
+Argentina,Combined 6,ATP,Mariano Kestelboim,1396,S
+Argentina,Combined 6,ATP,Guido Andreozzi,20,D
+Argentina,Combined 6,WTA,Solana Sierra,106,S
+Argentina,Combined 6,WTA,Jazmin Ortenzi,187,S
+Argentina,Combined 6,WTA,Nicole Fossa Huergo,73,D
+Hungary,Combined 7,ATP,Fabian Marozsan,63,S
+Hungary,Combined 7,ATP,Zsombor Piros,99,S
+Hungary,Combined 7,WTA,Anna Bondar,76,S
+Hungary,Combined 7,WTA,Panna Udvardy,87,S
+Hungary,Combined 7,WTA,Fanny Stollar,44,D
+Kazakhstan,Combined 8,ATP,Aleksandr Shevchenko,107,S
+Kazakhstan,Combined 8,ATP,Dmitry Popko,495,S
+Kazakhstan,Combined 8,WTA,Yulia Putintseva,66,S
+Kazakhstan,Combined 8,WTA,Zhibek Kulambayeva,381,S
+Ukraine,Remplaçante 1,ATP,Vitaliy Sachko,247,S
+Ukraine,Remplaçante 1,ATP,Eric Vanshelboim,398,S
+Ukraine,Remplaçante 1,WTA,Katarina Zavatska,246,S
+Ukraine,Remplaçante 1,WTA,Valeriya Strakhova,401,S
+Norway,Remplaçante 2,ATP,Viktor Durasovic,498,S
+Norway,Remplaçante 2,ATP,Andreja Petrovic,628,S
+Norway,Remplaçante 2,WTA,Emilie Lindh Gallagher,486,PS
+Norway,Remplaçante 2,WTA,Astrid Brune Olsen,877,S
+Norway,Remplaçante 2,WTA,Ulrikke Eikeri,38,D
