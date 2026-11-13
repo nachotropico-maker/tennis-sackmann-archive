@@ -6,3 +6,9 @@ date,id,tour,tournoi,joueur_a,joueur_b,proba_a,proba_modele,ajustement,vainqueur
 2026-11-11,2026-11-11-atp-stockholm-sonego-tabilo,atp,Stockholm Open,Lorenzo Sonego,Alejandro Tabilo,0.349,0.349,0,Alejandro Tabilo,7-6 6-7 7-5
 2026-11-11,2026-11-11-wta-finals-sabalenka-andreeva,wta,WTA Finals,Aryna Sabalenka,Mirra Andreeva,0.667,0.667,0,Mirra Andreeva,6-4 6-0
 2026-11-11,2026-11-11-wta-finals-svitolina-muchova,wta,WTA Finals,Elina Svitolina,Karolina Muchova,0.511,0.511,0,Elina Svitolina,3-6 6-2 6-2
+2026-11-12,2026-11-12-wta-finals-pegula-noskova,wta,WTA Finals,Jessica Pegula,Linda Noskova,0.567,0.567,0,Jessica Pegula,7-6 4-6 7-5
+2026-11-12,2026-11-12-atp-stockholm-michelsen-tabilo,atp,Stockholm Open,Alex Michelsen,Alejandro Tabilo,0.702,0.702,0,Alejandro Tabilo,7-5 7-6
+2026-11-12,2026-11-12-atp-stockholm-tirante-shevchenko,atp,Stockholm Open,Thiago Agustin Tirante,Alexander Shevchenko,0.524,0.524,0,Thiago Agustin Tirante,7-6 6-7 6-3
+2026-11-12,2026-11-12-wta-finals-kostyuk-gauff,wta,WTA Finals,Marta Kostyuk,Coco Gauff,0.243,0.243,0,Coco Gauff,6-4 7-5
+2026-11-12,2026-11-12-atp-stockholm-musetti-humbert,atp,Stockholm Open,Lorenzo Musetti,Ugo Humbert,0.649,0.649,0,Lorenzo Musetti,7-6 3-6 6-4
+2026-11-12,2026-11-12-atp-stockholm-fritz-rune,atp,Stockholm Open,Taylor Fritz,Holger Rune,0.697,0.697,0,,forfait

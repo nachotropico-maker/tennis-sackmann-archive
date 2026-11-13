@@ -1,3 +1,5 @@
 tourney_name,surface,tourney_level,tourney_date,match_num,winner_id,winner_name,loser_id,loser_name,score,round
 WTA Finals,Hard,,20261111,0,259799,Mirra Andreeva,214544,Aryna Sabalenka,6-4 6-0,Phase de groupes
 WTA Finals,Hard,,20261111,0,202494,Elina Svitolina,214096,Karolina Muchova,3-6 6-2 6-2,Phase de groupes
+WTA Finals,Hard,F,20261112,0,202468,Jessica Pegula,222328,Linda Noskova,7-6 4-6 7-5,Phase de groupes
+WTA Finals,Hard,F,20261112,0,221103,Coco Gauff,216146,Marta Kostyuk,6-4 7-5,Phase de groupes
