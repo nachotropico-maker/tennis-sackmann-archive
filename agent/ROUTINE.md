@@ -65,6 +65,10 @@ Un appel `db_write` doit rester sous 64 Ko : découper si besoin (au plus 10 mat
    Seulement des faits vérifiés et sourcés, datant de moins de 30 jours (sauf une blessure toujours en cours). Pas de rumeur,
    pas d'impression personnelle (« semble fatigué »), pas de chiffre déjà calculé par le modèle. Liste vide si rien de notable.
    Ces faits apparaissent sur la carte du match et dans la lecture ; ils servent aussi à décider de l'ajustement.
+   **Face-à-face** : toujours le vérifier avec une source externe (ATP, WTA, Tennis Majors, Flashscore). Nos données
+   peuvent oublier des matchs, par exemple Tabilo–Tirante : nos fichiers comptaient 2-0 sur terre battue, mais Tirante
+   l'avait battu nettement sur dur. Si le bilan trouvé diffère de `h2h`, l'ajouter dans `contexte` (type mental, avec la
+   surface du match manquant) et le citer dans la lecture.
    - **Ajustement de l'agent** : seulement si une information vérifiée, absente des données, change vraiment la donne.
      `ajustement` = nombre entier de points de pourcentage pour joueur_a, entre -5 et +5 (0 par défaut, et c'est le cas le plus fréquent).
      `ajustement_raison` = une phrase qui cite le fait vérifié. `proba_a` = `proba_modele` + `ajustement`/100, borné entre 0,03 et 0,97 ;
