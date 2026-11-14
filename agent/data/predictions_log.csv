@@ -12,3 +12,7 @@ date,id,tour,tournoi,joueur_a,joueur_b,proba_a,proba_modele,ajustement,vainqueur
 2026-11-12,2026-11-12-wta-finals-kostyuk-gauff,wta,WTA Finals,Marta Kostyuk,Coco Gauff,0.243,0.243,0,Coco Gauff,6-4 7-5
 2026-11-12,2026-11-12-atp-stockholm-musetti-humbert,atp,Stockholm Open,Lorenzo Musetti,Ugo Humbert,0.649,0.649,0,Lorenzo Musetti,7-6 3-6 6-4
 2026-11-12,2026-11-12-atp-stockholm-fritz-rune,atp,Stockholm Open,Taylor Fritz,Holger Rune,0.697,0.697,0,,forfait
+2026-11-13,2026-11-13-atp-stockholm-fritz-musetti,atp,Stockholm Open,Taylor Fritz,Lorenzo Musetti,0.546,0.546,0,Taylor Fritz,6-4 6-2
+2026-11-13,2026-11-13-atp-stockholm-tabilo-tirante,atp,Stockholm Open,Alejandro Tabilo,Thiago Agustin Tirante,0.546,0.546,0,Thiago Agustin Tirante,7-5 7-6
+2026-11-13,2026-11-13-wta-finals-andreeva-muchova,wta,WTA Finals,Mirra Andreeva,Karolina Muchova,0.649,0.649,0,,forfait
+2026-11-13,2026-11-13-wta-finals-sabalenka-svitolina,wta,WTA Finals,Aryna Sabalenka,Elina Svitolina,0.717,0.717,0,Elina Svitolina,6-3 3-6 6-1
