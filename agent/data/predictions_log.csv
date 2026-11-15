@@ -16,3 +16,6 @@ date,id,tour,tournoi,joueur_a,joueur_b,proba_a,proba_modele,ajustement,vainqueur
 2026-11-13,2026-11-13-atp-stockholm-tabilo-tirante,atp,Stockholm Open,Alejandro Tabilo,Thiago Agustin Tirante,0.546,0.546,0,Thiago Agustin Tirante,7-5 7-6
 2026-11-13,2026-11-13-wta-finals-andreeva-muchova,wta,WTA Finals,Mirra Andreeva,Karolina Muchova,0.649,0.649,0,,forfait
 2026-11-13,2026-11-13-wta-finals-sabalenka-svitolina,wta,WTA Finals,Aryna Sabalenka,Elina Svitolina,0.717,0.717,0,Elina Svitolina,6-3 3-6 6-1
+2026-11-14,2026-11-14-atp-stockholm-fritz-tirante,atp,Stockholm Open,Taylor Fritz,Thiago Agustin Tirante,0.769,0.769,0,Taylor Fritz,6-2 4-6 7-6
+2026-11-14,2026-11-14-wta-finals-andreeva-pegula,wta,WTA Finals,Mirra Andreeva,Jessica Pegula,0.547,0.547,0,Mirra Andreeva,6-3 6-4
+2026-11-14,2026-11-14-wta-finals-noskova-svitolina,wta,WTA Finals,Linda Noskova,Elina Svitolina,0.487,0.487,0,Elina Svitolina,6-2 6-1
