@@ -106,8 +106,10 @@ def reasons(a, b, fa, fb, h2h, surf, tournoi, p, today):
         recent = lt and (datetime.date(today // 10000, today // 100 % 100, today % 100)
                          - datetime.date(lt["date"] // 10000, lt["date"] // 100 % 100, lt["date"] % 100)).days <= 14
         if recent and lt["resultat"] and lt["tournoi"] != tournoi:
+            # Test de novembre 2026 : pas de baisse de régime mesurable après un titre ou une finale ;
+            # à l'ATP, un long parcours en Masters 1000 annonce plutôt un bon résultat la semaine suivante.
             r.append(f"{n} sort d'une {'victoire' if lt['resultat'] == 'titre' else 'finale'} à {lt['tournoi']} : "
-                     f"risque de baisse de régime.")
+                     f"plutôt un signe de forme (pas de baisse de régime mesurable dans l'historique).")
         if f["matchs_surface"] < 15:
             r.append(f"Peu de matchs de {n} sur cette surface dans la base ({f['matchs_surface']}) : estimation moins fiable.")
     wa, wb = [int(x) for x in h2h["total"].split("-")]
