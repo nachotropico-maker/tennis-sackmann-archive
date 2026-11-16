@@ -7,6 +7,8 @@
    Exemple : Fritz battu par Baez à la United Cup 2026 alors qu'il était donné à 88 %.
 2. **Chaleur en Australie** : joueurs en difficulté au-delà de 35 °C ; effet du toit fermé.
 3. **Blessures et changements d'entraîneur pendant l'intersaison** (enquête de contexte).
+   Test à faire : après un changement d'entraîneur, le joueur fait-il mieux que prévu, et au bout de combien de temps ?
+   Cas à suivre : Shelton avec Juan Carlos Ferrero à partir des ATP Finals 2026.
 4. **Jeunes en forte progression** : leur Elo est-il en retard sur leur niveau en début de saison ?
 
 Déjà testé (novembre 2026, voir exp_*.py) :
