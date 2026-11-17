@@ -16,3 +16,7 @@ Déjà testé (novembre 2026, voir exp_*.py) :
   8 sets ou plus face à un adversaire qui en a joué 3 au plus gagne environ 5 points de moins que prévu
   (149 matchs ATP, piste à confirmer).
 - Favori à son premier match du tournoi : environ −1 point à l'ATP, aucun effet à la WTA, pas retenu.
+
+5. **Points gagnés derrière la première balle** (idée née aux ATP Finals 2026, Zverev–Shelton) : sur les derniers
+   matchs, prédisent-ils mieux que la moyenne de points gagnés au service sur 12 mois ? Séparer 1re et 2e balle
+   comme critères distincts, et tester une fenêtre courte (5-10 derniers matchs) contre la fenêtre de 12 mois.
