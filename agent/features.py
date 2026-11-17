@@ -262,6 +262,9 @@ class State:
         « Stockholm ». Le Masters du Canada alterne entre Montréal et Toronto : on prend l'édition d'il y a 2 ans
         (même ville)."""
         n = norm(tourney)
+        # Noms différents selon les sources pour le Masters de fin d'année (ATP Finals = Tour Finals)
+        if "finals" in n and "davis" not in n and "next" not in n and ("atp" in n or "nitto" in n or "turin" in n or "tour" in n):
+            n = norm("Tour Finals")
         if any(k in n for k in ("canada", "montreal", "toronto")):
             for ref in (year - 2, year - 4):
                 c = [k for k in self.speed if k[1] == ref and k[0] and any(v in k[0] for v in ("canada", "montreal", "toronto"))]
