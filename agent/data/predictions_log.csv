@@ -28,3 +28,5 @@ date,id,tour,tournoi,joueur_a,joueur_b,proba_a,proba_modele,ajustement,vainqueur
 2026-11-17,2026-11-17-atp-finals-zverev-shelton,atp,ATP Finals,Alexander Zverev,Ben Shelton,0.634,0.634,0,Alexander Zverev,6-2 7-6
 2026-11-18,2026-11-18-atp-finals-alcaraz-medvedev,atp,ATP Finals,Carlos Alcaraz,Daniil Medvedev,0.798,0.798,0,Carlos Alcaraz,6-2 6-4
 2026-11-18,2026-11-18-atp-finals-cobolli-tiafoe,atp,ATP Finals,Flavio Cobolli,Frances Tiafoe,0.371,0.371,0,Frances Tiafoe,7-6 6-0
+2026-11-19,2026-11-19-atp-finals-shelton-jodar,atp,ATP Finals,Ben Shelton,Rafael Jodar,0.633,0.603,3,Ben Shelton,7-6 7-5
+2026-11-19,2026-11-19-atp-finals-zverev-fils,atp,ATP Finals,Alexander Zverev,Arthur Fils,0.697,0.697,0,Alexander Zverev,6-4 7-6
