@@ -34,6 +34,12 @@ Un appel `db_write` doit rester sous 64 Ko : découper si besoin (au plus 10 mat
    - Ne jamais inventer un résultat : si un résultat reste introuvable, laisser `resultat: null` et le signaler dans le résumé du jour.
 3. **Programme du jour** : lister les matchs de **simple** du circuit principal prévus aujourd'hui
    (Grands Chelems, ATP/WTA Finals, Masters 1000, WTA 1000, ATP/WTA 500 et 250 ; pas de Challengers, ITF, UTR ni double).
+   **Compétitions par équipes** : inclure aussi les simples de la Billie Jean King Cup (qualifications, phase finale et
+   play-offs) et de la Coupe Davis (qualifications, groupe mondial I et phase finale), avec `niveau` = "D", `pays` = pays hôte,
+   `tournoi` = « Billie Jean King Cup » ou « Coupe Davis », `tour_tableau` = l'affiche des deux nations (ex. « Play-offs : SUI–CZE »).
+   Ne garder que les simples dont les deux joueurs sont annoncés dans l'ordre des matchs officiel ; une rencontre déjà jouée
+   (score acquis, « dead rubber ») est marquée comme enjeu dans `contexte`. Joueuse ou joueur à domicile : le critère domicile
+   s'applique déjà via `pays`.
    Sources : `fetch_sports_data` (tennis, scores : statut `scheduled`) et les programmes officiels (« order of play ») trouvés par recherche web.
    Pour chaque match : `tour, tournoi, categorie, surface, conditions, tour_tableau, heure` (heure de Paris), `joueur_a, joueur_b`,
    `code_tour` (R128, R64, R32, R16, QF, SF, F ou RR), `niveau` (G Grand Chelem, M Masters/WTA 1000, A 250/500, F Finals),
