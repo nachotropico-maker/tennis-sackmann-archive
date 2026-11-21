@@ -92,6 +92,19 @@ def parse_score(score, best_of):
 
 ROUND_NORM = {"1st Round": "R1", "2nd Round": "R2", "3rd Round": "R3", "4th Round": "R4", "Quarterfinals": "QF",
               "Semifinals": "SF", "The Final": "F", "Round Robin": "RR"}
+def fr_round(r):
+    """Tours écrits en français dans live.csv (ex. « Quart de finale », « Phase de groupes ») -> codes Sackmann."""
+    t = r.lower()
+    if "demi" in t: return "SF"
+    if "quart" in t: return "QF"
+    if "8e" in t or "huiti" in t: return "R16"
+    if "groupe" in t or "poule" in t: return "RR"
+    if t.startswith("finale") or t == "final": return "F"
+    for k, v in (("1er tour", "R1"), ("2e tour", "R2"), ("3e tour", "R3"), ("4e tour", "R4")):
+        if t.startswith(k): return v
+    return r
+
+
 OFFSET_BO3 = {"Q1": -3, "Q2": -2, "Q3": -1, "Q4": -1, "R128": 0, "R64": 1, "R32": 2, "R16": 3, "QF": 4, "SF": 5,
               "F": 6, "RR": 2, "BR": 6, "R1": 0, "R2": 2, "R3": 3, "R4": 4}
 OFFSET_BO5 = {"R128": 1, "R64": 3, "R32": 5, "R16": 7, "QF": 9, "SF": 11, "F": 13}
@@ -146,7 +159,7 @@ def load_all(tour):
     d["surf"] = d.surface.replace({"Carpet": "Hard"})
     for c in ["winner_id", "loser_id"]:
         d[c] = d[c].astype(str).str.replace(r"\.0$", "", regex=True)
-    d["round"] = d["round"].astype(str).map(lambda r: ROUND_NORM.get(r, r))
+    d["round"] = d["round"].astype(str).map(lambda r: ROUND_NORM.get(r, fr_round(r)))
     d.loc[d["round"].str.match(r"^Q\d"), "main"] = False
     d["main"] = d["main"].astype(bool)
     d["tourney_date"] = d.tourney_date.astype(int)

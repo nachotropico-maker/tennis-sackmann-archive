@@ -63,6 +63,20 @@ def score_full(st, poids, a, b, m, day):
         if abs(d) >= 0.003:
             impacts.append({"critere": k, "libelle": LABELS[k], "pts": round(d * 100, 1)})
     impacts.sort(key=lambda x: -abs(x["pts"]))
+    def reprise(pid):
+        """Jours depuis le dernier match, série de défaites en cours, dernier match = finale gagnée (titre)."""
+        h = [x for x in st.hist[pid] if x[0] < day]
+        if not h:
+            return {"jours_sans_match": None, "defaites_de_suite": 0, "titre_au_dernier_match": None}
+        streak = 0
+        for x in reversed(h):
+            if x[1]:
+                break
+            streak += 1
+        last = h[-1]
+        titre = last[9] if (last[10] == "F" and last[1]) else None
+        return {"jours_sans_match": day - last[0], "defaites_de_suite": streak, "titre_au_dernier_match": titre}
+    ra, rb = reprise(a), reprise(b)
     extra = lambda q: {"service_12m": round(q["spw"] * 100, 1), "retour_12m": round(q["rpw"] * 100, 1),
                        "minutes_7j": round(q["min7"] * 100), "sets_7j": q["s7"],
                        "tie_breaks_12m": round(q["tb"] * 100), "sets_decisifs_12m": round(q["dec"] * 100)}
@@ -71,7 +85,7 @@ def score_full(st, poids, a, b, m, day):
     alt = m.get("altitude_m") or tourney_altitude(m.get("tournoi", ""))
     if alt:
         court["altitude_m"] = alt
-    return p, p_elo, impacts, extra(pa), extra(pb), court
+    return p, p_elo, impacts, {**extra(pa), **ra}, {**extra(pb), **rb}, court
 
 SURF_FR = {"Hard": "dur", "Clay": "terre battue", "Grass": "gazon"}
 
@@ -110,6 +124,13 @@ def reasons(a, b, fa, fb, h2h, surf, tournoi, p, today):
             # à l'ATP, un long parcours en Masters 1000 annonce plutôt un bon résultat la semaine suivante.
             r.append(f"{n} sort d'une {'victoire' if lt['resultat'] == 'titre' else 'finale'} à {lt['tournoi']} : "
                      f"plutôt un signe de forme (pas de baisse de régime mesurable dans l'historique).")
+        js = f.get("jours_sans_match")
+        if js is not None and js >= 30:
+            r.append(f"{n} n'a plus joué depuis {js} jours : premier match après une longue pause.")
+        if f.get("defaites_de_suite", 0) >= 3:
+            r.append(f"{n} reste sur {f['defaites_de_suite']} défaites de suite.")
+        if f.get("titre_au_dernier_match") and f["titre_au_dernier_match"] != tournoi.lower():
+            r.append(f"{n} joue son premier match depuis son titre à {f['titre_au_dernier_match'].title()}.")
         if f["matchs_surface"] < 15:
             r.append(f"Peu de matchs de {n} sur cette surface dans la base ({f['matchs_surface']}) : estimation moins fiable.")
     wa, wb = [int(x) for x in h2h["total"].split("-")]
