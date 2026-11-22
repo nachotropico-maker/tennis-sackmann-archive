@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent Foot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Plan : feuille de match au bord du terrain. Vert pelouse, craie blanche, jaune « carton » réservé au pronostic.
+   Mise en page : en-tête + onglets, filtre par compétition, colonne de cartes de match, détail dépliable. */
+:root{
+  --bg:#F4F6F2; --surface:#FFFFFF; --ink:#14201A; --muted:#5A6860; --line:#DCE4DD;
+  --accent:#1F6E3A; --accent-soft:#E3F0E6; --pick:#F0B400; --draw:#8A94A6;
+  --good:#2C7A4B; --bad:#B0442D;
+  --display:"Barlow Condensed", "Arial Narrow", sans-serif;
+  --body:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0D1410; --surface:#152019; --ink:#E4ECE6; --muted:#97A69C; --line:#25332A;
+    --accent:#6FCB8C; --accent-soft:#1B2B21; --pick:#F5C83A; --draw:#7B8596;
+    --good:#6CC28E; --bad:#E57F67; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0D1410; --surface:#152019; --ink:#E4ECE6; --muted:#97A69C; --line:#25332A;
+  --accent:#6FCB8C; --accent-soft:#1B2B21; --pick:#F5C83A; --draw:#7B8596;
+  --good:#6CC28E; --bad:#E57F67; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--body);font-variant-numeric:tabular-nums}
+a{color:var(--accent)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:980px;margin:0 auto;padding:20px 16px 64px;display:flex;flex-direction:column;gap:18px}
+header.top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:12px}
+h1{font:700 34px/1 var(--display);letter-spacing:.5px;margin:0;text-transform:uppercase}
+.sub{color:var(--muted);font-size:13px;margin-top:4px}
+.fresh{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:3px 10px;font-size:12.5px;color:var(--muted)}
+.chip b{color:var(--ink);font-weight:600}
+nav.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);overflow-x:auto}
+nav.tabs a{font:600 17px/1 var(--display);text-transform:uppercase;letter-spacing:.6px;text-decoration:none;color:var(--muted);padding:10px 12px;border-bottom:3px solid transparent;white-space:nowrap}
+nav.tabs a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--accent)}
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.filters{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px}
+.filters button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 11px;cursor:pointer;font-size:13px;white-space:nowrap}
+.filters button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--surface);font-weight:600}
+.daynav{display:flex;align-items:center;gap:8px}
+.iconbtn{border:1px solid var(--line);background:var(--surface);border-radius:8px;width:34px;height:34px;cursor:pointer;display:grid;place-items:center}
+.iconbtn:disabled{opacity:.35;cursor:default}
+.daytitle{font:600 22px/1.1 var(--display);text-transform:uppercase;letter-spacing:.4px;min-width:200px;text-align:center}
+.summary{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;display:grid;gap:10px}
+.summary p{margin:0;max-width:68ch}
+.kpis{display:flex;flex-wrap:wrap;gap:18px}
+.kpi .v{font:700 26px/1 var(--display)}
+.kpi .l{font-size:12px;color:var(--muted)}
+.group{display:grid;gap:10px}
+.group h2{font:600 18px/1 var(--display);text-transform:uppercase;letter-spacing:.5px;margin:6px 0 0;color:var(--muted)}
+.cards{display:grid;gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.card .head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;padding:9px 14px;border-bottom:1px solid var(--line);font-size:13px;color:var(--muted)}
+.card .head .t{color:var(--ink);font-weight:600}
+.body{padding:12px 14px;display:grid;gap:10px}
+.teams{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center}
+.team{display:grid;gap:2px}
+.team.r{text-align:right}
+.team .name{font-weight:600;font-size:16px;line-height:1.25}
+.team .name.fav{font-weight:700}
+.team .sub2{font-size:12px;color:var(--muted)}
+.vs{font:700 22px/1 var(--display);color:var(--muted);text-align:center;min-width:54px}
+.vs.done{color:var(--ink)}
+.tri{display:grid;gap:4px}
+.tri .bar{height:10px;border-radius:999px;display:flex;overflow:hidden;background:var(--line)}
+.tri .bar span{display:block;height:100%}
+.tri .lab{display:grid;grid-template-columns:1fr auto 1fr;font-size:13px}
+.tri .lab span:nth-child(2){text-align:center}
+.tri .lab span:last-child{text-align:right}
+.tri .lab b{font:700 19px/1 var(--display)}
+.s1{background:var(--accent)} .sN{background:var(--draw);opacity:.6} .s2{background:var(--accent);opacity:.55}
+.s1.pk,.s2.pk,.sN.pk{background:var(--pick);opacity:1}
+.meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+.pills{display:flex;flex-wrap:wrap;gap:6px}
+.pill{font-size:12px;font-weight:600;padding:3px 9px;border-radius:999px;border:1px solid var(--line)}
+.pill.pk{background:color-mix(in srgb,var(--pick) 16%,transparent);border-color:color-mix(in srgb,var(--pick) 45%,transparent)}
+.res{font-size:12.5px;font-weight:600;padding:3px 9px;border-radius:999px}
+.res.ok{background:color-mix(in srgb,var(--good) 18%,transparent);color:var(--good)}
+.res.ko{background:color-mix(in srgb,var(--bad) 16%,transparent);color:var(--bad)}
+.res.wait{color:var(--muted);border:1px dashed var(--line)}
+details.why{border-top:1px solid var(--line)}
+details.why summary{cursor:pointer;padding:10px 14px;font-weight:600;font-size:14px;color:var(--accent);list-style:none;display:flex;align-items:center;gap:6px}
+details.why summary::-webkit-details-marker{display:none}
+details.why summary::before{content:"+";font:700 18px/1 var(--display);width:14px}
+details.why[open] summary::before{content:"–"}
+.why .in{padding:0 14px 14px;display:grid;gap:12px}
+.ctx{list-style:none;margin:0;padding:10px 12px;display:grid;gap:6px;background:color-mix(in srgb,var(--accent) 7%,transparent);border-radius:10px;font-size:14px}
+.ctx li{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.ctag{font:600 11px/1 var(--display);text-transform:uppercase;letter-spacing:.5px;padding:4px 6px;border-radius:5px;border:1px solid var(--line);color:var(--muted);flex:none}
+.ctx a{color:var(--accent);font-size:12.5px}
+.lecture{margin:0;max-width:70ch}
+.why ul{margin:0;padding-left:18px;display:grid;gap:4px}
+.adj{margin:0;font-size:13.5px;border-left:3px solid var(--pick);padding-left:10px}
+.form{display:inline-flex;gap:3px}
+.form i{font:600 11px/18px var(--body);font-style:normal;width:18px;text-align:center;border-radius:4px;color:#fff}
+.form .V{background:var(--good)} .form .N{background:var(--draw)} .form .D{background:var(--bad)}
+.ftab{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left}
+th{font-weight:600;color:var(--muted);font-size:12.5px}
+td.n,th.n{text-align:right}
+.note{font-size:12.5px;color:var(--muted)}
+.empty{background:var(--surface);border:1px dashed var(--line);border-radius:12px;padding:28px 18px;text-align:center;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;gap:10px}
+.panel h2{font:600 20px/1.1 var(--display);text-transform:uppercase;letter-spacing:.4px;margin:0;text-wrap:balance}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.tile .v{font:700 32px/1 var(--display)}
+.tile .l{font-size:12.5px;color:var(--muted);margin-top:4px}
+.mini{height:6px;background:var(--line);border-radius:999px;overflow:hidden}
+.mini span{display:block;height:100%;background:var(--accent)}
+.steps{display:grid;gap:10px;margin:0;padding:0;list-style:none;counter-reset:s}
+.steps li{display:grid;grid-template-columns:30px 1fr;gap:10px;counter-increment:s}
+.steps li::before{content:counter(s);font:700 20px/30px var(--display);text-align:center;background:var(--accent-soft);border-radius:8px;height:30px}
+.prose p{margin:0 0 8px;max-width:70ch}
+.up{color:var(--good)} .down{color:var(--bad)}
+.loading{color:var(--muted);font-size:13px}
+@media (max-width:520px){.daytitle{min-width:0;font-size:19px}.team .name{font-size:15px}}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="var(--surface)" stroke="var(--ink)" stroke-width="2"/><path d="M20 11l7 5-2.7 8.3h-8.6L13 16z" fill="var(--ink)"/><path d="M20 11V3M27 16l7.5-3M24.3 24.3l4.7 6.7M15.7 24.3L11 31M13 16l-7.5-3" stroke="var(--ink)" stroke-width="1.6"/></svg>
+      <div>
+        <h1>Agent Foot</h1>
+        <div class="sub">Pronostics expliqués · 9 championnats et 3 coupes d'Europe · chaque matin</div>
+      </div>
+    </div>
+    <div class="fresh" id="fresh"><span class="chip">Chargement des données…</span></div>
+  </header>
+
+  <nav class="tabs" aria-label="Sections">
+    <a href="#jour" data-view="jour">Matchs du jour</a>
+    <a href="#bilan" data-view="bilan">Bilan</a>
+    <a href="#classements" data-view="classements">Classements Elo</a>
+    <a href="#methode" data-view="methode">Méthode</a>
+  </nav>
+
+  <main id="view" aria-live="polite"></main>
+</div>
+
+<script>
+const COMPS = [["E0","Premier League"],["SP1","Liga"],["I1","Serie A"],["F1","Ligue 1"],["D1","Bundesliga"],["T1","Süper Lig"],["N1","Eredivisie"],["P1","Liga Portugal"],["B1","Pro League"],["UCL","Ligue des champions"],["UEL","Ligue Europa"],["UECL","Ligue Conférence"]];
+const CN = Object.fromEntries(COMPS);
+const MONTHS = ["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."];
+const DAYS = ["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"];
+const state = {view:"jour", comp:"all", day:null, days:[], matches:{}, bilan:null, modele:null, elo:[], rankComp:"E0", db:null, err:null, loaded:false};
+
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const pct = x => x == null ? "–" : Math.round(x * 100) + " %";
+function fmtDay(iso){ if(!iso) return ""; const [y,m,d] = iso.split("-").map(Number); const dt = new Date(y,m-1,d); return `${DAYS[dt.getDay()]} ${d} ${MONTHS[m-1]}`; }
+
+function render(){
+  document.querySelectorAll("nav.tabs a").forEach(a => a.setAttribute("aria-current", a.dataset.view === state.view ? "page" : "false"));
+  const v = document.getElementById("view");
+  renderFresh();
+  if(!state.loaded){ v.innerHTML = `<p class="loading">${state.err ? esc(state.err) : "Chargement des pronostics…"}</p>`; return; }
+  v.innerHTML = ({jour:viewDay, bilan:viewBilan, classements:viewRank, methode:viewMethode}[state.view] || viewDay)();
+  bind();
+}
+
+function renderFresh(){
+  const f = document.getElementById("fresh"), m = state.modele;
+  if(!m){ f.innerHTML = `<span class="chip">${state.loaded ? "Pas encore de données" : "Chargement des données…"}</span>`; return; }
+  f.innerHTML = `<span class="chip">Résultats intégrés jusqu'au <b>${esc(m.donnees_jusqu_a || "")}</b></span>
+    <span class="chip">Mise à jour <b>${esc(m.mise_a_jour || "")}</b></span>
+    <span class="chip">Prochaine : <b>${esc(m.prochaine || "chaque matin, 8 h 50")}</b></span>`;
+}
+
+function viewDay(){
+  if(!state.days.length) return `<div class="empty">Aucun pronostic enregistré pour l'instant. La première mise à jour automatique arrive demain matin.</div>`;
+  const i = state.days.findIndex(d => d.date === state.day);
+  const d = state.days[i] || state.days[0];
+  const all = state.matches[d.date] || [];
+  const present = COMPS.filter(([k]) => all.some(m => m.comp === k));
+  let ms = all.filter(m => state.comp === "all" || m.comp === state.comp);
+  ms.sort((a,b) => (a.heure||"").localeCompare(b.heure||""));
+  const played = ms.filter(m => m.resultat && m.resultat.score);
+  const ok = played.filter(m => m.correct).length;
+  const groups = COMPS.map(([k,l]) => [k, l, ms.filter(m => m.comp === k)]).filter(g => g[2].length);
+  return `
+  <div class="toolbar">
+    <div class="daynav">
+      <button class="iconbtn" id="prev" aria-label="Jour précédent" ${i >= state.days.length-1 ? "disabled" : ""}>‹</button>
+      <div class="daytitle">${esc(fmtDay(d.date))}</div>
+      <button class="iconbtn" id="next" aria-label="Jour suivant" ${i <= 0 ? "disabled" : ""}>›</button>
+    </div>
+  </div>
+  ${present.length > 1 ? `<div class="filters" role="group" aria-label="Compétition"><button data-comp="all" aria-pressed="${state.comp==="all"}">Toutes</button>${present.map(([k,l]) => `<button data-comp="${k}" aria-pressed="${state.comp===k}">${esc(l)}</button>`).join("")}</div>` : ""}
+  <section class="summary">
+    ${d.resume ? `<p>${esc(d.resume)}</p>` : ""}
+    <div class="kpis">
+      <div class="kpi"><div class="v">${ms.length}</div><div class="l">matchs analysés</div></div>
+      <div class="kpi"><div class="v">${ms.filter(m => (m.proba_favori||0) < .45).length}</div><div class="l">matchs très ouverts</div></div>
+      <div class="kpi"><div class="v">${played.length ? ok + "/" + played.length : "–"}</div><div class="l">pronostics justes</div></div>
+    </div>
+  </section>
+  ${groups.length ? groups.map(([k,l,g]) => `<section class="group"><h2>${esc(l)}</h2><div class="cards">${g.map(card).join("")}</div></section>`).join("") : `<div class="empty">Pas de match ce jour-là.</div>`}`;
+}
+
+function formHtml(list){
+  if(!list || !list.length) return "–";
+  return `<span class="form">${list.map(x => `<i class="${esc(x.res)}" title="${esc(x.date)} · ${esc(x.lieu === "dom" ? "contre" : "à")} ${esc(x.adv)} · ${esc(x.score)}">${esc(x.res)}</i>`).join("")}</span>`;
+}
+
+function card(m){
+  const pk = m.pronostic;
+  const fd = (m.facteurs||{}).dom || {}, fe = (m.facteurs||{}).ext || {};
+  const done = m.resultat && m.resultat.score;
+  const r = m.annule ? `<span class="res wait">${esc(m.resultat_texte || "Match reporté")}</span>`
+    : done ? `<span class="res ${m.correct ? "ok" : "ko"}">${m.correct ? "✓ Pronostic juste" : "✗ Pronostic raté"}</span>`
+    : `<span class="res wait">Résultat en attente</span>`;
+  const rk = f => f.rang ? `${f.rang}e · ${f.pts} pts` : `Elo ${f.elo ?? "–"}`;
+  const issue = pk === "1" ? m.dom_affiche : pk === "2" ? m.ext_affiche : "Match nul";
+  const sr = m.repere_sportradar;
+  const CTAG = {physique: "Effectif", mental: "Confiance", enjeu: "Enjeu", logistique: "Calendrier", coach: "Entraîneur"};
+  const safe = u => /^https:\/\//.test(u || "") ? u : "";
+  const ctx = (m.contexte||[]).length ? `<ul class="ctx" aria-label="Contexte vérifié">${m.contexte.map(c => `<li><span class="ctag">${esc(CTAG[c.type] || c.type || "Info")}</span><span><b>${esc(c.equipe || "")}</b>${c.equipe ? " : " : ""}${esc(c.fait)}${safe(c.source) ? ` <a href="${esc(safe(c.source))}" target="_blank" rel="noopener">source</a>` : ""}</span></li>`).join("")}</ul>` : "";
+  const facts = [
+    ["Classement", fd.rang ? fd.rang + "e" : "–", fe.rang ? fe.rang + "e" : "–"],
+    ["Points (matchs joués)", fd.pts != null ? `${fd.pts} (${fd.j})` : "–", fe.pts != null ? `${fe.pts} (${fe.j})` : "–"],
+    ["Bilan V-N-D", fd.v != null ? `${fd.v}-${fd.n}-${fd.d}` : "–", fe.v != null ? `${fe.v}-${fe.n}-${fe.d}` : "–"],
+    ["Buts pour / contre", fd.bp != null ? `${fd.bp} / ${fd.bc}` : "–", fe.bp != null ? `${fe.bp} / ${fe.bc}` : "–"],
+    ["Elo actuel", fd.elo, fe.elo],
+    ["Évolution de l'Elo depuis septembre", fd.elo_septembre != null ? sign(fd.elo - fd.elo_septembre) : "–", fe.elo_septembre != null ? sign(fe.elo - fe.elo_septembre) : "–"],
+    ["Jours de repos", fd.jours_repos ?? "–", fe.jours_repos ?? "–"],
+  ];
+  const tri = (k, p, cls) => `<span class="${cls}${pk === k ? " pk" : ""}" style="width:${p*100}%"></span>`;
+  return `<article class="card">
+    <div class="head"><span><span class="t">${esc(m.competition)}</span>${m.tour ? " · " + esc(m.tour) : ""}</span><span>${esc(m.heure || "")}</span></div>
+    <div class="body">
+      <div class="teams">
+        <div class="team"><span class="name ${pk==="1"?"fav":""}">${esc(m.dom_affiche)}</span><span class="sub2">${esc(rk(fd))}</span></div>
+        <div class="vs ${done ? "done" : ""}">${done ? esc(m.resultat.score) : "–"}</div>
+        <div class="team r"><span class="name ${pk==="2"?"fav":""}">${esc(m.ext_affiche)}</span><span class="sub2">${esc(rk(fe))}</span></div>
+      </div>
+      <div class="tri">
+        <div class="bar" role="img" aria-label="Victoire ${esc(m.dom_affiche)} ${pct(m.p1)}, nul ${pct(m.pN)}, victoire ${esc(m.ext_affiche)} ${pct(m.p2)}">${tri("1", m.p1, "s1")}${tri("N", m.pN, "sN")}${tri("2", m.p2, "s2")}</div>
+        <div class="lab"><span>1 · <b>${pct(m.p1)}</b></span><span>N · <b>${pct(m.pN)}</b></span><span><b>${pct(m.p2)}</b> · 2</span></div>
+      </div>
+      <div class="meta">
+        <div class="pills"><span class="pill pk">Pronostic : ${esc(issue)}</span><span class="pill">${esc(m.confiance)}</span><span class="pill">Score probable ${esc(m.score_probable)}</span><span class="pill">+2,5 buts ${pct(m.plus_2_5)}</span></div>
+        ${r}
+      </div>
+      ${ctx}
+    </div>
+    <details class="why">
+      <summary>Pourquoi ce pronostic ?</summary>
+      <div class="in">
+        ${m.lecture ? `<p class="lecture">${esc(m.lecture)}</p>` : ""}
+        ${m.ajustement && m.ajustement_raison ? `<p class="adj"><b>Ajustement de l'agent (${m.ajustement > 0 ? "+" : "−"}${Math.abs(m.ajustement)} pts pour ${esc(m.dom_affiche)}) :</b> ${esc(m.ajustement_raison)}</p>` : ""}
+        ${(m.raisons||[]).length ? `<ul>${m.raisons.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
+        <div class="ftab"><table>
+          <thead><tr><th>Critère</th><th class="n">${esc(m.dom_affiche)}</th><th class="n">${esc(m.ext_affiche)}</th></tr></thead>
+          <tbody>${facts.map(([l,a,b]) => `<tr><td>${l}</td><td class="n">${esc(a ?? "–")}</td><td class="n">${esc(b ?? "–")}</td></tr>`).join("")}
+          <tr><td>5 derniers matchs suivis</td><td class="n">${formHtml(fd.derniers)}</td><td class="n">${formHtml(fe.derniers)}</td></tr>
+          <tr><td>Buts attendus</td><td class="n">${esc(m.buts_dom)}</td><td class="n">${esc(m.buts_ext)}</td></tr></tbody>
+        </table></div>
+        ${sr ? `<p class="note">Repère externe (probabilités SportRadar) : 1 ${pct(sr.p1)} · N ${pct(sr.pN)} · 2 ${pct(sr.p2)}.</p>` : ""}
+      </div>
+    </details>
+  </article>`;
+}
+const sign = x => (x > 0 ? "+" : x < 0 ? "−" : "") + Math.abs(Math.round(x));
+
+function viewBilan(){
+  const b = state.bilan, t = (state.modele || {}).test || {};
+  let live = `<div class="empty">Le bilan en conditions réelles commence avec les premiers résultats enregistrés.</div>`;
+  if(b && b.global && b.global.matchs){
+    const g = b.global;
+    live = `<div class="tiles">
+      <div class="tile"><div class="v">${pct(g.taux)}</div><div class="l">pronostics justes (${g.reussis}/${g.matchs})</div></div>
+      <div class="tile"><div class="v">${g.scores_exacts ?? 0}</div><div class="l">scores exacts trouvés</div></div>
+      <div class="tile"><div class="v">${g.rps != null ? g.rps.toFixed(3) : "–"}</div><div class="l">erreur moyenne (RPS, plus bas = mieux)</div></div>
+    </div>
+    ${(b.par_comp||[]).length ? `<div class="panel"><h2>Par compétition</h2><div class="ftab"><table><thead><tr><th>Compétition</th><th class="n">Matchs</th><th class="n">Justes</th><th class="n">Taux</th></tr></thead><tbody>${b.par_comp.map(r => `<tr><td>${esc(CN[r.comp] || r.comp)}</td><td class="n">${r.matchs}</td><td class="n">${r.reussis}</td><td class="n">${pct(r.taux)}</td></tr>`).join("")}</tbody></table></div></div>` : ""}`;
+  }
+  const ref = t.matchs ? `<div class="panel"><h2>Référence : test sur l'historique</h2>
+    <p class="note">Modèle appris sur 2012-2022, puis testé sur ${t.matchs.toLocaleString("fr-FR")} matchs des saisons ${esc((t.saisons||[]).join(", "))}, jamais vus.</p>
+    <div class="ftab"><table><tbody>
+      <tr><td><b>Agent Foot (Elo + avantage du terrain)</b></td><td class="n"><b>${pct(t.reussite_modele)}</b></td></tr>
+      <tr><td>Bookmakers, mêmes matchs</td><td class="n">${pct(t.reussite_bookmakers)}</td></tr>
+      <tr><td>« L'équipe à domicile gagne toujours »</td><td class="n">${pct(t.reussite_toujours_domicile)}</td></tr>
+      <tr><td>Part des matchs nuls</td><td class="n">${pct(t.taux_nuls)}</td></tr>
+    </tbody></table></div>
+    ${t.par_ligue ? `<div class="ftab"><table><thead><tr><th>Championnat</th><th class="n">Réussite</th></tr></thead><tbody>${Object.entries(t.par_ligue).map(([k,v]) => `<tr><td>${esc(k)}</td><td class="n">${pct(v)}</td></tr>`).join("")}</tbody></table></div>` : ""}
+    <p class="note">Au football, avec trois issues possibles et un quart de nuls, 50 à 55 % de bons pronostics est le niveau des meilleurs modèles.</p></div>` : "";
+  return live + ref;
+}
+
+function viewRank(){
+  const rows = state.elo.filter(r => r.ligue === state.rankComp).sort((a,b) => b.elo - a.elo);
+  const tabs = COMPS.slice(0, 9);
+  if(!state.elo.length) return `<div class="empty">Classements indisponibles pour l'instant.</div>`;
+  const max = rows.length ? rows[0].elo : 1, min = rows.length ? rows[rows.length-1].elo : 0;
+  return `<div class="filters" role="group" aria-label="Championnat">${tabs.map(([k,l]) => `<button data-rc="${k}" aria-pressed="${state.rankComp===k}">${esc(l)}</button>`).join("")}</div>
+    <div class="panel ftab"><table>
+      <thead><tr><th class="n">#</th><th>Club</th><th class="n">Elo</th><th style="width:34%"></th><th class="n">Depuis sept.</th></tr></thead>
+      <tbody>${rows.map((r,i) => `<tr><td class="n">${i+1}</td><td>${esc(r.nom || r.club)}</td><td class="n"><b>${Math.round(r.elo)}</b></td>
+        <td><div class="mini"><span style="width:${Math.max(4,(r.elo-min)/Math.max(1,max-min)*100)}%"></span></div></td>
+        <td class="n ${r.evol > 0 ? "up" : r.evol < 0 ? "down" : ""}">${sign(r.evol)}</td></tr>`).join("")}</tbody>
+    </table></div>
+    <p class="note">Échelle Elo commune à toute l'Europe (type ClubElo) : on peut comparer un club turc et un club anglais, ce qui sert pour les coupes d'Europe.</p>`;
+}
+
+function viewMethode(){
+  return `<div class="grid2">
+    <section class="panel prose"><h2>Le socle : l'Elo des clubs</h2>
+      <p>Chaque club a une note Elo sur une échelle commune à toute l'Europe. Elle monte après une victoire, d'autant plus que l'adversaire était fort et que l'écart de buts est large, et baisse après une défaite.</p>
+      <p>L'avantage du terrain vaut environ 65 points d'Elo, soit 7 à 8 points de pourcentage de chances de victoire en plus.</p>
+    </section>
+    <section class="panel prose"><h2>Trois issues, pas deux</h2>
+      <p>À partir de l'écart d'Elo, le modèle donne les chances de victoire à domicile, de nul et de victoire à l'extérieur, avec un réglage propre à chaque championnat. Il en déduit aussi les buts attendus, le score le plus probable et la probabilité de plus de 2,5 buts.</p>
+      <p>Le nul est rarement l'issue la plus probable, même quand il arrive une fois sur quatre : c'est normal, et c'est pour ça que le football est plus dur à prévoir que le tennis.</p>
+    </section>
+    <section class="panel prose"><h2>L'ajustement de l'agent</h2>
+      <p>Blessés et suspendus, changement d'entraîneur, fatigue d'un match européen en semaine, enjeu de fin de saison : l'agent les vérifie chaque matin et peut ajuster les chances de 5 points au maximum, toujours avec une source affichée.</p>
+    </section>
+    <section class="panel"><h2>La mise à jour de chaque matin</h2>
+      <ol class="steps">
+        <li><span>Récupère les résultats de la veille et note chaque pronostic juste ou raté.</span></li>
+        <li><span>Met à jour l'Elo des clubs avec ces résultats.</span></li>
+        <li><span>Récupère le programme du jour des 12 compétitions suivies.</span></li>
+        <li><span>Calcule les probabilités, vérifie l'actualité (blessés, suspendus, entraîneurs) et ajuste si besoin.</span></li>
+        <li><span>Rédige l'explication de chaque match et met à jour cette page.</span></li>
+      </ol>
+    </section>
+    <section class="panel prose"><h2>Limites connues</h2>
+      <p>Les résultats de septembre à novembre 2026 ont été intégrés à partir des classements (points et buts), pas match par match. Les clubs hors des 9 championnats suivis (par exemple en Ligue des champions) ont parfois un niveau estimé. Pas encore de données de buts attendus (xG) ni de compositions d'équipe.</p>
+    </section>
+    <section class="panel prose"><h2>Sources</h2>
+      <p>Historique et Elo : base « Club Football Match Data » (football-data.co.uk et ClubElo). Classements et résultats : ESPN, flux de scores SportRadar. Actualité : pages officielles des clubs et presse sportive.</p>
+      <p class="note">Ces pronostics servent à comprendre le football. Ce ne sont pas des conseils de pari.</p>
+    </section>
+  </div>`;
+}
+
+function bind(){
+  document.querySelectorAll("[data-comp]").forEach(b => b.onclick = () => { state.comp = b.dataset.comp; render(); });
+  document.querySelectorAll("[data-rc]").forEach(b => b.onclick = () => { state.rankComp = b.dataset.rc; render(); });
+  const p = document.getElementById("prev"), n = document.getElementById("next");
+  const i = state.days.findIndex(d => d.date === state.day);
+  if(p) p.onclick = () => { if(i < state.days.length-1){ state.day = state.days[i+1].date; state.comp = "all"; loadMatches(state.day); } };
+  if(n) n.onclick = () => { if(i > 0){ state.day = state.days[i-1].date; state.comp = "all"; loadMatches(state.day); } };
+}
+
+function route(){
+  const h = (location.hash || "#jour").slice(1);
+  state.view = ["jour","bilan","classements","methode"].includes(h) ? h : "jour";
+  render();
+}
+window.addEventListener("hashchange", route);
+
+const subs = {};
+function loadMatches(date){
+  render();
+  if(state.matches[date] || subs[date] || !state.db) return;
+  subs[date] = state.db.collection("matchs").where("date", "==", date).onSnapshot(
+    s => { state.matches[date] = s.docs.map(d => d.data()); render(); },
+    () => { state.matches[date] = []; render(); });
+}
+
+(async function init(){
+  route();
+  const timer = setTimeout(() => { if(!state.loaded){ state.err = "Les données ne répondent pas encore. Réessaie dans un instant."; render(); } }, 10000);
+  let db = null;
+  try { db = await claude.use("db"); } catch(e) { db = null; }
+  if(!db){ clearTimeout(timer); state.err = "Connecte-toi à claude.ai pour voir les pronostics."; render(); return; }
+  state.db = db;
+  db.collection("jours").orderBy("date", "desc").limit(120).onSnapshot(s => {
+    clearTimeout(timer);
+    state.days = s.docs.map(d => d.data());
+    if(!state.day || !state.days.some(d => d.date === state.day)) state.day = state.days[0] && state.days[0].date;
+    state.loaded = true;
+    if(state.day) loadMatches(state.day); else render();
+  }, e => { clearTimeout(timer); state.loaded = true; render(); });
+  db.doc("meta/bilan").onSnapshot(s => { state.bilan = s.exists ? s.data() : null; render(); }, () => {});
+  db.doc("meta/modele").onSnapshot(s => { state.modele = s.exists ? s.data() : null; render(); }, () => {});
+  db.doc("classements/elo").onSnapshot(s => { state.elo = s.exists ? (s.data().lignes || []) : []; if(state.view === "classements") render(); }, () => {});
+})();
+</script>
+</body>
+</html>
