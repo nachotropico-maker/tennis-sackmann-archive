@@ -117,6 +117,13 @@ def un(m):
         raisons.append("Niveau d'un des clubs estimé (club hors des 9 championnats suivis) : pronostic moins fiable.")
     lecture = (f"{'Victoire de ' + fav if fav else 'Nul'} ({pct(pmax)}). Score le plus probable : {p['score_probable']}. "
                f"Plus de 2,5 buts : {pct(p['plus_2_5'])}.")
+    # textes avec les noms affichés, pas les noms internes Elo
+    nd, ne = m["dom"], m["ext"]
+    def aff(t):
+        return t.replace(cd, nd).replace(ce, ne) if cd != ce else t
+    raisons = [aff(x) for x in raisons]
+    lecture = aff(lecture)
+    fav = nd if prono == "1" else ne if prono == "2" else None
     return {
         "id": m["id"], "date": m["date"], "heure": m.get("heure"), "comp": comp, "competition": NOM_COMP.get(comp, comp),
         "tour": m.get("tour"), "dom": cd, "ext": ce, "dom_affiche": m["dom"], "ext_affiche": m["ext"],
