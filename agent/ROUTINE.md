@@ -47,6 +47,9 @@ Un appel `db_write` doit rester sous 64 Ko : découper si besoin (au plus 10 mat
      et un premier match après un titre ; compléter dans `contexte` avec la raison de la pause (blessure, fin de saison…)
      et la dernière déclaration du joueur ;
    - **la sélection** : qui joue n° 1 ou n° 2, remplacement de dernière minute, joueur aligné en simple et en double le même jour.
+   - **les résultats de la veille** : pour une rencontre sur plusieurs jours, chercher les scores des simples de la veille
+     (site officiel BJK Cup / Coupe Davis, Flashscore, Tennis Majors) et les ajouter à `data/{tour}_live.csv` avant le calcul ;
+     indiquer dans `contexte` le score de la rencontre (ex. « La Thaïlande mène 2-0 ») et si le match peut être sans enjeu.
    Sources : `fetch_sports_data` (tennis, scores : statut `scheduled`) et les programmes officiels (« order of play ») trouvés par recherche web.
    Pour chaque match : `tour, tournoi, categorie, surface, conditions, tour_tableau, heure` (heure de Paris), `joueur_a, joueur_b`,
    `code_tour` (R128, R64, R32, R16, QF, SF, F ou RR), `niveau` (G Grand Chelem, M Masters/WTA 1000, A 250/500, F Finals),
