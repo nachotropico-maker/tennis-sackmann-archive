@@ -61,6 +61,10 @@ Un appel `db_write` doit rester sous 64 Ko : découper si besoin (au plus 10 mat
    - **les résultats de la veille** : pour une rencontre sur plusieurs jours, chercher les scores des simples de la veille
      (site officiel BJK Cup / Coupe Davis, Flashscore, Tennis Majors) et les ajouter à `data/{tour}_live.csv` avant le calcul ;
      indiquer dans `contexte` le score de la rencontre (ex. « La Thaïlande mène 2-0 ») et si le match peut être sans enjeu.
+   - **simples conditionnels** : si une équipe mène 2-0 et que le double se joue avant les simples, chaque simple du jour
+     est marqué `conditionnel: true` avec la mention « Ne se joue avec ces joueuses que si le double ne qualifie pas X ».
+     Si le double qualifie l'équipe, les simples prévus sont annulés (les remplaçantes jouent des matchs sans enjeu) :
+     ne pas les compter dans le bilan. Leçon du 22/11/2026 : Thaïlande 3-0 après le double, Tararudee et Teichmann n'ont pas joué.
    Sources : `fetch_sports_data` (tennis, scores : statut `scheduled`) et les programmes officiels (« order of play ») trouvés par recherche web.
    Pour chaque match : `tour, tournoi, categorie, surface, conditions, tour_tableau, heure` (heure de Paris), `joueur_a, joueur_b`,
    `code_tour` (R128, R64, R32, R16, QF, SF, F ou RR), `niveau` (G Grand Chelem, M Masters/WTA 1000, A 250/500, F Finals),
