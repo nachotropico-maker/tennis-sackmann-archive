@@ -24,8 +24,25 @@ def append_live(r):
            "winner_id": r["id_vainqueur"], "winner_name": win,
            "loser_id": r["id_perdant"], "loser_name": los, "score": r.get("score", ""),
            "round": r.get("tour_tableau", "")}
-    df = pd.DataFrame([row])
-    df.to_csv(f, mode="a", header=not os.path.exists(f), index=False)
+    # Statistiques du match (format SportRadar de fetch_sports_data game_stats), facultatives :
+    # r["stats_a"] / r["stats_b"] = dictionnaires « statistics » de joueur_a / joueur_b.
+    sa, sb = r.get("stats_a"), r.get("stats_b")
+    if sa and sb:
+        sw, sl = (sa, sb) if r["vainqueur"] == r["joueur_a"] else (sb, sa)
+        row.update(sackmann_stats("w", sw, sl)); row.update(sackmann_stats("l", sl, sw))
+    old = pd.read_csv(f, low_memory=False) if os.path.exists(f) else pd.DataFrame()
+    pd.concat([old, pd.DataFrame([row])], ignore_index=True).to_csv(f, index=False)
+
+
+def sackmann_stats(p, s, opp):
+    """Statistiques SportRadar -> colonnes Sackmann (w_ / l_)."""
+    g = lambda d, k: int(d.get(k, 0) or 0)
+    svpt = g(s, "service_points_won") + g(s, "service_points_lost")
+    faced = g(opp, "total_breakpoints")
+    return {f"{p}_ace": g(s, "aces"), f"{p}_df": g(s, "double_faults"), f"{p}_svpt": svpt,
+            f"{p}_1stIn": g(s, "first_serve_successful"), f"{p}_1stWon": g(s, "first_serve_points_won"),
+            f"{p}_2ndWon": g(s, "second_serve_points_won"),
+            f"{p}_bpFaced": faced, f"{p}_bpSaved": faced - g(opp, "breakpoints_won")}
 
 
 def main(path):

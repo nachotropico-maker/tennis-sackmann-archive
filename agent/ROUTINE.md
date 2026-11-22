@@ -28,7 +28,16 @@ Un appel `db_write` doit rester sous 64 Ko : découper si besoin (au plus 10 mat
    - Écrire `resultat: {vainqueur, score}` et `correct` (le favori a-t-il gagné ?) dans chaque document `matchs/{id}`.
    - Abandon en cours de match : compter le vainqueur officiel et ajouter « ab. » au score. Forfait avant le match : `resultat: {vainqueur: null, score: "forfait"}`, `correct: null`.
    - Écrire ces résultats dans un fichier JSON (champs : `date, id, tour, tournoi, surface, tour_tableau, joueur_a, joueur_b, proba_a, proba_modele, ajustement, vainqueur, score` ; le score au format « 6-4 3-6 7-6 », avec « RET » en cas d'abandon)
-     et lancer `python agent/record.py fichier.json`. Cela ajoute les matchs à `agent/data/{tour}_live.csv` (pour l'Elo),
+     et lancer `python agent/record.py fichier.json`.
+   - **Statistiques du match** (à faire pour chaque match terminé) : `fetch_sports_data` (tennis, `scores`) donne l'identifiant
+     SportRadar du match (`sr:sport_event:…`), puis `fetch_sports_data` (`game_stats`, avec cet identifiant) donne
+     `statistics.totals.competitors[].statistics` (aces, doubles fautes, 1res balles passées, points gagnés derrière la 1re
+     et la 2e balle, balles de break obtenues et converties). Ajouter dans le JSON pour `record.py` les champs `stats_a` et
+     `stats_b` = ces dictionnaires pour joueur_a et joueur_b : les statistiques entrent alors dans le modèle (service,
+     retour, balles de break). Écrire aussi dans `matchs/{id}` un champ `stats` =
+     `{a: {pct_1re, pts_1re, pts_2e, aces, df, bp_sauvees, bp_converties}, b: {…}}` (pourcentages entiers, balles de break
+     sous la forme « 5/9 »). Si l'outil n'est pas disponible ou ne couvre pas le match, chercher les stats sur le site
+     officiel ATP/WTA/BJK Cup/Coupe Davis par recherche web ; sinon laisser sans stats (ne jamais les inventer). Cela ajoute les matchs à `agent/data/{tour}_live.csv` (pour l'Elo),
      au journal `agent/data/predictions_log.csv`, et recalcule `agent/data/stats.json`.
    - Écrire le contenu de `agent/data/stats.json` dans `meta/bilan`.
    - Ne jamais inventer un résultat : si un résultat reste introuvable, laisser `resultat: null` et le signaler dans le résumé du jour.
