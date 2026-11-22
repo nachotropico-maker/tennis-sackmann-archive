@@ -1,16 +1,17 @@
-tourney_name,surface,tourney_level,tourney_date,match_num,winner_id,winner_name,loser_id,loser_name,score,round,w_ace,w_df,w_svpt,w_1stIn,w_1stWon,w_2ndWon,w_bpFaced,w_bpSaved,l_ace,l_df,l_svpt,l_1stIn,l_1stWon,l_2ndWon,l_bpFaced,l_bpSaved
-WTA Finals,Hard,,20261111,0,259799,Mirra Andreeva,214544,Aryna Sabalenka,6-4 6-0,Phase de groupes,,,,,,,,,,,,,,,,
-WTA Finals,Hard,,20261111,0,202494,Elina Svitolina,214096,Karolina Muchova,3-6 6-2 6-2,Phase de groupes,,,,,,,,,,,,,,,,
-WTA Finals,Hard,F,20261112,0,202468,Jessica Pegula,222328,Linda Noskova,7-6 4-6 7-5,Phase de groupes,,,,,,,,,,,,,,,,
-WTA Finals,Hard,F,20261112,0,221103,Coco Gauff,216146,Marta Kostyuk,6-4 7-5,Phase de groupes,,,,,,,,,,,,,,,,
-WTA Finals,Hard,F,20261113,0,202494,Elina Svitolina,214544,Aryna Sabalenka,6-3 3-6 6-1,Phase de groupes,,,,,,,,,,,,,,,,
-WTA Finals,Hard,F,20261113,0,259799,Mirra Andreeva,223670,Diana Shnaider,6-2 6-1,Phase de groupes,,,,,,,,,,,,,,,,
-WTA Finals,Hard,F,20261114,0,259799,Mirra Andreeva,202468,Jessica Pegula,6-3 6-4,Demi-finale,,,,,,,,,,,,,,,,
-WTA Finals,Hard,F,20261114,0,202494,Elina Svitolina,222328,Linda Noskova,6-2 6-1,Demi-finale,,,,,,,,,,,,,,,,
-WTA Finals,Hard,F,20261115,0,259799,Mirra Andreeva,202494,Elina Svitolina,7-5 6-3,Finale,,,,,,,,,,,,,,,,
-Billie Jean King Cup,Hard,D,20261121,0,222290,Lanlana Tararudee,213525,Jil Teichmann,1-6 6-4 6-4,Play-offs,5.0,4.0,67.0,29.0,20.0,16.0,5.0,0.0,1.0,5.0,106.0,69.0,42.0,17.0,17.0,12.0
-Billie Jean King Cup,Hard,D,20261121,0,216566,Mananchaya Sawangkaew,215899,Simona Waltert,6-3 5-7 6-4,Play-offs,1.0,3.0,89.0,55.0,30.0,14.0,12.0,5.0,2.0,11.0,118.0,73.0,38.0,18.0,19.0,10.0
-Billie Jean King Cup,Clay,D,20261121,0,221883,Talia Gibson,216262,Clara Burel,6-2 6-1,Play-offs,1.0,1.0,59.0,37.0,30.0,9.0,2.0,2.0,1.0,1.0,37.0,18.0,6.0,10.0,6.0,2.0
-Billie Jean King Cup,Clay,D,20261121,0,204411,Storm Hunter,220348,Diane Parry,6-3 6-4,Play-offs,2.0,3.0,63.0,47.0,34.0,8.0,7.0,6.0,1.0,3.0,56.0,33.0,22.0,12.0,4.0,1.0
-Billie Jean King Cup,Hard,D,20261121,0,221103,Coco Gauff,213646,Dalma Galfi,6-1 6-1,Play-offs,3.0,5.0,41.0,24.0,22.0,8.0,2.0,2.0,1.0,3.0,53.0,28.0,13.0,9.0,13.0,8.0
-Billie Jean King Cup,Hard,D,20261121,0,215983,Ann Li,214388,Anna Bondar,6-1 6-4,Play-offs,4.0,1.0,46.0,27.0,23.0,15.0,4.0,4.0,1.0,2.0,44.0,32.0,19.0,6.0,3.0,0.0
+tourney_name,surface,tourney_level,tourney_date,match_num,winner_id,winner_name,loser_id,loser_name,score,round,w_ace,w_df,w_svpt,w_1stIn,w_1stWon,w_2ndWon,w_bpFaced,w_bpSaved,l_ace,l_df,l_svpt,l_1stIn,l_1stWon,l_2ndWon,l_bpFaced,l_bpSaved,best_of
+WTA Finals,Hard,,20261111,0,259799,Mirra Andreeva,214544,Aryna Sabalenka,6-4 6-0,Phase de groupes,,,,,,,,,,,,,,,,,
+WTA Finals,Hard,,20261111,0,202494,Elina Svitolina,214096,Karolina Muchova,3-6 6-2 6-2,Phase de groupes,,,,,,,,,,,,,,,,,
+WTA Finals,Hard,F,20261112,0,202468,Jessica Pegula,222328,Linda Noskova,7-6 4-6 7-5,Phase de groupes,,,,,,,,,,,,,,,,,
+WTA Finals,Hard,F,20261112,0,221103,Coco Gauff,216146,Marta Kostyuk,6-4 7-5,Phase de groupes,,,,,,,,,,,,,,,,,
+WTA Finals,Hard,F,20261113,0,202494,Elina Svitolina,214544,Aryna Sabalenka,6-3 3-6 6-1,Phase de groupes,,,,,,,,,,,,,,,,,
+WTA Finals,Hard,F,20261113,0,259799,Mirra Andreeva,223670,Diana Shnaider,6-2 6-1,Phase de groupes,,,,,,,,,,,,,,,,,
+WTA Finals,Hard,F,20261114,0,259799,Mirra Andreeva,202468,Jessica Pegula,6-3 6-4,Demi-finale,,,,,,,,,,,,,,,,,
+WTA Finals,Hard,F,20261114,0,202494,Elina Svitolina,222328,Linda Noskova,6-2 6-1,Demi-finale,,,,,,,,,,,,,,,,,
+WTA Finals,Hard,F,20261115,0,259799,Mirra Andreeva,202494,Elina Svitolina,7-5 6-3,Finale,,,,,,,,,,,,,,,,,
+Billie Jean King Cup,Hard,D,20261121,0,222290,Lanlana Tararudee,213525,Jil Teichmann,1-6 6-4 6-4,Play-offs,5.0,4.0,67.0,29.0,20.0,16.0,5.0,0.0,1.0,5.0,106.0,69.0,42.0,17.0,17.0,12.0,
+Billie Jean King Cup,Hard,D,20261121,0,216566,Mananchaya Sawangkaew,215899,Simona Waltert,6-3 5-7 6-4,Play-offs,1.0,3.0,89.0,55.0,30.0,14.0,12.0,5.0,2.0,11.0,118.0,73.0,38.0,18.0,19.0,10.0,
+Billie Jean King Cup,Clay,D,20261121,0,221883,Talia Gibson,216262,Clara Burel,6-2 6-1,Play-offs,1.0,1.0,59.0,37.0,30.0,9.0,2.0,2.0,1.0,1.0,37.0,18.0,6.0,10.0,6.0,2.0,
+Billie Jean King Cup,Clay,D,20261121,0,204411,Storm Hunter,220348,Diane Parry,6-3 6-4,Play-offs,2.0,3.0,63.0,47.0,34.0,8.0,7.0,6.0,1.0,3.0,56.0,33.0,22.0,12.0,4.0,1.0,
+Billie Jean King Cup,Hard,D,20261121,0,221103,Coco Gauff,213646,Dalma Galfi,6-1 6-1,Play-offs,3.0,5.0,41.0,24.0,22.0,8.0,2.0,2.0,1.0,3.0,53.0,28.0,13.0,9.0,13.0,8.0,
+Billie Jean King Cup,Hard,D,20261121,0,215983,Ann Li,214388,Anna Bondar,6-1 6-4,Play-offs,4.0,1.0,46.0,27.0,23.0,15.0,4.0,4.0,1.0,2.0,44.0,32.0,19.0,6.0,3.0,0.0,
+Billie Jean King Cup,Hard,D,20261122,,,Susan Bandecchi,,Anchisa Chanta,6-3 7-5,Play-offs,,,,,,,,,,,,,,,,,3.0

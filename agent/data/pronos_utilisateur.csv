@@ -1,7 +1,7 @@
-date,match_id,choix_utilisateur,score_utilisateur,choix_agent,proba_agent
-2026-11-22,2026-11-22-wta-bjk-tararudee-golubic,Tararudee,2-0,Tararudee,0.559
-2026-11-22,2026-11-22-wta-bjk-sawangkaew-teichmann,Sawangkaew,2-1,Teichmann,0.583
-2026-11-22,2026-11-22-wta-bjk-parry-gibson,Gibson,2-0,Parry,0.500
-2026-11-22,2026-11-22-wta-bjk-burel-hunter,Hunter,2-0,Burel,0.633
-2026-11-22,2026-11-22-wta-bjk-gauff-bondar,Gauff,2-0,Gauff,0.917
-2026-11-22,2026-11-22-wta-bjk-li-galfi,Li,2-0,Li,0.762
+date,match_id,choix_utilisateur,score_utilisateur,choix_agent,proba_agent,statut
+2026-11-22,2026-11-22-wta-bjk-tararudee-golubic,Tararudee,2-0,Tararudee,0.559,"annulé (THA qualifiée 3-0 après le double, remplacé par Chanta–Bandecchi sans enjeu)"
+2026-11-22,2026-11-22-wta-bjk-sawangkaew-teichmann,Sawangkaew,2-1,Teichmann,0.583,"annulé (THA qualifiée 3-0 après le double, remplacé par Chanta–Bandecchi sans enjeu)"
+2026-11-22,2026-11-22-wta-bjk-parry-gibson,Gibson,2-0,Parry,0.5,
+2026-11-22,2026-11-22-wta-bjk-burel-hunter,Hunter,2-0,Burel,0.633,
+2026-11-22,2026-11-22-wta-bjk-gauff-bondar,Gauff,2-0,Gauff,0.917,
+2026-11-22,2026-11-22-wta-bjk-li-galfi,Li,2-0,Li,0.762,
