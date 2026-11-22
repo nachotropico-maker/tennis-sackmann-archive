@@ -36,7 +36,9 @@ Un appel `db_write` doit rester sous 64 Ko : découper si besoin (au plus 10 mat
      `stats_b` = ces dictionnaires pour joueur_a et joueur_b : les statistiques entrent alors dans le modèle (service,
      retour, balles de break). Écrire aussi dans `matchs/{id}` un champ `stats` =
      `{a: {pct_1re, pts_1re, pts_2e, aces, df, bp_sauvees, bp_converties}, b: {…}}` (pourcentages entiers, balles de break
-     sous la forme « 5/9 »). Si l'outil n'est pas disponible ou ne couvre pas le match, chercher les stats sur le site
+     sous la forme « 5/9 »). Contrôle : si `second_serve_successful` vaut 0 alors que `first_serve_successful` égale
+     le total des points au service, la répartition 1re/2e balle manque (vu sur Burel–Gibson, BJK Cup 2026) : garder les
+     totaux, mais ne pas afficher pts_1re / pts_2e ni pct_1re pour ce match. Si l'outil n'est pas disponible ou ne couvre pas le match, chercher les stats sur le site
      officiel ATP/WTA/BJK Cup/Coupe Davis par recherche web ; sinon laisser sans stats (ne jamais les inventer). Cela ajoute les matchs à `agent/data/{tour}_live.csv` (pour l'Elo),
      au journal `agent/data/predictions_log.csv`, et recalcule `agent/data/stats.json`.
    - Écrire le contenu de `agent/data/stats.json` dans `meta/bilan`.
