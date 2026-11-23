@@ -47,7 +47,9 @@ Ligue Europa `UEL`, Ligue Conférence `UECL`. Rien d'autre (pas de coupes nation
 
 6. **Enquête sur le contexte, ajustement et explication** : pour chaque match, chercher (recherche web, sources de moins de 7 jours) :
    - **effectif** : blessés et suspendus importants (titulaires, buteur, gardien), retours de blessure ;
-   - **entraîneur** : changement récent (moins de 30 jours), entraîneur menacé ;
+   - **entraîneur** : pour CHAQUE équipe, vérifier si l'entraîneur a changé depuis le début de la saison (pas seulement ces 30 derniers jours) ;
+     si oui, noter dans `contexte` (type `coach`) la date, le nom et le bilan sous le nouvel entraîneur (à domicile / à l'extérieur).
+     Leçon du 23/11/2026 : Çorum a changé d'entraîneur (Burak Yılmaz après la 6e journée) et l'agent ne l'avait pas vu ; entraîneur menacé ;
    - **calendrier** : match européen en milieu de semaine (jours de repos), long déplacement ;
    - **enjeu** : derby, course au titre, maintien, qualification européenne déjà acquise ou perdue, match retour.
    Chaque fait vérifié va dans `contexte` : `{equipe, type (physique | coach | logistique | enjeu | mental), fait, source (URL https), date}`.
