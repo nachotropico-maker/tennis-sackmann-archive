@@ -38,7 +38,9 @@ Ligue Europa `UEL`, Ligue Conférence `UECL`. Rien d'autre (pas de coupes nation
    - recherche web pour la Süper Lig, l'Eredivisie, la Liga Portugal, la Pro League, la Ligue Europa et la Ligue Conférence
      (programme ESPN, sites officiels). Indiquer le `tour` (« 13e journée », « Phase de ligue – J5 », « 8es de finale aller »…).
    - Matchs aller-retour en coupe : noter dans `contexte` le score de l'aller ; finale sur terrain neutre : `neutre: true`.
-   Écrire la liste dans `jour.json` (format décrit en tête de `predict.py`).
+   Écrire la liste dans `jour.json` (format décrit en tête de `predict.py`). `dom` et `ext` = nom usuel du club tel qu'on l'écrit
+   en français (« Başakşehir », « Çorum FK », « Atlético de Madrid »), jamais le nom interne de la base Elo (« Buyuksehyr », « Ath Madrid ») :
+   c'est ce nom qui s'affiche sur la page.
 
 5. **Calcul** : `python3 predict.py jour.json sortie.json`. Vérifier qu'aucun club n'est « estimé » à tort (nom mal reconnu) :
    si un club des 9 championnats sort avec un Elo par défaut, corriger le nom (alias dans `noms.py`) et relancer.
