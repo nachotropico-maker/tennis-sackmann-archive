@@ -34,3 +34,4 @@ date,id,tour,tournoi,joueur_a,joueur_b,proba_a,proba_modele,ajustement,vainqueur
 2026-11-20,2026-11-20-atp-finals-medvedev-tiafoe,atp,ATP Finals,Daniil Medvedev,Frances Tiafoe,0.628,0.628,0,Daniil Medvedev,6-3 6-4
 2026-11-21,2026-11-21-atp-finals-alcaraz-shelton,atp,ATP Finals,Carlos Alcaraz,Ben Shelton,0.794,0.794,0,Carlos Alcaraz,3-6 6-3 7-6
 2026-11-21,2026-11-21-atp-finals-zverev-medvedev,atp,ATP Finals,Alexander Zverev,Daniil Medvedev,0.597,0.597,0,Alexander Zverev,7-6 6-4
+2026-11-22,2026-11-22-atp-finals-alcaraz-zverev,atp,ATP Finals,Carlos Alcaraz,Alexander Zverev,0.69,0.69,0,Carlos Alcaraz,6-2 7-6
