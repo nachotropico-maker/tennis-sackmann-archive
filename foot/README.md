@@ -1,7 +1,7 @@
 # Agent Foot
 
-Pronostics 1N2 expliqués pour 9 championnats (Angleterre, Espagne, Italie, France, Allemagne, Turquie, Pays-Bas, Portugal, Belgique)
-et les 3 coupes d'Europe. Page : https://claude.ai/artifact/2uZ8SEppTThr2bp9F1KGMQ — routine quotidienne : `ROUTINE.md`.
+Pronostics 1N2 expliqués pour le Big Five, la Süper Lig et les 3 coupes d'Europe (Pays-Bas, Portugal, Belgique :
+résultats suivis en arrière-plan pour le niveau des clubs en Coupe d'Europe, sans pronostic). Page : https://claude.ai/artifact/2uZ8SEppTThr2bp9F1KGMQ — routine quotidienne : `ROUTINE.md`.
 
 - `modele.py` : régression multinomiale (issue 1/N/2) et Poisson (buts) sur l'écart d'Elo, intercept par championnat.
   Test 2023-2025 (8 813 matchs) : 52,7 % de bons pronostics (bookmakers 54,4 %, « domicile gagne » 43,3 %).

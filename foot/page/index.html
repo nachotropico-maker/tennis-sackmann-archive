@@ -141,7 +141,7 @@ td.n,th.n{text-align:right}
       <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="var(--surface)" stroke="var(--ink)" stroke-width="2"/><path d="M20 11l7 5-2.7 8.3h-8.6L13 16z" fill="var(--ink)"/><path d="M20 11V3M27 16l7.5-3M24.3 24.3l4.7 6.7M15.7 24.3L11 31M13 16l-7.5-3" stroke="var(--ink)" stroke-width="1.6"/></svg>
       <div>
         <h1>Agent Foot</h1>
-        <div class="sub">Pronostics expliqués · 9 championnats et 3 coupes d'Europe · chaque matin</div>
+        <div class="sub">Pronostics expliqués · Big Five, Süper Lig et coupes d'Europe · chaque matin</div>
       </div>
     </div>
     <div class="fresh" id="fresh"><span class="chip">Chargement des données…</span></div>
@@ -158,7 +158,7 @@ td.n,th.n{text-align:right}
 </div>
 
 <script>
-const COMPS = [["E0","Premier League"],["SP1","Liga"],["I1","Serie A"],["F1","Ligue 1"],["D1","Bundesliga"],["T1","Süper Lig"],["N1","Eredivisie"],["P1","Liga Portugal"],["B1","Pro League"],["UCL","Ligue des champions"],["UEL","Ligue Europa"],["UECL","Ligue Conférence"]];
+const COMPS = [["E0","Premier League"],["SP1","Liga"],["I1","Serie A"],["F1","Ligue 1"],["D1","Bundesliga"],["T1","Süper Lig"],["UCL","Ligue des champions"],["UEL","Ligue Europa"],["UECL","Ligue Conférence"]];
 const CN = Object.fromEntries(COMPS);
 const MONTHS = ["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."];
 const DAYS = ["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"];
@@ -314,7 +314,7 @@ function viewBilan(){
 
 function viewRank(){
   const rows = state.elo.filter(r => r.ligue === state.rankComp).sort((a,b) => b.elo - a.elo);
-  const tabs = COMPS.slice(0, 9);
+  const tabs = COMPS.slice(0, 6);
   if(!state.elo.length) return `<div class="empty">Classements indisponibles pour l'instant.</div>`;
   const max = rows.length ? rows[0].elo : 1, min = rows.length ? rows[rows.length-1].elo : 0;
   return `<div class="filters" role="group" aria-label="Championnat">${tabs.map(([k,l]) => `<button data-rc="${k}" aria-pressed="${state.rankComp===k}">${esc(l)}</button>`).join("")}</div>
@@ -345,7 +345,7 @@ function viewMethode(){
       <ol class="steps">
         <li><span>Récupère les résultats de la veille et note chaque pronostic juste ou raté.</span></li>
         <li><span>Met à jour l'Elo des clubs avec ces résultats.</span></li>
-        <li><span>Récupère le programme du jour des 12 compétitions suivies.</span></li>
+        <li><span>Récupère le programme du jour : cinq grands championnats, Süper Lig et les trois coupes d'Europe.</span></li>
         <li><span>Calcule les probabilités, vérifie l'actualité (blessés, suspendus, entraîneurs) et ajuste si besoin.</span></li>
         <li><span>Rédige l'explication de chaque match et met à jour cette page.</span></li>
       </ol>

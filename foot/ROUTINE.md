@@ -3,9 +3,11 @@
 Page : artefact **Agent Foot**, slug `0f6f9d49-7112-44f9-864d-07547f0a6ecb`,
 lien https://claude.ai/artifact/2uZ8SEppTThr2bp9F1KGMQ. Tout est en français.
 
-Compétitions suivies (codes) : Premier League `E0`, Liga `SP1`, Serie A `I1`, Ligue 1 `F1`, Bundesliga `D1`,
-Süper Lig `T1`, Eredivisie `N1`, Liga Portugal `P1`, Pro League `B1`, Ligue des champions `UCL`,
-Ligue Europa `UEL`, Ligue Conférence `UECL`. Rien d'autre (pas de coupes nationales, pas de matchs amicaux).
+Compétitions **pronostiquées et publiées** (choix de l'utilisateur, 24/11/2026) : Premier League `E0`, Liga `SP1`, Serie A `I1`,
+Ligue 1 `F1`, Bundesliga `D1`, Süper Lig `T1`, Ligue des champions `UCL`, Ligue Europa `UEL`, Ligue Conférence `UECL`.
+Rien d'autre (pas de coupes nationales, pas de matchs amicaux).
+Eredivisie `N1`, Liga Portugal `P1`, Pro League `B1` : **pas de pronostic**, mais leurs résultats de la veille sont intégrés à
+l'Elo (étape 2) pour que PSV, Porto, Bruges… soient bien évalués en Coupe d'Europe.
 
 ## Base de données de la page (outils `db_*` du serveur claude-artifacts, avec le slug ci-dessus)
 
@@ -39,7 +41,8 @@ Ligue Europa `UEL`, Ligue Conférence `UECL`. Rien d'autre (pas de coupes nation
    - sinon recherche web (pages de match ESPN, site officiel de la compétition, presse sportive). Ne jamais inventer un score.
    Écrire `resultat: {score: "2-1"}` (buts domicile-extérieur, temps réglementaire + prolongations éventuelles, jamais les tirs au but)
    et `correct` (l'issue 1/N/2 annoncée est la bonne). Match reporté ou arrêté : `annule: true`, `resultat_texte: "Match reporté"`.
-   Rassembler aussi **tous** les résultats d'hier des 12 compétitions (même les matchs non pronostiqués) dans `res.json`
+   Rassembler aussi **tous** les résultats d'hier des 12 compétitions (les 9 publiées + Eredivisie, Liga Portugal, Pro League ;
+   pour ces 3-là, `hier_scores_autres` du fichier API-Football suffit) (même les matchs non pronostiqués) dans `res.json`
    (format de `resultats.py`) et lancer `python3 resultats.py res.json` : l'Elo et les classements se mettent à jour.
    **Tirs cadrés** : pour chaque match des 5 grands championnats et de la Ligue des champions, `fetch_sports_data`
    (`data_type: game_stats`, `game_id` du match) donne `team_stats.{équipe}.shots_on_target` et `shots_total` : les mettre dans `tc_dom` / `tc_ext` et `tt_dom` / `tt_ext`.
@@ -50,9 +53,9 @@ Ligue Europa `UEL`, Ligue Conférence `UECL`. Rien d'autre (pas de coupes nation
 3. **Bilan** : `db_query` sur toute la collection `matchs` (sans filtre, `limit` 1000), écrire le résultat dans `matchs.json`
    (liste des `data`), lancer `python3 bilan.py matchs.json` et écrire la sortie dans `meta/bilan`.
 
-4. **Programme du jour** : lister tous les matchs du jour des 12 compétitions avec l'heure de Paris.
+4. **Programme du jour** : lister tous les matchs du jour des 9 compétitions publiées avec l'heure de Paris.
    - `fetch_sports_data` pour les 6 compétitions couvertes (garder `win_probability` comme `repere_sportradar` : `{p1, pN, p2}` en fractions) ;
-   - recherche web pour la Süper Lig, l'Eredivisie, la Liga Portugal, la Pro League, la Ligue Europa et la Ligue Conférence
+   - le fichier API-Football du jour (`aujourdhui.matchs`) ; recherche web en secours pour la Süper Lig, la Ligue Europa et la Ligue Conférence
      (programme ESPN, sites officiels). Indiquer le `tour` (« 13e journée », « Phase de ligue – J5 », « 8es de finale aller »…).
    - Matchs aller-retour en coupe : noter dans `contexte` le score de l'aller ; finale sur terrain neutre : `neutre: true`.
    Écrire la liste dans `jour.json` (format décrit en tête de `predict.py`). `dom` et `ext` = nom usuel du club tel qu'on l'écrit

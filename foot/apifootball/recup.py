@@ -14,6 +14,7 @@ KEY = os.environ.get("API_FOOTBALL_KEY", "")
 BASE = "https://v3.football.api-sports.io/"
 LIGUES = {39: "E0", 140: "SP1", 135: "I1", 61: "F1", 78: "D1", 203: "T1", 88: "N1", 94: "P1", 144: "B1",
           2: "UCL", 3: "UEL", 848: "UECL"}
+SUIVIES = {39, 140, 135, 61, 78, 203, 2, 3, 848}   # pronostics publiés ; 88, 94, 144 : résultats seulement (niveau des clubs en Coupe d'Europe)
 ICI = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(ICI, "..", "data", "apifootball")
 appels = []
@@ -113,7 +114,8 @@ def rattrapage(auj, equipes_du_jour):
         for l in open(F_HIST):
             deja.add(json.loads(l)["id"])
     a_faire = [(lid, x) for lid, xs in cal.items() for x in xs
-               if x["statut"] in ("FT", "AET", "PEN") and x["id"] not in deja and x["date"] < auj.isoformat()]
+               if x["statut"] in ("FT", "AET", "PEN") and x["id"] not in deja and x["date"] < auj.isoformat()
+               and (int(lid) in SUIVIES or x["dom"] in equipes_du_jour or x["ext"] in equipes_du_jour)]
     a_faire.sort(key=lambda t: (not (t[1]["dom"] in equipes_du_jour or t[1]["ext"] in equipes_du_jour), -int(t[1]["date"].replace("-", ""))))
     n = 0
     with open(F_HIST, "a") as out:
@@ -141,7 +143,9 @@ def main():
     res = {"genere": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")}
     # matchs d'hier terminés
     fh = [f for f in get("fixtures", date=hier.isoformat(), timezone="Europe/Paris") if f["league"]["id"] in LIGUES]
-    finis = [f for f in fh if f["fixture"]["status"]["short"] in ("FT", "AET", "PEN")]
+    finis_tous = [f for f in fh if f["fixture"]["status"]["short"] in ("FT", "AET", "PEN")]
+    res["hier_scores_autres"] = [resume(f) for f in finis_tous if f["league"]["id"] not in SUIVIES]
+    finis = [f for f in finis_tous if f["league"]["id"] in SUIVIES]
     # l'offre gratuite n'accepte pas fixtures?ids= : un appel par match et par type de données.
     # Priorité : statistiques (tous les matchs), puis compositions, puis joueurs, tant qu'il reste de la marge.
     for f in finis:
