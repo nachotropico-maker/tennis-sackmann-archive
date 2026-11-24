@@ -1,0 +1,29 @@
+name: API-Football (données foot du matin)
+
+on:
+  schedule:
+    - cron: "15 5 * * *"   # 6 h 15 à Paris (heure d'hiver), avant la routine de 8 h 50
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  recup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Récupérer les données
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+        run: python foot/apifootball/recup.py
+      - name: Enregistrer dans le dépôt
+        run: |
+          git config user.name "agent-foot-bot"
+          git config user.email "agent-foot-bot@users.noreply.github.com"
+          git add foot/data/apifootball
+          git diff --cached --quiet || git commit -m "API-Football : données du $(date -u +%F)"
+          git pull --rebase origin main && git push origin main
