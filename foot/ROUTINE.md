@@ -26,6 +26,10 @@ Ligue Europa `UEL`, Ligue Conférence `UECL`. Rien d'autre (pas de coupes nation
    les faire correspondre avec `noms.py`. Afficher dans `contexte` le xG d'hier quand il raconte autre chose que le score
    (ex. « a perdu 1-0 avec 2,3 xG contre 0,6 »). Le xG et les notes de joueurs ne changent PAS les probabilités pour l'instant :
    ils servent de contexte, en attendant assez d'historique pour les tester.
+   **Moyennes récentes** : `python3 foot/apifootball/moyennes.py "Nom API-Football" 10` donne, sur les 10 derniers matchs en base,
+   xG pour/contre, tirs, tirs cadrés, tirs dans et hors de la surface, possession, buts, et l'écart buts − xG (chance ou efficacité).
+   Mettre dans `contexte` ce qui éclaire le match (ex. « Monza marque 1,2 but de plus que son xG sur 10 matchs : surperformance
+   qui ne dure généralement pas »). L'historique se complète chaque nuit (voir `journal.csv`, colonne reste_a_rattraper).
 
 1. **Préparer** : `git clone --depth 1 https://github.com/nachotropico-maker/tennis-sackmann-archive`, puis
    `pip install pandas scikit-learn --break-system-packages` si besoin. Travailler dans `foot/`.

@@ -92,6 +92,46 @@ def resume(f):
     return out
 
 
+SAISON = 2026
+F_LISTE = os.path.join(OUT, "historique", "calendrier.json")
+F_HIST = os.path.join(OUT, "historique", "matchs.jsonl")
+
+
+def rattrapage(auj, equipes_du_jour):
+    """Stats des matchs déjà joués de la saison, en priorité ceux des équipes qui jouent aujourd'hui puis les plus récents."""
+    os.makedirs(os.path.dirname(F_HIST), exist_ok=True)
+    cal = json.load(open(F_LISTE)) if os.path.exists(F_LISTE) else {}
+    for lid in LIGUES:                       # calendrier de chaque compétition : une seule fois
+        if str(lid) not in cal and len(appels) < LIMITE:
+            fx = get("fixtures", league=lid, season=SAISON)
+            cal[str(lid)] = [{"id": f["fixture"]["id"], "date": f["fixture"]["date"][:10], "statut": f["fixture"]["status"]["short"],
+                              "dom": f["teams"]["home"]["name"], "ext": f["teams"]["away"]["name"],
+                              "bd": f["goals"]["home"], "be": f["goals"]["away"], "tour": f["league"].get("round")} for f in fx]
+    json.dump(cal, open(F_LISTE, "w"), ensure_ascii=False)
+    deja = set()
+    if os.path.exists(F_HIST):
+        for l in open(F_HIST):
+            deja.add(json.loads(l)["id"])
+    a_faire = [(lid, x) for lid, xs in cal.items() for x in xs
+               if x["statut"] in ("FT", "AET", "PEN") and x["id"] not in deja and x["date"] < auj.isoformat()]
+    a_faire.sort(key=lambda t: (not (t[1]["dom"] in equipes_du_jour or t[1]["ext"] in equipes_du_jour), -int(t[1]["date"].replace("-", ""))))
+    n = 0
+    with open(F_HIST, "a") as out:
+        for lid, x in a_faire:
+            if len(appels) >= LIMITE:
+                break
+            st = get("fixtures/statistics", fixture=x["id"])
+            if not st:
+                continue
+            f = {"fixture": {"id": x["id"], "date": x["date"], "status": {"short": x["statut"]}},
+                 "league": {"id": int(lid), "round": x["tour"]},
+                 "teams": {"home": {"id": st[0]["team"]["id"], "name": x["dom"]}, "away": {"id": st[-1]["team"]["id"], "name": x["ext"]}},
+                 "goals": {"home": x["bd"], "away": x["be"]}, "statistics": st}
+            out.write(json.dumps(resume(f), ensure_ascii=False) + "\n"); n += 1
+    reste = len(a_faire) - n
+    return {"matchs_ajoutes": n, "reste_a_rattraper": reste, "deja_en_base": len(deja) + n}
+
+
 def main():
     if not KEY:
         sys.exit("API_FOOTBALL_KEY manquant")
@@ -112,6 +152,13 @@ def main():
                 break
             f[cle] = get(path, fixture=f["fixture"]["id"])
     res["hier"] = {"date": hier.isoformat(), "matchs": [resume(f) for f in finis]}
+    os.makedirs(os.path.dirname(F_HIST), exist_ok=True)
+    deja = {json.loads(l)["id"] for l in open(F_HIST)} if os.path.exists(F_HIST) else set()
+    with open(F_HIST, "a") as out:
+        for m in res["hier"]["matchs"]:
+            if m["id"] not in deja and m.get("tc_dom") is not None:
+                out.write(json.dumps({k: v for k, v in m.items() if k not in ("joueurs", "titulaires_dom", "titulaires_ext")},
+                                     ensure_ascii=False) + "\n")
     # programme et absents du jour
     fa = [f for f in get("fixtures", date=auj.isoformat(), timezone="Europe/Paris") if f["league"]["id"] in LIGUES]
     res["aujourdhui"] = {"date": auj.isoformat(), "matchs": [resume(f) for f in fa]}
@@ -120,6 +167,8 @@ def main():
     res["aujourdhui"]["absents"] = [{"fixture": x["fixture"]["id"], "equipe": x["team"]["name"], "joueur": x["player"]["name"],
                                      "type": x["player"].get("type"), "raison": x["player"].get("reason")}
                                     for x in inj if x.get("fixture", {}).get("id") in ids_auj]
+    # --- rattrapage de l'historique de la saison avec les requêtes restantes ---
+    res["rattrapage"] = rattrapage(auj, {m["dom"] for m in res["aujourdhui"]["matchs"]} | {m["ext"] for m in res["aujourdhui"]["matchs"]})
     res["appels"] = appels
     with open(os.path.join(OUT, f"{auj.isoformat()}.json"), "w") as fh_:
         json.dump(res, fh_, ensure_ascii=False, indent=1)
@@ -127,10 +176,11 @@ def main():
     new = not os.path.exists(j)
     with open(j, "a") as fh_:
         if new:
-            fh_.write("date,appels,reste_jour,matchs_hier,avec_xg,matchs_jour,absents\n")
+            fh_.write("date,appels,reste_jour,matchs_hier,avec_xg,matchs_jour,absents,historique,reste_a_rattraper\n")
         xg = sum(1 for m in res["hier"]["matchs"] if m.get("xg_dom") is not None)
         fh_.write(f"{auj},{len(appels)},{appels[-1]['reste_jour'] if appels else ''},{len(res['hier']['matchs'])},{xg},"
-                  f"{len(res['aujourdhui']['matchs'])},{len(res['aujourdhui']['absents'])}\n")
+                  f"{len(res['aujourdhui']['matchs'])},{len(res['aujourdhui']['absents'])},"
+                  f"{res['rattrapage']['deja_en_base']},{res['rattrapage']['reste_a_rattraper']}\n")
     print(json.dumps({k: v for k, v in res.items() if k != "appels"}, ensure_ascii=False)[:1500])
     print("erreurs :", [a["erreurs"] for a in appels if a["erreurs"]])
 
