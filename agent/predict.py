@@ -98,6 +98,14 @@ def confidence(p):
     return "Large favori"
 
 
+MOIS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."]
+
+
+def fmt_date(n):
+    s = str(n)
+    return f"{int(s[6:8])} {MOIS[int(s[4:6]) - 1]} {s[:4]}"
+
+
 def reasons(a, b, fa, fb, h2h, surf, tournoi, p, today):
     na, nb = a.split()[-1], b.split()[-1]
     r = []
@@ -137,6 +145,9 @@ def reasons(a, b, fa, fb, h2h, surf, tournoi, p, today):
     if wa + wb >= 3:
         lead = na if wa > wb else nb if wb > wa else None
         r.append(f"Face-à-face {wa}-{wb}" + (f" en faveur de {lead}." if lead else ", à égalité."))
+    dn = h2h.get("dernier")
+    if dn and str(dn["date"]) >= str(today - 20000):   # moins de 2 ans
+        r.append(f"Dernier face-à-face : {dn['vainqueur']} a gagné {dn['score']} ({dn['tournoi']}, {fmt_date(dn['date'])}).")
     fa10, fb10 = [int(f["forme_10"].split("-")[0]) for f in (fa, fb)]
     if abs(fa10 - fb10) >= 3:
         r.append(f"Forme récente : {na} {fa['forme_10']} contre {nb} {fb['forme_10']} sur les 10 derniers matchs.")

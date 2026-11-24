@@ -209,11 +209,20 @@ class Model:
         }
 
     def h2h(self, a, b, surf):
-        m = self.main
+        # tous les matchs (circuit principal, Challengers, qualifications, Coupe Davis) : c'est aussi ce que voit le modèle
+        m = self.m
         x = m[((m.winner_id == a) & (m.loser_id == b)) | ((m.winner_id == b) & (m.loser_id == a))]
         xs = x[x.surf == surf]
-        return {"total": f"{int((x.winner_id == a).sum())}-{int((x.winner_id == b).sum())}",
-                "surface": f"{int((xs.winner_id == a).sum())}-{int((xs.winner_id == b).sum())}"}
+        xp = x[x.main]
+        out = {"total": f"{int((x.winner_id == a).sum())}-{int((x.winner_id == b).sum())}",
+               "surface": f"{int((xs.winner_id == a).sum())}-{int((xs.winner_id == b).sum())}"}
+        if len(xp) != len(x):
+            out["dont_hors_circuit"] = len(x) - len(xp)
+        if len(x):
+            dern = x.sort_values("tourney_date").iloc[-1]
+            out["dernier"] = {"date": int(dern.tourney_date), "tournoi": dern.tourney_name,
+                              "vainqueur": self.names.get(dern.winner_id, ""), "score": dern.score}
+        return out
 
     def rankings(self, n=150, active_since=None):
         cutoff = active_since or int((pd.Timestamp(str(self.data_through)) - pd.Timedelta(days=200)).strftime("%Y%m%d"))
