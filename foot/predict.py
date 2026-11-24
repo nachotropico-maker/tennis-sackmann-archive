@@ -63,8 +63,8 @@ def jours_depuis(club, date):
 
 
 def forme_tirs_buts(club, date, ligue):
-    """(écart de tirs cadrés par match sur les 5 derniers matchs connus ou None, buts par match pour+contre)"""
-    sot, buts = None, None
+    """(écart de tirs cadrés par match sur 5 matchs ou None, buts par match pour+contre, écart de tirs totaux ou None)"""
+    sot, buts, tirs = None, None, None
     if os.path.exists(F_RES):
         r = pd.read_csv(F_RES)
         r = r[((r.dom == club) | (r.ext == club)) & (r.date < date)].sort_values("date")
@@ -72,13 +72,17 @@ def forme_tirs_buts(club, date, ligue):
             t = r.dropna(subset=["tc_dom", "tc_ext"]).tail(5)
             if len(t) >= 3:
                 sot = float(((t.tc_dom - t.tc_ext).where(t.dom == club, t.tc_ext - t.tc_dom)).mean())
+        if "tt_dom" in r:
+            t = r.dropna(subset=["tt_dom", "tt_ext"]).tail(5)
+            if len(t) >= 3:
+                tirs = float(((t.tt_dom - t.tt_ext).where(t.dom == club, t.tt_ext - t.tt_dom)).mean())
         if len(r) >= 5:
             buts = float((r.bd + r.be).tail(10).mean())
     if buts is None and ligue:
         cl = classement(ligue); row = cl[cl.club == club]
         if len(row) and row.iloc[0].gp:
             buts = float((row.iloc[0].gf + row.iloc[0].ga) / row.iloc[0].gp)
-    return sot, (buts if buts is not None else 2.6)
+    return sot, (buts if buts is not None else 2.6), tirs
 
 
 def pct(x):
@@ -90,10 +94,11 @@ def un(m):
     lg = comp if comp in LIGUES else None
     cd, ed, est_d = elo_de(m["dom"], m.get("pays_dom"), lg)
     ce, ee, est_e = elo_de(m["ext"], m.get("pays_ext"), lg)
-    sd, bd_ = forme_tirs_buts(cd, m["date"], lg)
-    se, be_ = forme_tirs_buts(ce, m["date"], lg)
+    sd, bd_, td = forme_tirs_buts(cd, m["date"], lg)
+    se, be_, te_ = forme_tirs_buts(ce, m["date"], lg)
     sot = (sd - se) / 3 if sd is not None and se is not None else 0.0
-    p = proba(ed, ee, comp, neutre=m.get("neutre", False), sot=sot, buts=(bd_ + be_) / 2 - 2.6)
+    tirs = (td - te_) / 6 if td is not None and te_ is not None else 0.0
+    p = proba(ed, ee, comp, neutre=m.get("neutre", False), sot=sot, buts=(bd_ + be_) / 2 - 2.6, tirs=tirs)
     et = etat().set_index("club")
     sept = lambda c, e: float(et.loc[c, "elo_septembre"]) if c in et.index else e
     issues = {"1": p["p1"], "N": p["pN"], "2": p["p2"]}
@@ -135,6 +140,9 @@ def un(m):
         st_, bu_ = (sd, bd_) if side == "dom" else (se, be_)
         if st_ is not None:
             fac[side]["tirs_cadres_5"] = round(st_, 1)
+        tt_ = td if side == "dom" else te_
+        if tt_ is not None:
+            fac[side]["tirs_5"] = round(tt_, 1)
         fac[side]["buts_par_match"] = round(bu_, 2)
         j = jours_depuis(c, m["date"])
         if j is not None:

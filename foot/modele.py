@@ -16,7 +16,7 @@ def _saison(d):
     return d.dt.year.where(d.dt.month >= 7, d.dt.year - 1)
 
 
-COLS = ["d", "sot", "absd", "buts"]
+COLS = ["d", "sot", "absd", "buts", "tirs"]
 
 
 def features_hist(m):
@@ -26,16 +26,19 @@ def features_hist(m):
     for side, t, o, gf, ga, sf, sa in (("H", "HomeTeam", "AwayTeam", "FTHome", "FTAway", "HomeTarget", "AwayTarget"),
                                       ("A", "AwayTeam", "HomeTeam", "FTAway", "FTHome", "AwayTarget", "HomeTarget")):
         rows.append(pd.DataFrame({"i": m.index, "side": side, "team": m[t], "date": m.MatchDate,
-                                  "tc": m[sf] - m[sa], "n": m[sf].notna(), "b": m[gf] + m[ga]}))
+                                  "tc": m[sf] - m[sa], "n": m[sf].notna(), "b": m[gf] + m[ga],
+                                  "sh": m["HomeShots" if side == "H" else "AwayShots"] - m["AwayShots" if side == "H" else "HomeShots"]}))
     L = pd.concat(rows).sort_values(["team", "date"])
     g = L.groupby("team")
     L["sot5"] = g.tc.transform(lambda s: s.shift(1).rolling(5, min_periods=3).mean())
     L["nb"] = g.n.transform(lambda s: s.shift(1).rolling(5, min_periods=1).sum())
+    L["sh5"] = g.sh.transform(lambda s: s.shift(1).rolling(5, min_periods=3).mean())
     L["b10"] = g.b.transform(lambda s: s.shift(1).rolling(10, min_periods=5).mean())
     H = L[L.side == "H"].set_index("i"); A = L[L.side == "A"].set_index("i")
     ok = (H.nb >= 3) & (A.nb >= 3)
     f = pd.DataFrame(index=m.index)
     f["sot"] = ((H.sot5.fillna(0) - A.sot5.fillna(0)) / 3).where(ok, 0.0)
+    f["tirs"] = ((H.sh5.fillna(0) - A.sh5.fillna(0)) / 6).where(ok, 0.0)
     f["absd"] = m.d.abs()
     f["buts"] = (H.b10.fillna(2.6) + A.b10.fillna(2.6)) / 2 - 2.6
     return f
@@ -115,16 +118,16 @@ def _inter(table, ligue, neutre=False):
     return v
 
 
-def proba(elo_dom, elo_ext, ligue, neutre=False, sot=0.0, buts=0.0):
+def proba(elo_dom, elo_ext, ligue, neutre=False, sot=0.0, buts=0.0, tirs=0.0):
     """sot = (écart de tirs cadrés par match du dom sur 5 matchs − même chose pour l'ext) / 3 ;
     buts = moyenne des buts par match (pour+contre, 10 derniers) des deux équipes − 2,6."""
     M = _mod()
     d = (elo_dom - elo_ext) / 100
     lg = {c: np.array(v) for c, v in M["logit"].items()}
-    extra = lambda dd, ss: sum(lg[c] * v for c, v in (("sot", ss), ("absd", abs(dd)), ("buts", buts)) if c in lg)
-    z = _inter(lg, ligue) + lg["d"] * d + extra(d, sot)
+    extra = lambda dd, ss, tt: sum(lg[c] * v for c, v in (("sot", ss), ("absd", abs(dd)), ("buts", buts), ("tirs", tt)) if c in lg)
+    z = _inter(lg, ligue) + lg["d"] * d + extra(d, sot, tirs)
     if neutre:  # pas d'avantage du terrain : symétriser
-        z2 = _inter(lg, ligue) - lg["d"] * d + extra(-d, -sot)
+        z2 = _inter(lg, ligue) - lg["d"] * d + extra(-d, -sot, -tirs)
         z = (z + z2[::-1]) / 2
     p = np.exp(z - z.max()); p = p / p.sum()
     bh = M["buts_dom"]; ba = M["buts_ext"]

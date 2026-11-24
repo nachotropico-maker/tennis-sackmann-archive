@@ -127,7 +127,7 @@ def elo_de(nom, pays=None, ligue=None):
     return nom, float(DEFAUT_PAYS.get(p, 1550)), True
 
 
-def maj(date, comp, dom, ext, bd, be, pays_dom=None, pays_ext=None, neutre=False, tc_dom=None, tc_ext=None):
+def maj(date, comp, dom, ext, bd, be, pays_dom=None, pays_ext=None, neutre=False, tc_dom=None, tc_ext=None, tt_dom=None, tt_ext=None):
     """Applique un résultat. Écrit l'état et ajoute la ligne à resultats_live.csv (sans doublon)."""
     et = etat()
     cd, rd, est_d = elo_de(dom, pays_dom, comp if comp in PAYS else None)
@@ -148,7 +148,7 @@ def maj(date, comp, dom, ext, bd, be, pays_dom=None, pays_ext=None, neutre=False
                                                    elo_septembre=r, nom_espn="", maj=date)])])
     et.to_csv(F_ETAT, index=False)
     ligne = pd.DataFrame([dict(date=date, comp=comp, dom=cd, ext=ce, bd=bd, be=be, elo_dom=rd, elo_ext=re_,
-                               delta=round(dl, 1), tc_dom=tc_dom, tc_ext=tc_ext)])
+                               delta=round(dl, 1), tc_dom=tc_dom, tc_ext=tc_ext, tt_dom=tt_dom, tt_ext=tt_ext)])
     if os.path.exists(F_RES):
         ligne = pd.concat([pd.read_csv(F_RES), ligne])
     ligne.to_csv(F_RES, index=False)

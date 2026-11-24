@@ -1,7 +1,8 @@
 """Intègre des résultats (Elo + resultats_live.csv).
 
 python3 resultats.py resultats.json
-resultats.json : [{date, comp (E0…B1, UCL, UEL, UECL), dom, ext, bd, be, pays_dom?, pays_ext?, neutre?, tc_dom?, tc_ext?}]
+resultats.json : [{date, comp (E0…B1, UCL, UEL, UECL), dom, ext, bd, be, pays_dom?, pays_ext?, neutre?, tc_dom?, tc_ext?, tt_dom?, tt_ext?}]
+(tt = tirs totaux)
 (tc = tirs cadrés de chaque équipe : à remplir dès qu'on les a, ils alimentent la forme aux tirs cadrés)
 Les doublons (même date, mêmes clubs) sont ignorés. Affiche chaque mise à jour.
 """
@@ -16,6 +17,6 @@ if __name__ == "__main__":
             print(f"{r['date']} {r['comp']} {r['dom']}–{r['ext']} : ignoré (déjà dans la base du 22/11)")
             continue
         d = maj(r["date"], r["comp"], r["dom"], r["ext"], int(r["bd"]), int(r["be"]),
-                r.get("pays_dom"), r.get("pays_ext"), r.get("neutre", False), r.get("tc_dom"), r.get("tc_ext"))
+                r.get("pays_dom"), r.get("pays_ext"), r.get("neutre", False), r.get("tc_dom"), r.get("tc_ext"), r.get("tt_dom"), r.get("tt_ext"))
         print(f"{r['date']} {r['comp']:<5} {r['dom']} {r['bd']}-{r['be']} {r['ext']} : "
               + ("déjà intégré" if d is None else f"{d:+.1f} pts d'Elo pour {r['dom']}"))

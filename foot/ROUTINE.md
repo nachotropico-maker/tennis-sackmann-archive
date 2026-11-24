@@ -29,7 +29,7 @@ Ligue Europa `UEL`, Ligue Conférence `UECL`. Rien d'autre (pas de coupes nation
    Rassembler aussi **tous** les résultats d'hier des 12 compétitions (même les matchs non pronostiqués) dans `res.json`
    (format de `resultats.py`) et lancer `python3 resultats.py res.json` : l'Elo et les classements se mettent à jour.
    **Tirs cadrés** : pour chaque match des 5 grands championnats et de la Ligue des champions, `fetch_sports_data`
-   (`data_type: game_stats`, `game_id` du match) donne `team_stats.{équipe}.shots_on_target` : les mettre dans `tc_dom` / `tc_ext`.
+   (`data_type: game_stats`, `game_id` du match) donne `team_stats.{équipe}.shots_on_target` et `shots_total` : les mettre dans `tc_dom` / `tc_ext` et `tt_dom` / `tt_ext`.
    Pour les autres compétitions, les prendre sur la page de match ESPN si elle les donne ; sinon laisser vide (jamais inventer).
    Noter aussi un **carton rouge** dans `contexte` du match (il explique souvent un écart de score).
    Pour les coupes d'Europe, préciser `pays_dom` / `pays_ext` (codes ENG, ESP, ITA, FRA, GER, TUR, NED, POR, BEL, SCO, CZE, AUT…).

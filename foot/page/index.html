@@ -243,6 +243,7 @@ function card(m){
     ["Évolution de l'Elo depuis septembre", fd.elo_septembre != null ? sign(fd.elo - fd.elo_septembre) : "–", fe.elo_septembre != null ? sign(fe.elo - fe.elo_septembre) : "–"],
     ["Jours de repos", fd.jours_repos ?? "–", fe.jours_repos ?? "–"],
     ["Tirs cadrés (écart par match, 5 derniers)", sgn1(fd.tirs_cadres_5), sgn1(fe.tirs_cadres_5)],
+    ["Tirs (écart par match, 5 derniers)", sgn1(fd.tirs_5), sgn1(fe.tirs_5)],
     ["Buts par match (pour + contre)", fd.buts_par_match ?? "–", fe.buts_par_match ?? "–"],
   ];
   const tri = (k, p, cls) => `<span class="${cls}${pk === k ? " pk" : ""}" style="width:${p*100}%"></span>`;
