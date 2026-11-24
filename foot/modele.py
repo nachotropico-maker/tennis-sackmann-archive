@@ -16,6 +16,31 @@ def _saison(d):
     return d.dt.year.where(d.dt.month >= 7, d.dt.year - 1)
 
 
+COLS = ["d", "sot", "absd", "buts"]
+
+
+def features_hist(m):
+    """Forme aux tirs cadrés (5 derniers matchs) et volume de buts (10 derniers), calculés avant chaque match."""
+    m = m.sort_values("MatchDate")
+    rows = []
+    for side, t, o, gf, ga, sf, sa in (("H", "HomeTeam", "AwayTeam", "FTHome", "FTAway", "HomeTarget", "AwayTarget"),
+                                      ("A", "AwayTeam", "HomeTeam", "FTAway", "FTHome", "AwayTarget", "HomeTarget")):
+        rows.append(pd.DataFrame({"i": m.index, "side": side, "team": m[t], "date": m.MatchDate,
+                                  "tc": m[sf] - m[sa], "n": m[sf].notna(), "b": m[gf] + m[ga]}))
+    L = pd.concat(rows).sort_values(["team", "date"])
+    g = L.groupby("team")
+    L["sot5"] = g.tc.transform(lambda s: s.shift(1).rolling(5, min_periods=3).mean())
+    L["nb"] = g.n.transform(lambda s: s.shift(1).rolling(5, min_periods=1).sum())
+    L["b10"] = g.b.transform(lambda s: s.shift(1).rolling(10, min_periods=5).mean())
+    H = L[L.side == "H"].set_index("i"); A = L[L.side == "A"].set_index("i")
+    ok = (H.nb >= 3) & (A.nb >= 3)
+    f = pd.DataFrame(index=m.index)
+    f["sot"] = ((H.sot5.fillna(0) - A.sot5.fillna(0)) / 3).where(ok, 0.0)
+    f["absd"] = m.d.abs()
+    f["buts"] = (H.b10.fillna(2.6) + A.b10.fillna(2.6)) / 2 - 2.6
+    return f
+
+
 def fit(test_saisons=(2023, 2024, 2025)):
     from sklearn.linear_model import LogisticRegression, PoissonRegressor
     from sklearn.metrics import log_loss
@@ -25,7 +50,15 @@ def fit(test_saisons=(2023, 2024, 2025)):
     m["y"] = m.FTResult.map({"H": 0, "D": 1, "A": 2})
     m["saison"] = _saison(m.MatchDate)
 
+    f = features_hist(m)
+    m = m.join(f)
     def X(df):
+        x = pd.get_dummies(df.Division, dtype=float).reindex(columns=list(LIGUES), fill_value=0)
+        for c in COLS:
+            x[c] = df[c]
+        return x
+
+    def Xg(df):
         x = pd.get_dummies(df.Division, dtype=float).reindex(columns=list(LIGUES), fill_value=0)
         x["d"] = df.d
         return x
@@ -34,8 +67,8 @@ def fit(test_saisons=(2023, 2024, 2025)):
     for phase in ("test", "final"):
         tr = m[m.saison < min(test_saisons)] if phase == "test" else m
         lr = LogisticRegression(max_iter=3000, fit_intercept=False).fit(X(tr), tr.y)
-        ph = PoissonRegressor(alpha=0, max_iter=1000, fit_intercept=False).fit(X(tr), tr.FTHome)
-        pa = PoissonRegressor(alpha=0, max_iter=1000, fit_intercept=False).fit(X(tr), tr.FTAway)
+        ph = PoissonRegressor(alpha=0, max_iter=1000, fit_intercept=False).fit(Xg(tr), tr.FTHome)
+        pa = PoissonRegressor(alpha=0, max_iter=1000, fit_intercept=False).fit(Xg(tr), tr.FTAway)
         if phase == "test":
             te = m[m.saison.isin(test_saisons)]
             p = lr.predict_proba(X(te))
@@ -55,10 +88,11 @@ def fit(test_saisons=(2023, 2024, 2025)):
                               for k in LIGUES},
             }
         else:
-            cols = list(LIGUES) + ["d"]
+            cols = list(LIGUES) + COLS
             res["logit"] = {c: [float(v) for v in lr.coef_[:, i]] for i, c in enumerate(cols)}
-            res["buts_dom"] = {c: float(ph.coef_[i]) for i, c in enumerate(cols)}
-            res["buts_ext"] = {c: float(pa.coef_[i]) for i, c in enumerate(cols)}
+            cg = list(LIGUES) + ["d"]
+            res["buts_dom"] = {c: float(ph.coef_[i]) for i, c in enumerate(cg)}
+            res["buts_ext"] = {c: float(pa.coef_[i]) for i, c in enumerate(cg)}
     json.dump(res, open(os.path.join(ICI, "data/modele.json"), "w"), indent=1, ensure_ascii=False)
     return res
 
@@ -81,13 +115,16 @@ def _inter(table, ligue, neutre=False):
     return v
 
 
-def proba(elo_dom, elo_ext, ligue, neutre=False):
+def proba(elo_dom, elo_ext, ligue, neutre=False, sot=0.0, buts=0.0):
+    """sot = (écart de tirs cadrés par match du dom sur 5 matchs − même chose pour l'ext) / 3 ;
+    buts = moyenne des buts par match (pour+contre, 10 derniers) des deux équipes − 2,6."""
     M = _mod()
     d = (elo_dom - elo_ext) / 100
     lg = {c: np.array(v) for c, v in M["logit"].items()}
-    z = _inter(lg, ligue) + lg["d"] * d
+    extra = lambda dd, ss: sum(lg[c] * v for c, v in (("sot", ss), ("absd", abs(dd)), ("buts", buts)) if c in lg)
+    z = _inter(lg, ligue) + lg["d"] * d + extra(d, sot)
     if neutre:  # pas d'avantage du terrain : symétriser
-        z2 = _inter(lg, ligue) - lg["d"] * d
+        z2 = _inter(lg, ligue) - lg["d"] * d + extra(-d, -sot)
         z = (z + z2[::-1]) / 2
     p = np.exp(z - z.max()); p = p / p.sum()
     bh = M["buts_dom"]; ba = M["buts_ext"]

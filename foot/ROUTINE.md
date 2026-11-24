@@ -28,6 +28,10 @@ Ligue Europa `UEL`, Ligue Conférence `UECL`. Rien d'autre (pas de coupes nation
    et `correct` (l'issue 1/N/2 annoncée est la bonne). Match reporté ou arrêté : `annule: true`, `resultat_texte: "Match reporté"`.
    Rassembler aussi **tous** les résultats d'hier des 12 compétitions (même les matchs non pronostiqués) dans `res.json`
    (format de `resultats.py`) et lancer `python3 resultats.py res.json` : l'Elo et les classements se mettent à jour.
+   **Tirs cadrés** : pour chaque match des 5 grands championnats et de la Ligue des champions, `fetch_sports_data`
+   (`data_type: game_stats`, `game_id` du match) donne `team_stats.{équipe}.shots_on_target` : les mettre dans `tc_dom` / `tc_ext`.
+   Pour les autres compétitions, les prendre sur la page de match ESPN si elle les donne ; sinon laisser vide (jamais inventer).
+   Noter aussi un **carton rouge** dans `contexte` du match (il explique souvent un écart de score).
    Pour les coupes d'Europe, préciser `pays_dom` / `pays_ext` (codes ENG, ESP, ITA, FRA, GER, TUR, NED, POR, BEL, SCO, CZE, AUT…).
 
 3. **Bilan** : `db_query` sur toute la collection `matchs` (sans filtre, `limit` 1000), écrire le résultat dans `matchs.json`
@@ -42,7 +46,9 @@ Ligue Europa `UEL`, Ligue Conférence `UECL`. Rien d'autre (pas de coupes nation
    en français (« Başakşehir », « Çorum FK », « Atlético de Madrid »), jamais le nom interne de la base Elo (« Buyuksehyr », « Ath Madrid ») :
    c'est ce nom qui s'affiche sur la page.
 
-5. **Calcul** : `python3 predict.py jour.json sortie.json`. Vérifier qu'aucun club n'est « estimé » à tort (nom mal reconnu) :
+5. **Calcul** : avant, **rattrapage des tirs cadrés** : pour chaque équipe du jour qui a moins de 3 matchs avec tirs cadrés dans
+   `data/resultats_live.csv`, chercher ses 5 derniers matchs de championnat (`fetch_sports_data` scores avec `team`, puis `game_stats`)
+   et les ajouter via `resultats.py` (les doublons sont ignorés). Puis `python3 predict.py jour.json sortie.json`. Vérifier qu'aucun club n'est « estimé » à tort (nom mal reconnu) :
    si un club des 9 championnats sort avec un Elo par défaut, corriger le nom (alias dans `noms.py`) et relancer.
 
 6. **Enquête sur le contexte, ajustement et explication** : pour chaque match, chercher (recherche web, sources de moins de 7 jours) :
@@ -53,9 +59,13 @@ Ligue Europa `UEL`, Ligue Conférence `UECL`. Rien d'autre (pas de coupes nation
    - **calendrier** : match européen en milieu de semaine (jours de repos), long déplacement ;
    - **enjeu** : derby, course au titre, maintien, qualification européenne déjà acquise ou perdue, match retour.
    Chaque fait vérifié va dans `contexte` : `{equipe, type (physique | coach | logistique | enjeu | mental), fait, source (URL https), date}`.
-   **Ajustement** : seulement sur un fait vérifié qui n'est pas déjà dans l'Elo (absence de plusieurs titulaires, entraîneur limogé,
-   équipe B alignée…), de 5 points de % au maximum, pris sur l'issue concernée et rendu proportionnellement aux deux autres ;
-   remplir `ajustement` (points pour l'équipe à domicile, négatif sinon) et `ajustement_raison`. Ne jamais ajuster sur une rumeur.
+   **Ajustement** : règle stricte (leçon du 23/11/2026 : Brentford, privé de son buteur et de deux défenseurs, a gagné 4-0 ;
+   les absences pèsent moins qu'on ne le croit). On n'ajuste que dans ces cas, confirmés par une source officielle ou un
+   journaliste du club : **au moins 3 titulaires habituels absents**, gardien titulaire absent, entraîneur limogé depuis moins de 10 jours,
+   ou équipe B / large rotation annoncée (match sans enjeu, finale de coupe trois jours après). Ajustement de 5 points de % au
+   maximum, pris sur l'issue concernée et rendu proportionnellement aux deux autres ; garder `p_modele` intact, mettre à jour
+   `p1/pN/p2`, et remplir `ajustement` (points pour l'équipe à domicile, négatif sinon) et `ajustement_raison`.
+   Une absence isolée, une série en cours, un « bon profil à l'extérieur » : on les écrit dans `contexte`, on n'ajuste pas.
    Réécrire `lecture` en 2 ou 3 phrases claires : le pronostic, pourquoi, et ce qui pourrait le faire mentir.
 
 7. **Publier** : `python3 publier.py sortie.json AAAA-MM-JJ "résumé du jour en 1-2 phrases" > ops.json`, puis envoyer chaque paquet
@@ -72,6 +82,7 @@ et le développement de l'application se fait ailleurs). Une fois les étapes te
 1. **Message d'accueil** (en français, lisible sur téléphone, sans jargon technique) :
    - « Bonjour ! » puis le bilan d'hier en une ligne (x/y pronostics justes, score exact trouvé s'il y en a) ;
    - les matchs du jour par compétition : affiche, pronostic (1, N ou 2) et probabilité, score probable ;
+     quand `double_chance` existe (favori sous 45 %), le dire : « match ouvert, double chance 1N à 73 % » ;
      une demi-phrase d'explication pour les 3 à 5 matchs les plus intéressants (les plus ouverts, les gros chocs, tout match ajusté) ;
    - le lien vers la page : https://claude.ai/artifact/2uZ8SEppTThr2bp9F1KGMQ ;
    - « Dis-moi ce que tu en penses : on peut tester tes intuitions sur les données. »

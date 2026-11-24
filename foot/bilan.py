@@ -25,15 +25,25 @@ def bilan(ms):
     g = {"matchs": 0, "reussis": 0, "scores_exacts": 0, "rps": 0.0}
     pc = defaultdict(lambda: {"matchs": 0, "reussis": 0})
     pj = defaultdict(lambda: {"matchs": 0, "reussis": 0})
+    dc = {"matchs": 0, "reussis": 0}
+    aj = {"matchs": 0, "rps_avec": 0.0, "rps_sans": 0.0}
     for m in ms:
         o = issue(m["resultat"]["score"]); ok = o == m["pronostic"]
         g["matchs"] += 1; g["reussis"] += ok; g["rps"] += rps(m, o)
         g["scores_exacts"] += m["resultat"]["score"] == m.get("score_probable")
         pc[m["comp"]]["matchs"] += 1; pc[m["comp"]]["reussis"] += ok
         pj[m["date"]]["matchs"] += 1; pj[m["date"]]["reussis"] += ok
+        if m.get("double_chance"):
+            dc["matchs"] += 1; dc["reussis"] += o in m["double_chance"]["issue"]
+        if m.get("ajustement") and m.get("p_modele"):
+            aj["matchs"] += 1; aj["rps_avec"] += rps(m, o); aj["rps_sans"] += rps(m["p_modele"], o)
     if g["matchs"]:
         g["taux"] = round(g["reussis"] / g["matchs"], 3); g["rps"] = round(g["rps"] / g["matchs"], 3)
-    return {"global": g,
+    if dc["matchs"]:
+        dc["taux"] = round(dc["reussis"] / dc["matchs"], 3)
+    if aj["matchs"]:
+        aj["rps_avec"] = round(aj["rps_avec"] / aj["matchs"], 3); aj["rps_sans"] = round(aj["rps_sans"] / aj["matchs"], 3)
+    return {"global": g, "double_chance": dc, "ajustements": aj,
             "par_comp": [{"comp": k, **v, "taux": round(v["reussis"] / v["matchs"], 3)} for k, v in pc.items()],
             "par_jour": [{"date": k, **v} for k, v in sorted(pj.items())]}
 

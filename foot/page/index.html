@@ -242,6 +242,8 @@ function card(m){
     ["Elo actuel", fd.elo, fe.elo],
     ["Évolution de l'Elo depuis septembre", fd.elo_septembre != null ? sign(fd.elo - fd.elo_septembre) : "–", fe.elo_septembre != null ? sign(fe.elo - fe.elo_septembre) : "–"],
     ["Jours de repos", fd.jours_repos ?? "–", fe.jours_repos ?? "–"],
+    ["Tirs cadrés (écart par match, 5 derniers)", sgn1(fd.tirs_cadres_5), sgn1(fe.tirs_cadres_5)],
+    ["Buts par match (pour + contre)", fd.buts_par_match ?? "–", fe.buts_par_match ?? "–"],
   ];
   const tri = (k, p, cls) => `<span class="${cls}${pk === k ? " pk" : ""}" style="width:${p*100}%"></span>`;
   return `<article class="card">
@@ -257,7 +259,7 @@ function card(m){
         <div class="lab"><span>1 · <b>${pct(m.p1)}</b></span><span>N · <b>${pct(m.pN)}</b></span><span><b>${pct(m.p2)}</b> · 2</span></div>
       </div>
       <div class="meta">
-        <div class="pills"><span class="pill pk">Pronostic : ${esc(issue)}</span><span class="pill">${esc(m.confiance)}</span><span class="pill">Score probable ${esc(m.score_probable)}</span><span class="pill">+2,5 buts ${pct(m.plus_2_5)}</span></div>
+        <div class="pills"><span class="pill pk">Pronostic : ${esc(issue)}</span><span class="pill">${esc(m.confiance)}</span>${m.double_chance ? `<span class="pill" title="Sous 45 %, le favori n'a raison qu'environ 4 fois sur 10 : la double chance (victoire ou nul) est plus parlante">Double chance ${esc(m.double_chance.issue)} · ${pct(m.double_chance.proba)}</span>` : ""}<span class="pill">Score probable ${esc(m.score_probable)}</span><span class="pill">+2,5 buts ${pct(m.plus_2_5)}</span></div>
         ${r}
       </div>
       ${ctx}
@@ -279,6 +281,7 @@ function card(m){
     </details>
   </article>`;
 }
+const sgn1 = x => x == null ? "–" : (x > 0 ? "+" : x < 0 ? "−" : "") + Math.abs(x).toFixed(1).replace(".", ",");
 const sign = x => (x > 0 ? "+" : x < 0 ? "−" : "") + Math.abs(Math.round(x));
 
 function viewBilan(){
@@ -290,7 +293,9 @@ function viewBilan(){
       <div class="tile"><div class="v">${pct(g.taux)}</div><div class="l">pronostics justes (${g.reussis}/${g.matchs})</div></div>
       <div class="tile"><div class="v">${g.scores_exacts ?? 0}</div><div class="l">scores exacts trouvés</div></div>
       <div class="tile"><div class="v">${g.rps != null ? g.rps.toFixed(3) : "–"}</div><div class="l">erreur moyenne (RPS, plus bas = mieux)</div></div>
+      ${b.double_chance && b.double_chance.matchs ? `<div class="tile"><div class="v">${pct(b.double_chance.taux)}</div><div class="l">double chance juste (${b.double_chance.reussis}/${b.double_chance.matchs} matchs ouverts)</div></div>` : ""}
     </div>
+    ${b.ajustements && b.ajustements.matchs ? `<div class="panel"><h2>Les ajustements de l'agent aident-ils ?</h2><p>Sur ${b.ajustements.matchs} match${b.ajustements.matchs > 1 ? "s" : ""} ajusté${b.ajustements.matchs > 1 ? "s" : ""} : erreur moyenne ${b.ajustements.rps_avec} avec l'ajustement, ${b.ajustements.rps_sans} sans (plus bas = mieux).</p></div>` : ""}
     ${(b.par_comp||[]).length ? `<div class="panel"><h2>Par compétition</h2><div class="ftab"><table><thead><tr><th>Compétition</th><th class="n">Matchs</th><th class="n">Justes</th><th class="n">Taux</th></tr></thead><tbody>${b.par_comp.map(r => `<tr><td>${esc(CN[r.comp] || r.comp)}</td><td class="n">${r.matchs}</td><td class="n">${r.reussis}</td><td class="n">${pct(r.taux)}</td></tr>`).join("")}</tbody></table></div></div>` : ""}`;
   }
   const ref = t.matchs ? `<div class="panel"><h2>Référence : test sur l'historique</h2>
@@ -302,7 +307,7 @@ function viewBilan(){
       <tr><td>Part des matchs nuls</td><td class="n">${pct(t.taux_nuls)}</td></tr>
     </tbody></table></div>
     ${t.par_ligue ? `<div class="ftab"><table><thead><tr><th>Championnat</th><th class="n">Réussite</th></tr></thead><tbody>${Object.entries(t.par_ligue).map(([k,v]) => `<tr><td>${esc(k)}</td><td class="n">${pct(v)}</td></tr>`).join("")}</tbody></table></div>` : ""}
-    <p class="note">Au football, avec trois issues possibles et un quart de nuls, 50 à 55 % de bons pronostics est le niveau des meilleurs modèles.</p></div>` : "";
+    <p class="note">Version 2 : forme aux tirs cadrés (5 derniers matchs) et volume de buts des deux équipes en plus de l'Elo. Quand le favori est sous 45 %, il n'a raison qu'environ 4 fois sur 10 : la carte indique alors aussi la double chance.</p><p class="note">Au football, avec trois issues possibles et un quart de nuls, 50 à 55 % de bons pronostics est le niveau des meilleurs modèles.</p></div>` : "";
   return live + ref;
 }
 
@@ -328,6 +333,7 @@ function viewMethode(){
       <p>L'avantage du terrain vaut environ 65 points d'Elo, soit 7 à 8 points de pourcentage de chances de victoire en plus.</p>
     </section>
     <section class="panel prose"><h2>Trois issues, pas deux</h2>
+      <p>Depuis la version 2, il tient aussi compte de la forme aux tirs cadrés sur les 5 derniers matchs (une équipe qui domine sans marquer finit souvent par gagner) et du nombre de buts dans les matchs des deux équipes (les matchs fermés finissent plus souvent nuls). Testés eux aussi, l'avantage du terrain propre à chaque club, le profil à l'extérieur et les jours de repos n'apportent rien de mesurable : ils ne sont pas retenus.</p>
       <p>À partir de l'écart d'Elo, le modèle donne les chances de victoire à domicile, de nul et de victoire à l'extérieur, avec un réglage propre à chaque championnat. Il en déduit aussi les buts attendus, le score le plus probable et la probabilité de plus de 2,5 buts.</p>
       <p>Le nul est rarement l'issue la plus probable, même quand il arrive une fois sur quatre : c'est normal, et c'est pour ça que le football est plus dur à prévoir que le tennis.</p>
     </section>

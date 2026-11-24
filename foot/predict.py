@@ -62,6 +62,25 @@ def jours_depuis(club, date):
     return (pd.Timestamp(date) - pd.Timestamp(r.date.max())).days
 
 
+def forme_tirs_buts(club, date, ligue):
+    """(écart de tirs cadrés par match sur les 5 derniers matchs connus ou None, buts par match pour+contre)"""
+    sot, buts = None, None
+    if os.path.exists(F_RES):
+        r = pd.read_csv(F_RES)
+        r = r[((r.dom == club) | (r.ext == club)) & (r.date < date)].sort_values("date")
+        if "tc_dom" in r:
+            t = r.dropna(subset=["tc_dom", "tc_ext"]).tail(5)
+            if len(t) >= 3:
+                sot = float(((t.tc_dom - t.tc_ext).where(t.dom == club, t.tc_ext - t.tc_dom)).mean())
+        if len(r) >= 5:
+            buts = float((r.bd + r.be).tail(10).mean())
+    if buts is None and ligue:
+        cl = classement(ligue); row = cl[cl.club == club]
+        if len(row) and row.iloc[0].gp:
+            buts = float((row.iloc[0].gf + row.iloc[0].ga) / row.iloc[0].gp)
+    return sot, (buts if buts is not None else 2.6)
+
+
 def pct(x):
     return f"{round(100 * x)} %"
 
@@ -71,7 +90,10 @@ def un(m):
     lg = comp if comp in LIGUES else None
     cd, ed, est_d = elo_de(m["dom"], m.get("pays_dom"), lg)
     ce, ee, est_e = elo_de(m["ext"], m.get("pays_ext"), lg)
-    p = proba(ed, ee, comp, neutre=m.get("neutre", False))
+    sd, bd_ = forme_tirs_buts(cd, m["date"], lg)
+    se, be_ = forme_tirs_buts(ce, m["date"], lg)
+    sot = (sd - se) / 3 if sd is not None and se is not None else 0.0
+    p = proba(ed, ee, comp, neutre=m.get("neutre", False), sot=sot, buts=(bd_ + be_) / 2 - 2.6)
     et = etat().set_index("club")
     sept = lambda c, e: float(et.loc[c, "elo_septembre"]) if c in et.index else e
     issues = {"1": p["p1"], "N": p["pN"], "2": p["p2"]}
@@ -79,6 +101,10 @@ def un(m):
     fav = cd if prono == "1" else ce if prono == "2" else None
     pmax = issues[prono]
     confiance = "Net favori" if pmax >= 0.6 else "Favori" if pmax >= 0.48 else "Léger avantage" if pmax >= 0.40 else "Très ouvert"
+    # sous 45 %, le favori n'a raison que 4 fois sur 10 (test 2023-2025) : on donne aussi la double chance
+    double = None
+    if prono != "N" and pmax < 0.45:
+        double = {"issue": "1N" if prono == "1" else "N2", "proba": round(pmax + p["pN"], 3)}
     raisons = []
     diff = ed - ee
     raisons.append(f"Écart d'Elo : {cd} {ed:.0f}, {ce} {ee:.0f} ({abs(diff):.0f} pts en faveur de {cd if diff >= 0 else ce}).")
@@ -106,11 +132,18 @@ def un(m):
         fac[side]["elo"] = round(ed if side == "dom" else ee)
         fac[side]["elo_septembre"] = round(sept(c, ed if side == "dom" else ee))
         fac[side]["derniers"] = derniers(c)
+        st_, bu_ = (sd, bd_) if side == "dom" else (se, be_)
+        if st_ is not None:
+            fac[side]["tirs_cadres_5"] = round(st_, 1)
+        fac[side]["buts_par_match"] = round(bu_, 2)
         j = jours_depuis(c, m["date"])
         if j is not None:
             fac[side]["jours_repos"] = j
             if j <= 3:
                 raisons.append(f"{c} a joué il y a {j} jours : peu de récupération.")
+    if sd is not None and se is not None and abs(sd - se) >= 2:
+        meilleur = cd if sd > se else ce
+        raisons.append(f"Forme aux tirs cadrés (5 derniers matchs) : {meilleur} domine nettement ({sd:+.1f} contre {se:+.1f} par match).")
     if p["pN"] >= 0.28 and abs(p["p1"] - p["p2"]) < 0.12:
         raisons.append(f"Match serré : le nul est une vraie option ({pct(p['pN'])}).")
     if est_d or est_e:
@@ -128,7 +161,8 @@ def un(m):
         "id": m["id"], "date": m["date"], "heure": m.get("heure"), "comp": comp, "competition": NOM_COMP.get(comp, comp),
         "tour": m.get("tour"), "dom": cd, "ext": ce, "dom_affiche": m["dom"], "ext_affiche": m["ext"],
         "neutre": bool(m.get("neutre", False)), "p1": p["p1"], "pN": p["pN"], "p2": p["p2"],
-        "pronostic": prono, "favori": fav, "proba_favori": pmax, "confiance": confiance,
+        "pronostic": prono, "favori": fav, "double_chance": double,
+        "p_modele": {"p1": p["p1"], "pN": p["pN"], "p2": p["p2"]}, "proba_favori": pmax, "confiance": confiance,
         "score_probable": p["score_probable"], "buts_dom": p["buts_dom"], "buts_ext": p["buts_ext"],
         "plus_2_5": p["plus_2_5"], "facteurs": fac, "raisons": raisons, "lecture": lecture,
         "repere_sportradar": m.get("repere_sportradar"), "contexte": m.get("contexte", []),
