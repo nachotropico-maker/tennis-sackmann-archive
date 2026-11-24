@@ -8,7 +8,7 @@ Budget offre gratuite : 100 requêtes par jour (95 utilisées au maximum) :
   1 × injuries?date=aujourd'hui -> blessés et suspendus annoncés
 Écrit foot/data/apifootball/AAAA-MM-JJ.json (données d'hier + programme et absents du jour) et journal.csv.
 """
-import datetime as dt, json, os, sys, time, urllib.parse, urllib.request
+import datetime as dt, json, os, sys, time, urllib.error, urllib.parse, urllib.request
 
 KEY = os.environ.get("API_FOOTBALL_KEY", "")
 BASE = "https://v3.football.api-sports.io/"
@@ -23,11 +23,20 @@ LIMITE = 95  # sur 100 gratuits
 def get(path, **params):
     url = BASE + path + "?" + urllib.parse.urlencode(params)
     req = urllib.request.Request(url, headers={"x-apisports-key": KEY})
-    with urllib.request.urlopen(req, timeout=60) as r:
-        reste = r.headers.get("x-ratelimit-requests-remaining")
-        d = json.load(r)
+    for essai in range(4):
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                reste = r.headers.get("x-ratelimit-requests-remaining")
+                d = json.load(r)
+            break
+        except urllib.error.HTTPError as e:
+            if e.code == 429 and essai < 3:      # trop de requêtes à la minute : on attend
+                time.sleep(65)
+                continue
+            appels.append({"path": path, "params": params, "reste_jour": None, "erreurs": f"HTTP {e.code}"})
+            return []
     appels.append({"path": path, "params": params, "reste_jour": reste, "erreurs": d.get("errors")})
-    time.sleep(2.5)  # 30 requêtes / minute max
+    time.sleep(7)  # l'offre gratuite limite le nombre de requêtes par minute
     return d.get("response", [])
 
 
