@@ -18,6 +18,15 @@ Ligue Europa `UEL`, Ligue Conférence `UECL`. Rien d'autre (pas de coupes nation
 
 ## Étapes
 
+0. **Données API-Football** (si le fichier existe) : `foot/data/apifootball/AAAA-MM-JJ.json` (date du jour), déposé vers 6 h 15
+   par une GitHub Action. `hier.matchs` donne pour chaque match d'hier le score, les tirs cadrés (`tc_*`), les tirs (`tt_*`),
+   le xG (`xg_*`, parfois vide), la possession, les schémas tactiques, les titulaires et les notes des joueurs ;
+   `aujourdhui.matchs` donne le programme, et `aujourdhui.absents` les blessés et suspendus annoncés.
+   S'en servir en priorité pour les étapes 2, 4 et 6 (en gardant les autres sources en secours). Les noms de clubs diffèrent :
+   les faire correspondre avec `noms.py`. Afficher dans `contexte` le xG d'hier quand il raconte autre chose que le score
+   (ex. « a perdu 1-0 avec 2,3 xG contre 0,6 »). Le xG et les notes de joueurs ne changent PAS les probabilités pour l'instant :
+   ils servent de contexte, en attendant assez d'historique pour les tester.
+
 1. **Préparer** : `git clone --depth 1 https://github.com/nachotropico-maker/tennis-sackmann-archive`, puis
    `pip install pandas scikit-learn --break-system-packages` si besoin. Travailler dans `foot/`.
 
