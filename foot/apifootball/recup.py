@@ -1,8 +1,9 @@
 """Récupération quotidienne API-Football (lancée par la GitHub Action, clé dans le secret API_FOOTBALL_KEY).
 
-Budget offre gratuite : 100 requêtes par jour. Ce script en utilise en général 4 à 8 :
+Budget offre gratuite : 100 requêtes par jour (95 utilisées au maximum) :
   1 × fixtures?date=hier        -> matchs d'hier des 12 compétitions
-  k × fixtures?ids=…(20 max)    -> détails : stats (tirs, xG si dispo), compositions, schémas, événements
+  n × fixtures/statistics       -> tirs, xG si dispo (tous les matchs)
+  puis compositions et joueurs par match, tant qu'il reste de la marge
   1 × fixtures?date=aujourd'hui -> programme du jour
   1 × injuries?date=aujourd'hui -> blessés et suspendus annoncés
 Écrit foot/data/apifootball/AAAA-MM-JJ.json (données d'hier + programme et absents du jour) et journal.csv.
@@ -16,6 +17,7 @@ LIGUES = {39: "E0", 140: "SP1", 135: "I1", 61: "F1", 78: "D1", 203: "T1", 88: "N
 ICI = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(ICI, "..", "data", "apifootball")
 appels = []
+LIMITE = 95  # sur 100 gratuits
 
 
 def get(path, **params):
@@ -90,11 +92,17 @@ def main():
     res = {"genere": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")}
     # matchs d'hier terminés
     fh = [f for f in get("fixtures", date=hier.isoformat(), timezone="Europe/Paris") if f["league"]["id"] in LIGUES]
-    ids = [f["fixture"]["id"] for f in fh if f["fixture"]["status"]["short"] in ("FT", "AET", "PEN")]
-    det = []
-    for i in range(0, len(ids), 20):
-        det += get("fixtures", ids="-".join(map(str, ids[i:i + 20])))
-    res["hier"] = {"date": hier.isoformat(), "matchs": [resume(f) for f in det]}
+    finis = [f for f in fh if f["fixture"]["status"]["short"] in ("FT", "AET", "PEN")]
+    # l'offre gratuite n'accepte pas fixtures?ids= : un appel par match et par type de données.
+    # Priorité : statistiques (tous les matchs), puis compositions, puis joueurs, tant qu'il reste de la marge.
+    for f in finis:
+        f["statistics"] = get("fixtures/statistics", fixture=f["fixture"]["id"])
+    for cle, path in (("lineups", "fixtures/lineups"), ("players", "fixtures/players")):
+        for f in finis:
+            if len(appels) >= LIMITE - 3:   # garder 2 appels pour le programme et les absents du jour
+                break
+            f[cle] = get(path, fixture=f["fixture"]["id"])
+    res["hier"] = {"date": hier.isoformat(), "matchs": [resume(f) for f in finis]}
     # programme et absents du jour
     fa = [f for f in get("fixtures", date=auj.isoformat(), timezone="Europe/Paris") if f["league"]["id"] in LIGUES]
     res["aujourdhui"] = {"date": auj.isoformat(), "matchs": [resume(f) for f in fa]}
