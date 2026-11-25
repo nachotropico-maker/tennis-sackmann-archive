@@ -1,5 +1,14 @@
-date,comp,dom,ext,bd,be,elo_dom,elo_ext,delta
-2026-11-23,E0,Brentford,Everton,4,0,1824.6,1811.0,14.6
-2026-11-23,I1,Monza,Fiorentina,3,0,1554.4,1667.9,19.9
-2026-11-23,SP1,Levante,Elche,1,1,1614.8,1620.1,-1.7
-2026-11-23,T1,Buyuksehyr,Corum,4,2,1497.5,1512.1,12.8
+date,comp,dom,ext,bd,be,elo_dom,elo_ext,delta,tc_dom,tc_ext,tt_dom,tt_ext
+2026-11-23,E0,Brentford,Everton,4,0,1824.6,1811.0,14.6,,,,
+2026-11-23,I1,Monza,Fiorentina,3,0,1554.4,1667.9,19.9,,,,
+2026-11-23,SP1,Levante,Elche,1,1,1614.8,1620.1,-1.7,,,,
+2026-11-23,T1,Buyuksehyr,Corum,4,2,1497.5,1512.1,12.8,,,,
+2026-11-24,UCL,Arsenal,Dortmund,1,1,2032.6,1877.1,-5.6,4.0,4.0,30.0,13.0
+2026-11-24,UCL,Bodoe Glimt,LASK,1,0,1612.68,1458.06,4.4,2.0,0.0,9.0,5.0
+2026-11-24,UCL,Como,AEK,1,0,1820.9,1613.91,3.5,4.0,3.0,19.0,7.0
+2026-11-24,UCL,Feyenoord,Porto,0,1,1709.5,1823.8,-8.6,7.0,3.0,21.0,9.0
+2026-11-24,UCL,Galatasaray,Aston Villa,1,0,1701.7,1866.5,12.8,2.0,0.0,9.0,4.0
+2026-11-24,UCL,Man City,Napoli,2,2,1953.8,1792.1,-5.7,7.0,3.0,18.0,9.0
+2026-11-24,UCL,RB Leipzig,Lens,3,1,1810.9,1718.5,8.6,7.0,3.0,16.0,11.0
+2026-11-24,UCL,Real Madrid,PSV Eindhoven,5,1,1951.0,1788.5,8.0,9.0,1.0,24.0,10.0
+2026-11-24,UCL,Slovan Bratislava,Betis,0,2,1480.0,1811.8,-5.3,2.0,6.0,12.0,18.0
