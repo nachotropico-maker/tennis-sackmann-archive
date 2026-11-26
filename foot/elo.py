@@ -16,7 +16,10 @@ K = 20.0
 # niveau par défaut d'un club absent des données (coupes d'Europe), par pays
 DEFAUT_PAYS = {"SCO": 1600, "CZE": 1620, "CRO": 1580, "SRB": 1580, "SUI": 1590, "UKR": 1600, "AZE": 1540,
                "CYP": 1520, "ISR": 1520, "GRE": 1600, "AUT": 1600, "DEN": 1600, "NOR": 1600, "SWE": 1540,
-               "POL": 1540, "HUN": 1500, "SVK": 1480, "SLO": 1480, "BUL": 1500, "ROU": 1520, "KAZ": 1460}
+               "POL": 1540, "HUN": 1500, "SVK": 1480, "SLO": 1480, "BUL": 1500, "ROU": 1520, "KAZ": 1460,
+               # ajout 26/11/2026 : petites nations de la Ligue Conférence, et clubs portugais hors Liga Portugal (2e division)
+               "SVN": 1480, "ROM": 1520, "BIH": 1450, "GEO": 1450, "ARM": 1430, "ALB": 1430, "FIN": 1430, "LTU": 1420,
+               "LVA": 1420, "AND": 1380, "GIB": 1380, "POR": 1400}
 
 
 def _snapshot(date="2026-09-01"):

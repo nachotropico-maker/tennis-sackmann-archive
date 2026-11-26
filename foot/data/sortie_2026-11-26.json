@@ -1,0 +1,3003 @@
+{
+ "matchs": [
+  {
+   "id": "2026-11-26-uecl-kairat-almaty-mjallby",
+   "date": "2026-11-26",
+   "heure": "16:30",
+   "comp": "UECL",
+   "competition": "Ligue Conférence",
+   "tour": "Phase de ligue – J4",
+   "dom": "Kaïrat Almaty",
+   "ext": "Mjaellby",
+   "dom_affiche": "Kaïrat Almaty",
+   "ext_affiche": "Mjällby",
+   "neutre": false,
+   "p1": 0.4,
+   "pN": 0.295,
+   "p2": 0.305,
+   "pronostic": "1",
+   "favori": "Kaïrat Almaty",
+   "double_chance": {
+    "issue": "1N",
+    "proba": 0.695
+   },
+   "p_modele": {
+    "p1": 0.4,
+    "pN": 0.295,
+    "p2": 0.305
+   },
+   "proba_favori": 0.4,
+   "confiance": "Léger avantage",
+   "score_probable": "1-0",
+   "buts_dom": 1.42,
+   "buts_ext": 1.25,
+   "plus_2_5": 0.498,
+   "facteurs": {
+    "dom": {
+     "elo": 1460,
+     "elo_septembre": 1460,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1489,
+     "elo_septembre": 1489,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Kaïrat Almaty 1460, Mjällby 1489 (29 pts en faveur de Mjällby).",
+    "Avantage du terrain pour Kaïrat Almaty (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Match serré : le nul est une vraie option (30 %).",
+    "Niveau d'un des clubs estimé (club hors des 9 championnats suivis) : pronostic moins fiable."
+   ],
+   "lecture": "Match très ouvert : léger avantage à Kaïrat à domicile (40 %), double chance 1N à 70 %. Mjällby (7 pts, 9e) est mieux classé que Kaïrat (2 pts) mais joue loin, à Almaty. Les deux niveaux sont estimés : prudence.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Kaïrat Almaty",
+     "type": "enjeu",
+     "fait": "27e de la phase de ligue avec 2 pts après 3 journées (top 8 = huitièmes directs).",
+     "source": "https://sport.sky.de/fussball/almaty-vs-mjaellby-aif/577952",
+     "date": "2026-11-05"
+    },
+    {
+     "equipe": "Mjällby",
+     "type": "enjeu",
+     "fait": "9e de la phase de ligue avec 7 pts après 3 journées, aux portes du top 8.",
+     "source": "https://sport.sky.de/fussball/almaty-vs-mjaellby-aif/577952",
+     "date": "2026-11-05"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-26-uel-besiktas-hapoel-beer-sheva",
+   "date": "2026-11-26",
+   "heure": "18:45",
+   "comp": "UEL",
+   "competition": "Ligue Europa",
+   "tour": "Phase de ligue – J5",
+   "dom": "Besiktas",
+   "ext": "Hapoël Beer-Sheva",
+   "dom_affiche": "Beşiktaş",
+   "ext_affiche": "Hapoël Beer-Sheva",
+   "neutre": true,
+   "p1": 0.386,
+   "pN": 0.296,
+   "p2": 0.318,
+   "pronostic": "1",
+   "favori": "Beşiktaş",
+   "double_chance": {
+    "issue": "1N",
+    "proba": 0.682
+   },
+   "p_modele": {
+    "p1": 0.386,
+    "pN": 0.296,
+    "p2": 0.318
+   },
+   "proba_favori": 0.386,
+   "confiance": "Très ouvert",
+   "score_probable": "1-0",
+   "buts_dom": 1.41,
+   "buts_ext": 1.25,
+   "plus_2_5": 0.497,
+   "facteurs": {
+    "dom": {
+     "elo": 1552,
+     "elo_septembre": 1518,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1520,
+     "elo_septembre": 1520,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Beşiktaş 1552, Hapoël Beer-Sheva 1520 (32 pts en faveur de Beşiktaş).",
+    "Beşiktaş en forme depuis septembre (+34 pts d'Elo).",
+    "Match serré : le nul est une vraie option (30 %).",
+    "Niveau d'un des clubs estimé (club hors des 9 championnats suivis) : pronostic moins fiable."
+   ],
+   "lecture": "Match délocalisé à Batumi (terrain neutre) : Beşiktaş garde un léger avantage (39 %), double chance 1N à 68 %. Beer-Sheva (1 pt, 33e) joue sa survie mais devrait faire tourner avant son match de championnat. Sans l'avantage du terrain, tout reste possible.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Beşiktaş",
+     "type": "logistique",
+     "fait": "Match délocalisé à Batumi (Géorgie) par l'UEFA pour raisons de sécurité (terrain neutre).",
+     "source": "https://www.fanatik.com.tr/en/bad-news-for-besiktas-from-uefa-2637108",
+     "date": "2026-09-08"
+    },
+    {
+     "equipe": "Beşiktaş",
+     "type": "physique",
+     "fait": "Akdağ suspendu (carton rouge) ; Miretti absent (épaule).",
+     "source": "https://starting11.com/fixtures/besiktas-vs-hapoel-beer-sheva",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Beşiktaş",
+     "type": "enjeu",
+     "fait": "8e de la phase de ligue avec 7 pts après 4 journées.",
+     "source": "https://sport.sky.de/fussball/celta-vigo-vs-bournemouth/tabelle/577814",
+     "date": "2026-11-05"
+    },
+    {
+     "equipe": "Hapoël Beer-Sheva",
+     "type": "enjeu",
+     "fait": "33e avec 1 pt après 4 journées : qualification en grand danger.",
+     "source": "https://sport.sky.de/fussball/celta-vigo-vs-bournemouth/tabelle/577814",
+     "date": "2026-11-05"
+    },
+    {
+     "equipe": "Hapoël Beer-Sheva",
+     "type": "logistique",
+     "fait": "Match de championnat 2 jours après : rotation probable selon starting11.",
+     "source": "https://starting11.com/fixtures/besiktas-vs-hapoel-beer-sheva",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Hapoël Beer-Sheva",
+     "type": "physique",
+     "fait": "Biton (problème cardiaque) et Ventura (blessure musculaire) absents.",
+     "source": "https://starting11.com/fixtures/besiktas-vs-hapoel-beer-sheva",
+     "date": "2026-11-26"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-26-uel-celta-vigo-bournemouth",
+   "date": "2026-11-26",
+   "heure": "18:45",
+   "comp": "UEL",
+   "competition": "Ligue Europa",
+   "tour": "Phase de ligue – J5",
+   "dom": "Celta",
+   "ext": "Bournemouth",
+   "dom_affiche": "Celta Vigo",
+   "ext_affiche": "Bournemouth",
+   "neutre": false,
+   "p1": 0.256,
+   "pN": 0.252,
+   "p2": 0.492,
+   "pronostic": "2",
+   "favori": "Bournemouth",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.256,
+    "pN": 0.252,
+    "p2": 0.492
+   },
+   "proba_favori": 0.492,
+   "confiance": "Favori",
+   "score_probable": "0-1",
+   "buts_dom": 1.05,
+   "buts_ext": 1.69,
+   "plus_2_5": 0.516,
+   "facteurs": {
+    "dom": {
+     "elo": 1695,
+     "elo_septembre": 1682,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1885,
+     "elo_septembre": 1856,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Celta Vigo 1695, Bournemouth 1885 (190 pts en faveur de Bournemouth).",
+    "Avantage du terrain pour Celta Vigo (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Bournemouth en forme depuis septembre (+29 pts d'Elo)."
+   ],
+   "lecture": "Bournemouth favori (49 %) : meilleur Elo et 4 victoires en 4 matchs. Celta est privé de Borja Iglesias et de Miguel Román et doit gagner (3 pts). Une rotation des Cherries avant la Premier League pourrait rééquilibrer.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Celta Vigo",
+     "type": "physique",
+     "fait": "Borja Iglesias (mollet), Miguel Román et Manu Sánchez (genou), Starfelt (musculaire) absents ; Moriba incertain.",
+     "source": "https://starting11.com/fixtures/celta-vigo-vs-bournemouth",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Celta Vigo",
+     "type": "enjeu",
+     "fait": "27e avec 3 pts après 4 journées : qualification en danger.",
+     "source": "https://sport.sky.de/fussball/celta-vigo-vs-bournemouth/tabelle/577814",
+     "date": "2026-11-05"
+    },
+    {
+     "equipe": "Bournemouth",
+     "type": "enjeu",
+     "fait": "2e avec 12 pts (4 victoires en 4 matchs).",
+     "source": "https://sport.sky.de/fussball/celta-vigo-vs-bournemouth/tabelle/577814",
+     "date": "2026-11-05"
+    },
+    {
+     "equipe": "Bournemouth",
+     "type": "physique",
+     "fait": "Araujo (cuisse), Tóth (musculaire) et Juanlu Sánchez (cheville) absents.",
+     "source": "https://starting11.com/fixtures/celta-vigo-vs-bournemouth",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Bournemouth",
+     "type": "logistique",
+     "fait": "Match de Premier League 3 jours après : rotation jugée probable par starting11.",
+     "source": "https://starting11.com/fixtures/celta-vigo-vs-bournemouth",
+     "date": "2026-11-26"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-26-uel-dinamo-zagreb-bayer-leverkusen",
+   "date": "2026-11-26",
+   "heure": "18:45",
+   "comp": "UEL",
+   "competition": "Ligue Europa",
+   "tour": "Phase de ligue – J5",
+   "dom": "Dinamo Zagreb",
+   "ext": "Leverkusen",
+   "dom_affiche": "Dinamo Zagreb",
+   "ext_affiche": "Bayer Leverkusen",
+   "neutre": false,
+   "p1": 0.221,
+   "pN": 0.235,
+   "p2": 0.544,
+   "pronostic": "2",
+   "favori": "Bayer Leverkusen",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.221,
+    "pN": 0.235,
+    "p2": 0.544
+   },
+   "proba_favori": 0.544,
+   "confiance": "Favori",
+   "score_probable": "0-1",
+   "buts_dom": 0.97,
+   "buts_ext": 1.83,
+   "plus_2_5": 0.531,
+   "facteurs": {
+    "dom": {
+     "elo": 1580,
+     "elo_septembre": 1580,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1813,
+     "elo_septembre": 1784,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Dinamo Zagreb 1580, Bayer Leverkusen 1813 (233 pts en faveur de Bayer Leverkusen).",
+    "Avantage du terrain pour Dinamo Zagreb (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Bayer Leverkusen en forme depuis septembre (+29 pts d'Elo).",
+    "Niveau d'un des clubs estimé (club hors des 9 championnats suivis) : pronostic moins fiable."
+   ],
+   "lecture": "Leverkusen favori (54 %) grâce à un écart d'Elo net. Le Dinamo (7 pts) est solide à domicile et Leverkusen pourrait faire tourner avant la Bundesliga.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Dinamo Zagreb",
+     "type": "enjeu",
+     "fait": "9e avec 7 pts après 4 journées.",
+     "source": "https://sport.sky.de/fussball/celta-vigo-vs-bournemouth/tabelle/577814",
+     "date": "2026-11-05"
+    },
+    {
+     "equipe": "Bayer Leverkusen",
+     "type": "enjeu",
+     "fait": "7e avec 9 pts après 4 journées.",
+     "source": "https://sport.sky.de/fussball/celta-vigo-vs-bournemouth/tabelle/577814",
+     "date": "2026-11-05"
+    },
+    {
+     "equipe": "Bayer Leverkusen",
+     "type": "physique",
+     "fait": "Terrier (musculaire) et Eichhorn (malade) absents ; Kofane, Tella, Diaby et Maza incertains.",
+     "source": "https://starting11.com/fixtures/dinamo-zagreb-vs-bayer-leverkusen",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Bayer Leverkusen",
+     "type": "logistique",
+     "fait": "Match de Bundesliga 3 jours après : rotation probable selon starting11.",
+     "source": "https://starting11.com/fixtures/dinamo-zagreb-vs-bayer-leverkusen",
+     "date": "2026-11-26"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-26-uel-marseille-levski-sofia",
+   "date": "2026-11-26",
+   "heure": "18:45",
+   "comp": "UEL",
+   "competition": "Ligue Europa",
+   "tour": "Phase de ligue – J5",
+   "dom": "Marseille",
+   "ext": "Levski Sofia",
+   "dom_affiche": "Marseille",
+   "ext_affiche": "Levski Sofia",
+   "neutre": false,
+   "p1": 0.732,
+   "pN": 0.174,
+   "p2": 0.094,
+   "pronostic": "1",
+   "favori": "Marseille",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.732,
+    "pN": 0.174,
+    "p2": 0.094
+   },
+   "proba_favori": 0.732,
+   "confiance": "Net favori",
+   "score_probable": "2-0",
+   "buts_dom": 2.41,
+   "buts_ext": 0.73,
+   "plus_2_5": 0.607,
+   "facteurs": {
+    "dom": {
+     "elo": 1760,
+     "elo_septembre": 1743,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1500,
+     "elo_septembre": 1500,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Marseille 1760, Levski Sofia 1500 (260 pts en faveur de Marseille).",
+    "Avantage du terrain pour Marseille (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Niveau d'un des clubs estimé (club hors des 9 championnats suivis) : pronostic moins fiable."
+   ],
+   "lecture": "Marseille net favori (73 %) : gros écart de niveau et obligation de gagner (3 pts, 31e). Seul piège : la pression d'un OM en difficulté sur la scène européenne.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Marseille",
+     "type": "enjeu",
+     "fait": "31e avec 3 pts après 4 journées : qualification en danger.",
+     "source": "https://sport.sky.de/fussball/celta-vigo-vs-bournemouth/tabelle/577814",
+     "date": "2026-11-05"
+    },
+    {
+     "equipe": "Marseille",
+     "type": "physique",
+     "fait": "Cornelius (hanche) et Emerson (genou) absents ; Højbjerg incertain (maladie).",
+     "source": "https://starting11.com/fixtures/marseille-vs-levski-sofia",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Levski Sofia",
+     "type": "enjeu",
+     "fait": "10e avec 7 pts après 4 journées.",
+     "source": "https://sport.sky.de/fussball/celta-vigo-vs-bournemouth/tabelle/577814",
+     "date": "2026-11-05"
+    },
+    {
+     "equipe": "Levski Sofia",
+     "type": "physique",
+     "fait": "Kirilov (genou) absent.",
+     "source": "https://starting11.com/fixtures/marseille-vs-levski-sofia",
+     "date": "2026-11-26"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-26-uel-olympiakos-ac-milan",
+   "date": "2026-11-26",
+   "heure": "18:45",
+   "comp": "UEL",
+   "competition": "Ligue Europa",
+   "tour": "Phase de ligue – J5",
+   "dom": "Olympiakos",
+   "ext": "Milan",
+   "dom_affiche": "Olympiakos",
+   "ext_affiche": "AC Milan",
+   "neutre": false,
+   "p1": 0.267,
+   "pN": 0.257,
+   "p2": 0.476,
+   "pronostic": "2",
+   "favori": "AC Milan",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.267,
+    "pN": 0.257,
+    "p2": 0.476
+   },
+   "proba_favori": 0.476,
+   "confiance": "Léger avantage",
+   "score_probable": "0-1",
+   "buts_dom": 1.08,
+   "buts_ext": 1.64,
+   "plus_2_5": 0.512,
+   "facteurs": {
+    "dom": {
+     "elo": 1655,
+     "elo_septembre": 1655,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1832,
+     "elo_septembre": 1798,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Olympiakos 1655, AC Milan 1832 (176 pts en faveur de AC Milan).",
+    "Avantage du terrain pour Olympiakos (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "AC Milan en forme depuis septembre (+33 pts d'Elo)."
+   ],
+   "lecture": "Milan favori (48 %) sur l'Elo, mais le club annonce une longue liste d'absents (Modrić, Gabbia, Saelemaekers… non confirmés officiellement) et reste à 3 pts. Olympiakos, privé d'El Kaabi, est 6e : un nul ne surprendrait pas.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Olympiakos",
+     "type": "enjeu",
+     "fait": "6e avec 10 pts après 4 journées.",
+     "source": "https://sport.sky.de/fussball/celta-vigo-vs-bournemouth/tabelle/577814",
+     "date": "2026-11-05"
+    },
+    {
+     "equipe": "Olympiakos",
+     "type": "physique",
+     "fait": "El Kaabi (jambe cassée), Chiquinho (pied), Yazıcı (genou), Puerta et Hezze absents.",
+     "source": "https://starting11.com/fixtures/olympiakos-piraeus-vs-ac-milan",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "AC Milan",
+     "type": "enjeu",
+     "fait": "28e avec 3 pts après 4 journées : qualification en danger.",
+     "source": "https://sport.sky.de/fussball/celta-vigo-vs-bournemouth/tabelle/577814",
+     "date": "2026-11-05"
+    },
+    {
+     "equipe": "AC Milan",
+     "type": "physique",
+     "fait": "Liste longue d'absents annoncés : Modrić, Loftus-Cheek, Gabbia (cuisse), Saelemaekers (cheville), Pavlović (malade), Bartesaghi (jambe), Chukwueze, Camarda, Terracciano.",
+     "source": "https://starting11.com/fixtures/olympiakos-piraeus-vs-ac-milan",
+     "date": "2026-11-26"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-26-uel-viktoria-plzen-benfica",
+   "date": "2026-11-26",
+   "heure": "18:45",
+   "comp": "UEL",
+   "competition": "Ligue Europa",
+   "tour": "Phase de ligue – J5",
+   "dom": "Viktoria Plzeň",
+   "ext": "Benfica",
+   "dom_affiche": "Viktoria Plzeň",
+   "ext_affiche": "Benfica",
+   "neutre": false,
+   "p1": 0.246,
+   "pN": 0.247,
+   "p2": 0.507,
+   "pronostic": "2",
+   "favori": "Benfica",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.246,
+    "pN": 0.247,
+    "p2": 0.507
+   },
+   "proba_favori": 0.507,
+   "confiance": "Favori",
+   "score_probable": "0-1",
+   "buts_dom": 1.03,
+   "buts_ext": 1.72,
+   "plus_2_5": 0.52,
+   "facteurs": {
+    "dom": {
+     "elo": 1620,
+     "elo_septembre": 1620,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1822,
+     "elo_septembre": 1800,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Viktoria Plzeň 1620, Benfica 1822 (202 pts en faveur de Benfica).",
+    "Avantage du terrain pour Viktoria Plzeň (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Niveau d'un des clubs estimé (club hors des 9 championnats suivis) : pronostic moins fiable."
+   ],
+   "lecture": "Benfica favori (51 %) : leader avec 12 pts sur 12 et un Elo bien supérieur. Plzeň (3 pts) doit absolument prendre des points à domicile.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Viktoria Plzeň",
+     "type": "enjeu",
+     "fait": "30e avec 3 pts après 4 journées.",
+     "source": "https://sport.sky.de/fussball/celta-vigo-vs-bournemouth/tabelle/577814",
+     "date": "2026-11-05"
+    },
+    {
+     "equipe": "Benfica",
+     "type": "enjeu",
+     "fait": "1er avec 12 pts (4 sur 4).",
+     "source": "https://sport.sky.de/fussball/celta-vigo-vs-bournemouth/tabelle/577814",
+     "date": "2026-11-05"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-26-uel-union-saint-gilloise-lech-poznan",
+   "date": "2026-11-26",
+   "heure": "18:45",
+   "comp": "UEL",
+   "competition": "Ligue Europa",
+   "tour": "Phase de ligue – J5",
+   "dom": "St. Gilloise",
+   "ext": "Lech",
+   "dom_affiche": "Union Saint-Gilloise",
+   "ext_affiche": "Lech Poznań",
+   "neutre": false,
+   "p1": 0.729,
+   "pN": 0.176,
+   "p2": 0.095,
+   "pronostic": "1",
+   "favori": "Union Saint-Gilloise",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.729,
+    "pN": 0.176,
+    "p2": 0.095
+   },
+   "proba_favori": 0.729,
+   "confiance": "Net favori",
+   "score_probable": "2-0",
+   "buts_dom": 2.4,
+   "buts_ext": 0.73,
+   "plus_2_5": 0.605,
+   "facteurs": {
+    "dom": {
+     "elo": 1790,
+     "elo_septembre": 1732,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1533,
+     "elo_septembre": 1533,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Union Saint-Gilloise 1790, Lech Poznań 1533 (257 pts en faveur de Union Saint-Gilloise).",
+    "Avantage du terrain pour Union Saint-Gilloise (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Union Saint-Gilloise en forme depuis septembre (+58 pts d'Elo)."
+   ],
+   "lecture": "Union net favori (73 %) : niveau supérieur et 4e du classement. Lech (1 pt) a de nombreux blessés, dont Ishak, son buteur.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Union Saint-Gilloise",
+     "type": "enjeu",
+     "fait": "4e avec 10 pts après 4 journées.",
+     "source": "https://sport.sky.de/fussball/celta-vigo-vs-bournemouth/tabelle/577814",
+     "date": "2026-11-05"
+    },
+    {
+     "equipe": "Union Saint-Gilloise",
+     "type": "logistique",
+     "fait": "Match joué au Den Dreef (Louvain).",
+     "source": "https://starting11.com/fixtures/union-saint-gilloise-vs-lech-poznan",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Union Saint-Gilloise",
+     "type": "physique",
+     "fait": "Biondic et Mac Allister (genou) absents.",
+     "source": "https://starting11.com/fixtures/union-saint-gilloise-vs-lech-poznan",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Lech Poznań",
+     "type": "enjeu",
+     "fait": "35e avec 1 pt après 4 journées : qualification en grand danger.",
+     "source": "https://sport.sky.de/fussball/celta-vigo-vs-bournemouth/tabelle/577814",
+     "date": "2026-11-05"
+    },
+    {
+     "equipe": "Lech Poznań",
+     "type": "physique",
+     "fait": "Ishak (musculaire), Moutinho (jambe cassée), Douglas (cheville), Sayyadmanesh (aine) absents.",
+     "source": "https://starting11.com/fixtures/union-saint-gilloise-vs-lech-poznan",
+     "date": "2026-11-26"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-26-uel-rb-salzbourg-ararat-armenia",
+   "date": "2026-11-26",
+   "heure": "18:45",
+   "comp": "UEL",
+   "competition": "Ligue Europa",
+   "tour": "Phase de ligue – J5",
+   "dom": "Salzburg",
+   "ext": "Ararat-Armenia",
+   "dom_affiche": "RB Salzbourg",
+   "ext_affiche": "Ararat-Armenia",
+   "neutre": false,
+   "p1": 0.588,
+   "pN": 0.242,
+   "p2": 0.17,
+   "pronostic": "1",
+   "favori": "RB Salzbourg",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.588,
+    "pN": 0.242,
+    "p2": 0.17
+   },
+   "proba_favori": 0.588,
+   "confiance": "Favori",
+   "score_probable": "1-0",
+   "buts_dom": 1.9,
+   "buts_ext": 0.93,
+   "plus_2_5": 0.536,
+   "facteurs": {
+    "dom": {
+     "elo": 1559,
+     "elo_septembre": 1559,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1430,
+     "elo_septembre": 1430,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : RB Salzbourg 1559, Ararat-Armenia 1430 (129 pts en faveur de RB Salzbourg).",
+    "Avantage du terrain pour RB Salzbourg (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Niveau d'un des clubs estimé (club hors des 9 championnats suivis) : pronostic moins fiable."
+   ],
+   "lecture": "Salzbourg favori (59 %) contre le dernier du classement (0 pt), dont le gardien Bravim est suspendu. Salzbourg a toutefois une infirmerie chargée et un niveau d'Elo modeste.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "RB Salzbourg",
+     "type": "enjeu",
+     "fait": "26e avec 4 pts après 4 journées.",
+     "source": "https://sport.sky.de/fussball/celta-vigo-vs-bournemouth/tabelle/577814",
+     "date": "2026-11-05"
+    },
+    {
+     "equipe": "RB Salzbourg",
+     "type": "physique",
+     "fait": "Nombreux blessés annoncés : Tabaković, Schmid, Veratschnig (genou), Boma (mollet), Kitano (cheville), Mellberg (musculaire).",
+     "source": "https://starting11.com/fixtures/red-bull-salzburg-vs-ararat-armenia",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Ararat-Armenia",
+     "type": "enjeu",
+     "fait": "36e et dernier avec 0 pt après 4 journées.",
+     "source": "https://sport.sky.de/fussball/celta-vigo-vs-bournemouth/tabelle/577814",
+     "date": "2026-11-05"
+    },
+    {
+     "equipe": "Ararat-Armenia",
+     "type": "physique",
+     "fait": "Le gardien Bravim est suspendu (carton rouge).",
+     "source": "https://starting11.com/fixtures/red-bull-salzburg-vs-ararat-armenia",
+     "date": "2026-11-26"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-26-uecl-ajax-fc-thoune",
+   "date": "2026-11-26",
+   "heure": "18:45",
+   "comp": "UECL",
+   "competition": "Ligue Conférence",
+   "tour": "Phase de ligue – J4",
+   "dom": "Ajax",
+   "ext": "FC Thoune",
+   "dom_affiche": "Ajax",
+   "ext_affiche": "FC Thoune",
+   "neutre": false,
+   "p1": 0.515,
+   "pN": 0.27,
+   "p2": 0.215,
+   "pronostic": "1",
+   "favori": "Ajax",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.515,
+    "pN": 0.27,
+    "p2": 0.215
+   },
+   "proba_favori": 0.515,
+   "confiance": "Favori",
+   "score_probable": "1-0",
+   "buts_dom": 1.7,
+   "buts_ext": 1.04,
+   "plus_2_5": 0.516,
+   "facteurs": {
+    "dom": {
+     "elo": 1660,
+     "elo_septembre": 1629,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1590,
+     "elo_septembre": 1590,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Ajax 1660, FC Thoune 1590 (70 pts en faveur de Ajax).",
+    "Avantage du terrain pour Ajax (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Ajax en forme depuis septembre (+31 pts d'Elo).",
+    "Niveau d'un des clubs estimé (club hors des 9 championnats suivis) : pronostic moins fiable."
+   ],
+   "lecture": "Ajax favori (52 %) à domicile. Thoune, au niveau estimé, n'a que 3 pts ; Ajax (6 pts) doit gagner pour viser le top 8.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Ajax",
+     "type": "enjeu",
+     "fait": "11e avec 6 pts après 3 journées.",
+     "source": "https://sport.sky.de/fussball/almaty-vs-mjaellby-aif/577952",
+     "date": "2026-11-05"
+    },
+    {
+     "equipe": "FC Thoune",
+     "type": "enjeu",
+     "fait": "20e avec 3 pts après 3 journées.",
+     "source": "https://sport.sky.de/fussball/almaty-vs-mjaellby-aif/577952",
+     "date": "2026-11-05"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-26-uecl-brann-agf-aarhus",
+   "date": "2026-11-26",
+   "heure": "18:45",
+   "comp": "UECL",
+   "competition": "Ligue Conférence",
+   "tour": "Phase de ligue – J4",
+   "dom": "Brann",
+   "ext": "Aarhus",
+   "dom_affiche": "Brann",
+   "ext_affiche": "AGF Aarhus",
+   "neutre": false,
+   "p1": 0.482,
+   "pN": 0.282,
+   "p2": 0.237,
+   "pronostic": "1",
+   "favori": "Brann",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.482,
+    "pN": 0.282,
+    "p2": 0.237
+   },
+   "proba_favori": 0.482,
+   "confiance": "Favori",
+   "score_probable": "1-0",
+   "buts_dom": 1.62,
+   "buts_ext": 1.09,
+   "plus_2_5": 0.509,
+   "facteurs": {
+    "dom": {
+     "elo": 1493,
+     "elo_septembre": 1493,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1450,
+     "elo_septembre": 1450,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Brann 1493, AGF Aarhus 1450 (44 pts en faveur de Brann).",
+    "Avantage du terrain pour Brann (environ +65 pts d'Elo, soit 7 à 8 points de % en plus)."
+   ],
+   "lecture": "Brann favori (48 %) : bon départ (7 pts) et avantage du terrain. Aarhus (2 pts) est proche en Elo : le nul reste une vraie option (28 %).",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Brann",
+     "type": "enjeu",
+     "fait": "6e avec 7 pts après 3 journées.",
+     "source": "https://sport.sky.de/fussball/almaty-vs-mjaellby-aif/577952",
+     "date": "2026-11-05"
+    },
+    {
+     "equipe": "AGF Aarhus",
+     "type": "enjeu",
+     "fait": "24e avec 2 pts après 3 journées.",
+     "source": "https://sport.sky.de/fussball/almaty-vs-mjaellby-aif/577952",
+     "date": "2026-11-05"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-26-uecl-brighton-universitatea-craiova",
+   "date": "2026-11-26",
+   "heure": "18:45",
+   "comp": "UECL",
+   "competition": "Ligue Conférence",
+   "tour": "Phase de ligue – J4",
+   "dom": "Brighton",
+   "ext": "Craiova",
+   "dom_affiche": "Brighton",
+   "ext_affiche": "Universitatea Craiova",
+   "neutre": false,
+   "p1": 0.895,
+   "pN": 0.079,
+   "p2": 0.026,
+   "pronostic": "1",
+   "favori": "Brighton",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.895,
+    "pN": 0.079,
+    "p2": 0.026
+   },
+   "proba_favori": 0.895,
+   "confiance": "Net favori",
+   "score_probable": "3-0",
+   "buts_dom": 3.75,
+   "buts_ext": 0.46,
+   "plus_2_5": 0.789,
+   "facteurs": {
+    "dom": {
+     "elo": 1924,
+     "elo_septembre": 1824,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1425,
+     "elo_septembre": 1425,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Brighton 1924, Universitatea Craiova 1425 (499 pts en faveur de Brighton).",
+    "Avantage du terrain pour Brighton (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Brighton en forme depuis septembre (+100 pts d'Elo)."
+   ],
+   "lecture": "Brighton très net favori (90 %) : énorme écart de niveau. Rotation probable avant la Premier League et absents (Mitoma, Ferguson), mais Craiova, solide (7 pts), devrait subir.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Brighton",
+     "type": "enjeu",
+     "fait": "5e avec 7 pts après 3 journées.",
+     "source": "https://sport.sky.de/fussball/almaty-vs-mjaellby-aif/577952",
+     "date": "2026-11-05"
+    },
+    {
+     "equipe": "Brighton",
+     "type": "physique",
+     "fait": "Mitoma (ischios), Ferguson (cheville), Tzimas (genou) absents ; Struijk laissé au repos ; Minteh et Hadjam incertains.",
+     "source": "https://starting11.com/es/fixtures/brighton-vs-universitatea-craiova",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Brighton",
+     "type": "logistique",
+     "fait": "Match de Premier League 3 jours après : rotation probable selon starting11.",
+     "source": "https://starting11.com/es/fixtures/brighton-vs-universitatea-craiova",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Universitatea Craiova",
+     "type": "enjeu",
+     "fait": "8e avec 7 pts après 3 journées.",
+     "source": "https://sport.sky.de/fussball/almaty-vs-mjaellby-aif/577952",
+     "date": "2026-11-05"
+    },
+    {
+     "equipe": "Universitatea Craiova",
+     "type": "mental",
+     "fait": "Onze stable : même XI aligné deux matchs de suite, aucun absent annoncé.",
+     "source": "https://starting11.com/es/fixtures/brighton-vs-universitatea-craiova",
+     "date": "2026-11-26"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-26-uecl-egnatia-lincoln-red-imps",
+   "date": "2026-11-26",
+   "heure": "18:45",
+   "comp": "UECL",
+   "competition": "Ligue Conférence",
+   "tour": "Phase de ligue – J4",
+   "dom": "Egnatia",
+   "ext": "Lincoln Red Imps",
+   "dom_affiche": "Egnatia",
+   "ext_affiche": "Lincoln Red Imps",
+   "neutre": false,
+   "p1": 0.489,
+   "pN": 0.279,
+   "p2": 0.232,
+   "pronostic": "1",
+   "favori": "Egnatia",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.489,
+    "pN": 0.279,
+    "p2": 0.232
+   },
+   "proba_favori": 0.489,
+   "confiance": "Favori",
+   "score_probable": "1-0",
+   "buts_dom": 1.64,
+   "buts_ext": 1.08,
+   "plus_2_5": 0.51,
+   "facteurs": {
+    "dom": {
+     "elo": 1430,
+     "elo_septembre": 1430,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1380,
+     "elo_septembre": 1380,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Egnatia 1430, Lincoln Red Imps 1380 (50 pts en faveur de Egnatia).",
+    "Avantage du terrain pour Egnatia (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Niveau d'un des clubs estimé (club hors des 9 championnats suivis) : pronostic moins fiable."
+   ],
+   "lecture": "Léger avantage à Egnatia à domicile (49 %). Deux équipes au niveau estimé et peu de repères : pronostic fragile.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Egnatia",
+     "type": "enjeu",
+     "fait": "Egnatia n'a pris que 2 points en 3 matchs de phase de ligue ; leader du championnat albanais mais battu 1-0 par Skënderbeu le week-end dernier.",
+     "source": "https://www.thestatszone.com/egnatia-vs-lincoln-red-imps-preview-prediction-2026-27-uefa-conference-league-league-phase-241168",
+     "date": "2026-11-23"
+    },
+    {
+     "equipe": "Lincoln Red Imps",
+     "type": "enjeu",
+     "fait": "Lincoln Red Imps (1 victoire, 2 défaites) figure dans le top 24 de la phase de ligue.",
+     "source": "https://www.thestatszone.com/egnatia-vs-lincoln-red-imps-preview-prediction-2026-27-uefa-conference-league-league-phase-241168",
+     "date": "2026-11-23"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-26-uecl-hearts-monaco",
+   "date": "2026-11-26",
+   "heure": "18:45",
+   "comp": "UECL",
+   "competition": "Ligue Conférence",
+   "tour": "Phase de ligue – J4",
+   "dom": "Hearts",
+   "ext": "Monaco",
+   "dom_affiche": "Hearts",
+   "ext_affiche": "Monaco",
+   "neutre": false,
+   "p1": 0.226,
+   "pN": 0.237,
+   "p2": 0.537,
+   "pronostic": "2",
+   "favori": "Monaco",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.226,
+    "pN": 0.237,
+    "p2": 0.537
+   },
+   "proba_favori": 0.537,
+   "confiance": "Favori",
+   "score_probable": "0-1",
+   "buts_dom": 0.98,
+   "buts_ext": 1.81,
+   "plus_2_5": 0.528,
+   "facteurs": {
+    "dom": {
+     "elo": 1495,
+     "elo_septembre": 1495,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1722,
+     "elo_septembre": 1753,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Hearts 1495, Monaco 1722 (227 pts en faveur de Monaco).",
+    "Avantage du terrain pour Hearts (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Monaco en baisse depuis septembre (-31 pts d'Elo)."
+   ],
+   "lecture": "Monaco favori (54 %), 9 pts en 3 matchs mais six matchs de Ligue 1 sans victoire. Hearts (1 pt) a beaucoup d'absents mais sort d'un 8-0 en championnat.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Hearts",
+     "type": "enjeu",
+     "fait": "Hearts est 32e de la phase de ligue avec 1 point en 3 matchs.",
+     "source": "https://www.sportsmole.co.uk/football/hearts/europa-conference-league/preview/hearts-vs-monaco-prediction-team-news-lineups_609756.html",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Hearts",
+     "type": "physique",
+     "fait": "Neuf joueurs ne devraient pas jouer selon Sports Mole (Fagan-Walcott, Kingsley, Magnusson, Miller, McEntee, Milne, Spittal, Renaud, Halkett) ; Vrancken pourrait toutefois reconduire le XI vainqueur 8-0 à Dundee.",
+     "source": "https://www.sportsmole.co.uk/football/hearts/europa-conference-league/preview/hearts-vs-monaco-prediction-team-news-lineups_609756.html",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Monaco",
+     "type": "enjeu",
+     "fait": "Monaco est 4e de la phase de ligue avec 9 points en 3 matchs, mais reste sur six matchs de Ligue 1 sans victoire.",
+     "source": "https://www.sportsmole.co.uk/football/hearts/europa-conference-league/preview/hearts-vs-monaco-prediction-team-news-lineups_609756.html",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Monaco",
+     "type": "physique",
+     "fait": "Golovin, Ansu Fati et Idumbo sont absents (blessures).",
+     "source": "https://www.sportsmole.co.uk/football/hearts/europa-conference-league/preview/hearts-vs-monaco-prediction-team-news-lineups_609756.html",
+     "date": "2026-11-25"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-26-uecl-iberia-1999-getafe",
+   "date": "2026-11-26",
+   "heure": "18:45",
+   "comp": "UECL",
+   "competition": "Ligue Conférence",
+   "tour": "Phase de ligue – J4",
+   "dom": "Iberia 1999",
+   "ext": "Getafe",
+   "dom_affiche": "Iberia 1999",
+   "ext_affiche": "Getafe",
+   "neutre": false,
+   "p1": 0.267,
+   "pN": 0.257,
+   "p2": 0.476,
+   "pronostic": "2",
+   "favori": "Getafe",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.267,
+    "pN": 0.257,
+    "p2": 0.476
+   },
+   "proba_favori": 0.476,
+   "confiance": "Léger avantage",
+   "score_probable": "0-1",
+   "buts_dom": 1.08,
+   "buts_ext": 1.64,
+   "plus_2_5": 0.512,
+   "facteurs": {
+    "dom": {
+     "elo": 1450,
+     "elo_septembre": 1450,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1627,
+     "elo_septembre": 1654,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Iberia 1999 1450, Getafe 1627 (177 pts en faveur de Getafe).",
+    "Avantage du terrain pour Iberia 1999 (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Getafe en baisse depuis septembre (-28 pts d'Elo).",
+    "Niveau d'un des clubs estimé (club hors des 9 championnats suivis) : pronostic moins fiable."
+   ],
+   "lecture": "Getafe favori (48 %) face au club géorgien au niveau estimé. Tension entre Bordalás et sa direction, et lourde défaite contre l'Atlético : Getafe n'est pas serein.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Iberia 1999",
+     "type": "enjeu",
+     "fait": "Iberia 1999 n'a pris qu'1 point en 3 matchs de phase de ligue ; victoire 1-0 à Samgurali le week-end.",
+     "source": "https://www.thestatszone.com/iberia-1999-vs-getafe-preview-prediction-2026-27-uefa-conference-league-league-phase-241189",
+     "date": "2026-11-23"
+    },
+    {
+     "equipe": "Getafe",
+     "type": "mental",
+     "fait": "Bordalás est en conflit ouvert avec le président Ángel Torres sur l'état de l'effectif ; Getafe a perdu 3-0 contre l'Atlético le week-end et peine à gérer le double calendrier.",
+     "source": "https://www.thestatszone.com/iberia-1999-vs-getafe-preview-prediction-2026-27-uefa-conference-league-league-phase-241189",
+     "date": "2026-11-23"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-26-uecl-jablonec-lugano",
+   "date": "2026-11-26",
+   "heure": "18:45",
+   "comp": "UECL",
+   "competition": "Ligue Conférence",
+   "tour": "Phase de ligue – J4",
+   "dom": "Jablonec",
+   "ext": "Lugano",
+   "dom_affiche": "Jablonec",
+   "ext_affiche": "Lugano",
+   "neutre": false,
+   "p1": 0.464,
+   "pN": 0.287,
+   "p2": 0.249,
+   "pronostic": "1",
+   "favori": "Jablonec",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.464,
+    "pN": 0.287,
+    "p2": 0.249
+   },
+   "proba_favori": 0.464,
+   "confiance": "Léger avantage",
+   "score_probable": "1-0",
+   "buts_dom": 1.58,
+   "buts_ext": 1.12,
+   "plus_2_5": 0.506,
+   "facteurs": {
+    "dom": {
+     "elo": 1620,
+     "elo_septembre": 1620,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1590,
+     "elo_septembre": 1590,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Jablonec 1620, Lugano 1590 (30 pts en faveur de Jablonec).",
+    "Avantage du terrain pour Jablonec (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Niveau d'un des clubs estimé (club hors des 9 championnats suivis) : pronostic moins fiable."
+   ],
+   "lecture": "Léger avantage à Jablonec à domicile (46 %) selon l'Elo estimé, mais Lugano a gagné ses 3 matchs (11 buts) et mène le championnat suisse : c'est le match où le modèle peut se tromper.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Jablonec",
+     "type": "enjeu",
+     "fait": "Jablonec n'a pris que 2 points en 3 matchs de phase de ligue.",
+     "source": "https://www.thestatszone.com/jablonec-vs-lugano-preview-prediction-2026-27-uefa-conference-league-league-phase-241192",
+     "date": "2026-11-23"
+    },
+    {
+     "equipe": "Lugano",
+     "type": "enjeu",
+     "fait": "Lugano est en tête de la phase de ligue (3 victoires en 3 matchs, 11 buts) et leader du championnat suisse après sa victoire sur Grasshoppers.",
+     "source": "https://www.thestatszone.com/jablonec-vs-lugano-preview-prediction-2026-27-uefa-conference-league-league-phase-241192",
+     "date": "2026-11-23"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-26-uecl-kauno-zalgiris-riga-fc",
+   "date": "2026-11-26",
+   "heure": "18:45",
+   "comp": "UECL",
+   "competition": "Ligue Conférence",
+   "tour": "Phase de ligue – J4",
+   "dom": "Kauno Žalgiris",
+   "ext": "Riga FC",
+   "dom_affiche": "Kauno Žalgiris",
+   "ext_affiche": "Riga FC",
+   "neutre": false,
+   "p1": 0.444,
+   "pN": 0.311,
+   "p2": 0.245,
+   "pronostic": "1",
+   "favori": "Kauno Žalgiris",
+   "double_chance": {
+    "issue": "1N",
+    "proba": 0.755
+   },
+   "p_modele": {
+    "p1": 0.426,
+    "pN": 0.299,
+    "p2": 0.275
+   },
+   "proba_favori": 0.444,
+   "confiance": "Léger avantage",
+   "score_probable": "1-0",
+   "buts_dom": 1.5,
+   "buts_ext": 1.18,
+   "plus_2_5": 0.501,
+   "facteurs": {
+    "dom": {
+     "elo": 1420,
+     "elo_septembre": 1420,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1420,
+     "elo_septembre": 1420,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Kauno Žalgiris 1420, Riga FC 1420 (0 pts en faveur de Kauno Žalgiris).",
+    "Avantage du terrain pour Kauno Žalgiris (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Niveau d'un des clubs estimé (club hors des 9 championnats suivis) : pronostic moins fiable."
+   ],
+   "lecture": "Match ouvert : avantage à Kauno Žalgiris (44 %), double chance 1N à 75 %. Riga a changé d'entraîneur cette semaine (Zaneti nommé le 24/11) : ajustement de 3 points. Les deux niveaux sont estimés.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Riga FC",
+     "type": "coach",
+     "fait": "Riga s'est séparé à l'amiable le 22 novembre de son entraîneur Adrián Guľa (96 matchs : 65 V, 21 N, 10 D) ; ses adjoints sont aussi partis.",
+     "source": "https://www.lsm.lv/raksts/sports/futbols/22.11.2026-futbola-klubs-riga-partrauc-ligumu-ar-galveno-treneri-gulu.a672931/",
+     "date": "2026-11-22"
+    },
+    {
+     "equipe": "Riga FC",
+     "type": "coach",
+     "fait": "Le Français Didier Zaneti (ex-Auda) a été nommé entraîneur le 24 novembre, deux jours avant le match à Kaunas.",
+     "source": "https://www.lsm.lv/raksts/sports/futbols/24.11.2026-futbola-klubs-riga-galvena-trenera-amata-apstiprina-ieprieks-auda-vadijuso-zaneti.a673200/",
+     "date": "2026-11-24"
+    },
+    {
+     "equipe": "Riga FC",
+     "type": "logistique",
+     "fait": "Riga a terminé sa saison de Virslīga (2e) : plus de match de championnat à gérer.",
+     "source": "https://www.lsm.lv/raksts/sports/futbols/24.11.2026-futbola-klubs-riga-galvena-trenera-amata-apstiprina-ieprieks-auda-vadijuso-zaneti.a673200/",
+     "date": "2026-11-24"
+    }
+   ],
+   "ajustement": 3,
+   "resultat": null,
+   "correct": null,
+   "ajustement_raison": "Riga a perdu son entraîneur Adrián Guľa le 22/11, remplacé par Didier Zaneti le 24/11 : -3 points sur la victoire de Riga."
+  },
+  {
+   "id": "2026-11-26-uecl-pafos-midtjylland",
+   "date": "2026-11-26",
+   "heure": "18:45",
+   "comp": "UECL",
+   "competition": "Ligue Conférence",
+   "tour": "Phase de ligue – J4",
+   "dom": "Pafos",
+   "ext": "Midtjylland",
+   "dom_affiche": "Pafos",
+   "ext_affiche": "Midtjylland",
+   "neutre": false,
+   "p1": 0.357,
+   "pN": 0.287,
+   "p2": 0.356,
+   "pronostic": "1",
+   "favori": "Pafos",
+   "double_chance": {
+    "issue": "1N",
+    "proba": 0.644
+   },
+   "p_modele": {
+    "p1": 0.357,
+    "pN": 0.287,
+    "p2": 0.356
+   },
+   "proba_favori": 0.357,
+   "confiance": "Très ouvert",
+   "score_probable": "1-0",
+   "buts_dom": 1.3,
+   "buts_ext": 1.36,
+   "plus_2_5": 0.497,
+   "facteurs": {
+    "dom": {
+     "elo": 1520,
+     "elo_septembre": 1520,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1596,
+     "elo_septembre": 1596,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Pafos 1520, Midtjylland 1596 (76 pts en faveur de Midtjylland).",
+    "Avantage du terrain pour Pafos (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Match serré : le nul est une vraie option (29 %).",
+    "Niveau d'un des clubs estimé (club hors des 9 championnats suivis) : pronostic moins fiable."
+   ],
+   "lecture": "Match très ouvert (36 % de chaque côté), double chance 1N à 64 %. Les deux clubs n'ont qu'1 point ; Midtjylland, leader au Danemark, a un meilleur Elo mais se déplace.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Pafos",
+     "type": "enjeu",
+     "fait": "Pafos n'a pris qu'1 point en 3 matchs de phase de ligue ; victoire 2-1 contre Omonia Aradippou le week-end.",
+     "source": "https://www.thestatszone.com/pafos-vs-midtjylland-preview-prediction-2026-27-uefa-conference-league-league-phase-241217",
+     "date": "2026-11-23"
+    },
+    {
+     "equipe": "Midtjylland",
+     "type": "enjeu",
+     "fait": "Midtjylland n'a aussi qu'1 point en 3 matchs de phase de ligue, bien que leader de la Superliga danoise.",
+     "source": "https://www.thestatszone.com/pafos-vs-midtjylland-preview-prediction-2026-27-uefa-conference-league-league-phase-241217",
+     "date": "2026-11-23"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-26-uel-crystal-palace-real-sociedad",
+   "date": "2026-11-26",
+   "heure": "21:00",
+   "comp": "UEL",
+   "competition": "Ligue Europa",
+   "tour": "Phase de ligue – J5",
+   "dom": "Crystal Palace",
+   "ext": "Sociedad",
+   "dom_affiche": "Crystal Palace",
+   "ext_affiche": "Real Sociedad",
+   "neutre": false,
+   "p1": 0.397,
+   "pN": 0.295,
+   "p2": 0.308,
+   "pronostic": "1",
+   "favori": "Crystal Palace",
+   "double_chance": {
+    "issue": "1N",
+    "proba": 0.692
+   },
+   "p_modele": {
+    "p1": 0.397,
+    "pN": 0.295,
+    "p2": 0.308
+   },
+   "proba_favori": 0.397,
+   "confiance": "Très ouvert",
+   "score_probable": "1-0",
+   "buts_dom": 1.41,
+   "buts_ext": 1.25,
+   "plus_2_5": 0.498,
+   "facteurs": {
+    "dom": {
+     "elo": 1706,
+     "elo_septembre": 1772,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1738,
+     "elo_septembre": 1664,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Crystal Palace 1706, Real Sociedad 1738 (32 pts en faveur de Real Sociedad).",
+    "Avantage du terrain pour Crystal Palace (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Crystal Palace en baisse depuis septembre (-66 pts d'Elo).",
+    "Real Sociedad en forme depuis septembre (+74 pts d'Elo).",
+    "Match serré : le nul est une vraie option (30 %)."
+   ],
+   "lecture": "Match ouvert : léger avantage à Palace à domicile (40 %), double chance 1N à 69 %. Palace est dernier de Premier League, sans Wharton (suspendu) ni Sarr, sous Thomas Frank depuis dix jours. La Real, 5e de Liga, peut gagner à Londres.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Crystal Palace",
+     "type": "coach",
+     "fait": "Thomas Frank nommé le 16 novembre après le renvoi de Pierre Sage la semaine précédente (5 V, 3 N, 8 D en 16 matchs).",
+     "source": "https://www.soccernews.com/struggling-crystal-palace-confirm-frank-as-new-manager/408268/",
+     "date": "2026-11-16"
+    },
+    {
+     "equipe": "Crystal Palace",
+     "type": "mental",
+     "fait": "Défaite 3-2 à Coventry pour le premier match de Frank ; Palace est dernier de Premier League (8 défaites en 11 matchs).",
+     "source": "https://premierleaguenewsnow.com/2026/11/25/crystal-palace-real-sociedad-preview-wharton-frank/",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Crystal Palace",
+     "type": "physique",
+     "fait": "Adam Wharton suspendu (rouge contre Hoffenheim) ; Ismaïla Sarr (aine, plusieurs semaines) et Tomiyasu absents ; Mateta disponible en C3 avant sa suspension en championnat.",
+     "source": "https://sports.yahoo.com/soccer/articles/crystal-palace-vs-real-sociedad-061200668.html",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Crystal Palace",
+     "type": "enjeu",
+     "fait": "Palace est 21e avec 5 points après 4 matchs, à deux points du top 8.",
+     "source": "https://premierleaguenewsnow.com/2026/11/25/crystal-palace-real-sociedad-preview-wharton-frank/",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Real Sociedad",
+     "type": "enjeu",
+     "fait": "La Real Sociedad est 20e avec 5 points ; 5e de Liga mais battue 3-2 au Racing Santander le week-end.",
+     "source": "https://premierleaguenewsnow.com/2026/11/25/crystal-palace-real-sociedad-preview-wharton-frank/",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Real Sociedad",
+     "type": "physique",
+     "fait": "Odriozola (genou) et Barrenetxea (opéré des ischios) sont absents pour longtemps.",
+     "source": "https://premierleaguenewsnow.com/2026/11/25/crystal-palace-real-sociedad-preview-wharton-frank/",
+     "date": "2026-11-25"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-26-uel-ferencvaros-celje",
+   "date": "2026-11-26",
+   "heure": "21:00",
+   "comp": "UEL",
+   "competition": "Ligue Europa",
+   "tour": "Phase de ligue – J5",
+   "dom": "Ferencváros",
+   "ext": "Celje",
+   "dom_affiche": "Ferencváros",
+   "ext_affiche": "Celje",
+   "neutre": false,
+   "p1": 0.451,
+   "pN": 0.291,
+   "p2": 0.257,
+   "pronostic": "1",
+   "favori": "Ferencváros",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.451,
+    "pN": 0.291,
+    "p2": 0.257
+   },
+   "proba_favori": 0.451,
+   "confiance": "Léger avantage",
+   "score_probable": "1-0",
+   "buts_dom": 1.55,
+   "buts_ext": 1.14,
+   "plus_2_5": 0.504,
+   "facteurs": {
+    "dom": {
+     "elo": 1500,
+     "elo_septembre": 1500,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1480,
+     "elo_septembre": 1480,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Ferencváros 1500, Celje 1480 (20 pts en faveur de Ferencváros).",
+    "Avantage du terrain pour Ferencváros (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Niveau d'un des clubs estimé (club hors des 9 championnats suivis) : pronostic moins fiable."
+   ],
+   "lecture": "Ferencváros favori (45 %) : 12 pts sur 12 et invaincu en Europe. Mais Celje gagne tout depuis 5 matchs et Yusuf est suspendu : match plus ouvert qu'il n'y paraît.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Ferencváros",
+     "type": "enjeu",
+     "fait": "Ferencváros est 3e avec 12 points (4 victoires) et invaincu en 12 matchs européens ; une victoire le porterait à 15 points.",
+     "source": "https://hunfoci.hu/europa-liga/tovabb-menetelhet-a-ferencvaros-az-europa-ligaban-a-celje-ellen-mar-a-nyolcaddonto-lehet-a-tet.html",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Ferencváros",
+     "type": "physique",
+     "fait": "L'attaquant Bamidele Yusuf est suspendu (expulsé contre l'AC Milan).",
+     "source": "https://hunfoci.hu/europa-liga/tovabb-menetelhet-a-ferencvaros-az-europa-ligaban-a-celje-ellen-mar-a-nyolcaddonto-lehet-a-tet.html",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Ferencváros",
+     "type": "mental",
+     "fait": "Défaite 3-1 à domicile contre Győr le week-end, fin d'une série de 22 matchs sans défaite en championnat.",
+     "source": "https://hunfoci.hu/europa-liga/tovabb-menetelhet-a-ferencvaros-az-europa-ligaban-a-celje-ellen-mar-a-nyolcaddonto-lehet-a-tet.html",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Celje",
+     "type": "coach",
+     "fait": "Zoran Zeljković a pris les commandes de Celje le 15 septembre ; l'équipe a gagné ses cinq derniers matchs officiels.",
+     "source": "https://www.nemzetisport.hu/europa-liga/2026/11/a-celje-vezetoedzoje-a-ferencvaros-az-europa-liga-egyik-legjobbja",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Celje",
+     "type": "enjeu",
+     "fait": "Celje est 25e après 4 journées.",
+     "source": "https://hunfoci.hu/europa-liga/tovabb-menetelhet-a-ferencvaros-az-europa-ligaban-a-celje-ellen-mar-a-nyolcaddonto-lehet-a-tet.html",
+     "date": "2026-11-25"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-26-uel-hoffenheim-sturm-graz",
+   "date": "2026-11-26",
+   "heure": "21:00",
+   "comp": "UEL",
+   "competition": "Ligue Europa",
+   "tour": "Phase de ligue – J5",
+   "dom": "Hoffenheim",
+   "ext": "Sturm Graz",
+   "dom_affiche": "Hoffenheim",
+   "ext_affiche": "Sturm Graz",
+   "neutre": false,
+   "p1": 0.571,
+   "pN": 0.249,
+   "p2": 0.18,
+   "pronostic": "1",
+   "favori": "Hoffenheim",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.571,
+    "pN": 0.249,
+    "p2": 0.18
+   },
+   "proba_favori": 0.571,
+   "confiance": "Favori",
+   "score_probable": "1-0",
+   "buts_dom": 1.85,
+   "buts_ext": 0.95,
+   "plus_2_5": 0.531,
+   "facteurs": {
+    "dom": {
+     "elo": 1668,
+     "elo_septembre": 1688,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1553,
+     "elo_septembre": 1553,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Hoffenheim 1668, Sturm Graz 1553 (115 pts en faveur de Hoffenheim).",
+    "Avantage du terrain pour Hoffenheim (environ +65 pts d'Elo, soit 7 à 8 points de % en plus)."
+   ],
+   "lecture": "Hoffenheim favori (57 %) contre un Sturm en crise, sans victoire depuis un mois et dont l'entraîneur est contesté. Hoffenheim a cinq absents, dont Gendrey.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Hoffenheim",
+     "type": "enjeu",
+     "fait": "Hoffenheim est 23e avec 4 points, une place devant Sturm Graz (4 points aussi).",
+     "source": "https://www.bundesliga.com/en/bundesliga/news/hoffenheim-sturm-graz-live-europa-league-blog-preview-report-kabak-kramaric-40066",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Hoffenheim",
+     "type": "physique",
+     "fait": "Cinq joueurs indisponibles : De Cat, Gendrey (jambe cassée), Hajdari, Hranáč et Wimmer ; défaite 1-0 contre Francfort le week-end.",
+     "source": "https://www.bundesliga.com/en/bundesliga/news/hoffenheim-sturm-graz-live-europa-league-blog-preview-report-kabak-kramaric-40066",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Sturm Graz",
+     "type": "coach",
+     "fait": "Sturm est en crise : 5e du championnat, sans victoire depuis plus d'un mois, battu 1-0 à Altach ; une partie des supporters réclame le départ de l'entraîneur Fabio Ingolitsch.",
+     "source": "https://www.sportschau.de/regional/swr/swr-krise-in-der-steiermark-warum-hoffenheim-mit-sturm-graz-einen-angeschlagenen-gegner-erwartet-100.html",
+     "date": "2026-11-25"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-26-uel-juventus-omonia-nicosie",
+   "date": "2026-11-26",
+   "heure": "21:00",
+   "comp": "UEL",
+   "competition": "Ligue Europa",
+   "tour": "Phase de ligue – J5",
+   "dom": "Juventus",
+   "ext": "Omonia Nicosie",
+   "dom_affiche": "Juventus",
+   "ext_affiche": "Omonia Nicosie",
+   "neutre": false,
+   "p1": 0.689,
+   "pN": 0.202,
+   "p2": 0.109,
+   "pronostic": "1",
+   "favori": "Juventus",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.729,
+    "pN": 0.176,
+    "p2": 0.095
+   },
+   "proba_favori": 0.689,
+   "confiance": "Net favori",
+   "score_probable": "2-0",
+   "buts_dom": 2.4,
+   "buts_ext": 0.73,
+   "plus_2_5": 0.605,
+   "facteurs": {
+    "dom": {
+     "elo": 1776,
+     "elo_septembre": 1820,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1520,
+     "elo_septembre": 1520,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Juventus 1776, Omonia Nicosie 1520 (256 pts en faveur de Juventus).",
+    "Avantage du terrain pour Juventus (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Juventus en baisse depuis septembre (-44 pts d'Elo).",
+    "Niveau d'un des clubs estimé (club hors des 9 championnats suivis) : pronostic moins fiable."
+   ],
+   "lecture": "Juventus nette favorite (69 % après ajustement). Sans Yildiz, Thuram, Locatelli, Kalulu ni González, et avec des rotations annoncées par Spalletti : -4 points. L'Omonia (6 pts) peut accrocher un nul.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Juventus",
+     "type": "physique",
+     "fait": "Yildiz, Khephren Thuram et Locatelli sont absents de longue durée ; Nico González et Kalulu manquent aussi le match.",
+     "source": "https://www.goal.com/en-us/news/luciano-spalletti-confirms-jeff-ekhator-start-against-omonoia-europa-league/bltf1e0f10066e1ba49",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Juventus",
+     "type": "logistique",
+     "fait": "Spalletti annonce des rotations (« des rotations en lesquelles nous avons confiance ») et la titularisation de Jeff Ekhator.",
+     "source": "https://www.goal.com/en-us/news/luciano-spalletti-confirms-jeff-ekhator-start-against-omonoia-europa-league/bltf1e0f10066e1ba49",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Juventus",
+     "type": "enjeu",
+     "fait": "La Juventus est 5e (3 victoires, 1 nul) et sort d'un 4-0 contre Venezia en Serie A.",
+     "source": "https://www.goal.com/en-us/news/luciano-spalletti-confirms-jeff-ekhator-start-against-omonoia-europa-league/bltf1e0f10066e1ba49",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Omonia Nicosie",
+     "type": "enjeu",
+     "fait": "L'Omonia est 18e avec 6 points (2 victoires, 2 défaites).",
+     "source": "https://www.goal.com/en-us/news/luciano-spalletti-confirms-jeff-ekhator-start-against-omonoia-europa-league/bltf1e0f10066e1ba49",
+     "date": "2026-11-25"
+    }
+   ],
+   "ajustement": -4,
+   "resultat": null,
+   "correct": null,
+   "ajustement_raison": "Yildiz, Khephren Thuram, Locatelli, Kalulu et Nico González absents, et Spalletti annonce des rotations : -4 points sur la victoire de la Juventus."
+  },
+  {
+   "id": "2026-11-26-uel-lyon-lillestrm",
+   "date": "2026-11-26",
+   "heure": "21:00",
+   "comp": "UEL",
+   "competition": "Ligue Europa",
+   "tour": "Phase de ligue – J5",
+   "dom": "Lyon",
+   "ext": "Lillestrom",
+   "dom_affiche": "Lyon",
+   "ext_affiche": "Lillestrøm",
+   "neutre": false,
+   "p1": 0.885,
+   "pN": 0.086,
+   "p2": 0.029,
+   "pronostic": "1",
+   "favori": "Lyon",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.885,
+    "pN": 0.086,
+    "p2": 0.029
+   },
+   "proba_favori": 0.885,
+   "confiance": "Net favori",
+   "score_probable": "3-0",
+   "buts_dom": 3.59,
+   "buts_ext": 0.49,
+   "plus_2_5": 0.771,
+   "facteurs": {
+    "dom": {
+     "elo": 1747,
+     "elo_septembre": 1751,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1272,
+     "elo_septembre": 1272,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Lyon 1747, Lillestrøm 1272 (475 pts en faveur de Lyon).",
+    "Avantage du terrain pour Lyon (environ +65 pts d'Elo, soit 7 à 8 points de % en plus)."
+   ],
+   "lecture": "Lyon très net favori (89 %) contre l'avant-dernier (1 pt). Vicens a gagné son premier match ; Openda est de retour malgré l'infirmerie (Sulc, Morton).",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Lyon",
+     "type": "coach",
+     "fait": "Carlos Vicens nommé entraîneur (contrat jusqu'en juin 2028) après le départ soudain de Paulo Fonseca pour le Sporting.",
+     "source": "https://www.foxsports.com/articles/soccer/lyon-turns-to-vicens-as-coach-after-fonsecas-sudden-exit",
+     "date": "2026-11-10"
+    },
+    {
+     "equipe": "Lyon",
+     "type": "coach",
+     "fait": "Vicens a gagné son premier match 1-0 à Lille ; Lyon est 13e de la phase de ligue après 4 matchs, à égalité de points avec la 8e place.",
+     "source": "https://www.sportsmole.co.uk/football/lyon/europa-league/preview/lyon-vs-lillestrom-prediction-team-news-lineups_609716.html",
+     "date": "2026-11-23"
+    },
+    {
+     "equipe": "Lyon",
+     "type": "physique",
+     "fait": "Sulc et Morton (opérés) et Ouédraogo absents plusieurs mois ; Bidstrup et Mata forfaits ; retour d'Openda dans le groupe de 23.",
+     "source": "https://www.ferveurlyonnaise.fr/ligue-europa-j5-ol-sk-lillestrom-le-point-medical-et-le-groupe-de-vicens-avec-openda-de-retour",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Lillestrøm",
+     "type": "enjeu",
+     "fait": "Lillestrøm est 34e avec un seul point après 4 journées.",
+     "source": "https://www.sportsmole.co.uk/football/lyon/europa-league/preview/lyon-vs-lillestrom-prediction-team-news-lineups_609716.html",
+     "date": "2026-11-23"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-26-uel-nec-nimegue-rennes",
+   "date": "2026-11-26",
+   "heure": "21:00",
+   "comp": "UEL",
+   "competition": "Ligue Europa",
+   "tour": "Phase de ligue – J5",
+   "dom": "Nijmegen",
+   "ext": "Rennes",
+   "dom_affiche": "NEC Nimègue",
+   "ext_affiche": "Rennes",
+   "neutre": false,
+   "p1": 0.241,
+   "pN": 0.245,
+   "p2": 0.514,
+   "pronostic": "2",
+   "favori": "Rennes",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.241,
+    "pN": 0.245,
+    "p2": 0.514
+   },
+   "proba_favori": 0.514,
+   "confiance": "Favori",
+   "score_probable": "0-1",
+   "buts_dom": 1.02,
+   "buts_ext": 1.74,
+   "plus_2_5": 0.522,
+   "facteurs": {
+    "dom": {
+     "elo": 1500,
+     "elo_septembre": 1564,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1708,
+     "elo_septembre": 1732,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : NEC Nimègue 1500, Rennes 1708 (208 pts en faveur de Rennes).",
+    "Avantage du terrain pour NEC Nimègue (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "NEC Nimègue en baisse depuis septembre (-64 pts d'Elo)."
+   ],
+   "lecture": "Rennes favori (51 %) : Elo bien supérieur et invaincu en phase de ligue. NEC a pris 7 pts sur ses 3 derniers matchs européens : le nul reste crédible.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "NEC Nimègue",
+     "type": "enjeu",
+     "fait": "NEC a pris 7 points lors de ses trois derniers matchs de C3 mais a été battu 4-1 par le PSV samedi ; 12e d'Eredivisie.",
+     "source": "https://www.sportsmole.co.uk/football/nec/preview/nijmegen-vs-rennes-prediction-team-news-lineups_609742.html",
+     "date": "2026-11-24"
+    },
+    {
+     "equipe": "NEC Nimègue",
+     "type": "physique",
+     "fait": "Nuytinck (cheville) absent jusqu'à fin novembre, Schuurs attendu en décembre.",
+     "source": "https://www.sportsmole.co.uk/football/nec/preview/nijmegen-vs-rennes-prediction-team-news-lineups_609742.html",
+     "date": "2026-11-24"
+    },
+    {
+     "equipe": "Rennes",
+     "type": "enjeu",
+     "fait": "Rennes est invaincu en phase de ligue (1 victoire, 3 nuls) ; nul 1-1 à Lorient dimanche.",
+     "source": "https://www.sportsmole.co.uk/football/nec/preview/nijmegen-vs-rennes-prediction-team-news-lineups_609742.html",
+     "date": "2026-11-24"
+    },
+    {
+     "equipe": "Rennes",
+     "type": "physique",
+     "fait": "Mayenda (mollet) et Rongier (cuisse) incertains ou absents ; possible retour de Lepaul dans le XI.",
+     "source": "https://www.sportsmole.co.uk/football/nec/preview/nijmegen-vs-rennes-prediction-team-news-lineups_609742.html",
+     "date": "2026-11-24"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-26-uel-ofi-crete-anderlecht",
+   "date": "2026-11-26",
+   "heure": "21:00",
+   "comp": "UEL",
+   "competition": "Ligue Europa",
+   "tour": "Phase de ligue – J5",
+   "dom": "OFI Crete",
+   "ext": "Anderlecht",
+   "dom_affiche": "OFI Crète",
+   "ext_affiche": "Anderlecht",
+   "neutre": false,
+   "p1": 0.286,
+   "pN": 0.264,
+   "p2": 0.45,
+   "pronostic": "2",
+   "favori": "Anderlecht",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.286,
+    "pN": 0.264,
+    "p2": 0.45
+   },
+   "proba_favori": 0.45,
+   "confiance": "Léger avantage",
+   "score_probable": "0-1",
+   "buts_dom": 1.12,
+   "buts_ext": 1.58,
+   "plus_2_5": 0.507,
+   "facteurs": {
+    "dom": {
+     "elo": 1427,
+     "elo_septembre": 1427,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1583,
+     "elo_septembre": 1528,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : OFI Crète 1427, Anderlecht 1583 (155 pts en faveur de Anderlecht).",
+    "Avantage du terrain pour OFI Crète (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Anderlecht en forme depuis septembre (+55 pts d'Elo)."
+   ],
+   "lecture": "Anderlecht favori (45 %). Voyage perturbé par une grève en Grèce et gardien Coosemans touché. OFI a 6 pts et six blessés.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "OFI Crète",
+     "type": "enjeu",
+     "fait": "16e de la phase de ligue avec 6 points en 4 matchs (première participation à une phase de ligue), victoire 2-0 contre Hapoel Beer-Sheva à la J4.",
+     "source": "https://www.uefa.com/uefaeuropaleague/news/02ab-221b7fac106f-ef047ae48cd4-1000--europa-league-matchday-5-briefing-bournemouth-and-olympiac/",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "OFI Crète",
+     "type": "physique",
+     "fait": "Six absents annoncés pour blessure : Kenan Kodro, Kresimir Krizmanic, Fotis Koutsoupias, Konstantinos Lagoudakis, Emmanouil Chnaris et Nikos Marinakis (statut de titulaire non précisé).",
+     "source": "https://www.sportsmole.co.uk/football/anderlecht/europa-league/preview/ofi-crete-vs-anderlecht-prediction-team-news-lineups_609757.html",
+     "date": "2026-11-24"
+    },
+    {
+     "equipe": "Anderlecht",
+     "type": "enjeu",
+     "fait": "15e de la phase de ligue avec 6 points ; 5e du championnat belge, vient de battre Louvain 1-0.",
+     "source": "https://www.sportsmole.co.uk/football/anderlecht/europa-league/preview/ofi-crete-vs-anderlecht-prediction-team-news-lineups_609757.html",
+     "date": "2026-11-24"
+    },
+    {
+     "equipe": "Anderlecht",
+     "type": "physique",
+     "fait": "Ilay Camara et Lucas Hey forfaits sur blessure ; le gardien Colin Coosemans (pied gonflé) et Danylo Sikan (revenu blessé de sélection) sont tout de même du voyage.",
+     "source": "https://www.dhnet.be/sports/football/division-1a/anderlecht/2026/11/25/les-blesses-coosemans-et-sikan-du-voyage-en-crete-anderlecht-sentraine-exceptionnellement-en-terrain-hostile-IOEDRU7AUBCZFLFQBQNRA6VJI4/",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Anderlecht",
+     "type": "logistique",
+     "fait": "Voyage perturbé par une grève générale en Grèce touchant les aéroports ; pas d'entraînement à Neerpede, séance la veille au stade de l'OFI.",
+     "source": "https://www.dhnet.be/sports/football/division-1a/anderlecht/2026/11/25/les-blesses-coosemans-et-sikan-du-voyage-en-crete-anderlecht-sentraine-exceptionnellement-en-terrain-hostile-IOEDRU7AUBCZFLFQBQNRA6VJI4/",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Anderlecht",
+     "type": "coach",
+     "fait": "Vítor Bruno nommé entraîneur en juin 2026, avant le début de saison : pas de changement d'entraîneur cette saison.",
+     "source": "https://www.rsca.be/en/Vitor-Bruno",
+     "date": "2026-06-23"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-26-uel-sparta-prague-az-alkmaar",
+   "date": "2026-11-26",
+   "heure": "21:00",
+   "comp": "UEL",
+   "competition": "Ligue Europa",
+   "tour": "Phase de ligue – J5",
+   "dom": "Sparta Prague",
+   "ext": "AZ Alkmaar",
+   "dom_affiche": "Sparta Prague",
+   "ext_affiche": "AZ Alkmaar",
+   "neutre": false,
+   "p1": 0.46,
+   "pN": 0.297,
+   "p2": 0.243,
+   "pronostic": "1",
+   "favori": "Sparta Prague",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.5,
+    "pN": 0.275,
+    "p2": 0.225
+   },
+   "proba_favori": 0.46,
+   "confiance": "Léger avantage",
+   "score_probable": "1-0",
+   "buts_dom": 1.67,
+   "buts_ext": 1.06,
+   "plus_2_5": 0.512,
+   "facteurs": {
+    "dom": {
+     "elo": 1620,
+     "elo_septembre": 1620,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1562,
+     "elo_septembre": 1603,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Sparta Prague 1620, AZ Alkmaar 1562 (58 pts en faveur de Sparta Prague).",
+    "Avantage du terrain pour Sparta Prague (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "AZ Alkmaar en baisse depuis septembre (-42 pts d'Elo).",
+    "Niveau d'un des clubs estimé (club hors des 9 championnats suivis) : pronostic moins fiable."
+   ],
+   "lecture": "Sparta légèrement favori (46 % après ajustement). Brian Priske vient d'être limogé et Guddal est suspendu : -4 points. AZ (6 pts) a aussi des absents.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Sparta Prague",
+     "type": "coach",
+     "fait": "Brian Priske limogé au lendemain de la défaite 3-1 à domicile contre Slovan Liberec (5e match sans victoire, éliminé de la coupe) ; intérim confié à Lukáš Bláža, assisté de Miroslav Droppa.",
+     "source": "https://www.goal.com/en/news/az-face-sparta-prague-without-priske-the-fans-chanted-for-him-to-get-out/blteb6afb2978208509",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Sparta Prague",
+     "type": "physique",
+     "fait": "Tobias Guddal suspendu (2e jaune contre Bournemouth, « perte significative ») ; Uchenna, Rynes, Penxa et Karabec blessés ; Eneme et Sochurek incertains (maladie).",
+     "source": "https://www.sportsmole.co.uk/football/sparta-prague/europa-league/preview/sparta-prague-vs-az-prediction-team-news-lineups_609744.html",
+     "date": "2026-11-24"
+    },
+    {
+     "equipe": "Sparta Prague",
+     "type": "enjeu",
+     "fait": "22e de la phase de ligue avec 4 points (zone de barrages) ; 4e en championnat à 13 points du Slavia.",
+     "source": "https://www.sportsmole.co.uk/football/sparta-prague/europa-league/preview/sparta-prague-vs-az-prediction-team-news-lineups_609744.html",
+     "date": "2026-11-24"
+    },
+    {
+     "equipe": "AZ Alkmaar",
+     "type": "physique",
+     "fait": "Weslley Patati, Kees Smit, Lewis Schouten, Stije Resink et Jizz Hornkamp indisponibles (statut de titulaire non précisé).",
+     "source": "https://www.sportsmole.co.uk/football/sparta-prague/europa-league/preview/sparta-prague-vs-az-prediction-team-news-lineups_609744.html",
+     "date": "2026-11-24"
+    },
+    {
+     "equipe": "AZ Alkmaar",
+     "type": "enjeu",
+     "fait": "14e de la phase de ligue avec 6 points, à 1 point du 8e (Besiktas).",
+     "source": "https://www.sportsmole.co.uk/football/sparta-prague/europa-league/preview/sparta-prague-vs-az-prediction-team-news-lineups_609744.html",
+     "date": "2026-11-24"
+    }
+   ],
+   "ajustement": -4,
+   "resultat": null,
+   "correct": null,
+   "ajustement_raison": "Entraîneur Brian Priske limogé cette semaine (intérim de Lukáš Bláža) : -4 points sur la victoire du Sparta."
+  },
+  {
+   "id": "2026-11-26-uel-sunderland-jagiellonia-biaystok",
+   "date": "2026-11-26",
+   "heure": "21:00",
+   "comp": "UEL",
+   "competition": "Ligue Europa",
+   "tour": "Phase de ligue – J5",
+   "dom": "Sunderland",
+   "ext": "Jagiellonia",
+   "dom_affiche": "Sunderland",
+   "ext_affiche": "Jagiellonia Białystok",
+   "neutre": false,
+   "p1": 0.636,
+   "pN": 0.226,
+   "p2": 0.138,
+   "pronostic": "1",
+   "favori": "Sunderland",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.666,
+    "pN": 0.207,
+    "p2": 0.127
+   },
+   "proba_favori": 0.636,
+   "confiance": "Net favori",
+   "score_probable": "2-0",
+   "buts_dom": 2.14,
+   "buts_ext": 0.82,
+   "plus_2_5": 0.568,
+   "facteurs": {
+    "dom": {
+     "elo": 1681,
+     "elo_septembre": 1726,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1486,
+     "elo_septembre": 1486,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Sunderland 1681, Jagiellonia Białystok 1486 (195 pts en faveur de Sunderland).",
+    "Avantage du terrain pour Sunderland (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Sunderland en baisse depuis septembre (-45 pts d'Elo)."
+   ],
+   "lecture": "Sunderland favori (64 % après ajustement). Xhaka, Brobbey, Ballard et Diarra sont absents et Tottenham arrive dimanche : -3 points. Jagiellonia (3 pts) a perdu 3 de ses 4 matchs.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Sunderland",
+     "type": "physique",
+     "fait": "Le Bris confirme les forfaits de Granit Xhaka (mollet) et Brian Brobbey (cuisse), blessés contre Chelsea.",
+     "source": "https://hayters.com/le-bris-gives-fitness-updates-on-xhaka-and-brobbey",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Sunderland",
+     "type": "physique",
+     "fait": "Dan Ballard, Habib Diarra et Romaine Mundle également absents (retour possible le mois prochain) ; Le Bris : « nous devons équilibrer l'effectif pour rester frais ».",
+     "source": "https://lastwordonsports.com/football/2026/11/25/sunderland-vs-jagiellonia/",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Sunderland",
+     "type": "logistique",
+     "fait": "Calendrier chargé : Tottenham à domicile dimanche, puis déplacement à Liverpool mercredi et à Newcastle le 6 décembre.",
+     "source": "https://dave.sport/news/xhaka-and-brobbey-sunderland-jagiellonia/",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Sunderland",
+     "type": "enjeu",
+     "fait": "11e de la phase de ligue avec 7 points.",
+     "source": "https://www.sportsmole.co.uk/football/europa-league/groups.html",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Jagiellonia Białystok",
+     "type": "enjeu",
+     "fait": "29e avec 3 points, 3 défaites en 4 matchs ; pas de supporters en déplacement après une sanction UEFA ; Ousmane Sow incertain (coup), Wojtuszek de retour.",
+     "source": "https://lastwordonsports.com/football/2026/11/25/sunderland-vs-jagiellonia/",
+     "date": "2026-11-25"
+    }
+   ],
+   "ajustement": -3,
+   "resultat": null,
+   "correct": null,
+   "ajustement_raison": "Xhaka et Brobbey forfaits (confirmés par Régis Le Bris), Ballard et Diarra absents : au moins 3 titulaires manquants, -3 points sur la victoire de Sunderland."
+  },
+  {
+   "id": "2026-11-26-uel-torreense-celtic",
+   "date": "2026-11-26",
+   "heure": "21:00",
+   "comp": "UEL",
+   "competition": "Ligue Europa",
+   "tour": "Phase de ligue – J5",
+   "dom": "Torreense",
+   "ext": "Celtic",
+   "dom_affiche": "Torreense",
+   "ext_affiche": "Celtic",
+   "neutre": false,
+   "p1": 0.227,
+   "pN": 0.238,
+   "p2": 0.535,
+   "pronostic": "2",
+   "favori": "Celtic",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.227,
+    "pN": 0.238,
+    "p2": 0.535
+   },
+   "proba_favori": 0.535,
+   "confiance": "Favori",
+   "score_probable": "0-1",
+   "buts_dom": 0.99,
+   "buts_ext": 1.8,
+   "plus_2_5": 0.528,
+   "facteurs": {
+    "dom": {
+     "elo": 1400,
+     "elo_septembre": 1400,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1625,
+     "elo_septembre": 1625,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Torreense 1400, Celtic 1625 (225 pts en faveur de Celtic).",
+    "Avantage du terrain pour Torreense (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Niveau d'un des clubs estimé (club hors des 9 championnats suivis) : pronostic moins fiable."
+   ],
+   "lecture": "Celtic favori (54 %) contre un club de 2e division portugaise, au niveau estimé. Le Celtic (3 pts) doit gagner. Torreense (6 pts) a déjà battu Ararat sous João Nuno.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Torreense",
+     "type": "coach",
+     "fait": "Luís Tralhão remplacé par João Nuno le 29/10 après un début de saison difficile ; nouveau coach vainqueur 3-2 d'Ararat-Arménie à la J4.",
+     "source": "https://www.rtp.pt/noticias/futebol-nacional/joao-nuno-sucede-a-luis-tralhao-no-torreense_d1775357",
+     "date": "2026-10-29"
+    },
+    {
+     "equipe": "Torreense",
+     "type": "physique",
+     "fait": "J. Aguirre suspendu (expulsé) et A. Baradji blessé.",
+     "source": "https://www.tufutbolero.com/en/news/torreense-celtic-celtic-arrive-with-3-points-and-two-e4fdc3",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Torreense",
+     "type": "enjeu",
+     "fait": "19e avec 6 points ; 12e de la 2e division portugaise ; match joué à Leiria (stade trop petit).",
+     "source": "https://www.livescore.com/en/news/football/scottish-premiership/torreense-boss-sends-celtic-warning-ahead-of-crucial-europa-league-showdown-celtic-shorts/",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Celtic",
+     "type": "physique",
+     "fait": "Mika Baur (cheville, environ 10 semaines, en grande forme) et Alistair Johnston (ischio-jambiers) forfaits ; Benjamin Nygren incertain (Achille).",
+     "source": "https://www.livescore.com/en/news/football/scottish-premiership/celtic-early-injury-news-for-torreense-clash-as-2-ruled-out-and-1-doubt-the-celtic-bhoys/",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Celtic",
+     "type": "enjeu",
+     "fait": "32e avec 3 points, en zone d'élimination malgré la victoire 3-2 contre Besiktas à la J4.",
+     "source": "https://www.uefa.com/uefaeuropaleague/news/02ab-221b7fac106f-ef047ae48cd4-1000--europa-league-matchday-5-briefing-bournemouth-and-olympiac/",
+     "date": "2026-11-25"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-26-uecl-borac-banja-luka-atalanta",
+   "date": "2026-11-26",
+   "heure": "21:00",
+   "comp": "UECL",
+   "competition": "Ligue Conférence",
+   "tour": "Phase de ligue – J4",
+   "dom": "Borac Banja Luka",
+   "ext": "Atalanta",
+   "dom_affiche": "Borac Banja Luka",
+   "ext_affiche": "Atalanta",
+   "neutre": false,
+   "p1": 0.213,
+   "pN": 0.238,
+   "p2": 0.548,
+   "pronostic": "2",
+   "favori": "Atalanta",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.199,
+    "pN": 0.222,
+    "p2": 0.578
+   },
+   "proba_favori": 0.548,
+   "confiance": "Favori",
+   "score_probable": "0-1",
+   "buts_dom": 0.92,
+   "buts_ext": 1.93,
+   "plus_2_5": 0.543,
+   "facteurs": {
+    "dom": {
+     "elo": 1450,
+     "elo_septembre": 1450,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1712,
+     "elo_septembre": 1798,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Borac Banja Luka 1450, Atalanta 1712 (262 pts en faveur de Atalanta).",
+    "Avantage du terrain pour Borac Banja Luka (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Atalanta en baisse depuis septembre (-87 pts d'Elo).",
+    "Niveau d'un des clubs estimé (club hors des 9 championnats suivis) : pronostic moins fiable."
+   ],
+   "lecture": "Atalanta favorite (55 % après ajustement). Le gardien Carnesecchi est blessé, remplacé par le jeune Pardel : -3 points. Borac (3 pts) a un niveau estimé.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Atalanta",
+     "type": "physique",
+     "fait": "Le gardien Carnesecchi blessé, absent du groupe ; le jeune Pardel convoqué à sa place.",
+     "source": "https://www.tuttomercatoweb.com/serie-a/atalanta-convocati-sarri-borac-banja-luka-novita-portiere-pardel-2297461",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Atalanta",
+     "type": "physique",
+     "fait": "Sarri : les blessés sont guéris mais manquent de rythme, « les faire tous jouer est un risque » ; la phase défensive est « à remettre en place ».",
+     "source": "https://www.calcionews24.com/atalanta-sarri-conferenza-stampa-pre-borac-conference-league-2026-27/",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Atalanta",
+     "type": "enjeu",
+     "fait": "16e de la phase de ligue avec 4 points en 3 matchs.",
+     "source": "https://www.sportsmole.co.uk/football/europa-conference-league/groups.html",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Borac Banja Luka",
+     "type": "enjeu",
+     "fait": "21e avec 3 points en 3 matchs.",
+     "source": "https://www.sportsmole.co.uk/football/europa-conference-league/groups.html",
+     "date": "2026-11-26"
+    }
+   ],
+   "ajustement": 3,
+   "resultat": null,
+   "correct": null,
+   "ajustement_raison": "Gardien titulaire de l'Atalanta, Carnesecchi, blessé et absent du groupe : -3 points sur la victoire de l'Atalanta."
+  },
+  {
+   "id": "2026-11-26-uecl-braga-kups",
+   "date": "2026-11-26",
+   "heure": "21:00",
+   "comp": "UECL",
+   "competition": "Ligue Conférence",
+   "tour": "Phase de ligue – J4",
+   "dom": "Sp Braga",
+   "ext": "KuPS",
+   "dom_affiche": "Braga",
+   "ext_affiche": "KuPS",
+   "neutre": false,
+   "p1": 0.629,
+   "pN": 0.224,
+   "p2": 0.147,
+   "pronostic": "1",
+   "favori": "Braga",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.629,
+    "pN": 0.224,
+    "p2": 0.147
+   },
+   "proba_favori": 0.629,
+   "confiance": "Net favori",
+   "score_probable": "2-0",
+   "buts_dom": 2.02,
+   "buts_ext": 0.87,
+   "plus_2_5": 0.552,
+   "facteurs": {
+    "dom": {
+     "elo": 1593,
+     "elo_septembre": 1633,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1430,
+     "elo_septembre": 1430,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Braga 1593, KuPS 1430 (163 pts en faveur de Braga).",
+    "Avantage du terrain pour Braga (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Braga en baisse depuis septembre (-40 pts d'Elo).",
+    "Niveau d'un des clubs estimé (club hors des 9 championnats suivis) : pronostic moins fiable."
+   ],
+   "lecture": "Braga favori (63 %) contre KuPS (1 pt), dont la saison en Finlande est terminée. Braga a gagné son premier match sous Franclim Carvalho.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Braga",
+     "type": "coach",
+     "fait": "Carlos Vicens limogé en octobre, remplacé par Franclim Carvalho (1re victoire : 2-0 contre La Gantoise).",
+     "source": "https://www.sportsmole.co.uk/football/braga/europa-conference-league/preview/braga-vs-kups-prediction-team-news-lineups_609783.html",
+     "date": "2026-11-24"
+    },
+    {
+     "equipe": "Braga",
+     "type": "physique",
+     "fait": "Niakaté (tendon d'Achille) absent, Jonas Wind incertain (surcharge physique) ; Gabriel Silva de retour.",
+     "source": "https://www.sportsmole.co.uk/football/braga/europa-conference-league/preview/braga-vs-kups-prediction-team-news-lineups_609783.html",
+     "date": "2026-11-24"
+    },
+    {
+     "equipe": "Braga",
+     "type": "enjeu",
+     "fait": "17e avec 4 points en 3 matchs ; 8e de Liga Portugal.",
+     "source": "https://www.sportsmole.co.uk/football/braga/europa-conference-league/preview/braga-vs-kups-prediction-team-news-lineups_609783.html",
+     "date": "2026-11-24"
+    },
+    {
+     "equipe": "KuPS",
+     "type": "enjeu",
+     "fait": "33e avec 1 point ; saison domestique terminée (3e, défaite 2-0 contre Inter Turku lors de la dernière journée) ; Bob Nii Armah incertain.",
+     "source": "https://www.sportsmole.co.uk/football/braga/europa-conference-league/preview/braga-vs-kups-prediction-team-news-lineups_609783.html",
+     "date": "2026-11-24"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-26-uecl-cska-sofia-trabzonspor",
+   "date": "2026-11-26",
+   "heure": "21:00",
+   "comp": "UECL",
+   "competition": "Ligue Conférence",
+   "tour": "Phase de ligue – J4",
+   "dom": "CSKA Sofia",
+   "ext": "Trabzonspor",
+   "dom_affiche": "CSKA Sofia",
+   "ext_affiche": "Trabzonspor",
+   "neutre": false,
+   "p1": 0.304,
+   "pN": 0.271,
+   "p2": 0.426,
+   "pronostic": "2",
+   "favori": "Trabzonspor",
+   "double_chance": {
+    "issue": "N2",
+    "proba": 0.697
+   },
+   "p_modele": {
+    "p1": 0.304,
+    "pN": 0.271,
+    "p2": 0.426
+   },
+   "proba_favori": 0.426,
+   "confiance": "Léger avantage",
+   "score_probable": "0-1",
+   "buts_dom": 1.17,
+   "buts_ext": 1.52,
+   "plus_2_5": 0.503,
+   "facteurs": {
+    "dom": {
+     "elo": 1500,
+     "elo_septembre": 1500,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1635,
+     "elo_septembre": 1539,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : CSKA Sofia 1500, Trabzonspor 1635 (135 pts en faveur de Trabzonspor).",
+    "Avantage du terrain pour CSKA Sofia (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Trabzonspor en forme depuis septembre (+96 pts d'Elo).",
+    "Niveau d'un des clubs estimé (club hors des 9 championnats suivis) : pronostic moins fiable."
+   ],
+   "lecture": "Match ouvert : léger avantage à Trabzonspor (43 %), double chance N2 à 70 %. Le CSKA est invaincu depuis 17 matchs en championnat, avec un niveau estimé.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "CSKA Sofia",
+     "type": "physique",
+     "fait": "Leo Pereira blessé, Barry Cotter absent de la liste, Teodor Ivanov incertain.",
+     "source": "https://www.sportsmole.co.uk/football/cska-sofia/europa-conference-league/preview/cska-sofia-vs-trabzonspor-prediction-team-news-lineups_609771.html",
+     "date": "2026-11-24"
+    },
+    {
+     "equipe": "CSKA Sofia",
+     "type": "enjeu",
+     "fait": "1 point en 3 matchs (28e), hors des places de barrage ; invaincu depuis 17 matchs en championnat.",
+     "source": "https://www.sportsmole.co.uk/football/cska-sofia/europa-conference-league/preview/cska-sofia-vs-trabzonspor-prediction-team-news-lineups_609771.html",
+     "date": "2026-11-24"
+    },
+    {
+     "equipe": "Trabzonspor",
+     "type": "physique",
+     "fait": "Franculino, Aral Simsir et Okay Yokuslu absents ; Jabol-Folcarelli incertain.",
+     "source": "https://www.sportsmole.co.uk/football/cska-sofia/europa-conference-league/preview/cska-sofia-vs-trabzonspor-prediction-team-news-lineups_609771.html",
+     "date": "2026-11-24"
+    },
+    {
+     "equipe": "Trabzonspor",
+     "type": "enjeu",
+     "fait": "12e avec 6 points, à relancer après une défaite 1-0 à domicile contre Fribourg.",
+     "source": "https://www.uefa.com/uefaconferenceleague/news/02ab-221b8c38a899-8ff9a785da68-1000--conference-league-matchday-4-briefing-brighton-face-test/",
+     "date": "2026-11-25"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-26-uecl-fribourg-twente",
+   "date": "2026-11-26",
+   "heure": "21:00",
+   "comp": "UECL",
+   "competition": "Ligue Conférence",
+   "tour": "Phase de ligue – J4",
+   "dom": "Freiburg",
+   "ext": "Twente",
+   "dom_affiche": "Fribourg",
+   "ext_affiche": "Twente",
+   "neutre": false,
+   "p1": 0.555,
+   "pN": 0.255,
+   "p2": 0.19,
+   "pronostic": "1",
+   "favori": "Fribourg",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.555,
+    "pN": 0.255,
+    "p2": 0.19
+   },
+   "proba_favori": 0.555,
+   "confiance": "Favori",
+   "score_probable": "1-0",
+   "buts_dom": 1.81,
+   "buts_ext": 0.98,
+   "plus_2_5": 0.526,
+   "facteurs": {
+    "dom": {
+     "elo": 1754,
+     "elo_septembre": 1687,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1652,
+     "elo_septembre": 1602,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Fribourg 1754, Twente 1652 (102 pts en faveur de Fribourg).",
+    "Avantage du terrain pour Fribourg (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Fribourg en forme depuis septembre (+67 pts d'Elo).",
+    "Twente en forme depuis septembre (+50 pts d'Elo)."
+   ],
+   "lecture": "Fribourg favori (56 %), 3e de Bundesliga. Twente a gagné ses 3 matchs : match plus disputé que l'Elo ne l'indique.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Fribourg",
+     "type": "enjeu",
+     "fait": "14e avec 6 points ; 3e de Bundesliga (22 points) ; Lienhart à évaluer après une lourde charge de matchs.",
+     "source": "https://www.sportsmole.co.uk/football/freiburg/europa-conference-league/preview/freiburg-vs-fc-twente-prediction-team-news-lineups_609722.html",
+     "date": "2026-11-24"
+    },
+    {
+     "equipe": "Twente",
+     "type": "enjeu",
+     "fait": "3 victoires en 3 matchs (9 points), parmi les leaders de la phase de ligue.",
+     "source": "https://www.uefa.com/uefaconferenceleague/news/02ab-221b8c38a899-8ff9a785da68-1000--conference-league-matchday-4-briefing-brighton-face-test/",
+     "date": "2026-11-25"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-26-uecl-la-gantoise-etoile-rouge-de-belgrade",
+   "date": "2026-11-26",
+   "heure": "21:00",
+   "comp": "UECL",
+   "competition": "Ligue Conférence",
+   "tour": "Phase de ligue – J4",
+   "dom": "Gent",
+   "ext": "Étoile rouge de Belgrade",
+   "dom_affiche": "La Gantoise",
+   "ext_affiche": "Étoile rouge de Belgrade",
+   "neutre": false,
+   "p1": 0.468,
+   "pN": 0.286,
+   "p2": 0.246,
+   "pronostic": "1",
+   "favori": "La Gantoise",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.468,
+    "pN": 0.286,
+    "p2": 0.246
+   },
+   "proba_favori": 0.468,
+   "confiance": "Léger avantage",
+   "score_probable": "1-0",
+   "buts_dom": 1.59,
+   "buts_ext": 1.11,
+   "plus_2_5": 0.506,
+   "facteurs": {
+    "dom": {
+     "elo": 1613,
+     "elo_septembre": 1533,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1580,
+     "elo_septembre": 1580,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : La Gantoise 1613, Étoile rouge de Belgrade 1580 (33 pts en faveur de La Gantoise).",
+    "Avantage du terrain pour La Gantoise (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "La Gantoise en forme depuis septembre (+80 pts d'Elo).",
+    "Niveau d'un des clubs estimé (club hors des 9 championnats suivis) : pronostic moins fiable."
+   ],
+   "lecture": "Léger avantage à La Gantoise (47 %) à domicile. Les deux clubs ont 4 pts ; le niveau de l'Étoile rouge est estimé.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "La Gantoise",
+     "type": "enjeu",
+     "fait": "18e avec 4 points (1 victoire, 1 nul, 1 défaite, 1 but marqué).",
+     "source": "https://sporza.be/nl/sport/voetbal/~3339627/",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Étoile rouge de Belgrade",
+     "type": "enjeu",
+     "fait": "15e avec 4 points (6 buts marqués, 6 encaissés).",
+     "source": "https://sporza.be/nl/sport/voetbal/~3339627/",
+     "date": "2026-11-26"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-26-uecl-hajduk-split-saint-trond",
+   "date": "2026-11-26",
+   "heure": "21:00",
+   "comp": "UECL",
+   "competition": "Ligue Conférence",
+   "tour": "Phase de ligue – J4",
+   "dom": "Hajduk Split",
+   "ext": "St Truiden",
+   "dom_affiche": "Hajduk Split",
+   "ext_affiche": "Saint-Trond",
+   "neutre": false,
+   "p1": 0.546,
+   "pN": 0.258,
+   "p2": 0.195,
+   "pronostic": "1",
+   "favori": "Hajduk Split",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.546,
+    "pN": 0.258,
+    "p2": 0.195
+   },
+   "proba_favori": 0.546,
+   "confiance": "Favori",
+   "score_probable": "1-0",
+   "buts_dom": 1.78,
+   "buts_ext": 0.99,
+   "plus_2_5": 0.523,
+   "facteurs": {
+    "dom": {
+     "elo": 1580,
+     "elo_septembre": 1580,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1485,
+     "elo_septembre": 1563,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Hajduk Split 1580, Saint-Trond 1485 (95 pts en faveur de Hajduk Split).",
+    "Avantage du terrain pour Hajduk Split (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Saint-Trond en baisse depuis septembre (-78 pts d'Elo).",
+    "Niveau d'un des clubs estimé (club hors des 9 championnats suivis) : pronostic moins fiable."
+   ],
+   "lecture": "Hajduk favori (55 %) à domicile malgré l'absence de Livaja. Saint-Trond (7 pts) devance Hajduk d'un point au classement.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Hajduk Split",
+     "type": "physique",
+     "fait": "Marko Livaja (ischio-jambiers, absent depuis fin septembre), Hadžikadunić, Brajković, Pajaziti et Ivušić blessés.",
+     "source": "https://thefootballfaithful.com/hajduk-split-vs-sint-truiden-prediction-betting-tips-26-11-2026/",
+     "date": "2026-11-24"
+    },
+    {
+     "equipe": "Saint-Trond",
+     "type": "enjeu",
+     "fait": "10e avec 7 points, un point devant Hajduk (13e, 6 points).",
+     "source": "https://thefootballfaithful.com/hajduk-split-vs-sint-truiden-prediction-betting-tips-26-11-2026/",
+     "date": "2026-11-24"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-26-uecl-inter-d-escaldes-fc-copenhague",
+   "date": "2026-11-26",
+   "heure": "21:00",
+   "comp": "UECL",
+   "competition": "Ligue Conférence",
+   "tour": "Phase de ligue – J4",
+   "dom": "Inter d'Escaldes",
+   "ext": "FC Copenhague",
+   "dom_affiche": "Inter d'Escaldes",
+   "ext_affiche": "FC Copenhague",
+   "neutre": false,
+   "p1": 0.231,
+   "pN": 0.24,
+   "p2": 0.529,
+   "pronostic": "2",
+   "favori": "FC Copenhague",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.231,
+    "pN": 0.24,
+    "p2": 0.529
+   },
+   "proba_favori": 0.529,
+   "confiance": "Favori",
+   "score_probable": "0-1",
+   "buts_dom": 1.0,
+   "buts_ext": 1.78,
+   "plus_2_5": 0.526,
+   "facteurs": {
+    "dom": {
+     "elo": 1380,
+     "elo_septembre": 1380,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1600,
+     "elo_septembre": 1600,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Inter d'Escaldes 1380, FC Copenhague 1600 (220 pts en faveur de FC Copenhague).",
+    "Avantage du terrain pour Inter d'Escaldes (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Niveau d'un des clubs estimé (club hors des 9 championnats suivis) : pronostic moins fiable."
+   ],
+   "lecture": "Copenhague favori (53 %) contre le club andorran (0 pt), privé de son milieu Berlanga. Copenhague a pris 5-0 contre Nordsjælland le week-end : prudence.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Inter d'Escaldes",
+     "type": "physique",
+     "fait": "Domi Berlanga, son milieu créatif, suspendu ; 0 point en 3 matchs.",
+     "source": "https://thefootballfaithful.com/inter-club-descaldes-vs-fc-kobenhavn-prediction-betting-tips-26-11-2026/",
+     "date": "2026-11-24"
+    },
+    {
+     "equipe": "FC Copenhague",
+     "type": "physique",
+     "fait": "Nasnas, Ramaj, Maseko et Mattsson (ligaments croisés) absents, mais le noyau du XI (Delaney, Elyounoussi, Cornelius) est disponible ; 7e avec 7 points.",
+     "source": "https://thefootballfaithful.com/inter-club-descaldes-vs-fc-kobenhavn-prediction-betting-tips-26-11-2026/",
+     "date": "2026-11-24"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-26-uecl-nordsjlland-panathinaikos",
+   "date": "2026-11-26",
+   "heure": "21:00",
+   "comp": "UECL",
+   "competition": "Ligue Conférence",
+   "tour": "Phase de ligue – J4",
+   "dom": "Nordsjaelland",
+   "ext": "Panathinaikos",
+   "dom_affiche": "Nordsjælland",
+   "ext_affiche": "Panathinaïkos",
+   "neutre": false,
+   "p1": 0.401,
+   "pN": 0.296,
+   "p2": 0.303,
+   "pronostic": "1",
+   "favori": "Nordsjælland",
+   "double_chance": {
+    "issue": "1N",
+    "proba": 0.697
+   },
+   "p_modele": {
+    "p1": 0.401,
+    "pN": 0.296,
+    "p2": 0.303
+   },
+   "proba_favori": 0.401,
+   "confiance": "Léger avantage",
+   "score_probable": "1-0",
+   "buts_dom": 1.42,
+   "buts_ext": 1.24,
+   "plus_2_5": 0.498,
+   "facteurs": {
+    "dom": {
+     "elo": 1515,
+     "elo_septembre": 1515,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "elo": 1543,
+     "elo_septembre": 1543,
+     "derniers": [],
+     "buts_par_match": 2.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Nordsjælland 1515, Panathinaïkos 1543 (27 pts en faveur de Panathinaïkos).",
+    "Avantage du terrain pour Nordsjælland (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Match serré : le nul est une vraie option (30 %)."
+   ],
+   "lecture": "Match ouvert : léger avantage à Nordsjælland (40 %), double chance 1N à 70 %. Nordsjælland a battu Copenhague 5-0, mais le Panathinaïkos (9 pts) reste sur 5 victoires d'affilée.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Nordsjælland",
+     "type": "enjeu",
+     "fait": "25e avec 2 points ; vient de battre le FC Copenhague 5-0 en championnat ; Souleymane Alio incertain.",
+     "source": "https://www.tipsbladet.dk/nyhed/conference-league/fc-nordsjaelland-panathinaikos",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Panathinaïkos",
+     "type": "physique",
+     "fait": "Ounahi (ligaments croisés), Andino et Ingason blessés ; de Vrij (poignet) et Kyriakopoulos pas du voyage selon Newsit.",
+     "source": "https://www.tipsbladet.dk/nyhed/conference-league/fc-nordsjaelland-panathinaikos",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Panathinaïkos",
+     "type": "enjeu",
+     "fait": "2e avec 9 points en 3 matchs, 5 victoires de suite toutes compétitions.",
+     "source": "https://www.tipsbladet.dk/nyhed/conference-league/fc-nordsjaelland-panathinaikos",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Panathinaïkos",
+     "type": "coach",
+     "fait": "Jacob Neestrup nommé le 26/05/2026, avant la saison : pas de changement d'entraîneur cette saison.",
+     "source": "https://www.pao.gr/en/fc/jacob-neestrup-appointed-new-head-coach-of-panathinaikos/",
+     "date": "2026-05-26"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  }
+ ],
+ "meta": {
+  "test": {
+   "saisons": [
+    2023,
+    2024,
+    2025
+   ],
+   "matchs": 8813,
+   "reussite_modele": 0.53,
+   "logloss_modele": 0.9727,
+   "reussite_bookmakers": 0.544,
+   "logloss_bookmakers": 0.9605,
+   "reussite_toujours_domicile": 0.4332,
+   "taux_nuls": 0.2576,
+   "par_ligue": {
+    "Premier League": 0.53,
+    "Liga": 0.532,
+    "Serie A": 0.536,
+    "Ligue 1": 0.519,
+    "Bundesliga": 0.51,
+    "Süper Lig": 0.541,
+    "Eredivisie": 0.54,
+    "Liga Portugal": 0.562,
+    "Pro League": 0.501
+   }
+  }
+ }
+}
