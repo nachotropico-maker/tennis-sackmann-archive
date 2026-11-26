@@ -35,3 +35,9 @@ Le **tennis est le sujet principal** de la conversation de développement (déci
 - Vérifier pour chaque équipe un changement d'entraîneur depuis le début de saison (leçon Çorum / Burak Yılmaz).
 - xG, xGOT, compositions, notes des joueurs : via API-Football, en contexte seulement (pas dans les probabilités) tant qu'il n'y a pas assez d'historique.
 - Pas de collecte automatique sur Flashscore / Sofascore / FotMob / FBref (interdite par leurs règles).
+
+### 26/11 — Vitesse du court ajoutée « coûte que coûte » (demande utilisateur)
+- Stats des 4 simples de Bologne (agent/data/davis_bologne_stats.csv) : aces 7,8 % (dur 9,1 %, Turin 9,8 %), 1re 69 %, 2e 50 %, BP sauvées 72 %.
+- Test exp_vitesse_v2.py : mesurer la vitesse de l'édition EN COURS améliore légèrement (WTA 66,20→66,27 %, ATP stable) ; interactions service/retour × vitesse inutiles.
+- Retenu : speed_ratio() mélange édition précédente + semaine en cours, + fichier manuel vitesse_courts.csv. Poids style×vitesse doublé (ATP 0,044→0,088).
+- Norrie–Struff : utilisateur Norrie (retour), agent Struff 51,6 %.

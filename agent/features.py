@@ -201,6 +201,19 @@ LABELS = {"elo": "Niveau Elo (surface + global)", "tendance": "Tendance de l'Elo
 MEANS = {"atp": (0.635, 0.365), "wta": (0.565, 0.435)}
 
 
+def _manuel():
+    """data/vitesse_courts.csv : tournoi,annee,aces,points_service (stats live saisies à la main)."""
+    f = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "vitesse_courts.csv")
+    out = {}
+    if os.path.exists(f):
+        for r in pd.read_csv(f).itertuples(index=False):
+            k = (norm(r.tournoi), int(r.annee)); a, n = out.get(k, (0.0, 0.0)); out[k] = (a + r.aces, n + r.points_service)
+    return out
+
+
+MANUEL = _manuel()
+
+
 class State:
     def __init__(self, tour):
         self.tour = tour
@@ -290,23 +303,49 @@ class State:
         cands = [k for k in self.speed if k[1] == year - 1 and k[0] and (k[0] in n or n in k[0])]
         return (self.speed[max(cands, key=lambda k: len(k[0]))], year - 1) if cands else (None, None)
 
-    def speed_z(self, tourney, surf, year):
+    def speed_cur(self, tourney, year):
+        """Aces et points de service de l'édition EN COURS : matchs déjà joués (historique) + stats saisies à la main
+        (data/vitesse_courts.csv, pour la Coupe Davis et les tournois dont les stats live manquent)."""
+        a, n = self.speed.get((norm(tourney), year), [0.0, 0.0])
+        for (t, y), (a2, n2) in MANUEL.items():
+            if y == year and t == norm(tourney):
+                a, n = a + a2, n + n2
+        return a, n
+
+    def speed_ratio(self, tourney, surf, year):
+        """Rapport (taux d'aces du court) / (moyenne de la surface). Mélange l'édition précédente et l'édition en
+        cours : le poids de l'édition en cours monte avec le nombre de points joués (n / (n + 1500))."""
         t, ref = self.speed_lookup(tourney, year)
-        m = self.speed_surf.get((surf, ref))
-        if not t or not m or t[1] < 2000 or m[1] == 0:
-            return 0.0
-        return math.log((t[0] / t[1] + 1e-4) / (m[0] / m[1] + 1e-4))
+        m = self.speed_surf.get((surf, ref)) if ref else None
+        if not m or m[1] == 0:
+            m = self.speed_surf.get((surf, year - 1))
+        if not m or m[1] == 0:
+            return None, 0.0
+        moy = m[0] / m[1]
+        z0 = math.log((t[0] / t[1] + 1e-4) / (moy + 1e-4)) if t and t[1] >= 2000 else None
+        a, n = self.speed_cur(tourney, year)
+        zc = math.log((a / n + 1e-4) / (moy + 1e-4)) if n >= 300 else None
+        if zc is None:
+            return z0, moy
+        if z0 is None:
+            z0 = 0.0
+        w = n / (n + 1500)
+        return w * zc + (1 - w) * z0, moy
+
+    def speed_z(self, tourney, surf, year):
+        z, _ = self.speed_ratio(tourney, surf, year)
+        return z or 0.0
 
     def court_info(self, tourney, surf, year):
-        """Vitesse estimée du court (taux d'aces de l'édition précédente comparé à la moyenne de la surface)."""
-        t, ref = self.speed_lookup(tourney, year)
-        m = self.speed_surf.get((surf, ref))
-        if not t or not m or t[1] < 2000 or m[1] == 0:
+        """Vitesse estimée du court (édition précédente + matchs déjà joués cette semaine, comparés à la surface)."""
+        z, moy = self.speed_ratio(tourney, surf, year)
+        if z is None:
             return None
-        r = (t[0] / t[1]) / (m[0] / m[1])
+        r = math.exp(z)
+        a, n = self.speed_cur(tourney, year)
         label = "lent" if r < 0.85 else "rapide" if r > 1.15 else "moyen"
-        return {"vitesse": label, "aces_pct": round(t[0] / t[1] * 100, 1), "moyenne_surface_pct": round(m[0] / m[1] * 100, 1),
-                "annee_reference": ref}
+        return {"vitesse": label, "aces_pct": round(r * moy * 100, 1), "moyenne_surface_pct": round(moy * 100, 1),
+                "points_cette_semaine": int(n)}
 
     def features(self, a, b, surf, day, best_of, rnd, level, country, tourney):
         p = min(max(self.p_elo(a, b, surf), 1e-4), 1 - 1e-4)

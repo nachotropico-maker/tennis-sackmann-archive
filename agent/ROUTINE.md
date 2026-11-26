@@ -151,3 +151,8 @@ la conversation de développement de l'application est ailleurs). Une fois les �
    - Actualité (blessure, forfait, programme) : recherche web, en citant la source. Ne jamais inventer un résultat, une blessure ou un chiffre.
    - Jamais de conseil de pari, de mise ou de cote : ces probabilités servent à comprendre le tennis.
    - Ne pas modifier le code ni les données pendant la discussion, sauf demande explicite ; ne jamais changer la probabilité d'un match déjà commencé.
+
+## Vitesse du court en cours de tournoi (26/11/2026)
+Le modèle mélange la vitesse de l'édition précédente et celle de la semaine en cours (poids n/(n+1500), n = points de service joués).
+Quand les stats live manquent (Coupe Davis, BJK, nouveau site), ajouter les aces et points de service des matchs terminés
+dans `agent/data/vitesse_courts.csv` (tournoi,annee,aces,points_service) avant de publier les pronos du jour.
