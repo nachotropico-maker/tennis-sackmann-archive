@@ -1,0 +1,9 @@
+date,joueur,adversaire,aces,df,pts_serv,pts_1re_gagnes,1res_in,pts_2e_gagnes,2es,bp_sauvees,bp_subies
+2026-11-25,Musetti,Hong,4,1,65,33,42,12,23,3,4
+2026-11-25,Hong,Musetti,3,1,59,21,37,12,22,1,5
+2026-11-25,Cobolli,Kwon,11,4,117,53,72,25,46,3,4
+2026-11-25,Kwon,Cobolli,9,8,130,51,74,31,56,9,12
+2026-11-24,Machac,Draxl,9,2,70,36,47,13,23,2,3
+2026-11-24,Draxl,Machac,6,2,90,47,74,4,16,5,9
+2026-11-24,Lehecka,Auger-Aliassime,5,2,82,48,66,7,16,9,9
+2026-11-24,Auger-Aliassime,Lehecka,8,1,90,46,74,6,16,9,11
