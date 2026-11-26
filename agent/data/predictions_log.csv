@@ -37,3 +37,5 @@ date,id,tour,tournoi,joueur_a,joueur_b,proba_a,proba_modele,ajustement,vainqueur
 2026-11-22,2026-11-22-atp-finals-alcaraz-zverev,atp,ATP Finals,Carlos Alcaraz,Alexander Zverev,0.69,0.69,0,Carlos Alcaraz,6-2 7-6
 2026-11-24,2026-11-24-atp-davis-machac-draxl,atp,Coupe Davis,Tomas Machac,Liam Draxl,0.656,0.636,2,Tomas Machac,6-2 3-6 6-2
 2026-11-24,2026-11-24-atp-davis-lehecka-auger-aliassime,atp,Coupe Davis,Jiri Lehecka,Felix Auger Aliassime,0.466,0.466,0,Jiri Lehecka,7-6 6-2
+2026-11-25,2026-11-25-atp-davis-cobolli-kwon,atp,Coupe Davis,Flavio Cobolli,Soon Woo Kwon,0.634,0.634,0,Soon Woo Kwon,3-6 7-6 7-6
+2026-11-25,2026-11-25-atp-davis-musetti-chung,atp,Coupe Davis,Lorenzo Musetti,Hyeon Chung,0.91,0.91,0,,non joué

@@ -1,15 +1,15 @@
 {
  "global": {
-  "matchs": 36,
+  "matchs": 37,
   "reussis": 29,
-  "taux": 0.806,
-  "brier": 0.1803
+  "taux": 0.784,
+  "brier": 0.1863
  },
  "atp": {
-  "matchs": 28,
+  "matchs": 29,
   "reussis": 23,
-  "taux": 0.821,
-  "brier": 0.1597
+  "taux": 0.793,
+  "brier": 0.168
  },
  "wta": {
   "matchs": 8,
@@ -108,6 +108,13 @@
    "reussis": 1,
    "taux": 0.5,
    "brier": 0.2017
+  },
+  {
+   "date": "2026-11-25",
+   "matchs": 1,
+   "reussis": 0,
+   "taux": 0.0,
+   "brier": 0.402
   }
  ],
  "calibration": [
@@ -119,9 +126,9 @@
   },
   {
    "tranche": "60–70 %",
-   "matchs": 13,
-   "annonce": 0.651,
-   "reel": 0.923
+   "matchs": 14,
+   "annonce": 0.65,
+   "reel": 0.857
   },
   {
    "tranche": "70–80 %",
@@ -137,9 +144,9 @@
   }
  ],
  "modele_seul": {
-  "matchs": 36,
-  "taux": 0.806,
-  "brier": 0.1812
+  "matchs": 37,
+  "taux": 0.784,
+  "brier": 0.1871
  },
  "ajustements": {
   "matchs": 3,
