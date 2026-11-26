@@ -1,0 +1,5816 @@
+{
+ "genere": "2026-11-26T06:04:49+00:00",
+ "hier_scores_autres": [],
+ "hier": {
+  "date": "2026-11-25",
+  "matchs": [
+   {
+    "id": 1635718,
+    "date": "2026-11-25T18:45:00+01:00",
+    "statut": "FT",
+    "comp": "UCL",
+    "tour": "League Stage - 5",
+    "dom": "Sabah FA",
+    "ext": "Barcelona",
+    "bd": 1,
+    "be": 4,
+    "tc_dom": 3.0,
+    "tt_dom": 8.0,
+    "tirs_surface_dom": 7.0,
+    "tirs_hors_surface_dom": 1.0,
+    "possession_dom": 28.0,
+    "xg_dom": 1.22,
+    "buts_evites_dom": null,
+    "rouges_dom": 0.0,
+    "tc_ext": 14.0,
+    "tt_ext": 25.0,
+    "tirs_surface_ext": 15.0,
+    "tirs_hors_surface_ext": 10.0,
+    "possession_ext": 72.0,
+    "xg_ext": 4.19,
+    "buts_evites_ext": null,
+    "rouges_ext": 0.0,
+    "schema_dom": "4-2-3-1",
+    "titulaires_dom": [
+     "S. Pokatilov",
+     "A. Zedadka",
+     "S. Solvet",
+     "Erivaldo Almeida",
+     "T. Puchacz",
+     "U. Rahmonaliyev",
+     "I. Lepinjica",
+     "X. Severina",
+     "Du Queiroz",
+     "C. Nwachukwu",
+     "K. Aliyev"
+    ],
+    "entraineur_dom": "V. Dambrauskas",
+    "schema_ext": "4-3-3",
+    "titulaires_ext": [
+     "Joan García",
+     "J. Koundé",
+     "F. de Jong",
+     "Gerard Martín",
+     "Alejandro Balde",
+     "Fermín",
+     "Gavi",
+     "Pedri",
+     "K. Adeyemi",
+     "Gabriel Jesus",
+     "A. Gordon"
+    ],
+    "entraineur_ext": "H. Flick",
+    "joueurs": [
+     {
+      "equipe": "dom",
+      "nom": "K. Parris",
+      "poste": "M",
+      "minutes": 29,
+      "note": "6.07",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "T. Mütəllimov",
+      "poste": "D",
+      "minutes": 14,
+      "note": "5.85",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "J. Mickels",
+      "poste": "F",
+      "minutes": 45,
+      "note": "7.04",
+      "buts": 1,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "A. Isaev",
+      "poste": "M",
+      "minutes": 29,
+      "note": "5.89",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "R. Daşdəmirov",
+      "poste": "D",
+      "minutes": 14,
+      "note": "5.7",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "S. Pokatilov",
+      "poste": "G",
+      "minutes": 90,
+      "note": "7.22",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "Du Queiroz",
+      "poste": "M",
+      "minutes": 61,
+      "note": "6.17",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "Erivaldo Almeida",
+      "poste": "D",
+      "minutes": 76,
+      "note": "5.79",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "I. Lepinjica",
+      "poste": "M",
+      "minutes": 90,
+      "note": "5.74",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 6,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "C. Nwachukwu",
+      "poste": "M",
+      "minutes": 90,
+      "note": "6.49",
+      "buts": 0,
+      "passes_d": 1,
+      "duels_gagnes": 1,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "dom",
+      "nom": "T. Puchacz",
+      "poste": "D",
+      "minutes": 90,
+      "note": "5.36",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "U. Rahmonaliyev",
+      "poste": "M",
+      "minutes": 90,
+      "note": "6",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "X. Severina",
+      "poste": "M",
+      "minutes": 61,
+      "note": "5.89",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "A. Zedadka",
+      "poste": "D",
+      "minutes": 76,
+      "note": "6.31",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 5,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "S. Solvet",
+      "poste": "D",
+      "minutes": 90,
+      "note": "6.05",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "K. Aliyev",
+      "poste": null,
+      "minutes": 45,
+      "note": "6.21",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "A. Campos",
+      "poste": "D",
+      "minutes": 26,
+      "note": "6.56",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "João Cancelo",
+      "poste": "D",
+      "minutes": 26,
+      "note": "6.77",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "B. Farinas",
+      "poste": "M",
+      "minutes": 4,
+      "note": "6.24",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "Dani Olmo",
+      "poste": "M",
+      "minutes": 45,
+      "note": "6.77",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "ext",
+      "nom": "Raphinha",
+      "poste": "F",
+      "minutes": 14,
+      "note": "6.69",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "Alejandro Balde",
+      "poste": "D",
+      "minutes": 64,
+      "note": "7.17",
+      "buts": 0,
+      "passes_d": 1,
+      "duels_gagnes": 3,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "Joan García",
+      "poste": "G",
+      "minutes": 90,
+      "note": "7.31",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "K. Adeyemi",
+      "poste": "F",
+      "minutes": 90,
+      "note": "7.7",
+      "buts": 1,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "ext",
+      "nom": "Pedri",
+      "poste": "M",
+      "minutes": 45,
+      "note": "7.17",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "ext",
+      "nom": "Gerard Martín",
+      "poste": "D",
+      "minutes": 90,
+      "note": "6.58",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "J. Koundé",
+      "poste": "D",
+      "minutes": 90,
+      "note": "7.13",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 7,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "A. Gordon",
+      "poste": "F",
+      "minutes": 76,
+      "note": "9.07",
+      "buts": 2,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "ext",
+      "nom": "Gavi",
+      "poste": "M",
+      "minutes": 86,
+      "note": "6.44",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 4,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "Gabriel Jesus",
+      "poste": "F",
+      "minutes": 90,
+      "note": "7.93",
+      "buts": 1,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "Fermín",
+      "poste": "M",
+      "minutes": 90,
+      "note": "7.6",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 5,
+      "passes_cles": 3
+     },
+     {
+      "equipe": "ext",
+      "nom": "F. de Jong",
+      "poste": "D",
+      "minutes": 64,
+      "note": "6.69",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     }
+    ]
+   },
+   {
+    "id": 1635728,
+    "date": "2026-11-25T18:45:00+01:00",
+    "statut": "FT",
+    "comp": "UCL",
+    "tour": "League Stage - 5",
+    "dom": "Slavia Praha",
+    "ext": "Villarreal",
+    "bd": 0,
+    "be": 1,
+    "tc_dom": 1.0,
+    "tt_dom": 13.0,
+    "tirs_surface_dom": 8.0,
+    "tirs_hors_surface_dom": 5.0,
+    "possession_dom": 52.0,
+    "xg_dom": 1.05,
+    "buts_evites_dom": null,
+    "rouges_dom": 0.0,
+    "tc_ext": 5.0,
+    "tt_ext": 7.0,
+    "tirs_surface_ext": 6.0,
+    "tirs_hors_surface_ext": 1.0,
+    "possession_ext": 48.0,
+    "xg_ext": 1.11,
+    "buts_evites_ext": null,
+    "rouges_ext": 0.0,
+    "schema_dom": "3-4-2-1",
+    "titulaires_dom": [
+     "J. Markovič",
+     "T. Holeš",
+     "D. Zima",
+     "A. N&apos;Guessan",
+     "T. Vlček",
+     "M. Sadílek",
+     "W. Nowak",
+     "D. Jurásek",
+     "E. Ayaosi",
+     "M. E. Suleiman",
+     "M. Chytil"
+    ],
+    "entraineur_dom": "J. Trpišovský",
+    "schema_ext": "4-4-2",
+    "titulaires_ext": [
+     "Luíz Júnior",
+     "S. Mouriño",
+     "Logan Costa",
+     "Renato Veiga",
+     "Sergi Cardona",
+     "T. Buchanan",
+     "C. Macia",
+     "P. Gueye",
+     "Alberto Moleiro",
+     "Ayoze Pérez",
+     "T. Oluwaseyi"
+    ],
+    "entraineur_ext": "Iñigo Pérez",
+    "joueurs": [
+     {
+      "equipe": "ext",
+      "nom": "Santi Comesaña",
+      "poste": "M",
+      "minutes": 31,
+      "note": "6.49",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "T. Buchanan",
+      "poste": "M",
+      "minutes": 90,
+      "note": "8.2",
+      "buts": 1,
+      "passes_d": 0,
+      "duels_gagnes": 7,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "Sergi Cardona",
+      "poste": "D",
+      "minutes": 89,
+      "note": "6.31",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "Logan Costa",
+      "poste": "D",
+      "minutes": 90,
+      "note": "7.48",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 10,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "P. Gueye",
+      "poste": "M",
+      "minutes": 90,
+      "note": "6.33",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 7,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "C. Macia",
+      "poste": "M",
+      "minutes": 75,
+      "note": "6.63",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 7,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "Alberto Moleiro",
+      "poste": "M",
+      "minutes": 59,
+      "note": "6.38",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "S. Mouriño",
+      "poste": "D",
+      "minutes": 90,
+      "note": "6.01",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "T. Oluwaseyi",
+      "poste": "F",
+      "minutes": 90,
+      "note": "6.47",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 5,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "Ayoze Pérez",
+      "poste": "F",
+      "minutes": 75,
+      "note": "6.99",
+      "buts": 0,
+      "passes_d": 1,
+      "duels_gagnes": 4,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "ext",
+      "nom": "Renato Veiga",
+      "poste": "D",
+      "minutes": 90,
+      "note": "5.86",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 5,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "Luíz Júnior",
+      "poste": "G",
+      "minutes": 90,
+      "note": "6.57",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "A. Freeman",
+      "poste": "D",
+      "minutes": 15,
+      "note": "6.23",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "G. Mikautadze",
+      "poste": "F",
+      "minutes": 15,
+      "note": "6.68",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "Carlos Romero",
+      "poste": "D",
+      "minutes": 1,
+      "note": "6.07",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "E. Ayaosi",
+      "poste": "M",
+      "minutes": 83,
+      "note": "5.83",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "M. Chytil",
+      "poste": "F",
+      "minutes": 90,
+      "note": "6.15",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 7,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "T. Holeš",
+      "poste": "D",
+      "minutes": 90,
+      "note": "6.43",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "D. Jurásek",
+      "poste": "M",
+      "minutes": 90,
+      "note": "6.56",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 4,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "A. N&apos;Guessan",
+      "poste": "D",
+      "minutes": 66,
+      "note": "6.53",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 5,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "W. Nowak",
+      "poste": "M",
+      "minutes": 90,
+      "note": "6.27",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 4,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "dom",
+      "nom": "M. Sadílek",
+      "poste": "M",
+      "minutes": 90,
+      "note": "5.9",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 4,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "T. Vlček",
+      "poste": "M",
+      "minutes": 66,
+      "note": "5.77",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 5,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "D. Zima",
+      "poste": "D",
+      "minutes": 90,
+      "note": "6.7",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "J. Markovič",
+      "poste": "G",
+      "minutes": 90,
+      "note": "7.6",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "Pavel Kacor",
+      "poste": "M",
+      "minutes": 24,
+      "note": "6.75",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 5,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "I. Schranz",
+      "poste": "F",
+      "minutes": 7,
+      "note": "6.28",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "O. Kubiak",
+      "poste": "D",
+      "minutes": 24,
+      "note": "6.25",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "M. E. Suleiman",
+      "poste": "M",
+      "minutes": 90,
+      "note": "5.72",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 4,
+      "passes_cles": 1
+     }
+    ]
+   },
+   {
+    "id": 1635625,
+    "date": "2026-11-25T21:00:00+01:00",
+    "statut": "FT",
+    "comp": "UCL",
+    "tour": "League Stage - 5",
+    "dom": "Atletico Madrid",
+    "ext": "Viking",
+    "bd": 2,
+    "be": 0,
+    "tc_dom": 9.0,
+    "tt_dom": 20.0,
+    "tirs_surface_dom": 10.0,
+    "tirs_hors_surface_dom": 10.0,
+    "possession_dom": 48.0,
+    "xg_dom": 1.99,
+    "buts_evites_dom": null,
+    "rouges_dom": 0.0,
+    "tc_ext": 1.0,
+    "tt_ext": 9.0,
+    "tirs_surface_ext": 5.0,
+    "tirs_hors_surface_ext": 4.0,
+    "possession_ext": 52.0,
+    "xg_ext": 0.68,
+    "buts_evites_ext": null,
+    "rouges_ext": 1.0,
+    "schema_dom": "4-4-2",
+    "titulaires_dom": [
+     "J. Oblak",
+     "Marcos Llorente",
+     "Robin Le Normand",
+     "D. Hancko",
+     "Álex Grimaldo",
+     "Lee Kang-In",
+     "Koke",
+     "J. Cardoso",
+     "Álex Baena",
+     "J. Álvarez",
+     "A. Sørloth"
+    ],
+    "entraineur_dom": "D. Simeone",
+    "schema_ext": "4-3-3",
+    "titulaires_ext": [
+     "Ľ. Belko",
+     "H. Haugen",
+     "G. Stensness",
+     "H. Falchener",
+     "H. Heggheim",
+     "K. Askildsen",
+     "T. Moi",
+     "S. Kvia-Egeskog",
+     "H. Bjørdal",
+     "E. Botheim",
+     "Z. Tripić"
+    ],
+    "entraineur_ext": "B. Aarsheim",
+    "joueurs": [
+     {
+      "equipe": "dom",
+      "nom": "Pablo Barrios",
+      "poste": "M",
+      "minutes": 45,
+      "note": "7.13",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "G. Simeone",
+      "poste": "F",
+      "minutes": 33,
+      "note": "6.55",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "Rodrigo Mendoza",
+      "poste": "M",
+      "minutes": 19,
+      "note": "6.82",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "J. David",
+      "poste": "F",
+      "minutes": 33,
+      "note": "6.7",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "M. Hjulmand",
+      "poste": "M",
+      "minutes": 22,
+      "note": "6.53",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "J. Oblak",
+      "poste": "G",
+      "minutes": 90,
+      "note": "6.98",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "Marcos Llorente",
+      "poste": "D",
+      "minutes": 90,
+      "note": "7.13",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 4,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "dom",
+      "nom": "Robin Le Normand",
+      "poste": "D",
+      "minutes": 90,
+      "note": "7.29",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 4,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "D. Hancko",
+      "poste": "D",
+      "minutes": 90,
+      "note": "6.88",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 4,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "Álex Grimaldo",
+      "poste": "D",
+      "minutes": 90,
+      "note": "7.64",
+      "buts": 0,
+      "passes_d": 1,
+      "duels_gagnes": 2,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "dom",
+      "nom": "Lee Kang-In",
+      "poste": "M",
+      "minutes": 57,
+      "note": "6.69",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "dom",
+      "nom": "Koke",
+      "poste": "M",
+      "minutes": 68,
+      "note": "7.19",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 5,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "J. Cardoso",
+      "poste": "M",
+      "minutes": 90,
+      "note": "6.63",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 4,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "Álex Baena",
+      "poste": "M",
+      "minutes": 45,
+      "note": "6.59",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "J. Álvarez",
+      "poste": "F",
+      "minutes": 57,
+      "note": "8.2",
+      "buts": 1,
+      "passes_d": 0,
+      "duels_gagnes": 4,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "dom",
+      "nom": "A. Sørloth",
+      "poste": "F",
+      "minutes": 71,
+      "note": "8.05",
+      "buts": 1,
+      "passes_d": 0,
+      "duels_gagnes": 5,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "J. Bell",
+      "poste": "M",
+      "minutes": 8,
+      "note": "5.98",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "P. Christiansen",
+      "poste": "F",
+      "minutes": 33,
+      "note": "6.22",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "A. Cosic",
+      "poste": "F",
+      "minutes": 14,
+      "note": "6.47",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "N. Fuglestad",
+      "poste": "F",
+      "minutes": 14,
+      "note": "6.43",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "Vetle Auklend",
+      "poste": "D",
+      "minutes": 33,
+      "note": "6.38",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "Z. Tripić",
+      "poste": "F",
+      "minutes": 90,
+      "note": "6.23",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "G. Stensness",
+      "poste": "D",
+      "minutes": 90,
+      "note": "6.59",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 4,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "T. Moi",
+      "poste": "M",
+      "minutes": 76,
+      "note": "6.69",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "S. Kvia-Egeskog",
+      "poste": "M",
+      "minutes": 57,
+      "note": "6",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "H. Heggheim",
+      "poste": "D",
+      "minutes": 57,
+      "note": "6.59",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "H. Haugen",
+      "poste": "D",
+      "minutes": 76,
+      "note": "6.46",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "H. Falchener",
+      "poste": "D",
+      "minutes": 90,
+      "note": "5.5",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "E. Botheim",
+      "poste": "F",
+      "minutes": 90,
+      "note": "5.93",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "ext",
+      "nom": "H. Bjørdal",
+      "poste": "F",
+      "minutes": 90,
+      "note": "6.31",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "K. Askildsen",
+      "poste": "M",
+      "minutes": 82,
+      "note": "6.08",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 6,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "Ľ. Belko",
+      "poste": "G",
+      "minutes": 90,
+      "note": "7.7",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     }
+    ]
+   },
+   {
+    "id": 1635642,
+    "date": "2026-11-25T21:00:00+01:00",
+    "statut": "FT",
+    "comp": "UCL",
+    "tour": "League Stage - 5",
+    "dom": "Club Brugge KV",
+    "ext": "Liverpool",
+    "bd": 0,
+    "be": 3,
+    "tc_dom": 5.0,
+    "tt_dom": 17.0,
+    "tirs_surface_dom": 9.0,
+    "tirs_hors_surface_dom": 8.0,
+    "possession_dom": 54.0,
+    "xg_dom": 1.18,
+    "buts_evites_dom": null,
+    "rouges_dom": 0.0,
+    "tc_ext": 4.0,
+    "tt_ext": 13.0,
+    "tirs_surface_ext": 12.0,
+    "tirs_hors_surface_ext": 1.0,
+    "possession_ext": 46.0,
+    "xg_ext": 2.0,
+    "buts_evites_ext": null,
+    "rouges_ext": 0.0,
+    "schema_dom": "4-2-3-1",
+    "titulaires_dom": [
+     "Y. Sommer",
+     "K. Sabbe",
+     "J. Spileers",
+     "B. Mechele",
+     "J. Seys",
+     "F. Potts",
+     "H. Vanaken",
+     "Carlos Forbs",
+     "H. Vetlesen",
+     "F. Lemaréchal",
+     "N. Tresoldi"
+    ],
+    "entraineur_dom": "I. Leko",
+    "schema_ext": "4-2-3-1",
+    "titulaires_ext": [
+     "Alisson Becker",
+     "J. Frimpong",
+     "R. Araújo",
+     "J. Jacquet",
+     "M. Kerkez",
+     "D. Szoboszlai",
+     "T. Nyoni",
+     "Víctor Muñoz",
+     "F. Wirtz",
+     "B. Barcola",
+     "A. Isak"
+    ],
+    "entraineur_ext": "Andoni Iraola",
+    "joueurs": [
+     {
+      "equipe": "dom",
+      "nom": "Carlos Forbs",
+      "poste": "M",
+      "minutes": 90,
+      "note": "6.26",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 6,
+      "passes_cles": 3
+     },
+     {
+      "equipe": "dom",
+      "nom": "R. Vermant",
+      "poste": "F",
+      "minutes": 15,
+      "note": "6.4",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "C. Tsawa",
+      "poste": "M",
+      "minutes": 7,
+      "note": "5.88",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "H. Siquet",
+      "poste": "D",
+      "minutes": 7,
+      "note": "5.98",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "M. Diakhon",
+      "poste": "F",
+      "minutes": 15,
+      "note": "6.77",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "dom",
+      "nom": "M. Dams",
+      "poste": "D",
+      "minutes": 1,
+      "note": "5.9",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "H. Vetlesen",
+      "poste": "M",
+      "minutes": 75,
+      "note": "5.84",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "Y. Sommer",
+      "poste": "G",
+      "minutes": 90,
+      "note": "5.61",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "F. Lemaréchal",
+      "poste": "M",
+      "minutes": 75,
+      "note": "6.17",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 4,
+      "passes_cles": 3
+     },
+     {
+      "equipe": "dom",
+      "nom": "B. Mechele",
+      "poste": "D",
+      "minutes": 90,
+      "note": "6.47",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 7,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "F. Potts",
+      "poste": "M",
+      "minutes": 83,
+      "note": "5.97",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "K. Sabbe",
+      "poste": "D",
+      "minutes": 83,
+      "note": "6.15",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "J. Seys",
+      "poste": "D",
+      "minutes": 89,
+      "note": "6.51",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 5,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "J. Spileers",
+      "poste": "D",
+      "minutes": 90,
+      "note": "6.13",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 5,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "N. Tresoldi",
+      "poste": "F",
+      "minutes": 90,
+      "note": "6.68",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 7,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "H. Vanaken",
+      "poste": "M",
+      "minutes": 90,
+      "note": "7.2",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 4
+     },
+     {
+      "equipe": "ext",
+      "nom": "V. van Dijk",
+      "poste": "D",
+      "minutes": 17,
+      "note": "6.59",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "R. Ngumoha",
+      "poste": "F",
+      "minutes": 48,
+      "note": "7.14",
+      "buts": 0,
+      "passes_d": 1,
+      "duels_gagnes": 6,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "A. Mac Allister",
+      "poste": "M",
+      "minutes": 17,
+      "note": "6.46",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "L. Koumas",
+      "poste": "F",
+      "minutes": 4,
+      "note": "6.49",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "L. Chambers",
+      "poste": "D",
+      "minutes": 4,
+      "note": "6.16",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "F. Wirtz",
+      "poste": "M",
+      "minutes": 90,
+      "note": "7.2",
+      "buts": 1,
+      "passes_d": 0,
+      "duels_gagnes": 6,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "D. Szoboszlai",
+      "poste": "M",
+      "minutes": 90,
+      "note": "7.7",
+      "buts": 0,
+      "passes_d": 1,
+      "duels_gagnes": 0,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "ext",
+      "nom": "T. Nyoni",
+      "poste": "M",
+      "minutes": 73,
+      "note": "6.94",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "Víctor Muñoz",
+      "poste": "M",
+      "minutes": 42,
+      "note": "6.83",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "M. Kerkez",
+      "poste": "D",
+      "minutes": 90,
+      "note": "6.87",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 8,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "ext",
+      "nom": "J. Jacquet",
+      "poste": "D",
+      "minutes": 90,
+      "note": "7.29",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 7,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "A. Isak",
+      "poste": "F",
+      "minutes": 86,
+      "note": "9.69",
+      "buts": 2,
+      "passes_d": 0,
+      "duels_gagnes": 4,
+      "passes_cles": 3
+     },
+     {
+      "equipe": "ext",
+      "nom": "J. Frimpong",
+      "poste": "D",
+      "minutes": 73,
+      "note": "6.69",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "B. Barcola",
+      "poste": "M",
+      "minutes": 86,
+      "note": "6.59",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 9,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "ext",
+      "nom": "R. Araújo",
+      "poste": "D",
+      "minutes": 90,
+      "note": "6.38",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "Alisson Becker",
+      "poste": "G",
+      "minutes": 90,
+      "note": "8.3",
+      "buts": 0,
+      "passes_d": 1,
+      "duels_gagnes": 0,
+      "passes_cles": 1
+     }
+    ]
+   },
+   {
+    "id": 1635673,
+    "date": "2026-11-25T21:00:00+01:00",
+    "statut": "FT",
+    "comp": "UCL",
+    "tour": "League Stage - 5",
+    "dom": "Inter",
+    "ext": "VfB Stuttgart",
+    "bd": 2,
+    "be": 0,
+    "tc_dom": 5.0,
+    "tt_dom": 20.0,
+    "tirs_surface_dom": 15.0,
+    "tirs_hors_surface_dom": 5.0,
+    "possession_dom": 51.0,
+    "xg_dom": 2.65,
+    "buts_evites_dom": null,
+    "rouges_dom": 0.0,
+    "tc_ext": 2.0,
+    "tt_ext": 13.0,
+    "tirs_surface_ext": 10.0,
+    "tirs_hors_surface_ext": 3.0,
+    "possession_ext": 49.0,
+    "xg_ext": 1.13,
+    "buts_evites_ext": null,
+    "rouges_ext": 0.0,
+    "schema_dom": "3-5-2",
+    "titulaires_dom": [
+     "Josep Martínez",
+     "Y. Bisseck",
+     "M. Akanji",
+     "A. Bastoni",
+     "D. Spence",
+     "N. Barella",
+     "P. Sučić",
+     "H. Mkhitaryan",
+     "Carlos Augusto",
+     "F. Esposito",
+     "M. Thuram"
+    ],
+    "entraineur_dom": "C. Chivu",
+    "schema_ext": "3-4-3",
+    "titulaires_ext": [
+     "D. Seimen",
+     "Finn Jeltsch",
+     "J. Chabot",
+     "R. Hendriks",
+     "J. Vagnoman",
+     "N. Nartey",
+     "Y. Spalt",
+     "M. Mittelstädt",
+     "B. El Khannouss",
+     "E. Demirović",
+     "C. Führich"
+    ],
+    "entraineur_ext": "S. Hoeneb",
+    "joueurs": [
+     {
+      "equipe": "dom",
+      "nom": "M. Akanji",
+      "poste": "D",
+      "minutes": 90,
+      "note": "6.68",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "Josep Martínez",
+      "poste": "G",
+      "minutes": 90,
+      "note": "6.86",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "A. Stanković",
+      "poste": "M",
+      "minutes": 4,
+      "note": "6.53",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "Lautaro Martínez",
+      "poste": "F",
+      "minutes": 21,
+      "note": "7.43",
+      "buts": 1,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "C. Jones",
+      "poste": "M",
+      "minutes": 21,
+      "note": "6.59",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "A. Diouf",
+      "poste": "M",
+      "minutes": 4,
+      "note": "6.67",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "F. Dimarco",
+      "poste": "D",
+      "minutes": 49,
+      "note": "7.28",
+      "buts": 0,
+      "passes_d": 1,
+      "duels_gagnes": 1,
+      "passes_cles": 4
+     },
+     {
+      "equipe": "dom",
+      "nom": "M. Thuram",
+      "poste": "F",
+      "minutes": 69,
+      "note": "6.33",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "P. Sučić",
+      "poste": "M",
+      "minutes": 90,
+      "note": "7.8",
+      "buts": 1,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "D. Spence",
+      "poste": "M",
+      "minutes": 90,
+      "note": "6.2",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 5,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "H. Mkhitaryan",
+      "poste": "M",
+      "minutes": 69,
+      "note": "6.4",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "F. Esposito",
+      "poste": "F",
+      "minutes": 86,
+      "note": "6.45",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "dom",
+      "nom": "Carlos Augusto",
+      "poste": "M",
+      "minutes": 90,
+      "note": "6.33",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 5,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "Y. Bisseck",
+      "poste": "D",
+      "minutes": 90,
+      "note": "7.27",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "A. Bastoni",
+      "poste": "D",
+      "minutes": 41,
+      "note": "6.98",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "N. Barella",
+      "poste": "M",
+      "minutes": 86,
+      "note": "7.17",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 4
+     },
+     {
+      "equipe": "ext",
+      "nom": "L. Jaquez",
+      "poste": "D",
+      "minutes": 19,
+      "note": "6.23",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "J. Leweling",
+      "poste": "F",
+      "minutes": 27,
+      "note": "6.35",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "A. Stiller",
+      "poste": "M",
+      "minutes": 19,
+      "note": "6.56",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "Tiago Tomás",
+      "poste": "F",
+      "minutes": 6,
+      "note": "6.35",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "D. Undav",
+      "poste": "F",
+      "minutes": 26,
+      "note": "6.42",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "J. Vagnoman",
+      "poste": "M",
+      "minutes": 63,
+      "note": "6.43",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "ext",
+      "nom": "Y. Spalt",
+      "poste": "M",
+      "minutes": 90,
+      "note": "6.06",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "N. Nartey",
+      "poste": "M",
+      "minutes": 71,
+      "note": "6.51",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 6,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "M. Mittelstädt",
+      "poste": "M",
+      "minutes": 90,
+      "note": "6.69",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 6,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "Finn Jeltsch",
+      "poste": "D",
+      "minutes": 71,
+      "note": "5.93",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 4,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "R. Hendriks",
+      "poste": "D",
+      "minutes": 90,
+      "note": "6.84",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "C. Führich",
+      "poste": "F",
+      "minutes": 64,
+      "note": "6.49",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "ext",
+      "nom": "B. El Khannouss",
+      "poste": "F",
+      "minutes": 84,
+      "note": "6.03",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "E. Demirović",
+      "poste": "F",
+      "minutes": 90,
+      "note": "6.87",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "J. Chabot",
+      "poste": "D",
+      "minutes": 90,
+      "note": "6.78",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 4,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "D. Seimen",
+      "poste": "G",
+      "minutes": 90,
+      "note": "5.73",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     }
+    ]
+   },
+   {
+    "id": 1635682,
+    "date": "2026-11-25T21:00:00+01:00",
+    "statut": "FT",
+    "comp": "UCL",
+    "tour": "League Stage - 5",
+    "dom": "Lille",
+    "ext": "Bayern München",
+    "bd": 2,
+    "be": 1,
+    "tc_dom": 3.0,
+    "tt_dom": 15.0,
+    "tirs_surface_dom": 12.0,
+    "tirs_hors_surface_dom": 3.0,
+    "possession_dom": 35.0,
+    "xg_dom": 2.15,
+    "buts_evites_dom": null,
+    "rouges_dom": 0.0,
+    "tc_ext": 7.0,
+    "tt_ext": 12.0,
+    "tirs_surface_ext": 4.0,
+    "tirs_hors_surface_ext": 8.0,
+    "possession_ext": 65.0,
+    "xg_ext": 1.19,
+    "buts_evites_ext": null,
+    "rouges_ext": 0.0,
+    "schema_dom": "4-3-3",
+    "titulaires_dom": [
+     "B. Özer",
+     "M. Goffi",
+     "N. Ngoy",
+     "Alexsandro Ribeiro",
+     "C. Verdonk",
+     "N. Mukau",
+     "N. Bentaleb",
+     "B. André",
+     "E. Mbappé",
+     "A. Ueda",
+     "H. Haraldsson"
+    ],
+    "entraineur_dom": "Davide Ancelotti",
+    "schema_ext": "4-2-3-1",
+    "titulaires_ext": [
+     "J. Urbig",
+     "J. Stanišić",
+     "D. Upamecano",
+     "Kim Min-Jae",
+     "H. Ito",
+     "J. Kimmich",
+     "T. Bischof",
+     "L. Karl",
+     "A. Pavlović",
+     "N. Brown",
+     "K. Laimer"
+    ],
+    "entraineur_ext": "V. Kompany",
+    "joueurs": [
+     {
+      "equipe": "dom",
+      "nom": "Alexsandro Ribeiro",
+      "poste": "D",
+      "minutes": 90,
+      "note": "6.65",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "R. Perraud",
+      "poste": "D",
+      "minutes": 1,
+      "note": "6.42",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "B. Önal",
+      "poste": "F",
+      "minutes": 13,
+      "note": "6.59",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "O. Giroud",
+      "poste": "F",
+      "minutes": 3,
+      "note": "6.46",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "S. Diaoune",
+      "poste": "F",
+      "minutes": 13,
+      "note": "6.49",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "I. Cossier",
+      "poste": "D",
+      "minutes": 3,
+      "note": "6.26",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "C. Verdonk",
+      "poste": "D",
+      "minutes": 89,
+      "note": "6.83",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 9,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "B. Özer",
+      "poste": "G",
+      "minutes": 90,
+      "note": "8.23",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "B. André",
+      "poste": "M",
+      "minutes": 87,
+      "note": "7.2",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 7,
+      "passes_cles": 3
+     },
+     {
+      "equipe": "dom",
+      "nom": "N. Bentaleb",
+      "poste": "M",
+      "minutes": 90,
+      "note": "6.27",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 5,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "M. Goffi",
+      "poste": "D",
+      "minutes": 90,
+      "note": "6.94",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "H. Haraldsson",
+      "poste": "F",
+      "minutes": 87,
+      "note": "5.98",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 5,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "dom",
+      "nom": "E. Mbappé",
+      "poste": "F",
+      "minutes": 77,
+      "note": "6.36",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "dom",
+      "nom": "N. Mukau",
+      "poste": "M",
+      "minutes": 90,
+      "note": "6.15",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "N. Ngoy",
+      "poste": "D",
+      "minutes": 90,
+      "note": "7.37",
+      "buts": 0,
+      "passes_d": 1,
+      "duels_gagnes": 6,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "A. Ueda",
+      "poste": "F",
+      "minutes": 77,
+      "note": "7.8",
+      "buts": 1,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "J. Tah",
+      "poste": "D",
+      "minutes": 1,
+      "note": "6.1",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "J. Musiala",
+      "poste": "M",
+      "minutes": 14,
+      "note": "6.19",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "L. Díaz",
+      "poste": "F",
+      "minutes": 14,
+      "note": "6.27",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "Noah Codjo-Evora",
+      "poste": null,
+      "minutes": 9,
+      "note": "6.29",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "T. Binder",
+      "poste": "F",
+      "minutes": 14,
+      "note": "6.72",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "D. Upamecano",
+      "poste": "D",
+      "minutes": 90,
+      "note": "7.43",
+      "buts": 1,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "J. Stanišić",
+      "poste": "D",
+      "minutes": 76,
+      "note": "6.15",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "A. Pavlović",
+      "poste": "M",
+      "minutes": 90,
+      "note": "6",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "K. Laimer",
+      "poste": "F",
+      "minutes": 90,
+      "note": "5.86",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "Kim Min-Jae",
+      "poste": "D",
+      "minutes": 89,
+      "note": "6.64",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "J. Kimmich",
+      "poste": "M",
+      "minutes": 90,
+      "note": "7.2",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "L. Karl",
+      "poste": "M",
+      "minutes": 81,
+      "note": "6.43",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "H. Ito",
+      "poste": "D",
+      "minutes": 76,
+      "note": "7.19",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 5,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "ext",
+      "nom": "N. Brown",
+      "poste": "M",
+      "minutes": 90,
+      "note": "6.5",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "ext",
+      "nom": "T. Bischof",
+      "poste": "M",
+      "minutes": 76,
+      "note": "7.7",
+      "buts": 0,
+      "passes_d": 1,
+      "duels_gagnes": 2,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "ext",
+      "nom": "J. Urbig",
+      "poste": "G",
+      "minutes": 90,
+      "note": "6.13",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     }
+    ]
+   },
+   {
+    "id": 1635703,
+    "date": "2026-11-25T21:00:00+01:00",
+    "statut": "FT",
+    "comp": "UCL",
+    "tour": "League Stage - 5",
+    "dom": "Paris Saint Germain",
+    "ext": "AS Roma",
+    "bd": 2,
+    "be": 2,
+    "tc_dom": 4.0,
+    "tt_dom": 15.0,
+    "tirs_surface_dom": 8.0,
+    "tirs_hors_surface_dom": 7.0,
+    "possession_dom": 66.0,
+    "xg_dom": 1.81,
+    "buts_evites_dom": null,
+    "rouges_dom": 0.0,
+    "tc_ext": 4.0,
+    "tt_ext": 13.0,
+    "tirs_surface_ext": 8.0,
+    "tirs_hors_surface_ext": 5.0,
+    "possession_ext": 34.0,
+    "xg_ext": 2.71,
+    "buts_evites_ext": null,
+    "rouges_ext": 0.0,
+    "schema_dom": "4-3-3",
+    "titulaires_dom": [
+     "M. Safonov",
+     "A. Hakimi",
+     "I. Zabarnyi",
+     "W. Pacho",
+     "Nuno Mendes",
+     "João Neves",
+     "Vitinha",
+     "Fabián Ruiz",
+     "M. Akliouche",
+     "Ferran Torres",
+     "Senny Mayulu"
+    ],
+    "entraineur_dom": "Luis Enrique",
+    "schema_ext": "3-4-2-1",
+    "titulaires_ext": [
+     "M. Svilar",
+     "G. Mancini",
+     "E. Ndicka",
+     "Hermoso",
+     "N. Molina",
+     "M. de Roon",
+     "M. Koné",
+     "Wesley",
+     "N. Pisilli",
+     "M. Soulé",
+     "S. Castro"
+    ],
+    "entraineur_ext": "G. Gasperini",
+    "joueurs": [
+     {
+      "equipe": "dom",
+      "nom": "M. Safonov",
+      "poste": "G",
+      "minutes": 90,
+      "note": "6.3",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "M. Akliouche",
+      "poste": "F",
+      "minutes": 79,
+      "note": "6.28",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "A. Hakimi",
+      "poste": "D",
+      "minutes": 90,
+      "note": "6.14",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 7,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "Senny Mayulu",
+      "poste": "F",
+      "minutes": 67,
+      "note": "6.96",
+      "buts": 0,
+      "passes_d": 1,
+      "duels_gagnes": 5,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "Nuno Mendes",
+      "poste": "D",
+      "minutes": 59,
+      "note": "7.12",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 7,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "dom",
+      "nom": "João Neves",
+      "poste": "M",
+      "minutes": 79,
+      "note": "6.24",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "W. Pacho",
+      "poste": "D",
+      "minutes": 90,
+      "note": "6.66",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 4,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "W. Zaïre-Emery",
+      "poste": "M",
+      "minutes": 31,
+      "note": "6.2",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "Quentin Ndjantou Mbitcha",
+      "poste": "F",
+      "minutes": 11,
+      "note": "6.43",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "L. Hernández",
+      "poste": "D",
+      "minutes": 11,
+      "note": "6.12",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "M. Godts",
+      "poste": "F",
+      "minutes": 23,
+      "note": "6.61",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "O. Dembélé",
+      "poste": "F",
+      "minutes": 31,
+      "note": "7.8",
+      "buts": 1,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "I. Zabarnyi",
+      "poste": "D",
+      "minutes": 90,
+      "note": "7.31",
+      "buts": 1,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "Vitinha",
+      "poste": "M",
+      "minutes": 90,
+      "note": "7.2",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 3
+     },
+     {
+      "equipe": "dom",
+      "nom": "Ferran Torres",
+      "poste": "F",
+      "minutes": 59,
+      "note": "6.38",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "Fabián Ruiz",
+      "poste": "M",
+      "minutes": 90,
+      "note": "6.69",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 4,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "Wesley",
+      "poste": "M",
+      "minutes": 90,
+      "note": "6.41",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 7,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "M. Soulé",
+      "poste": "M",
+      "minutes": 83,
+      "note": "6.57",
+      "buts": 0,
+      "passes_d": 1,
+      "duels_gagnes": 2,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "ext",
+      "nom": "N. Pisilli",
+      "poste": "M",
+      "minutes": 90,
+      "note": "6.42",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "E. Ndicka",
+      "poste": "D",
+      "minutes": 90,
+      "note": "6.3",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "N. Molina",
+      "poste": "M",
+      "minutes": 67,
+      "note": "6.49",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "G. Mancini",
+      "poste": "D",
+      "minutes": 67,
+      "note": "6.14",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 4,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "M. Koné",
+      "poste": "M",
+      "minutes": 62,
+      "note": "6.19",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 6,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "Hermoso",
+      "poste": "D",
+      "minutes": 90,
+      "note": "7.43",
+      "buts": 1,
+      "passes_d": 0,
+      "duels_gagnes": 6,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "M. de Roon",
+      "poste": "M",
+      "minutes": 90,
+      "note": "5.96",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "ext",
+      "nom": "S. Castro",
+      "poste": "F",
+      "minutes": 63,
+      "note": "6.74",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 4,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "D. Malen",
+      "poste": "F",
+      "minutes": 23,
+      "note": "7.8",
+      "buts": 1,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "E. Lulli",
+      "poste": "D",
+      "minutes": 7,
+      "note": "6.07",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "D. Ghilardi",
+      "poste": "D",
+      "minutes": 23,
+      "note": "6.2",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "P. Dybala",
+      "poste": "F",
+      "minutes": 27,
+      "note": "7.2",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "ext",
+      "nom": "B. Cristante",
+      "poste": "M",
+      "minutes": 28,
+      "note": "5.89",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 6,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "M. Svilar",
+      "poste": "G",
+      "minutes": 90,
+      "note": "5.82",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     }
+    ]
+   },
+   {
+    "id": 1635724,
+    "date": "2026-11-25T21:00:00+01:00",
+    "statut": "FT",
+    "comp": "UCL",
+    "tour": "League Stage - 5",
+    "dom": "Shakhtar Donetsk",
+    "ext": "Fenerbahçe",
+    "bd": 0,
+    "be": 1,
+    "tc_dom": 2.0,
+    "tt_dom": 8.0,
+    "tirs_surface_dom": 2.0,
+    "tirs_hors_surface_dom": 6.0,
+    "possession_dom": 54.0,
+    "xg_dom": 0.58,
+    "buts_evites_dom": null,
+    "rouges_dom": 0.0,
+    "tc_ext": 5.0,
+    "tt_ext": 13.0,
+    "tirs_surface_ext": 9.0,
+    "tirs_hors_surface_ext": 4.0,
+    "possession_ext": 46.0,
+    "xg_ext": 1.75,
+    "buts_evites_ext": null,
+    "rouges_ext": 0.0,
+    "schema_dom": "4-1-4-1",
+    "titulaires_dom": [
+     "D. Riznyk",
+     "Vinícius Tobias",
+     "V. Bondar",
+     "M. Matvienko",
+     "Pedrinho",
+     "E. Nazaryna",
+     "Alisson Santana",
+     "O. Ocheretko",
+     "Marlon Gomes",
+     "Newertton",
+     "L. Traoré"
+    ],
+    "entraineur_dom": "A. Turan",
+    "schema_ext": "4-2-3-1",
+    "titulaires_ext": [
+     "Ederson",
+     "Nélson Semedo",
+     "M. Škriniar",
+     "K. Peprah Oppong",
+     "A. Brown",
+     "İ. Yüksek",
+     "N. Kanté",
+     "O. Aydın",
+     "M. Greenwood",
+     "K. Aktürkoğlu",
+     "V. Muriqi"
+    ],
+    "entraineur_ext": "E. Belözoğlu",
+    "joueurs": [
+     {
+      "equipe": "dom",
+      "nom": "Alisson Santana",
+      "poste": "M",
+      "minutes": 90,
+      "note": "6.24",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 8,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "V. Bondar",
+      "poste": "D",
+      "minutes": 90,
+      "note": "6.42",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "Marlon Gomes",
+      "poste": "M",
+      "minutes": 55,
+      "note": "6.37",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 4,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "M. Matvienko",
+      "poste": "D",
+      "minutes": 90,
+      "note": "7.17",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 5,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "E. Nazaryna",
+      "poste": "M",
+      "minutes": 89,
+      "note": "6.84",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "Newertton",
+      "poste": "M",
+      "minutes": 90,
+      "note": "6.53",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 5,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "O. Ocheretko",
+      "poste": "M",
+      "minutes": 90,
+      "note": "6.52",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 4,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "Pedrinho",
+      "poste": "D",
+      "minutes": 90,
+      "note": "6.66",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 9,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "Vinícius Tobias",
+      "poste": "D",
+      "minutes": 82,
+      "note": "6.77",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 5,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "L. Traoré",
+      "poste": "F",
+      "minutes": 82,
+      "note": "6.05",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 5,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "D. Riznyk",
+      "poste": "G",
+      "minutes": 90,
+      "note": "7.43",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "P. Obah",
+      "poste": "M",
+      "minutes": 1,
+      "note": "6.31",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "Luca Meirelles",
+      "poste": "F",
+      "minutes": 8,
+      "note": "6.33",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "Isaque",
+      "poste": "M",
+      "minutes": 35,
+      "note": "6.1",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "I. Azarovi",
+      "poste": "D",
+      "minutes": 8,
+      "note": "6.25",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "İ. Yüksek",
+      "poste": "M",
+      "minutes": 90,
+      "note": "6.36",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 7,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "M. Škriniar",
+      "poste": "D",
+      "minutes": 90,
+      "note": "6.72",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "Nélson Semedo",
+      "poste": "D",
+      "minutes": 90,
+      "note": "6.25",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "K. Peprah Oppong",
+      "poste": "D",
+      "minutes": 90,
+      "note": "7.07",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 6,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "V. Muriqi",
+      "poste": "F",
+      "minutes": 86,
+      "note": "8.2",
+      "buts": 1,
+      "passes_d": 0,
+      "duels_gagnes": 10,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "N. Kanté",
+      "poste": "M",
+      "minutes": 90,
+      "note": "6.45",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 6,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "M. Greenwood",
+      "poste": "M",
+      "minutes": 78,
+      "note": "7.06",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 4,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "A. Brown",
+      "poste": "D",
+      "minutes": 90,
+      "note": "6.84",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "O. Aydın",
+      "poste": "M",
+      "minutes": 90,
+      "note": "6.63",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 6,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "K. Aktürkoğlu",
+      "poste": "M",
+      "minutes": 69,
+      "note": "6.79",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 4
+     },
+     {
+      "equipe": "ext",
+      "nom": "Ederson",
+      "poste": "G",
+      "minutes": 90,
+      "note": "6.88",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "M. Guendouzi",
+      "poste": "M",
+      "minutes": 12,
+      "note": "6.66",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "İ. Kahveci",
+      "poste": "M",
+      "minutes": 21,
+      "note": "7.15",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 4,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "ext",
+      "nom": "R. Lukaku",
+      "poste": "F",
+      "minutes": 4,
+      "note": "6.54",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     }
+    ]
+   },
+   {
+    "id": 1635735,
+    "date": "2026-11-25T21:00:00+01:00",
+    "statut": "FT",
+    "comp": "UCL",
+    "tour": "League Stage - 5",
+    "dom": "Sporting CP",
+    "ext": "Manchester United",
+    "bd": 2,
+    "be": 2,
+    "tc_dom": 4.0,
+    "tt_dom": 11.0,
+    "tirs_surface_dom": 8.0,
+    "tirs_hors_surface_dom": 3.0,
+    "possession_dom": 51.0,
+    "xg_dom": 2.5,
+    "buts_evites_dom": null,
+    "rouges_dom": 0.0,
+    "tc_ext": 2.0,
+    "tt_ext": 7.0,
+    "tirs_surface_ext": 4.0,
+    "tirs_hors_surface_ext": 3.0,
+    "possession_ext": 49.0,
+    "xg_ext": 1.09,
+    "buts_evites_ext": null,
+    "rouges_ext": 1.0,
+    "schema_dom": "3-1-4-2",
+    "titulaires_dom": [
+     "Kaique",
+     "Iván Fresneda",
+     "Eduardo Quaresma",
+     "Gonçalo Inácio",
+     "Sergi Altimira",
+     "Geny Catamo",
+     "S. Andersen",
+     "I. Doumbia",
+     "M. Araújo",
+     "Luis Guilherme",
+     "L. Suárez"
+    ],
+    "entraineur_dom": "Paulo Fonseca",
+    "schema_ext": "4-2-3-1",
+    "titulaires_ext": [
+     "S. Lammens",
+     "N. Mazraoui",
+     "L. Yoro",
+     "H. Maguire",
+     "Lisandro Martínez",
+     "K. Mainoo",
+     "Y. Tielemans",
+     "A. Diallo",
+     "Bruno Fernandes",
+     "B. Mbeumo",
+     "J. Zirkzee"
+    ],
+    "entraineur_ext": "M. Pochettino",
+    "joueurs": [
+     {
+      "equipe": "dom",
+      "nom": "Sergi Altimira",
+      "poste": "M",
+      "minutes": 90,
+      "note": "6.54",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 9,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "R. Zalazar",
+      "poste": "M",
+      "minutes": 22,
+      "note": "6.21",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "dom",
+      "nom": "N. Irankunda",
+      "poste": "F",
+      "minutes": 14,
+      "note": "6.34",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "F. Ioannidis",
+      "poste": "F",
+      "minutes": 4,
+      "note": "6.5",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "Ibrahima Ba",
+      "poste": "D",
+      "minutes": 14,
+      "note": "6.19",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "Kaique",
+      "poste": "G",
+      "minutes": 90,
+      "note": "5.93",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "S. Andersen",
+      "poste": "M",
+      "minutes": 90,
+      "note": "6.9",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "M. Araújo",
+      "poste": "M",
+      "minutes": 90,
+      "note": "6.1",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 8,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "Geny Catamo",
+      "poste": "M",
+      "minutes": 68,
+      "note": "6.68",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "I. Doumbia",
+      "poste": "M",
+      "minutes": 76,
+      "note": "6.31",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "Iván Fresneda",
+      "poste": "D",
+      "minutes": 90,
+      "note": "6.79",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "Gonçalo Inácio",
+      "poste": "D",
+      "minutes": 90,
+      "note": "6.6",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "Luis Guilherme",
+      "poste": "F",
+      "minutes": 90,
+      "note": "6.42",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 4,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "dom",
+      "nom": "Eduardo Quaresma",
+      "poste": "D",
+      "minutes": 76,
+      "note": "6",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "dom",
+      "nom": "L. Suárez",
+      "poste": "F",
+      "minutes": 86,
+      "note": "8.02",
+      "buts": 2,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "Andrey Santos",
+      "poste": "M",
+      "minutes": 1,
+      "note": "5.95",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "Diogo Dalot",
+      "poste": "D",
+      "minutes": 26,
+      "note": "6.18",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "P. Dorgu",
+      "poste": "D",
+      "minutes": 26,
+      "note": "6.07",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "S. Lacey",
+      "poste": "F",
+      "minutes": 13,
+      "note": "6.47",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 0,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "M. Mount",
+      "poste": "M",
+      "minutes": 1,
+      "note": "6.02",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "Bruno Fernandes",
+      "poste": "M",
+      "minutes": 89,
+      "note": "7.62",
+      "buts": 2,
+      "passes_d": 0,
+      "duels_gagnes": 3,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "S. Lammens",
+      "poste": "G",
+      "minutes": 90,
+      "note": "6.32",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "A. Diallo",
+      "poste": "M",
+      "minutes": 77,
+      "note": "7.09",
+      "buts": 0,
+      "passes_d": 1,
+      "duels_gagnes": 7,
+      "passes_cles": 2
+     },
+     {
+      "equipe": "ext",
+      "nom": "J. Zirkzee",
+      "poste": "F",
+      "minutes": 64,
+      "note": "6.43",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "L. Yoro",
+      "poste": "D",
+      "minutes": 90,
+      "note": "6.78",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 7,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "Y. Tielemans",
+      "poste": "M",
+      "minutes": 90,
+      "note": "5.89",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 6,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "B. Mbeumo",
+      "poste": "M",
+      "minutes": 89,
+      "note": "6.38",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 1,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "N. Mazraoui",
+      "poste": "D",
+      "minutes": 64,
+      "note": "6.6",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 6,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "Lisandro Martínez",
+      "poste": "D",
+      "minutes": 90,
+      "note": "6.72",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 6,
+      "passes_cles": 1
+     },
+     {
+      "equipe": "ext",
+      "nom": "K. Mainoo",
+      "poste": "M",
+      "minutes": 90,
+      "note": "6.23",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 2,
+      "passes_cles": 0
+     },
+     {
+      "equipe": "ext",
+      "nom": "H. Maguire",
+      "poste": "D",
+      "minutes": 90,
+      "note": "6.77",
+      "buts": 0,
+      "passes_d": 0,
+      "duels_gagnes": 6,
+      "passes_cles": 0
+     }
+    ]
+   }
+  ]
+ },
+ "aujourdhui": {
+  "date": "2026-11-26",
+  "matchs": [
+   {
+    "id": 1636435,
+    "date": "2026-11-26T16:30:00+01:00",
+    "statut": "NS",
+    "comp": "UECL",
+    "tour": "League Stage - 4",
+    "dom": "Kairat Almaty",
+    "ext": "Mjallby AIF",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636231,
+    "date": "2026-11-26T18:45:00+01:00",
+    "statut": "NS",
+    "comp": "UEL",
+    "tour": "League Stage - 5",
+    "dom": "Beşiktaş",
+    "ext": "Hapoel Beer Sheva",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636244,
+    "date": "2026-11-26T18:45:00+01:00",
+    "statut": "NS",
+    "comp": "UEL",
+    "tour": "League Stage - 5",
+    "dom": "Celta Vigo",
+    "ext": "Bournemouth",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636255,
+    "date": "2026-11-26T18:45:00+01:00",
+    "statut": "NS",
+    "comp": "UEL",
+    "tour": "League Stage - 5",
+    "dom": "Dinamo Zagreb",
+    "ext": "Bayer Leverkusen",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636298,
+    "date": "2026-11-26T18:45:00+01:00",
+    "statut": "NS",
+    "comp": "UEL",
+    "tour": "League Stage - 5",
+    "dom": "Marseille",
+    "ext": "Levski Sofia",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636307,
+    "date": "2026-11-26T18:45:00+01:00",
+    "statut": "NS",
+    "comp": "UEL",
+    "tour": "League Stage - 5",
+    "dom": "Olympiakos Piraeus",
+    "ext": "AC Milan",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636315,
+    "date": "2026-11-26T18:45:00+01:00",
+    "statut": "NS",
+    "comp": "UEL",
+    "tour": "League Stage - 5",
+    "dom": "Plzen",
+    "ext": "Benfica",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636329,
+    "date": "2026-11-26T18:45:00+01:00",
+    "statut": "NS",
+    "comp": "UEL",
+    "tour": "League Stage - 5",
+    "dom": "Union St. Gilloise",
+    "ext": "Lech Poznan",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636334,
+    "date": "2026-11-26T18:45:00+01:00",
+    "statut": "NS",
+    "comp": "UEL",
+    "tour": "League Stage - 5",
+    "dom": "Red Bull Salzburg",
+    "ext": "Ararat-Armenia",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636381,
+    "date": "2026-11-26T18:45:00+01:00",
+    "statut": "NS",
+    "comp": "UECL",
+    "tour": "League Stage - 4",
+    "dom": "Ajax",
+    "ext": "FC Thun",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636393,
+    "date": "2026-11-26T18:45:00+01:00",
+    "statut": "NS",
+    "comp": "UECL",
+    "tour": "League Stage - 4",
+    "dom": "Brann",
+    "ext": "Aarhus",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636395,
+    "date": "2026-11-26T18:45:00+01:00",
+    "statut": "NS",
+    "comp": "UECL",
+    "tour": "League Stage - 4",
+    "dom": "Brighton",
+    "ext": "Universitatea Craiova",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636405,
+    "date": "2026-11-26T18:45:00+01:00",
+    "statut": "NS",
+    "comp": "UECL",
+    "tour": "League Stage - 4",
+    "dom": "Egnatia Rrogozhinë",
+    "ext": "Lincoln Red Imps FC",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636421,
+    "date": "2026-11-26T18:45:00+01:00",
+    "statut": "NS",
+    "comp": "UECL",
+    "tour": "League Stage - 4",
+    "dom": "Heart Of Midlothian",
+    "ext": "Monaco",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636426,
+    "date": "2026-11-26T18:45:00+01:00",
+    "statut": "NS",
+    "comp": "UECL",
+    "tour": "League Stage - 4",
+    "dom": "FC Iberia 1999",
+    "ext": "Getafe",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636431,
+    "date": "2026-11-26T18:45:00+01:00",
+    "statut": "NS",
+    "comp": "UECL",
+    "tour": "League Stage - 4",
+    "dom": "FK Jablonec",
+    "ext": "FC Lugano",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636438,
+    "date": "2026-11-26T18:45:00+01:00",
+    "statut": "NS",
+    "comp": "UECL",
+    "tour": "League Stage - 4",
+    "dom": "Kauno Žalgiris",
+    "ext": "Riga",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636460,
+    "date": "2026-11-26T18:45:00+01:00",
+    "statut": "NS",
+    "comp": "UECL",
+    "tour": "League Stage - 4",
+    "dom": "Pafos",
+    "ext": "FC Midtjylland",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636252,
+    "date": "2026-11-26T21:00:00+01:00",
+    "statut": "NS",
+    "comp": "UEL",
+    "tour": "League Stage - 5",
+    "dom": "Crystal Palace",
+    "ext": "Real Sociedad",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636261,
+    "date": "2026-11-26T21:00:00+01:00",
+    "statut": "NS",
+    "comp": "UEL",
+    "tour": "League Stage - 5",
+    "dom": "Ferencvarosi TC",
+    "ext": "Celje",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636270,
+    "date": "2026-11-26T21:00:00+01:00",
+    "statut": "NS",
+    "comp": "UEL",
+    "tour": "League Stage - 5",
+    "dom": "1899 Hoffenheim",
+    "ext": "Sturm Graz",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636277,
+    "date": "2026-11-26T21:00:00+01:00",
+    "statut": "NS",
+    "comp": "UEL",
+    "tour": "League Stage - 5",
+    "dom": "Juventus",
+    "ext": "Omonia Nicosia",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636294,
+    "date": "2026-11-26T21:00:00+01:00",
+    "statut": "NS",
+    "comp": "UEL",
+    "tour": "League Stage - 5",
+    "dom": "Lyon",
+    "ext": "Lillestrom",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636301,
+    "date": "2026-11-26T21:00:00+01:00",
+    "statut": "NS",
+    "comp": "UEL",
+    "tour": "League Stage - 5",
+    "dom": "NEC Nijmegen",
+    "ext": "Rennes",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636305,
+    "date": "2026-11-26T21:00:00+01:00",
+    "statut": "NS",
+    "comp": "UEL",
+    "tour": "League Stage - 5",
+    "dom": "OFI",
+    "ext": "Anderlecht",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636336,
+    "date": "2026-11-26T21:00:00+01:00",
+    "statut": "NS",
+    "comp": "UEL",
+    "tour": "League Stage - 5",
+    "dom": "Sparta Praha",
+    "ext": "AZ Alkmaar",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636343,
+    "date": "2026-11-26T21:00:00+01:00",
+    "statut": "NS",
+    "comp": "UEL",
+    "tour": "League Stage - 5",
+    "dom": "Sunderland",
+    "ext": "Jagiellonia",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636349,
+    "date": "2026-11-26T21:00:00+01:00",
+    "statut": "NS",
+    "comp": "UEL",
+    "tour": "League Stage - 5",
+    "dom": "Torreense",
+    "ext": "Celtic",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636386,
+    "date": "2026-11-26T21:00:00+01:00",
+    "statut": "NS",
+    "comp": "UECL",
+    "tour": "League Stage - 4",
+    "dom": "Borac Banja Luka",
+    "ext": "Atalanta",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636389,
+    "date": "2026-11-26T21:00:00+01:00",
+    "statut": "NS",
+    "comp": "UECL",
+    "tour": "League Stage - 4",
+    "dom": "SC Braga",
+    "ext": "KuPS",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636402,
+    "date": "2026-11-26T21:00:00+01:00",
+    "statut": "NS",
+    "comp": "UECL",
+    "tour": "League Stage - 4",
+    "dom": "CSKA Sofia",
+    "ext": "Trabzonspor",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636410,
+    "date": "2026-11-26T21:00:00+01:00",
+    "statut": "NS",
+    "comp": "UECL",
+    "tour": "League Stage - 4",
+    "dom": "SC Freiburg",
+    "ext": "Twente",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636412,
+    "date": "2026-11-26T21:00:00+01:00",
+    "statut": "NS",
+    "comp": "UECL",
+    "tour": "League Stage - 4",
+    "dom": "Gent",
+    "ext": "FK Crvena Zvezda",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636420,
+    "date": "2026-11-26T21:00:00+01:00",
+    "statut": "NS",
+    "comp": "UECL",
+    "tour": "League Stage - 4",
+    "dom": "HNK Hajduk Split",
+    "ext": "St. Truiden",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636428,
+    "date": "2026-11-26T21:00:00+01:00",
+    "statut": "NS",
+    "comp": "UECL",
+    "tour": "League Stage - 4",
+    "dom": "Inter Club d'Escaldes",
+    "ext": "FC Copenhagen",
+    "bd": null,
+    "be": null
+   },
+   {
+    "id": 1636457,
+    "date": "2026-11-26T21:00:00+01:00",
+    "statut": "NS",
+    "comp": "UECL",
+    "tour": "League Stage - 4",
+    "dom": "FC Nordsjaelland",
+    "ext": "Panathinaikos",
+    "bd": null,
+    "be": null
+   }
+  ],
+  "absents": [
+   {
+    "fixture": 1636231,
+    "equipe": "Beşiktaş",
+    "joueur": "U. Akdag",
+    "type": "Missing Fixture",
+    "raison": "Red Card"
+   },
+   {
+    "fixture": 1636231,
+    "equipe": "Beşiktaş",
+    "joueur": "C. Keles",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636231,
+    "equipe": "Beşiktaş",
+    "joueur": "M. Rashica",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636231,
+    "equipe": "Beşiktaş",
+    "joueur": "E. Agbadou",
+    "type": "Questionable",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636231,
+    "equipe": "Hapoel Beer Sheva",
+    "joueur": "D. Biton",
+    "type": "Missing Fixture",
+    "raison": "Heart Problems"
+   },
+   {
+    "fixture": 1636231,
+    "equipe": "Hapoel Beer Sheva",
+    "joueur": "Lucas Ventura",
+    "type": "Missing Fixture",
+    "raison": "Muscle Injury"
+   },
+   {
+    "fixture": 1636231,
+    "equipe": "Hapoel Beer Sheva",
+    "joueur": "E. Peretz",
+    "type": "Missing Fixture",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636231,
+    "equipe": "Hapoel Beer Sheva",
+    "joueur": "I. Rotman",
+    "type": "Missing Fixture",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636231,
+    "equipe": "Hapoel Beer Sheva",
+    "joueur": "Y. Stoyanov",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636244,
+    "equipe": "Celta Vigo",
+    "joueur": "H. Gonzalez",
+    "type": "Missing Fixture",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636244,
+    "equipe": "Celta Vigo",
+    "joueur": "B. Iglesias",
+    "type": "Missing Fixture",
+    "raison": "Calf Injury"
+   },
+   {
+    "fixture": 1636244,
+    "equipe": "Celta Vigo",
+    "joueur": "M. Roman",
+    "type": "Missing Fixture",
+    "raison": "Knee Injury"
+   },
+   {
+    "fixture": 1636244,
+    "equipe": "Celta Vigo",
+    "joueur": "C. Starfelt",
+    "type": "Missing Fixture",
+    "raison": "Muscle Injury"
+   },
+   {
+    "fixture": 1636244,
+    "equipe": "Bournemouth",
+    "joueur": "M. Aarons",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636244,
+    "equipe": "Bournemouth",
+    "joueur": "J. Araujo",
+    "type": "Missing Fixture",
+    "raison": "Thigh Injury"
+   },
+   {
+    "fixture": 1636244,
+    "equipe": "Bournemouth",
+    "joueur": "F. Forster",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636244,
+    "equipe": "Bournemouth",
+    "joueur": "B. Gannon-Doak",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636244,
+    "equipe": "Bournemouth",
+    "joueur": "D. Jebbison",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636244,
+    "equipe": "Bournemouth",
+    "joueur": "V. Milosavljevic",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636244,
+    "equipe": "Bournemouth",
+    "joueur": "J. Sanchez",
+    "type": "Missing Fixture",
+    "raison": "Ankle Injury"
+   },
+   {
+    "fixture": 1636244,
+    "equipe": "Bournemouth",
+    "joueur": "A. Toth",
+    "type": "Missing Fixture",
+    "raison": "Muscle Injury"
+   },
+   {
+    "fixture": 1636255,
+    "equipe": "Dinamo Zagreb",
+    "joueur": "R. Mudrazija",
+    "type": "Missing Fixture",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636255,
+    "equipe": "Dinamo Zagreb",
+    "joueur": "I. Nevistic",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636255,
+    "equipe": "Dinamo Zagreb",
+    "joueur": "N. Nsoki",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636255,
+    "equipe": "Dinamo Zagreb",
+    "joueur": "A. Stojakovic",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636255,
+    "equipe": "Dinamo Zagreb",
+    "joueur": "P. Tabinas",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636255,
+    "equipe": "Dinamo Zagreb",
+    "joueur": "F. Topic",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636255,
+    "equipe": "Dinamo Zagreb",
+    "joueur": "S. McKenna",
+    "type": "Questionable",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636255,
+    "equipe": "Bayer Leverkusen",
+    "joueur": "V. Boniface",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636255,
+    "equipe": "Bayer Leverkusen",
+    "joueur": "K. Eichhorn",
+    "type": "Missing Fixture",
+    "raison": "Illness"
+   },
+   {
+    "fixture": 1636255,
+    "equipe": "Bayer Leverkusen",
+    "joueur": "T. Oermann",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636255,
+    "equipe": "Bayer Leverkusen",
+    "joueur": "M. Terrier",
+    "type": "Missing Fixture",
+    "raison": "Muscle Injury"
+   },
+   {
+    "fixture": 1636298,
+    "equipe": "Marseille",
+    "joueur": "D. Cornelius",
+    "type": "Missing Fixture",
+    "raison": "Hip Injury"
+   },
+   {
+    "fixture": 1636298,
+    "equipe": "Marseille",
+    "joueur": "Emerson",
+    "type": "Missing Fixture",
+    "raison": "Knee Injury"
+   },
+   {
+    "fixture": 1636298,
+    "equipe": "Levski Sofia",
+    "joueur": "P. Hristov",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636298,
+    "equipe": "Levski Sofia",
+    "joueur": "O. Kamdem",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636298,
+    "equipe": "Levski Sofia",
+    "joueur": "R. Kirilov",
+    "type": "Missing Fixture",
+    "raison": "Knee Injury"
+   },
+   {
+    "fixture": 1636298,
+    "equipe": "Levski Sofia",
+    "joueur": "A. Mitkov",
+    "type": "Missing Fixture",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636298,
+    "equipe": "Levski Sofia",
+    "joueur": "A. Raychev",
+    "type": "Missing Fixture",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636298,
+    "equipe": "Levski Sofia",
+    "joueur": "M. Sangare",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636298,
+    "equipe": "Levski Sofia",
+    "joueur": "S. Araujo",
+    "type": "Missing Fixture",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636307,
+    "equipe": "Olympiakos Piraeus",
+    "joueur": "L. Bailey",
+    "type": "Missing Fixture",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636307,
+    "equipe": "Olympiakos Piraeus",
+    "joueur": "Chiquinho",
+    "type": "Missing Fixture",
+    "raison": "Foot Injury"
+   },
+   {
+    "fixture": 1636307,
+    "equipe": "Olympiakos Piraeus",
+    "joueur": "C. Fernandes Silva",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636307,
+    "equipe": "Olympiakos Piraeus",
+    "joueur": "A. El Kaabi",
+    "type": "Missing Fixture",
+    "raison": "Broken Leg"
+   },
+   {
+    "fixture": 1636307,
+    "equipe": "Olympiakos Piraeus",
+    "joueur": "S. Hezze",
+    "type": "Missing Fixture",
+    "raison": "Knee Injury"
+   },
+   {
+    "fixture": 1636307,
+    "equipe": "Olympiakos Piraeus",
+    "joueur": "M. Mouandilmadji",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636307,
+    "equipe": "Olympiakos Piraeus",
+    "joueur": "B. Popovic",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636307,
+    "equipe": "Olympiakos Piraeus",
+    "joueur": "G. Puerta",
+    "type": "Missing Fixture",
+    "raison": "Injury"
+   },
+   {
+    "fixture": 1636307,
+    "equipe": "Olympiakos Piraeus",
+    "joueur": "J. Roca",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636307,
+    "equipe": "Olympiakos Piraeus",
+    "joueur": "L. Scipioni",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636307,
+    "equipe": "Olympiakos Piraeus",
+    "joueur": "Y. Yazici",
+    "type": "Missing Fixture",
+    "raison": "Knee Injury"
+   },
+   {
+    "fixture": 1636307,
+    "equipe": "AC Milan",
+    "joueur": "D. Bartesaghi",
+    "type": "Missing Fixture",
+    "raison": "Leg Injury"
+   },
+   {
+    "fixture": 1636307,
+    "equipe": "AC Milan",
+    "joueur": "W. Bondo",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636307,
+    "equipe": "AC Milan",
+    "joueur": "F. Camarda",
+    "type": "Missing Fixture",
+    "raison": "Ankle Injury"
+   },
+   {
+    "fixture": 1636307,
+    "equipe": "AC Milan",
+    "joueur": "S. Chukwueze",
+    "type": "Missing Fixture",
+    "raison": "Hip Injury"
+   },
+   {
+    "fixture": 1636307,
+    "equipe": "AC Milan",
+    "joueur": "M. Gabbia",
+    "type": "Missing Fixture",
+    "raison": "Thigh Injury"
+   },
+   {
+    "fixture": 1636307,
+    "equipe": "AC Milan",
+    "joueur": "R. Loftus-Cheek",
+    "type": "Missing Fixture",
+    "raison": "Thigh Injury"
+   },
+   {
+    "fixture": 1636307,
+    "equipe": "AC Milan",
+    "joueur": "L. Modric",
+    "type": "Missing Fixture",
+    "raison": "Thigh Injury"
+   },
+   {
+    "fixture": 1636307,
+    "equipe": "AC Milan",
+    "joueur": "S. Pavlovic",
+    "type": "Missing Fixture",
+    "raison": "Illness"
+   },
+   {
+    "fixture": 1636307,
+    "equipe": "AC Milan",
+    "joueur": "A. Saelemaekers",
+    "type": "Missing Fixture",
+    "raison": "Ankle Injury"
+   },
+   {
+    "fixture": 1636307,
+    "equipe": "AC Milan",
+    "joueur": "P. Terracciano",
+    "type": "Missing Fixture",
+    "raison": "Shoulder Injury"
+   },
+   {
+    "fixture": 1636315,
+    "equipe": "Plzen",
+    "joueur": "V. Jemelka",
+    "type": "Missing Fixture",
+    "raison": "Knee Injury"
+   },
+   {
+    "fixture": 1636315,
+    "equipe": "Plzen",
+    "joueur": "M. Tvrdon",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636315,
+    "equipe": "Benfica",
+    "joueur": "F. Aursnes",
+    "type": "Missing Fixture",
+    "raison": "Injury"
+   },
+   {
+    "fixture": 1636315,
+    "equipe": "Benfica",
+    "joueur": "L. Barreiro",
+    "type": "Missing Fixture",
+    "raison": "Injury"
+   },
+   {
+    "fixture": 1636315,
+    "equipe": "Benfica",
+    "joueur": "G. Prestianni",
+    "type": "Missing Fixture",
+    "raison": "Muscle Injury"
+   },
+   {
+    "fixture": 1636329,
+    "equipe": "Union St. Gilloise",
+    "joueur": "A. Ait El Hadj",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636329,
+    "equipe": "Union St. Gilloise",
+    "joueur": "M. Biondic",
+    "type": "Missing Fixture",
+    "raison": "Knee Injury"
+   },
+   {
+    "fixture": 1636329,
+    "equipe": "Union St. Gilloise",
+    "joueur": "N. Havenaar",
+    "type": "Missing Fixture",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636329,
+    "equipe": "Union St. Gilloise",
+    "joueur": "K. Mac Allister",
+    "type": "Missing Fixture",
+    "raison": "Knee Injury"
+   },
+   {
+    "fixture": 1636329,
+    "equipe": "Union St. Gilloise",
+    "joueur": "I. Pavlic",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636329,
+    "equipe": "Lech Poznan",
+    "joueur": "A. Douglas",
+    "type": "Missing Fixture",
+    "raison": "Ankle Injury"
+   },
+   {
+    "fixture": 1636329,
+    "equipe": "Lech Poznan",
+    "joueur": "A. Gholizadeh",
+    "type": "Missing Fixture",
+    "raison": "Knee Injury"
+   },
+   {
+    "fixture": 1636329,
+    "equipe": "Lech Poznan",
+    "joueur": "M. Ishak",
+    "type": "Missing Fixture",
+    "raison": "Muscle Injury"
+   },
+   {
+    "fixture": 1636329,
+    "equipe": "Lech Poznan",
+    "joueur": "J. Moutinho",
+    "type": "Missing Fixture",
+    "raison": "Broken Leg"
+   },
+   {
+    "fixture": 1636329,
+    "equipe": "Lech Poznan",
+    "joueur": "P. Rodriguez",
+    "type": "Missing Fixture",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636329,
+    "equipe": "Lech Poznan",
+    "joueur": "P. Walemark",
+    "type": "Missing Fixture",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636329,
+    "equipe": "Lech Poznan",
+    "joueur": "A. Sayyadmanesh",
+    "type": "Questionable",
+    "raison": "Groin Injury"
+   },
+   {
+    "fixture": 1636334,
+    "equipe": "Red Bull Salzburg",
+    "joueur": "K. Boma",
+    "type": "Missing Fixture",
+    "raison": "Calf Injury"
+   },
+   {
+    "fixture": 1636334,
+    "equipe": "Red Bull Salzburg",
+    "joueur": "A. Chase",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636334,
+    "equipe": "Red Bull Salzburg",
+    "joueur": "S. Kitano",
+    "type": "Missing Fixture",
+    "raison": "Ankle Injury"
+   },
+   {
+    "fixture": 1636334,
+    "equipe": "Red Bull Salzburg",
+    "joueur": "F. Matijasevic",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636334,
+    "equipe": "Red Bull Salzburg",
+    "joueur": "J. Mellberg",
+    "type": "Missing Fixture",
+    "raison": "Muscle Injury"
+   },
+   {
+    "fixture": 1636334,
+    "equipe": "Red Bull Salzburg",
+    "joueur": "J. Moser",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636334,
+    "equipe": "Red Bull Salzburg",
+    "joueur": "J. Omoregie",
+    "type": "Missing Fixture",
+    "raison": "Achilles Tendon Injury"
+   },
+   {
+    "fixture": 1636334,
+    "equipe": "Red Bull Salzburg",
+    "joueur": "D. Schmid",
+    "type": "Missing Fixture",
+    "raison": "Knee Injury"
+   },
+   {
+    "fixture": 1636334,
+    "equipe": "Red Bull Salzburg",
+    "joueur": "H. Tabakovic",
+    "type": "Missing Fixture",
+    "raison": "Knee Injury"
+   },
+   {
+    "fixture": 1636334,
+    "equipe": "Red Bull Salzburg",
+    "joueur": "L. Morgalla",
+    "type": "Questionable",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636334,
+    "equipe": "Red Bull Salzburg",
+    "joueur": "D. Redzic",
+    "type": "Questionable",
+    "raison": "Injury"
+   },
+   {
+    "fixture": 1636334,
+    "equipe": "Red Bull Salzburg",
+    "joueur": "N. Veratschnig",
+    "type": "Questionable",
+    "raison": "Knee Injury"
+   },
+   {
+    "fixture": 1636334,
+    "equipe": "Ararat-Armenia",
+    "joueur": "P. Ayongo",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636334,
+    "equipe": "Ararat-Armenia",
+    "joueur": "J. Bravim",
+    "type": "Missing Fixture",
+    "raison": "Red Card"
+   },
+   {
+    "fixture": 1636252,
+    "equipe": "Crystal Palace",
+    "joueur": "C. Doucoure",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636252,
+    "equipe": "Crystal Palace",
+    "joueur": "Z. Gozo",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636252,
+    "equipe": "Crystal Palace",
+    "joueur": "E. Guessand",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636252,
+    "equipe": "Crystal Palace",
+    "joueur": "J. Lerma",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636252,
+    "equipe": "Crystal Palace",
+    "joueur": "C. Riad",
+    "type": "Missing Fixture",
+    "raison": "Knee Injury"
+   },
+   {
+    "fixture": 1636252,
+    "equipe": "Crystal Palace",
+    "joueur": "I. Sarr",
+    "type": "Missing Fixture",
+    "raison": "Groin Injury"
+   },
+   {
+    "fixture": 1636252,
+    "equipe": "Crystal Palace",
+    "joueur": "T. Tomiyasu",
+    "type": "Missing Fixture",
+    "raison": "Calf Injury"
+   },
+   {
+    "fixture": 1636252,
+    "equipe": "Crystal Palace",
+    "joueur": "A. Wharton",
+    "type": "Missing Fixture",
+    "raison": "Red Card"
+   },
+   {
+    "fixture": 1636252,
+    "equipe": "Crystal Palace",
+    "joueur": "O. Mingueza",
+    "type": "Questionable",
+    "raison": "Muscle Injury"
+   },
+   {
+    "fixture": 1636252,
+    "equipe": "Real Sociedad",
+    "joueur": "J. Aramburu",
+    "type": "Missing Fixture",
+    "raison": "Hip Injury"
+   },
+   {
+    "fixture": 1636252,
+    "equipe": "Real Sociedad",
+    "joueur": "L. Astiazaran",
+    "type": "Missing Fixture",
+    "raison": "Knock"
+   },
+   {
+    "fixture": 1636252,
+    "equipe": "Real Sociedad",
+    "joueur": "A. Barrenetxea",
+    "type": "Missing Fixture",
+    "raison": "Hamstring Injury"
+   },
+   {
+    "fixture": 1636252,
+    "equipe": "Real Sociedad",
+    "joueur": "T. Folgado",
+    "type": "Missing Fixture",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636252,
+    "equipe": "Real Sociedad",
+    "joueur": "Y. Herrera",
+    "type": "Missing Fixture",
+    "raison": "Foot Injury"
+   },
+   {
+    "fixture": 1636252,
+    "equipe": "Real Sociedad",
+    "joueur": "A. Odriozola",
+    "type": "Missing Fixture",
+    "raison": "Knee Injury"
+   },
+   {
+    "fixture": 1636261,
+    "equipe": "Ferencvarosi TC",
+    "joueur": "E. Botka",
+    "type": "Missing Fixture",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636261,
+    "equipe": "Ferencvarosi TC",
+    "joueur": "B. Nagy",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636261,
+    "equipe": "Ferencvarosi TC",
+    "joueur": "B. Otvos",
+    "type": "Missing Fixture",
+    "raison": "Knee Injury"
+   },
+   {
+    "fixture": 1636261,
+    "equipe": "Ferencvarosi TC",
+    "joueur": "I. Pappoe",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636261,
+    "equipe": "Ferencvarosi TC",
+    "joueur": "G. Szecsi",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636261,
+    "equipe": "Ferencvarosi TC",
+    "joueur": "B. Yusuf",
+    "type": "Missing Fixture",
+    "raison": "Red Card"
+   },
+   {
+    "fixture": 1636261,
+    "equipe": "Celje",
+    "joueur": "I. Calusic",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636261,
+    "equipe": "Celje",
+    "joueur": "J. Pisek",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636261,
+    "equipe": "Celje",
+    "joueur": "R. Pozeg",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636261,
+    "equipe": "Celje",
+    "joueur": "Z. L. Sega",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636261,
+    "equipe": "Celje",
+    "joueur": "P. Sirvys",
+    "type": "Missing Fixture",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636261,
+    "equipe": "Celje",
+    "joueur": "S. Sluga",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636261,
+    "equipe": "Celje",
+    "joueur": "D. Vuklisevic",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636270,
+    "equipe": "1899 Hoffenheim",
+    "joueur": "N. De Cat",
+    "type": "Missing Fixture",
+    "raison": "Knee Injury"
+   },
+   {
+    "fixture": 1636270,
+    "equipe": "1899 Hoffenheim",
+    "joueur": "L. Engelns",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636270,
+    "equipe": "1899 Hoffenheim",
+    "joueur": "V. Gendrey",
+    "type": "Missing Fixture",
+    "raison": "Ankle Injury"
+   },
+   {
+    "fixture": 1636270,
+    "equipe": "1899 Hoffenheim",
+    "joueur": "A. Hajdari",
+    "type": "Missing Fixture",
+    "raison": "Foot Injury"
+   },
+   {
+    "fixture": 1636270,
+    "equipe": "1899 Hoffenheim",
+    "joueur": "R. Hranac",
+    "type": "Missing Fixture",
+    "raison": "Knee Injury"
+   },
+   {
+    "fixture": 1636270,
+    "equipe": "Sturm Graz",
+    "joueur": "N. Geyrhofer",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636270,
+    "equipe": "Sturm Graz",
+    "joueur": "L. Grgic",
+    "type": "Missing Fixture",
+    "raison": "Knee Injury"
+   },
+   {
+    "fixture": 1636270,
+    "equipe": "Sturm Graz",
+    "joueur": "D. Khudyakov",
+    "type": "Missing Fixture",
+    "raison": "Leg Injury"
+   },
+   {
+    "fixture": 1636270,
+    "equipe": "Sturm Graz",
+    "joueur": "O. Kiteishvili",
+    "type": "Missing Fixture",
+    "raison": "Calf Injury"
+   },
+   {
+    "fixture": 1636270,
+    "equipe": "Sturm Graz",
+    "joueur": "F. Rozga",
+    "type": "Missing Fixture",
+    "raison": "Muscle Injury"
+   },
+   {
+    "fixture": 1636270,
+    "equipe": "Sturm Graz",
+    "joueur": "S. Wlodarczyk",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636270,
+    "equipe": "Sturm Graz",
+    "joueur": "S. Jatta",
+    "type": "Questionable",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636270,
+    "equipe": "Sturm Graz",
+    "joueur": "P. Koller",
+    "type": "Questionable",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636277,
+    "equipe": "Juventus",
+    "joueur": "N. Gonzalez",
+    "type": "Missing Fixture",
+    "raison": "Calf Injury"
+   },
+   {
+    "fixture": 1636277,
+    "equipe": "Juventus",
+    "joueur": "K. Grabara",
+    "type": "Missing Fixture",
+    "raison": "Knee Injury"
+   },
+   {
+    "fixture": 1636277,
+    "equipe": "Juventus",
+    "joueur": "P. Kalulu",
+    "type": "Missing Fixture",
+    "raison": "Hamstring Injury"
+   },
+   {
+    "fixture": 1636277,
+    "equipe": "Juventus",
+    "joueur": "M. Locatelli",
+    "type": "Missing Fixture",
+    "raison": "Knee Injury"
+   },
+   {
+    "fixture": 1636277,
+    "equipe": "Juventus",
+    "joueur": "A. Milik",
+    "type": "Missing Fixture",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636277,
+    "equipe": "Juventus",
+    "joueur": "D. Rugani",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636277,
+    "equipe": "Juventus",
+    "joueur": "K. Thuram",
+    "type": "Missing Fixture",
+    "raison": "Knee Injury"
+   },
+   {
+    "fixture": 1636277,
+    "equipe": "Juventus",
+    "joueur": "K. Yildiz",
+    "type": "Missing Fixture",
+    "raison": "Foot Injury"
+   },
+   {
+    "fixture": 1636277,
+    "equipe": "Juventus",
+    "joueur": "E. Zhegrova",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636277,
+    "equipe": "Omonia Nicosia",
+    "joueur": "C. Eiting",
+    "type": "Missing Fixture",
+    "raison": "Knee Injury"
+   },
+   {
+    "fixture": 1636277,
+    "equipe": "Omonia Nicosia",
+    "joueur": "F. Kitsos",
+    "type": "Missing Fixture",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636294,
+    "equipe": "Lyon",
+    "joueur": "M. Bidstrup",
+    "type": "Missing Fixture",
+    "raison": "Foot Injury"
+   },
+   {
+    "fixture": 1636294,
+    "equipe": "Lyon",
+    "joueur": "L. Diarra",
+    "type": "Missing Fixture",
+    "raison": "Injury"
+   },
+   {
+    "fixture": 1636294,
+    "equipe": "Lyon",
+    "joueur": "C. Mata",
+    "type": "Missing Fixture",
+    "raison": "Muscle Injury"
+   },
+   {
+    "fixture": 1636294,
+    "equipe": "Lyon",
+    "joueur": "T. Morton",
+    "type": "Missing Fixture",
+    "raison": "Groin Injury"
+   },
+   {
+    "fixture": 1636294,
+    "equipe": "Lyon",
+    "joueur": "M. Ouedraogo",
+    "type": "Missing Fixture",
+    "raison": "Knee Injury"
+   },
+   {
+    "fixture": 1636294,
+    "equipe": "Lyon",
+    "joueur": "P. Sulc",
+    "type": "Missing Fixture",
+    "raison": "Knee Injury"
+   },
+   {
+    "fixture": 1636294,
+    "equipe": "Lillestrom",
+    "joueur": "D. Bassi",
+    "type": "Missing Fixture",
+    "raison": "Injury"
+   },
+   {
+    "fixture": 1636294,
+    "equipe": "Lillestrom",
+    "joueur": "E. B. Garnas",
+    "type": "Missing Fixture",
+    "raison": "Knee Injury"
+   },
+   {
+    "fixture": 1636294,
+    "equipe": "Lillestrom",
+    "joueur": "Y. Paintsil",
+    "type": "Questionable",
+    "raison": "Injury"
+   },
+   {
+    "fixture": 1636301,
+    "equipe": "NEC Nijmegen",
+    "joueur": "M. Bakker",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636301,
+    "equipe": "NEC Nijmegen",
+    "joueur": "I. Hansen-Aaroen",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636301,
+    "equipe": "NEC Nijmegen",
+    "joueur": "B. Nuytinck",
+    "type": "Missing Fixture",
+    "raison": "Ankle Injury"
+   },
+   {
+    "fixture": 1636301,
+    "equipe": "NEC Nijmegen",
+    "joueur": "P. Sandler",
+    "type": "Missing Fixture",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636301,
+    "equipe": "NEC Nijmegen",
+    "joueur": "A. Tahaui",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636301,
+    "equipe": "NEC Nijmegen",
+    "joueur": "D. Geiger",
+    "type": "Questionable",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636301,
+    "equipe": "NEC Nijmegen",
+    "joueur": "Y. Moslih",
+    "type": "Questionable",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636301,
+    "equipe": "NEC Nijmegen",
+    "joueur": "P. Schuurs",
+    "type": "Questionable",
+    "raison": "Injury"
+   },
+   {
+    "fixture": 1636301,
+    "equipe": "Rennes",
+    "joueur": "M. Camara",
+    "type": "Missing Fixture",
+    "raison": "Injury"
+   },
+   {
+    "fixture": 1636301,
+    "equipe": "Rennes",
+    "joueur": "P. Frankowski",
+    "type": "Missing Fixture",
+    "raison": "Muscle Injury"
+   },
+   {
+    "fixture": 1636301,
+    "equipe": "Rennes",
+    "joueur": "V. Rongier",
+    "type": "Missing Fixture",
+    "raison": "Thigh Injury"
+   },
+   {
+    "fixture": 1636301,
+    "equipe": "Rennes",
+    "joueur": "A. Sishuba",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636305,
+    "equipe": "OFI",
+    "joueur": "A. Chatzigiovanis",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636305,
+    "equipe": "OFI",
+    "joueur": "B. Gonzalez",
+    "type": "Missing Fixture",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636305,
+    "equipe": "OFI",
+    "joueur": "K. Kodro",
+    "type": "Missing Fixture",
+    "raison": "Injury"
+   },
+   {
+    "fixture": 1636305,
+    "equipe": "OFI",
+    "joueur": "A. Leya Iseka",
+    "type": "Missing Fixture",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636305,
+    "equipe": "OFI",
+    "joueur": "N. Marinakis",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636305,
+    "equipe": "OFI",
+    "joueur": "A. Poungouras",
+    "type": "Missing Fixture",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636305,
+    "equipe": "Anderlecht",
+    "joueur": "I. Camara",
+    "type": "Missing Fixture",
+    "raison": "Foot Injury"
+   },
+   {
+    "fixture": 1636305,
+    "equipe": "Anderlecht",
+    "joueur": "L. Hey",
+    "type": "Missing Fixture",
+    "raison": "Broken Leg"
+   },
+   {
+    "fixture": 1636305,
+    "equipe": "Anderlecht",
+    "joueur": "I. Koutsoupias",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636336,
+    "equipe": "Sparta Praha",
+    "joueur": "M. Andersen",
+    "type": "Missing Fixture",
+    "raison": "Knee Injury"
+   },
+   {
+    "fixture": 1636336,
+    "equipe": "Sparta Praha",
+    "joueur": "E. Cobbaut",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636336,
+    "equipe": "Sparta Praha",
+    "joueur": "T. Guddal",
+    "type": "Missing Fixture",
+    "raison": "Red Card"
+   },
+   {
+    "fixture": 1636336,
+    "equipe": "Sparta Praha",
+    "joueur": "A. Karabec",
+    "type": "Missing Fixture",
+    "raison": "Ankle Injury"
+   },
+   {
+    "fixture": 1636336,
+    "equipe": "Sparta Praha",
+    "joueur": "O. Penxa",
+    "type": "Missing Fixture",
+    "raison": "Knee Injury"
+   },
+   {
+    "fixture": 1636336,
+    "equipe": "Sparta Praha",
+    "joueur": "M. Rynes",
+    "type": "Missing Fixture",
+    "raison": "Ankle Injury"
+   },
+   {
+    "fixture": 1636336,
+    "equipe": "Sparta Praha",
+    "joueur": "E. Uchenna",
+    "type": "Missing Fixture",
+    "raison": "Groin Injury"
+   },
+   {
+    "fixture": 1636336,
+    "equipe": "Sparta Praha",
+    "joueur": "S. Eneme",
+    "type": "Questionable",
+    "raison": "Health problems"
+   },
+   {
+    "fixture": 1636336,
+    "equipe": "Sparta Praha",
+    "joueur": "H. Sochurek",
+    "type": "Questionable",
+    "raison": "Illness"
+   },
+   {
+    "fixture": 1636336,
+    "equipe": "AZ Alkmaar",
+    "joueur": "E. Dijkstra",
+    "type": "Missing Fixture",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636336,
+    "equipe": "AZ Alkmaar",
+    "joueur": "J. Hornkamp",
+    "type": "Missing Fixture",
+    "raison": "Injury"
+   },
+   {
+    "fixture": 1636336,
+    "equipe": "AZ Alkmaar",
+    "joueur": "M. Meerdink",
+    "type": "Missing Fixture",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636336,
+    "equipe": "AZ Alkmaar",
+    "joueur": "S. Resink",
+    "type": "Missing Fixture",
+    "raison": "Knee Injury"
+   },
+   {
+    "fixture": 1636336,
+    "equipe": "AZ Alkmaar",
+    "joueur": "L. Schouten",
+    "type": "Missing Fixture",
+    "raison": "Injury"
+   },
+   {
+    "fixture": 1636336,
+    "equipe": "AZ Alkmaar",
+    "joueur": "K. Smit",
+    "type": "Missing Fixture",
+    "raison": "Groin Injury"
+   },
+   {
+    "fixture": 1636336,
+    "equipe": "AZ Alkmaar",
+    "joueur": "Weslley Patati",
+    "type": "Missing Fixture",
+    "raison": "Injury"
+   },
+   {
+    "fixture": 1636343,
+    "equipe": "Sunderland",
+    "joueur": "J. Angulo",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636343,
+    "equipe": "Sunderland",
+    "joueur": "D. Ballard",
+    "type": "Missing Fixture",
+    "raison": "Muscle Injury"
+   },
+   {
+    "fixture": 1636343,
+    "equipe": "Sunderland",
+    "joueur": "B. Brobbey",
+    "type": "Missing Fixture",
+    "raison": "Muscle Injury"
+   },
+   {
+    "fixture": 1636343,
+    "equipe": "Sunderland",
+    "joueur": "A. Browne",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636343,
+    "equipe": "Sunderland",
+    "joueur": "H. Diarra",
+    "type": "Missing Fixture",
+    "raison": "Muscle Injury"
+   },
+   {
+    "fixture": 1636343,
+    "equipe": "Sunderland",
+    "joueur": "M. Ellborg",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636343,
+    "equipe": "Sunderland",
+    "joueur": "R. Mundle",
+    "type": "Missing Fixture",
+    "raison": "Knee Injury"
+   },
+   {
+    "fixture": 1636343,
+    "equipe": "Sunderland",
+    "joueur": "J. Ta Bi",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636343,
+    "equipe": "Sunderland",
+    "joueur": "C. Talbi",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636343,
+    "equipe": "Sunderland",
+    "joueur": "G. Xhaka",
+    "type": "Missing Fixture",
+    "raison": "Calf Injury"
+   },
+   {
+    "fixture": 1636343,
+    "equipe": "Jagiellonia",
+    "joueur": "D. Drachal",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636343,
+    "equipe": "Jagiellonia",
+    "joueur": "C. Polak",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636343,
+    "equipe": "Jagiellonia",
+    "joueur": "D. Rallis",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636343,
+    "equipe": "Jagiellonia",
+    "joueur": "Z. Zalewski",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636343,
+    "equipe": "Jagiellonia",
+    "joueur": "O. Sow",
+    "type": "Questionable",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636343,
+    "equipe": "Jagiellonia",
+    "joueur": "Y. Sylla",
+    "type": "Questionable",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636343,
+    "equipe": "Jagiellonia",
+    "joueur": "N. Wojtuszek",
+    "type": "Questionable",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636349,
+    "equipe": "Torreense",
+    "joueur": "M. Abubakari",
+    "type": "Missing Fixture",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636349,
+    "equipe": "Torreense",
+    "joueur": "J. Aguirre",
+    "type": "Missing Fixture",
+    "raison": "Red Card"
+   },
+   {
+    "fixture": 1636349,
+    "equipe": "Torreense",
+    "joueur": "N. Jatta",
+    "type": "Missing Fixture",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636349,
+    "equipe": "Torreense",
+    "joueur": "L. Paes Souza",
+    "type": "Missing Fixture",
+    "raison": "Inactive"
+   },
+   {
+    "fixture": 1636349,
+    "equipe": "Torreense",
+    "joueur": "A. Baradji",
+    "type": "Questionable",
+    "raison": "Injury"
+   },
+   {
+    "fixture": 1636349,
+    "equipe": "Celtic",
+    "joueur": "M. Baur",
+    "type": "Missing Fixture",
+    "raison": "Ankle Injury"
+   },
+   {
+    "fixture": 1636349,
+    "equipe": "Celtic",
+    "joueur": "L. Emenalo",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636349,
+    "equipe": "Celtic",
+    "joueur": "A. Johnston",
+    "type": "Missing Fixture",
+    "raison": "Leg Injury"
+   },
+   {
+    "fixture": 1636349,
+    "equipe": "Celtic",
+    "joueur": "Jota",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636349,
+    "equipe": "Celtic",
+    "joueur": "S. Mheuka",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   },
+   {
+    "fixture": 1636349,
+    "equipe": "Celtic",
+    "joueur": "J. van den Berg",
+    "type": "Missing Fixture",
+    "raison": "Off the roster"
+   }
+  ]
+ },
+ "rattrapage": {
+  "matchs_ajoutes": 0,
+  "reste_a_rattraper": 0,
+  "deja_en_base": 18
+ },
+ "appels": [
+  {
+   "path": "fixtures",
+   "params": {
+    "date": "2026-11-25",
+    "timezone": "Europe/Paris"
+   },
+   "reste_jour": "99",
+   "erreurs": []
+  },
+  {
+   "path": "fixtures/statistics",
+   "params": {
+    "fixture": 1635718
+   },
+   "reste_jour": "98",
+   "erreurs": []
+  },
+  {
+   "path": "fixtures/statistics",
+   "params": {
+    "fixture": 1635728
+   },
+   "reste_jour": "99",
+   "erreurs": []
+  },
+  {
+   "path": "fixtures/statistics",
+   "params": {
+    "fixture": 1635625
+   },
+   "reste_jour": "98",
+   "erreurs": []
+  },
+  {
+   "path": "fixtures/statistics",
+   "params": {
+    "fixture": 1635642
+   },
+   "reste_jour": "97",
+   "erreurs": []
+  },
+  {
+   "path": "fixtures/statistics",
+   "params": {
+    "fixture": 1635673
+   },
+   "reste_jour": "96",
+   "erreurs": []
+  },
+  {
+   "path": "fixtures/statistics",
+   "params": {
+    "fixture": 1635682
+   },
+   "reste_jour": "95",
+   "erreurs": []
+  },
+  {
+   "path": "fixtures/statistics",
+   "params": {
+    "fixture": 1635703
+   },
+   "reste_jour": "94",
+   "erreurs": []
+  },
+  {
+   "path": "fixtures/statistics",
+   "params": {
+    "fixture": 1635724
+   },
+   "reste_jour": "93",
+   "erreurs": []
+  },
+  {
+   "path": "fixtures/statistics",
+   "params": {
+    "fixture": 1635735
+   },
+   "reste_jour": "90",
+   "erreurs": []
+  },
+  {
+   "path": "fixtures/lineups",
+   "params": {
+    "fixture": 1635718
+   },
+   "reste_jour": "97",
+   "erreurs": []
+  },
+  {
+   "path": "fixtures/lineups",
+   "params": {
+    "fixture": 1635728
+   },
+   "reste_jour": "96",
+   "erreurs": []
+  },
+  {
+   "path": "fixtures/lineups",
+   "params": {
+    "fixture": 1635625
+   },
+   "reste_jour": "95",
+   "erreurs": []
+  },
+  {
+   "path": "fixtures/lineups",
+   "params": {
+    "fixture": 1635642
+   },
+   "reste_jour": "94",
+   "erreurs": []
+  },
+  {
+   "path": "fixtures/lineups",
+   "params": {
+    "fixture": 1635673
+   },
+   "reste_jour": "93",
+   "erreurs": []
+  },
+  {
+   "path": "fixtures/lineups",
+   "params": {
+    "fixture": 1635682
+   },
+   "reste_jour": "92",
+   "erreurs": []
+  },
+  {
+   "path": "fixtures/lineups",
+   "params": {
+    "fixture": 1635703
+   },
+   "reste_jour": "91",
+   "erreurs": []
+  },
+  {
+   "path": "fixtures/lineups",
+   "params": {
+    "fixture": 1635724
+   },
+   "reste_jour": "90",
+   "erreurs": []
+  },
+  {
+   "path": "fixtures/lineups",
+   "params": {
+    "fixture": 1635735
+   },
+   "reste_jour": "81",
+   "erreurs": []
+  },
+  {
+   "path": "fixtures/players",
+   "params": {
+    "fixture": 1635718
+   },
+   "reste_jour": "89",
+   "erreurs": []
+  },
+  {
+   "path": "fixtures/players",
+   "params": {
+    "fixture": 1635728
+   },
+   "reste_jour": "88",
+   "erreurs": []
+  },
+  {
+   "path": "fixtures/players",
+   "params": {
+    "fixture": 1635625
+   },
+   "reste_jour": "87",
+   "erreurs": []
+  },
+  {
+   "path": "fixtures/players",
+   "params": {
+    "fixture": 1635642
+   },
+   "reste_jour": "86",
+   "erreurs": []
+  },
+  {
+   "path": "fixtures/players",
+   "params": {
+    "fixture": 1635673
+   },
+   "reste_jour": "85",
+   "erreurs": []
+  },
+  {
+   "path": "fixtures/players",
+   "params": {
+    "fixture": 1635682
+   },
+   "reste_jour": "84",
+   "erreurs": []
+  },
+  {
+   "path": "fixtures/players",
+   "params": {
+    "fixture": 1635703
+   },
+   "reste_jour": "83",
+   "erreurs": []
+  },
+  {
+   "path": "fixtures/players",
+   "params": {
+    "fixture": 1635724
+   },
+   "reste_jour": "82",
+   "erreurs": []
+  },
+  {
+   "path": "fixtures/players",
+   "params": {
+    "fixture": 1635735
+   },
+   "reste_jour": "80",
+   "erreurs": []
+  },
+  {
+   "path": "fixtures",
+   "params": {
+    "date": "2026-11-26",
+    "timezone": "Europe/Paris"
+   },
+   "reste_jour": "79",
+   "erreurs": []
+  },
+  {
+   "path": "injuries",
+   "params": {
+    "date": "2026-11-26"
+   },
+   "reste_jour": "78",
+   "erreurs": []
+  }
+ ]
+}
