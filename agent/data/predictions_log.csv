@@ -39,3 +39,7 @@ date,id,tour,tournoi,joueur_a,joueur_b,proba_a,proba_modele,ajustement,vainqueur
 2026-11-24,2026-11-24-atp-davis-lehecka-auger-aliassime,atp,Coupe Davis,Jiri Lehecka,Felix Auger Aliassime,0.466,0.466,0,Jiri Lehecka,7-6 6-2
 2026-11-25,2026-11-25-atp-davis-cobolli-kwon,atp,Coupe Davis,Flavio Cobolli,Soon Woo Kwon,0.634,0.634,0,Soon Woo Kwon,3-6 7-6 7-6
 2026-11-25,2026-11-25-atp-davis-musetti-chung,atp,Coupe Davis,Lorenzo Musetti,Hyeon Chung,0.91,0.91,0,,non joué
+2026-11-26,2026-11-26-atp-davis-rodionov-jodar,atp,Coupe Davis,Jurij Rodionov,Rafael Jodar,0.203,0.203,0,Rafael Jodar,2-6 6-0 6-1
+2026-11-26,2026-11-26-atp-davis-schwaerzler-merida,atp,Coupe Davis,Joel Schwaerzler,Daniel Merida Aguilar,0.221,0.221,0,Daniel Merida Aguilar,6-4 6-4
+2026-11-26,2026-11-26-atp-davis-fery-zverev,atp,Coupe Davis,Arthur Fery,Alexander Zverev,0.106,0.106,0,Alexander Zverev,6-3 6-2
+2026-11-26,2026-11-26-atp-davis-norrie-struff,atp,Coupe Davis,Cameron Norrie,Jan Lennard Struff,0.483,0.483,0,Cameron Norrie,6-3 3-6 6-2
