@@ -1,0 +1,796 @@
+{
+ "matchs": [
+  {
+   "id": "2026-11-27-t1-alanyaspor-konyaspor",
+   "date": "2026-11-27",
+   "heure": "18:00",
+   "comp": "T1",
+   "competition": "Süper Lig",
+   "tour": "13e journée",
+   "dom": "Alanyaspor",
+   "ext": "Konyaspor",
+   "dom_affiche": "Alanyaspor",
+   "ext_affiche": "Konyaspor",
+   "neutre": false,
+   "p1": 0.432,
+   "pN": 0.301,
+   "p2": 0.267,
+   "pronostic": "1",
+   "favori": "Alanyaspor",
+   "double_chance": {
+    "issue": "1N",
+    "proba": 0.733
+   },
+   "p_modele": {
+    "p1": 0.432,
+    "pN": 0.301,
+    "p2": 0.267
+   },
+   "proba_favori": 0.432,
+   "confiance": "Léger avantage",
+   "score_probable": "1-0",
+   "buts_dom": 1.53,
+   "buts_ext": 1.18,
+   "plus_2_5": 0.51,
+   "facteurs": {
+    "dom": {
+     "rang": 14,
+     "pts": 12,
+     "j": 11,
+     "v": 3,
+     "n": 3,
+     "d": 5,
+     "bp": 9,
+     "bc": 18,
+     "elo": 1366,
+     "elo_septembre": 1396,
+     "derniers": [],
+     "buts_par_match": 2.45
+    },
+    "ext": {
+     "rang": 16,
+     "pts": 8,
+     "j": 11,
+     "v": 2,
+     "n": 2,
+     "d": 7,
+     "bp": 6,
+     "bc": 14,
+     "elo": 1364,
+     "elo_septembre": 1370,
+     "derniers": [],
+     "buts_par_match": 1.82
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Alanyaspor 1366, Konyaspor 1364 (2 pts en faveur de Alanyaspor).",
+    "Avantage du terrain pour Alanyaspor (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Alanyaspor en baisse depuis septembre (-30 pts d'Elo).",
+    "Classement : Alanyaspor 14e (12 pts en 11 matchs), Konyaspor 16e (8 pts en 11 matchs)."
+   ],
+   "lecture": "Match de bas de tableau très serré : Alanyaspor (43 %) a l'avantage du terrain et domine Konyaspor depuis 5 confrontations, double chance 1N à 73 %. Mais Alanyaspor reste sur 4 défaites et vient de changer d'entraîneur : un succès de Konyaspor, privé de son meilleur buteur, ne serait pas une énorme surprise.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Alanyaspor",
+     "type": "coach",
+     "fait": "João Pereira parti le 10/11 après 4 défaites de suite, remplacé par Uğur Uçar (1 match : défaite 2-1 à Kasımpaşa).",
+     "source": "https://www.yeniasir.com.tr/spor/2026/11/10/son-dakika-super-ligde-bir-ayrilik-daha-portekizli-calistiricinin-yerine-o-isim-geldi",
+     "date": "2026-11-10"
+    },
+    {
+     "equipe": "Alanyaspor",
+     "type": "enjeu",
+     "fait": "4 défaites de suite en championnat, mais 5 victoires sur les 5 dernières confrontations directes. Aucun absent annoncé.",
+     "source": "https://www.mynet.com/corendon-alanyaspor-tumosan-konyaspor-2026-11-27-maci-oncesi-analiz-527606-myspor",
+     "date": "2026-11-27"
+    },
+    {
+     "equipe": "Konyaspor",
+     "type": "physique",
+     "fait": "Demirbağ (ligaments croisés) absent ; Awaziem, meilleur buteur (2 buts), forfait.",
+     "source": "https://www.anadoludabugun.com.tr/konyaspor/konyaspor-6-puanlik-macta-alanyaspor-sinavinda/423717",
+     "date": "2026-11-27"
+    },
+    {
+     "equipe": "Konyaspor",
+     "type": "enjeu",
+     "fait": "15e avec 8 pts, toujours sans victoire à l'extérieur : « match à 6 points » pour le maintien.",
+     "source": "https://www.anadoludabugun.com.tr/konyaspor/konyaspor-6-puanlik-macta-alanyaspor-sinavinda/423717",
+     "date": "2026-11-27"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-27-t1-rizespor-kasimpasa",
+   "date": "2026-11-27",
+   "heure": "18:00",
+   "comp": "T1",
+   "competition": "Süper Lig",
+   "tour": "13e journée",
+   "dom": "Rizespor",
+   "ext": "Kasimpasa",
+   "dom_affiche": "Rizespor",
+   "ext_affiche": "Kasımpaşa",
+   "neutre": false,
+   "p1": 0.379,
+   "pN": 0.287,
+   "p2": 0.334,
+   "pronostic": "1",
+   "favori": "Rizespor",
+   "double_chance": {
+    "issue": "1N",
+    "proba": 0.666
+   },
+   "p_modele": {
+    "p1": 0.379,
+    "pN": 0.287,
+    "p2": 0.334
+   },
+   "proba_favori": 0.379,
+   "confiance": "Très ouvert",
+   "score_probable": "1-0",
+   "buts_dom": 1.36,
+   "buts_ext": 1.33,
+   "plus_2_5": 0.505,
+   "facteurs": {
+    "dom": {
+     "rang": 9,
+     "pts": 17,
+     "j": 12,
+     "v": 5,
+     "n": 2,
+     "d": 5,
+     "bp": 15,
+     "bc": 16,
+     "elo": 1417,
+     "elo_septembre": 1417,
+     "derniers": [],
+     "buts_par_match": 2.58
+    },
+    "ext": {
+     "rang": 6,
+     "pts": 20,
+     "j": 11,
+     "v": 5,
+     "n": 5,
+     "d": 1,
+     "bp": 17,
+     "bc": 11,
+     "elo": 1480,
+     "elo_septembre": 1414,
+     "derniers": [],
+     "buts_par_match": 2.55
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Rizespor 1417, Kasımpaşa 1480 (62 pts en faveur de Kasımpaşa).",
+    "Avantage du terrain pour Rizespor (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Kasımpaşa en forme depuis septembre (+65 pts d'Elo).",
+    "Classement : Rizespor 9e (17 pts en 12 matchs), Kasımpaşa 6e (20 pts en 11 matchs).",
+    "Match serré : le nul est une vraie option (29 %)."
+   ],
+   "lecture": "Match très ouvert : Rizespor à domicile (38 %) contre un Kasımpaşa en forme (Elo +65 depuis septembre, 2 sur 2 sous Schreuder), double chance 1N à 67 %. Les deux équipes ont plusieurs blessés, sans que la règle d'ajustement soit atteinte. Benedyczak (9 buts) est l'homme qui peut faire basculer le match vers Kasımpaşa.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Rizespor",
+     "type": "physique",
+     "fait": "Bozdoğan, Alikulov (ligaments croisés) et Mihaila blessés ; le gardien Fofana incertain (Zafer annoncé dans les buts par Ajansspor). Ali Sowe (6 buts) disponible.",
+     "source": "https://www.mynet.com/caykur-rizespor-kasimpasa-2026-11-27-maci-oncesi-analiz-527609-myspor",
+     "date": "2026-11-27"
+    },
+    {
+     "equipe": "Kasımpaşa",
+     "type": "coach",
+     "fait": "Alfred Schreuder a remplacé Emre Belözoğlu le 04/11 : 2 matchs, 2 victoires.",
+     "source": "https://www.beinsports.com.tr/haber/kasimpasanin-yeni-hocasi-aciklandi-emre-belozoglu-sonrasi",
+     "date": "2026-11-04"
+    },
+    {
+     "equipe": "Kasımpaşa",
+     "type": "physique",
+     "fait": "Çörekçi, Diabaté, Frimpong et Mouanga blessés, Karapo suspendu. Benedyczak (9 buts en 12 matchs) disponible.",
+     "source": "https://www.mynet.com/caykur-rizespor-kasimpasa-2026-11-27-maci-oncesi-analiz-527609-myspor",
+     "date": "2026-11-27"
+    },
+    {
+     "equipe": "Kasımpaşa",
+     "type": "enjeu",
+     "fait": "5e avec 23 pts, invaincu sur ses 5 derniers matchs.",
+     "source": "https://www.aksiyon.com.tr/kasimpasa-ile-caykur-rizespor-25-randevuda-benedyczak-in-gol-serisi-sinaniyor-402896",
+     "date": "2026-11-26"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-27-d1-werder-breme-borussia-monchengladbach",
+   "date": "2026-11-27",
+   "heure": "20:30",
+   "comp": "D1",
+   "competition": "Bundesliga",
+   "tour": "11e journée",
+   "dom": "Werder Bremen",
+   "ext": "M'gladbach",
+   "dom_affiche": "Werder Brême",
+   "ext_affiche": "Borussia Mönchengladbach",
+   "neutre": false,
+   "p1": 0.607,
+   "pN": 0.225,
+   "p2": 0.167,
+   "pronostic": "1",
+   "favori": "Werder Brême",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.607,
+    "pN": 0.225,
+    "p2": 0.167
+   },
+   "proba_favori": 0.607,
+   "confiance": "Net favori",
+   "score_probable": "2-1",
+   "buts_dom": 2.08,
+   "buts_ext": 1.01,
+   "plus_2_5": 0.597,
+   "facteurs": {
+    "dom": {
+     "rang": 6,
+     "pts": 15,
+     "j": 9,
+     "v": 4,
+     "n": 3,
+     "d": 2,
+     "bp": 17,
+     "bc": 15,
+     "elo": 1676,
+     "elo_septembre": 1597,
+     "derniers": [],
+     "buts_par_match": 3.56
+    },
+    "ext": {
+     "rang": 18,
+     "pts": 4,
+     "j": 10,
+     "v": 1,
+     "n": 1,
+     "d": 8,
+     "bp": 12,
+     "bc": 26,
+     "elo": 1543,
+     "elo_septembre": 1629,
+     "derniers": [],
+     "buts_par_match": 3.8
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Werder Brême 1676, Borussia Mönchengladbach 1543 (133 pts en faveur de Werder Brême).",
+    "Avantage du terrain pour Werder Brême (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Werder Brême en forme depuis septembre (+79 pts d'Elo).",
+    "Borussia Mönchengladbach en baisse depuis septembre (-86 pts d'Elo).",
+    "Classement : Werder Brême 6e (15 pts en 9 matchs), Borussia Mönchengladbach 18e (4 pts en 10 matchs)."
+   ],
+   "lecture": "Werder Brême net favori (61 %) : bien plus haut en Elo, en forme après son 4-0 dans le derby, face au dernier de Bundesliga, en crise jusque dans sa direction. Ce qui pourrait le faire mentir : Werder sans Grüll et peut-être Njinmah, et un Gladbach qui joue sa survie.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Werder Brême",
+     "type": "physique",
+     "fait": "Grüll (meilleur passeur, 6 passes) forfait ou au mieux remplaçant ; Njinmah très incertain ; Agu pas prêt.",
+     "source": "https://www.butenunbinnen.de/sport/werder-bremen-borussia-moenchengladbach-bundesliga-vorschau-100.html",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Werder Brême",
+     "type": "mental",
+     "fait": "Vient de gagner le derby du Nord 4-0 contre le HSV ; une victoire le placerait 5e.",
+     "source": "https://www.butenunbinnen.de/sport/werder-bremen-borussia-moenchengladbach-bundesliga-vorschau-100.html",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Borussia Mönchengladbach",
+     "type": "coach",
+     "fait": "Polanski limogé après 3 journées (0 pt), remplacé par Alexander Blessin fin septembre.",
+     "source": "https://www.deichstube.de/news/werder-bremen-nach-steffen-geruecht-neuer-gladbachtrainer-borussia-moenchengladbach-alexander-blessin-bundesliga-zr-94504811.html",
+     "date": "2026-09-23"
+    },
+    {
+     "equipe": "Borussia Mönchengladbach",
+     "type": "mental",
+     "fait": "Le CEO Stefan Stegemann licencié jeudi, la veille du match.",
+     "source": "https://de.headtopics.com/news/borussia-monchengladbach-entlasst-ceo-stefan-stegemann-vor-90221197",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Borussia Mönchengladbach",
+     "type": "physique",
+     "fait": "Hack et Hashioka forfaits ; le capitaine Kleindienst et Bolin incertains ; Ullrich et Leszczynski blessés.",
+     "source": "https://www.gladbachtotal.de/vor-werder-bremen-blessin-gibt-personal-update-zu-hack-kleindienst-und-bolin/",
+     "date": "2026-11-26"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-27-i1-venise-bologne",
+   "date": "2026-11-27",
+   "heure": "20:45",
+   "comp": "I1",
+   "competition": "Serie A",
+   "tour": "13e journée",
+   "dom": "Venezia",
+   "ext": "Bologna",
+   "dom_affiche": "Venise",
+   "ext_affiche": "Bologne",
+   "neutre": false,
+   "p1": 0.231,
+   "pN": 0.254,
+   "p2": 0.515,
+   "pronostic": "2",
+   "favori": "Bologne",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.231,
+    "pN": 0.254,
+    "p2": 0.515
+   },
+   "proba_favori": 0.515,
+   "confiance": "Favori",
+   "score_probable": "0-1",
+   "buts_dom": 0.98,
+   "buts_ext": 1.72,
+   "plus_2_5": 0.505,
+   "facteurs": {
+    "dom": {
+     "rang": 19,
+     "pts": 6,
+     "j": 11,
+     "v": 2,
+     "n": 0,
+     "d": 9,
+     "bp": 8,
+     "bc": 21,
+     "elo": 1556,
+     "elo_septembre": 1599,
+     "derniers": [],
+     "buts_par_match": 2.64
+    },
+    "ext": {
+     "rang": 8,
+     "pts": 17,
+     "j": 11,
+     "v": 5,
+     "n": 2,
+     "d": 4,
+     "bp": 16,
+     "bc": 14,
+     "elo": 1759,
+     "elo_septembre": 1712,
+     "derniers": [],
+     "buts_par_match": 2.73
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Venise 1556, Bologne 1759 (203 pts en faveur de Bologne).",
+    "Avantage du terrain pour Venise (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Venise en baisse depuis septembre (-44 pts d'Elo).",
+    "Bologne en forme depuis septembre (+47 pts d'Elo).",
+    "Classement : Venise 19e (6 pts en 11 matchs), Bologne 8e (17 pts en 11 matchs)."
+   ],
+   "lecture": "Bologne favori (52 %) : plus de 200 pts d'Elo d'écart, 4 victoires sur 5 sous Palladino, face au dernier du championnat. Venise a l'avantage du terrain et Bologne plusieurs absents (Miranda, Holm), mais pas assez pour changer la hiérarchie.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Venise",
+     "type": "coach",
+     "fait": "Stroppa limogé, Davide Nicola nommé le 14/10 : 2 victoires en 6 matchs.",
+     "source": "https://www.lapresse.it/calcio/2026/11/27/venezia-bologna-oggi-in-serie-a-orario-pronostico-probabili-formazioni-e-dove-vederla/",
+     "date": "2026-11-27"
+    },
+    {
+     "equipe": "Venise",
+     "type": "enjeu",
+     "fait": "Dernier de Serie A (6 pts), vient de perdre 4-0 à la Juventus.",
+     "source": "https://www.lapresse.it/calcio/2026/11/27/venezia-bologna-oggi-in-serie-a-orario-pronostico-probabili-formazioni-e-dove-vederla/",
+     "date": "2026-11-27"
+    },
+    {
+     "equipe": "Venise",
+     "type": "physique",
+     "fait": "Sverko, Adorante, Mazzocchi et Franjic absents selon les sites spécialisés (non confirmé par le club).",
+     "source": "https://fantaconsigli.it/venezia-bologna-probabili-formazioni-ballottaggi-e-indisponibili-per-la-13a-giornata/",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Bologne",
+     "type": "coach",
+     "fait": "Tedesco limogé après 4 journées, Raffaele Palladino nommé le 16/09 : 17 pts sur 24 depuis.",
+     "source": "https://www.fantacalcio.it/news/calcio-italia/16_09_2026/ufficiale-bologna-esonerato-tedesco-al-suo-posto-palladino-498003",
+     "date": "2026-09-16"
+    },
+    {
+     "equipe": "Bologne",
+     "type": "physique",
+     "fait": "Miranda forfait (confirmé par Palladino) ; Holm, Enem et El Azzouzi aussi annoncés absents.",
+     "source": "https://www.zerocinquantuno.it/notizie/conferenze-stampa/palladino-gara-con-udinese-insegnato-tanto-venezia-voglio-vedere-miglioramento-miranda-non-rischiamo-davanti-decido-anche-in-base-avversari/",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Bologne",
+     "type": "enjeu",
+     "fait": "4 victoires sur les 5 derniers matchs, vise l'Europe ; pas de Coupe d'Europe en semaine.",
+     "source": "https://www.tuttosport.com/news/calcio/serie-a/2026/11/27-152872193/venezia-bologna_probabili_formazioni_e_diretta_dove_si_vede_in_tv_e_streaming",
+     "date": "2026-11-27"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-27-f1-brest-paris-fc",
+   "date": "2026-11-27",
+   "heure": "20:45",
+   "comp": "F1",
+   "competition": "Ligue 1",
+   "tour": "12e journée",
+   "dom": "Brest",
+   "ext": "Paris FC",
+   "dom_affiche": "Brest",
+   "ext_affiche": "Paris FC",
+   "neutre": false,
+   "p1": 0.409,
+   "pN": 0.292,
+   "p2": 0.299,
+   "pronostic": "1",
+   "favori": "Brest",
+   "double_chance": {
+    "issue": "1N",
+    "proba": 0.701
+   },
+   "p_modele": {
+    "p1": 0.409,
+    "pN": 0.292,
+    "p2": 0.299
+   },
+   "proba_favori": 0.409,
+   "confiance": "Léger avantage",
+   "score_probable": "1-0",
+   "buts_dom": 1.39,
+   "buts_ext": 1.18,
+   "plus_2_5": 0.473,
+   "facteurs": {
+    "dom": {
+     "rang": 9,
+     "pts": 15,
+     "j": 10,
+     "v": 4,
+     "n": 3,
+     "d": 3,
+     "bp": 18,
+     "bc": 12,
+     "elo": 1677,
+     "elo_septembre": 1632,
+     "derniers": [],
+     "buts_par_match": 3.0
+    },
+    "ext": {
+     "rang": 3,
+     "pts": 20,
+     "j": 10,
+     "v": 6,
+     "n": 2,
+     "d": 2,
+     "bp": 17,
+     "bc": 10,
+     "elo": 1699,
+     "elo_septembre": 1639,
+     "derniers": [],
+     "buts_par_match": 2.7
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Brest 1677, Paris FC 1699 (22 pts en faveur de Paris FC).",
+    "Avantage du terrain pour Brest (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Brest en forme depuis septembre (+45 pts d'Elo).",
+    "Paris FC en forme depuis septembre (+60 pts d'Elo).",
+    "Classement : Brest 9e (15 pts en 10 matchs), Paris FC 3e (20 pts en 10 matchs).",
+    "Match serré : le nul est une vraie option (29 %)."
+   ],
+   "lecture": "Match ouvert : léger avantage à Brest à domicile (41 %), double chance 1N à 70 %. Les deux équipes sont en forme (3 victoires de suite chacune), et le Paris FC, 2e, a un Elo légèrement supérieur : sa victoire est presque aussi probable (30 %) que celle de Brest, privé de Chardonnet et Le Guen.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Brest",
+     "type": "coach",
+     "fait": "Julien Lachuer entraîneur depuis fin juin 2026, après le décès d'Éric Roy ; pas de changement cette saison.",
+     "source": "https://www.beinsports.com/en-us/soccer/ligue-1/articles/lachuer-named-brest-head-coach-following-death-of-roy-2026-06-27",
+     "date": "2026-06-27"
+    },
+    {
+     "equipe": "Brest",
+     "type": "physique",
+     "fait": "Chardonnet (capitaine, mollet) et Le Guen (fracture de la jambe) absents ; Lala (genou) incertain selon les sources.",
+     "source": "https://morning-foot.com/ligue-1/brest/stade-brestois-julien-lachuer-conference-paris-fc/",
+     "date": "2026-11-27"
+    },
+    {
+     "equipe": "Brest",
+     "type": "mental",
+     "fait": "3 victoires de suite sans encaisser de but.",
+     "source": "https://morning-foot.com/ligue-1/brest/stade-brestois-julien-lachuer-conference-paris-fc/",
+     "date": "2026-11-27"
+    },
+    {
+     "equipe": "Paris FC",
+     "type": "enjeu",
+     "fait": "2e avec 23 pts, à 3 pts du PSG ; 3 victoires de suite. Seul Sangui incertain.",
+     "source": "https://www.goal.com/fr/news/brest-v-paris-fc-actualites-l'equipe-blessures/blt0bfa5ec3e40af4d2",
+     "date": "2026-11-27"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-27-e0-nottingham-forest-chelsea",
+   "date": "2026-11-27",
+   "heure": "21:00",
+   "comp": "E0",
+   "competition": "Premier League",
+   "tour": "12e journée",
+   "dom": "Nott'm Forest",
+   "ext": "Chelsea",
+   "dom_affiche": "Nottingham Forest",
+   "ext_affiche": "Chelsea",
+   "neutre": false,
+   "p1": 0.392,
+   "pN": 0.292,
+   "p2": 0.316,
+   "pronostic": "1",
+   "favori": "Nottingham Forest",
+   "double_chance": {
+    "issue": "1N",
+    "proba": 0.684
+   },
+   "p_modele": {
+    "p1": 0.375,
+    "pN": 0.279,
+    "p2": 0.346
+   },
+   "proba_favori": 0.392,
+   "confiance": "Très ouvert",
+   "score_probable": "1-0",
+   "buts_dom": 1.33,
+   "buts_ext": 1.33,
+   "plus_2_5": 0.498,
+   "facteurs": {
+    "dom": {
+     "rang": 17,
+     "pts": 9,
+     "j": 11,
+     "v": 2,
+     "n": 3,
+     "d": 6,
+     "bp": 9,
+     "bc": 15,
+     "elo": 1741,
+     "elo_septembre": 1785,
+     "derniers": [],
+     "buts_par_match": 2.18
+    },
+    "ext": {
+     "rang": 8,
+     "pts": 16,
+     "j": 11,
+     "v": 5,
+     "n": 1,
+     "d": 5,
+     "bp": 20,
+     "bc": 20,
+     "elo": 1799,
+     "elo_septembre": 1848,
+     "derniers": [],
+     "buts_par_match": 3.64
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Nottingham Forest 1741, Chelsea 1799 (58 pts en faveur de Chelsea).",
+    "Avantage du terrain pour Nottingham Forest (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Nottingham Forest en baisse depuis septembre (-44 pts d'Elo).",
+    "Chelsea en baisse depuis septembre (-49 pts d'Elo).",
+    "Classement : Nottingham Forest 17e (9 pts en 11 matchs), Chelsea 8e (16 pts en 11 matchs)."
+   ],
+   "lecture": "Match très ouvert, avec un léger avantage à Forest à domicile (39 % après ajustement), double chance 1N à 68 %. Chelsea a un meilleur Elo mais est privé de cinq titulaires, dont João Pedro, et sort de 3 défaites en 4 matchs. Forest, lui, ne gagne presque plus (2 victoires en 14) : une victoire de Chelsea reste plausible à 32 %.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Nottingham Forest",
+     "type": "coach",
+     "fait": "Oliver Glasner en poste depuis le 06/07/2026 ; il reconnaît un début « décevant ».",
+     "source": "https://www.beinsports.com/en-us/soccer/premier-league/articles/glasner-no-magician-but-expected-more-premier-league-points-at-forest-2026-11-25",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Nottingham Forest",
+     "type": "physique",
+     "fait": "Seuls Domínguez et Savona absents, selon Glasner.",
+     "source": "https://www.si.com/soccer/nottingham-forest-vs-chelsea-predicted-lineups-palmer-under-pressure-11-27-26",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Nottingham Forest",
+     "type": "enjeu",
+     "fait": "17e avec 9 pts, juste au-dessus de la zone rouge ; 2 victoires sur ses 14 derniers matchs de championnat.",
+     "source": "https://www.beinsports.com/en-us/soccer/premier-league/articles/glasner-no-magician-but-expected-more-premier-league-points-at-forest-2026-11-25",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Chelsea",
+     "type": "physique",
+     "fait": "João Pedro (meilleur buteur), Reece James, Hato, Lacroix et Gittens absents, confirmé par Xabi Alonso.",
+     "source": "https://www.tribalfootball.com/article/alonso-says-chelsea-want-to-show-a-reaction-against-forest-but-pedro-will-not-return-052c557d-a66f-43c7-8267-297a8e78a9f5",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Chelsea",
+     "type": "mental",
+     "fait": "3 défaites sur les 4 derniers matchs de championnat, dont 1-4 contre Leeds à domicile ; Alonso parle d'un « moment fragile ».",
+     "source": "https://thenational.co.za/sport/2026-11-27-xabi-alonso-demands-chelsea-response-at-nottingham-forest-after-unacceptable-leeds-defeat/",
+     "date": "2026-11-27"
+    }
+   ],
+   "ajustement": 3,
+   "resultat": null,
+   "correct": null,
+   "ajustement_raison": "Chelsea privé de cinq titulaires (João Pedro, Reece James, Hato, Lacroix, Gittens), confirmé par Xabi Alonso : -3 points sur la victoire de Chelsea."
+  },
+  {
+   "id": "2026-11-27-sp1-levante-racing-santander",
+   "date": "2026-11-27",
+   "heure": "21:00",
+   "comp": "SP1",
+   "competition": "Liga",
+   "tour": "14e journée",
+   "dom": "Levante",
+   "ext": "Santander",
+   "dom_affiche": "Levante",
+   "ext_affiche": "Racing Santander",
+   "neutre": false,
+   "p1": 0.502,
+   "pN": 0.275,
+   "p2": 0.223,
+   "pronostic": "1",
+   "favori": "Levante",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.502,
+    "pN": 0.275,
+    "p2": 0.223
+   },
+   "proba_favori": 0.502,
+   "confiance": "Favori",
+   "score_probable": "1-0",
+   "buts_dom": 1.55,
+   "buts_ext": 1.01,
+   "plus_2_5": 0.473,
+   "facteurs": {
+    "dom": {
+     "rang": 14,
+     "pts": 12,
+     "j": 13,
+     "v": 2,
+     "n": 6,
+     "d": 5,
+     "bp": 17,
+     "bc": 22,
+     "elo": 1613,
+     "elo_septembre": 1644,
+     "derniers": [
+      {
+       "date": "2026-11-23",
+       "comp": "SP1",
+       "adv": "Elche",
+       "lieu": "dom",
+       "score": "1-1",
+       "res": "N"
+      }
+     ],
+     "buts_par_match": 3.0,
+     "jours_repos": 4
+    },
+    "ext": {
+     "rang": 12,
+     "pts": 14,
+     "j": 12,
+     "v": 4,
+     "n": 2,
+     "d": 6,
+     "bp": 17,
+     "bc": 30,
+     "elo": 1579,
+     "elo_septembre": 1606,
+     "derniers": [],
+     "buts_par_match": 3.92
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Levante 1613, Racing Santander 1579 (34 pts en faveur de Levante).",
+    "Avantage du terrain pour Levante (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Levante en baisse depuis septembre (-31 pts d'Elo).",
+    "Racing Santander en baisse depuis septembre (-26 pts d'Elo).",
+    "Classement : Levante 14e (12 pts en 13 matchs), Racing Santander 12e (14 pts en 12 matchs)."
+   ],
+   "lecture": "Levante favori (50 %) : avantage du terrain et léger avantage d'Elo face au Racing. Mais Levante reste sur 4 matchs sans victoire et perd Ratkov ; le Racing, offensif mais très perméable, peut l'emporter (22 %).",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Levante",
+     "type": "physique",
+     "fait": "Ratkov forfait (surcharge musculaire), Toljan et Manu Sánchez blessés.",
+     "source": "https://www.futbolfantasy.com/laliga/noticias/155587-ratkov-descartado-para-recibir-al-racing-por-una-sobreca",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Levante",
+     "type": "enjeu",
+     "fait": "4 matchs sans victoire, à égalité de points avec le premier relégable.",
+     "source": "https://www.infobae.com/america/agencias/2026/11/26/previa-el-levante-busca-reaccionar-ante-un-racing-que-aspira-a-europa/",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Racing Santander",
+     "type": "enjeu",
+     "fait": "À 2 pts de la 6e place, mais pire défense des 5 grands championnats (32 buts encaissés). Zabiri : 3 buts sur les 2 derniers matchs.",
+     "source": "https://www.infobae.com/america/agencias/2026/11/26/previa-el-levante-busca-reaccionar-ante-un-racing-que-aspira-a-europa/",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Racing Santander",
+     "type": "physique",
+     "fait": "Guliashvili incertain (virus), Sáinz-Maza disponible ; le XI qui a battu la Real Sociedad devrait être reconduit.",
+     "source": "https://www.comuniate.com/noticias/39357/jose-alberto-mantiene-la-duda-de-guliashvili-recupera-a-sainz-maza-y-abre-la-puerta-a-los-canteranos-ante-el-levante",
+     "date": "2026-11-26"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  }
+ ],
+ "meta": {
+  "test": {
+   "saisons": [
+    2023,
+    2024,
+    2025
+   ],
+   "matchs": 8813,
+   "reussite_modele": 0.53,
+   "logloss_modele": 0.9727,
+   "reussite_bookmakers": 0.544,
+   "logloss_bookmakers": 0.9605,
+   "reussite_toujours_domicile": 0.4332,
+   "taux_nuls": 0.2576,
+   "par_ligue": {
+    "Premier League": 0.53,
+    "Liga": 0.532,
+    "Serie A": 0.536,
+    "Ligue 1": 0.519,
+    "Bundesliga": 0.51,
+    "Süper Lig": 0.541,
+    "Eredivisie": 0.54,
+    "Liga Portugal": 0.562,
+    "Pro League": 0.501
+   }
+  }
+ }
+}

@@ -41,7 +41,7 @@ ALIAS = {
     "istanbul basaksehir": "Buyuksehyr", "basaksehir": "Buyuksehyr", "caykur rizespor": "Rizespor",
     "amed sfk": "Amedspor", "amed sportif faaliyetler": "Amedspor", "erzurum bb": "Erzurumspor", "bb erzurumspor": "Erzurumspor",
     "atiker konyaspor": "Konyaspor", "aytemiz alanyaspor": "Alanyaspor", "gaziantep fk": "Gaziantep", "corum fk": "Corum",
-    "naples": "Napoli", "come": "Como", "betis seville": "Betis",
+    "naples": "Napoli", "come": "Como", "betis seville": "Betis", "venise": "Venezia", "bologne": "Bologna",
     "kasimpasa": "Kasimpasa", "gencler birligi": "Genclerbirligi", "genclerbirligi": "Genclerbirligi",
 }
 
