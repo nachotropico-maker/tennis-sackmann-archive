@@ -1,0 +1,110 @@
+[
+ {
+  "date": "2026-11-27",
+  "comp": "I1",
+  "dom": "Venezia",
+  "ext": "Bologna",
+  "bd": 0,
+  "be": 0,
+  "tc_dom": 5.0,
+  "tc_ext": 6.0,
+  "tt_dom": 14.0,
+  "tt_ext": 13.0
+ },
+ {
+  "date": "2026-11-27",
+  "comp": "F1",
+  "dom": "Brest",
+  "ext": "Paris FC",
+  "bd": 1,
+  "be": 0,
+  "tc_dom": 3.0,
+  "tc_ext": 8.0,
+  "tt_dom": 17.0,
+  "tt_ext": 18.0
+ },
+ {
+  "date": "2026-11-27",
+  "comp": "E0",
+  "dom": "Nott'm Forest",
+  "ext": "Chelsea",
+  "bd": 3,
+  "be": 2,
+  "tc_dom": 7.0,
+  "tc_ext": 3.0,
+  "tt_dom": 10.0,
+  "tt_ext": 9.0
+ },
+ {
+  "date": "2026-11-27",
+  "comp": "D1",
+  "dom": "Werder Bremen",
+  "ext": "M'gladbach",
+  "bd": 3,
+  "be": 3,
+  "tc_dom": 8.0,
+  "tc_ext": 6.0,
+  "tt_dom": 20.0,
+  "tt_ext": 20.0
+ },
+ {
+  "date": "2026-11-27",
+  "comp": "T1",
+  "dom": "Rizespor",
+  "ext": "Kasimpasa",
+  "bd": 3,
+  "be": 2,
+  "tc_dom": 7.0,
+  "tc_ext": 6.0,
+  "tt_dom": 17.0,
+  "tt_ext": 13.0
+ },
+ {
+  "date": "2026-11-27",
+  "comp": "SP1",
+  "dom": "Levante",
+  "ext": "Santander",
+  "bd": 1,
+  "be": 3,
+  "tc_dom": 3.0,
+  "tc_ext": 8.0,
+  "tt_dom": 23.0,
+  "tt_ext": 15.0
+ },
+ {
+  "date": "2026-11-27",
+  "comp": "T1",
+  "dom": "Alanyaspor",
+  "ext": "Konyaspor",
+  "bd": 1,
+  "be": 2,
+  "tc_dom": 2.0,
+  "tc_ext": 4.0,
+  "tt_dom": 12.0,
+  "tt_ext": 12.0
+ },
+ {
+  "date": "2026-11-27",
+  "comp": "N1",
+  "dom": "Groningen",
+  "ext": "Willem II",
+  "bd": 1,
+  "be": 1
+ },
+ {
+  "date": "2026-11-27",
+  "comp": "B1",
+  "dom": "OH Leuven",
+  "ext": "Kortrijk",
+  "bd": 2,
+  "be": 2
+ },
+ {
+  "date": "2026-11-27",
+  "comp": "P1",
+  "dom": "Maritimo",
+  "ext": "Nacional",
+  "bd": 1,
+  "be": 2
+ }
+]
