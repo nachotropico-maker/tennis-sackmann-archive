@@ -1,0 +1,200 @@
+[
+ {
+  "id": "2026-11-28-sp1-betis-seville-rayo-vallecano",
+  "date": "2026-11-28",
+  "heure": "14:00",
+  "comp": "SP1",
+  "tour": "14e journée",
+  "dom": "Betis Séville",
+  "ext": "Rayo Vallecano"
+ },
+ {
+  "id": "2026-11-28-t1-samsunspor-genclerbirligi",
+  "date": "2026-11-28",
+  "heure": "14:00",
+  "comp": "T1",
+  "tour": "13e journée",
+  "dom": "Samsunspor",
+  "ext": "Gençlerbirliği"
+ },
+ {
+  "id": "2026-11-28-i1-frosinone-parme",
+  "date": "2026-11-28",
+  "heure": "15:00",
+  "comp": "I1",
+  "tour": "13e journée",
+  "dom": "Frosinone",
+  "ext": "Parme"
+ },
+ {
+  "id": "2026-11-28-d1-mayence-union-berlin",
+  "date": "2026-11-28",
+  "heure": "15:30",
+  "comp": "D1",
+  "tour": "11e journée",
+  "dom": "Mayence",
+  "ext": "Union Berlin"
+ },
+ {
+  "id": "2026-11-28-d1-hambourg-bayern-munich",
+  "date": "2026-11-28",
+  "heure": "15:30",
+  "comp": "D1",
+  "tour": "11e journée",
+  "dom": "Hambourg",
+  "ext": "Bayern Munich"
+ },
+ {
+  "id": "2026-11-28-d1-cologne-elversberg",
+  "date": "2026-11-28",
+  "heure": "15:30",
+  "comp": "D1",
+  "tour": "11e journée",
+  "dom": "Cologne",
+  "ext": "Elversberg"
+ },
+ {
+  "id": "2026-11-28-d1-paderborn-schalke-04",
+  "date": "2026-11-28",
+  "heure": "15:30",
+  "comp": "D1",
+  "tour": "11e journée",
+  "dom": "Paderborn",
+  "ext": "Schalke 04"
+ },
+ {
+  "id": "2026-11-28-e0-leeds-coventry",
+  "date": "2026-11-28",
+  "heure": "16:00",
+  "comp": "E0",
+  "tour": "12e journée",
+  "dom": "Leeds",
+  "ext": "Coventry"
+ },
+ {
+  "id": "2026-11-28-e0-manchester-united-brentford",
+  "date": "2026-11-28",
+  "heure": "16:00",
+  "comp": "E0",
+  "tour": "12e journée",
+  "dom": "Manchester United",
+  "ext": "Brentford"
+ },
+ {
+  "id": "2026-11-28-sp1-malaga-athletic-bilbao",
+  "date": "2026-11-28",
+  "heure": "16:15",
+  "comp": "SP1",
+  "tour": "14e journée",
+  "dom": "Málaga",
+  "ext": "Athletic Bilbao"
+ },
+ {
+  "id": "2026-11-28-t1-gaziantep-amedspor",
+  "date": "2026-11-28",
+  "heure": "17:00",
+  "comp": "T1",
+  "tour": "13e journée",
+  "dom": "Gaziantep",
+  "ext": "Amedspor"
+ },
+ {
+  "id": "2026-11-28-f1-angers-lens",
+  "date": "2026-11-28",
+  "heure": "17:15",
+  "comp": "F1",
+  "tour": "12e journée",
+  "dom": "Angers",
+  "ext": "Lens"
+ },
+ {
+  "id": "2026-11-28-i1-torino-lazio",
+  "date": "2026-11-28",
+  "heure": "18:00",
+  "comp": "I1",
+  "tour": "13e journée",
+  "dom": "Torino",
+  "ext": "Lazio"
+ },
+ {
+  "id": "2026-11-28-e0-ipswich-aston-villa",
+  "date": "2026-11-28",
+  "heure": "18:30",
+  "comp": "E0",
+  "tour": "12e journée",
+  "dom": "Ipswich",
+  "ext": "Aston Villa"
+ },
+ {
+  "id": "2026-11-28-sp1-elche-atletico-de-madrid",
+  "date": "2026-11-28",
+  "heure": "18:30",
+  "comp": "SP1",
+  "tour": "14e journée",
+  "dom": "Elche",
+  "ext": "Atlético de Madrid"
+ },
+ {
+  "id": "2026-11-28-d1-vfb-stuttgart-eintracht-francfort",
+  "date": "2026-11-28",
+  "heure": "18:30",
+  "comp": "D1",
+  "tour": "11e journée",
+  "dom": "VfB Stuttgart",
+  "ext": "Eintracht Francfort"
+ },
+ {
+  "id": "2026-11-28-i1-inter-milan-genoa",
+  "date": "2026-11-28",
+  "heure": "20:45",
+  "comp": "I1",
+  "tour": "13e journée",
+  "dom": "Inter Milan",
+  "ext": "Genoa"
+ },
+ {
+  "id": "2026-11-28-f1-le-havre-strasbourg",
+  "date": "2026-11-28",
+  "heure": "20:45",
+  "comp": "F1",
+  "tour": "12e journée",
+  "dom": "Le Havre",
+  "ext": "Strasbourg"
+ },
+ {
+  "id": "2026-11-28-f1-le-mans-lille",
+  "date": "2026-11-28",
+  "heure": "20:45",
+  "comp": "F1",
+  "tour": "12e journée",
+  "dom": "Le Mans",
+  "ext": "Lille"
+ },
+ {
+  "id": "2026-11-28-f1-nice-troyes",
+  "date": "2026-11-28",
+  "heure": "20:45",
+  "comp": "F1",
+  "tour": "12e journée",
+  "dom": "Nice",
+  "ext": "Troyes"
+ },
+ {
+  "id": "2026-11-28-f1-paris-saint-germain-lorient",
+  "date": "2026-11-28",
+  "heure": "20:45",
+  "comp": "F1",
+  "tour": "12e journée",
+  "dom": "Paris Saint-Germain",
+  "ext": "Lorient"
+ },
+ {
+  "id": "2026-11-28-sp1-real-madrid-alaves",
+  "date": "2026-11-28",
+  "heure": "21:00",
+  "comp": "SP1",
+  "tour": "14e journée",
+  "dom": "Real Madrid",
+  "ext": "Alavés"
+ }
+]
