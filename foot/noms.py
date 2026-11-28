@@ -42,7 +42,7 @@ ALIAS = {
     "amed sfk": "Amedspor", "amed sportif faaliyetler": "Amedspor", "erzurum bb": "Erzurumspor", "bb erzurumspor": "Erzurumspor",
     "atiker konyaspor": "Konyaspor", "aytemiz alanyaspor": "Alanyaspor", "gaziantep fk": "Gaziantep", "corum fk": "Corum",
     "naples": "Napoli", "come": "Como", "betis seville": "Betis", "venise": "Venezia", "bologne": "Bologna",
-    "kasimpasa": "Kasimpasa", "gencler birligi": "Genclerbirligi", "genclerbirligi": "Genclerbirligi",
+    "kasimpasa": "Kasimpasa", "mayence": "Mainz", "eintracht francfort": "Ein Frankfurt", "francfort": "Ein Frankfurt", "gencler birligi": "Genclerbirligi", "genclerbirligi": "Genclerbirligi",
 }
 
 STOP = {"fc", "afc", "cf", "sc", "sk", "fk", "ac", "as", "ssc", "ss", "us", "cd", "ud", "sd", "rc", "rcd", "ca", "club",

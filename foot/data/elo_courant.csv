@@ -27,7 +27,7 @@ Everton,ENG,E0,1796.4,1797.8,Everton,2026-11-23
 RB Leipzig,GER,D1,1819.5,1766.1,RB Leipzig,2026-11-24
 Man United,ENG,E0,1804.7,1888.6,Manchester United,2026-11-25
 Tottenham,ENG,E0,1801.8,1732.0,Tottenham Hotspur,2026-11-22
-Chelsea,ENG,E0,1799.2,1848.0,Chelsea,2026-11-22
+Chelsea,ENG,E0,1789.4,1848.0,Chelsea,2026-11-27
 Napoli,ITA,I1,1797.8,1831.2,Napoli,2026-11-24
 St. Gilloise,BEL,B1,1782.3,1731.7,Union St.-Gilloise,2026-11-26
 PSV Eindhoven,NED,N1,1780.5,1799.1,PSV Eindhoven,2026-11-24
@@ -37,11 +37,11 @@ Juventus,ITA,I1,1781.6,1819.9,Juventus,2026-11-26
 Sp Lisbon,POR,P1,1774.4,1796.3,Sporting CP,2026-11-25
 Newcastle,ENG,E0,1774.5,1821.8,Newcastle United,2026-11-22
 Marseille,FRA,F1,1763.3,1742.8,Marseille,2026-11-26
-Bologna,ITA,I1,1758.6,1711.7,Bologna,2026-11-22
+Bologna,ITA,I1,1754.8,1711.7,Bologna,2026-11-27
 Villarreal,ESP,SP1,1764.5,1780.8,Villarreal,2026-11-25
 Freiburg,GER,D1,1759.8,1687.2,SC Freiburg,2026-11-26
 Lyon,FRA,F1,1737.9,1750.7,Lyon,2026-11-26
-Nott'm Forest,ENG,E0,1740.7,1785.1,Nottingham Forest,2026-11-22
+Nott'm Forest,ENG,E0,1750.5,1785.1,Nottingham Forest,2026-11-27
 Sociedad,ESP,SP1,1728.5,1664.0,Real Sociedad,2026-11-26
 Stuttgart,GER,D1,1732.1,1757.9,VfB Stuttgart,2026-11-25
 Monaco,FRA,F1,1727.2,1753.0,AS Monaco,2026-11-26
@@ -52,7 +52,7 @@ Feyenoord,NED,N1,1700.9,1675.3,Feyenoord Rotterdam,2026-11-24
 Rennes,FRA,F1,1687.2,1732.1,Stade Rennais,2026-11-26
 Crystal Palace,ENG,E0,1714.8,1771.8,Crystal Palace,2026-11-26
 Galatasaray,TUR,T1,1714.5,1675.4,Galatasaray,2026-11-24
-Paris FC,FRA,F1,1699.1,1638.9,Paris FC,2026-11-22
+Paris FC,FRA,F1,1690.3,1638.9,Paris FC,2026-11-27
 Celta,ESP,SP1,1688.6,1682.4,Celta Vigo,2026-11-26
 Frosinone,ITA,I1,1694.6,1591.2,Frosinone,2026-11-22
 Nice,FRA,F1,1692.7,1619.5,Nice,2026-11-22
@@ -60,9 +60,9 @@ Toulouse,FRA,F1,1681.9,1654.1,Toulouse,2026-11-22
 Sunderland,ENG,E0,1674.9,1726.1,Sunderland,2026-11-26
 Ein Frankfurt,GER,D1,1681.0,1684.9,Eintracht Frankfurt,2026-11-22
 Torino,ITA,I1,1680.3,1641.1,Torino,2026-11-22
-Brest,FRA,F1,1677.0,1632.4,Brest,2026-11-22
+Brest,FRA,F1,1685.8,1632.4,Brest,2026-11-27
 Lorient,FRA,F1,1675.9,1630.7,Lorient,2026-11-22
-Werder Bremen,GER,D1,1675.5,1596.6,Werder Bremen,2026-11-22
+Werder Bremen,GER,D1,1670.3,1596.6,Werder Bremen,2026-11-27
 Fiorentina,ITA,I1,1648.0,1685.3,Fiorentina,2026-11-23
 Hoffenheim,GER,D1,1675.8,1688.2,TSG Hoffenheim,2026-11-26
 Vallecano,ESP,SP1,1667.1,1681.6,Rayo Vallecano,2026-11-22
@@ -82,7 +82,7 @@ Alaves,ESP,SP1,1635.1,1671.3,Alavés,2026-11-22
 Trabzonspor,TUR,T1,1644.2,1538.9,Trabzonspor,2026-11-26
 Getafe,ESP,SP1,1616.5,1654.4,Getafe,2026-11-26
 Elche,ESP,SP1,1621.8,1608.6,Elche,2026-11-23
-Levante,ESP,SP1,1613.1,1644.4,Levante,2026-11-23
+Levante,ESP,SP1,1593.9,1644.4,Levante,2026-11-27
 Augsburg,GER,D1,1614.8,1651.2,FC Augsburg,2026-11-22
 Gent,BEL,B1,1609.5,1533.2,KAA Gent,2026-11-26
 Parma,ITA,I1,1610.5,1629.8,Parma,2026-11-22
@@ -92,7 +92,7 @@ Auxerre,FRA,F1,1599.1,1604.8,AJ Auxerre,2026-11-22
 Sp Braga,POR,P1,1606.1,1632.7,Braga,2026-11-26
 Hull,ENG,E0,1592.8,1559.8,Hull City,2026-11-22
 Anderlecht,BEL,B1,1593.8,1527.9,Anderlecht,2026-11-26
-Santander,ESP,SP1,1579.1,1605.5,Racing Santander,2026-11-22
+Santander,ESP,SP1,1598.3,1605.5,Racing Santander,2026-11-27
 Academico Viseu,POR,P1,1578.8,1489.8,Académico de Viseu,2026-11-22
 Charleroi,BEL,B1,1578.2,1533.0,Royal Charleroi SC,2026-11-22
 Osasuna,ESP,SP1,1578.1,1663.3,Osasuna,2026-11-22
@@ -102,7 +102,7 @@ Heerenveen,NED,N1,1566.9,1505.0,Heerenveen,2026-11-22
 Elversberg,GER,D1,1565.1,1548.4,SV Elversberg,2026-11-22
 AZ Alkmaar,NED,N1,1578.9,1603.3,AZ Alkmaar,2026-11-26
 FC Koln,GER,D1,1561.0,1570.5,FC Cologne,2026-11-22
-Venezia,ITA,I1,1555.7,1599.4,Venezia,2026-11-22
+Venezia,ITA,I1,1559.5,1599.4,Venezia,2026-11-27
 Monza,ITA,I1,1574.3,1554.8,Monza,2026-11-23
 Famalicao,POR,P1,1552.6,1534.7,FC Famalicao,2026-11-22
 Besiktas,TUR,T1,1560.6,1518.4,Besiktas,2026-11-26
@@ -110,7 +110,7 @@ Paderborn,GER,D1,1547.3,1539.2,SC Paderborn 07,2026-11-22
 Udinese,ITA,I1,1546.8,1668.4,Udinese,2026-11-22
 Amedspor,TUR,T1,1545.1,1500.9,Amed SFK,2026-11-22
 Schalke 04,GER,D1,1544.6,1535.0,Schalke 04,2026-11-22
-M'gladbach,GER,D1,1542.6,1628.9,Borussia Mönchengladbach,2026-11-22
+M'gladbach,GER,D1,1547.8,1628.9,Borussia Mönchengladbach,2026-11-27
 Santa Clara,POR,P1,1538.9,1484.2,Santa Clara,2026-11-22
 Genk,BEL,B1,1538.2,1575.1,Racing Genk,2026-11-22
 Union Berlin,GER,D1,1536.7,1614.1,1. FC Union Berlin,2026-11-22
@@ -131,14 +131,14 @@ For Sittard,NED,N1,1487.5,1446.7,Fortuna Sittard,2026-11-22
 St Truiden,BEL,B1,1505.5,1562.8,Sint-Truidense,2026-11-26
 Goztep,TUR,T1,1483.5,1439.1,Goztepe,2026-11-22
 Standard,BEL,B1,1483.4,1513.0,Standard Liege,2026-11-22
-Kasimpasa,TUR,T1,1479.5,1414.1,Kasimpasa,2026-11-22
+Kasimpasa,TUR,T1,1469.6,1414.1,Kasimpasa,2026-11-27
 Guimaraes,POR,P1,1478.5,1487.9,Vitória de Guimaraes,2026-11-22
 Mechelen,BEL,B1,1476.4,1476.5,KV Mechelen,2026-11-22
 Go Ahead Eagles,NED,N1,1475.0,1483.2,Go Ahead Eagles,2026-11-22
-Groningen,NED,N1,1473.4,1466.7,FC Groningen,2026-11-22
+Groningen,NED,N1,1466.4,1466.7,FC Groningen,2026-11-27
 Alverca,POR,P1,1472.6,1436.0,Alverca,2026-11-22
 Moreirense,POR,P1,1468.2,1464.6,Moreirense,2026-11-22
-Oud-Heverlee Leuven,BEL,B1,1453.9,1402.9,OHL,2026-11-22
+Oud-Heverlee Leuven,BEL,B1,1448.8,1402.9,OHL,2026-11-27
 Telstar,NED,N1,1442.7,1472.9,Telstar,2026-11-22
 Cercle Brugge,BEL,B1,1438.7,1443.8,Cercle Brugge KSV,2026-11-22
 Cambuur,NED,N1,1436.0,1303.8,SC Cambuur,2026-11-22
@@ -146,26 +146,26 @@ Kocaelispor,TUR,T1,1430.7,1385.0,Kocaelispor,2026-11-22
 Sparta Rotterdam,NED,N1,1429.6,1463.9,Sparta Rotterdam,2026-11-22
 Zwolle,NED,N1,1425.8,1434.8,PEC Zwolle,2026-11-22
 Antwerp,BEL,B1,1424.5,1488.3,Antwerp,2026-11-22
-Rizespor,TUR,T1,1417.3,1417.4,Caykur Rizespor,2026-11-22
+Rizespor,TUR,T1,1427.2,1417.4,Caykur Rizespor,2026-11-27
 Estrela,POR,P1,1413.9,1455.0,Estrela,2026-11-22
 Casa Pia,POR,P1,1412.4,1393.4,Casa Pia,2026-11-22
 Rio Ave,POR,P1,1388.9,1440.8,Rio Ave,2026-11-22
 RAAL La Louviere,BEL,B1,1387.2,1416.9,RAAL La Louvière,2026-11-22
 Waregem,BEL,B1,1385.8,1471.2,Zulte-Waregem,2026-11-22
-Nacional,POR,P1,1381.1,1404.2,C.D. Nacional,2026-11-22
+Nacional,POR,P1,1391.9,1404.2,C.D. Nacional,2026-11-27
 Estoril,POR,P1,1373.8,1437.6,Estoril,2026-11-22
-Alanyaspor,TUR,T1,1365.9,1396.0,Alanyaspor,2026-11-22
-Konyaspor,TUR,T1,1364.0,1370.1,Konyaspor,2026-11-22
+Alanyaspor,TUR,T1,1354.0,1396.0,Alanyaspor,2026-11-27
+Konyaspor,TUR,T1,1375.9,1370.1,Konyaspor,2026-11-27
 Erzurum BB,TUR,T1,1356.4,1329.6,Erzurum BB,2026-11-22
-Maritimo,POR,P1,1344.2,1414.0,Maritimo,2026-11-22
+Maritimo,POR,P1,1333.4,1414.0,Maritimo,2026-11-27
 Excelsior,NED,N1,1344.1,1423.8,Excelsior,2026-11-22
 Beveren,BEL,B1,1342.2,1316.9,Waasland-Beveren,2026-11-22
 Den Haag,NED,N1,1330.4,1290.4,ADO Den Haag,2026-11-22
 Samsunspor,TUR,T1,1329.8,1467.0,Samsunspor,2026-11-22
-Kortrijk,BEL,B1,1325.5,1372.4,KV Kortrijk,2026-11-22
+Kortrijk,BEL,B1,1330.6,1372.4,KV Kortrijk,2026-11-27
 Genclerbirligi,TUR,T1,1319.1,1359.3,Genclerbirligi,2026-11-22
 Gaziantep,TUR,T1,1317.7,1401.5,Gaziantep FK,2026-11-22
-Willem II,NED,N1,1234.8,1318.1,Willem II,2026-11-22
+Willem II,NED,N1,1241.8,1318.1,Willem II,2026-11-27
 Eyupspor,TUR,T1,1217.6,1357.3,Eyupspor,2026-11-22
 A. Sebatspor,TUR,,1369.55,1369.55,,2026-09-01
 AEK,GRE,,1610.5,1613.91,,2026-11-24

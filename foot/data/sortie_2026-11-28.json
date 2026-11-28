@@ -1,0 +1,2402 @@
+{
+ "matchs": [
+  {
+   "id": "2026-11-28-sp1-betis-seville-rayo-vallecano",
+   "date": "2026-11-28",
+   "heure": "14:00",
+   "comp": "SP1",
+   "competition": "Liga",
+   "tour": "14e journée",
+   "dom": "Betis",
+   "ext": "Vallecano",
+   "dom_affiche": "Betis Séville",
+   "ext_affiche": "Rayo Vallecano",
+   "neutre": false,
+   "p1": 0.637,
+   "pN": 0.224,
+   "p2": 0.14,
+   "pronostic": "1",
+   "favori": "Betis Séville",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.637,
+    "pN": 0.224,
+    "p2": 0.14
+   },
+   "proba_favori": 0.637,
+   "confiance": "Net favori",
+   "score_probable": "1-0",
+   "buts_dom": 1.92,
+   "buts_ext": 0.82,
+   "plus_2_5": 0.515,
+   "facteurs": {
+    "dom": {
+     "rang": 4,
+     "pts": 27,
+     "j": 13,
+     "v": 8,
+     "n": 3,
+     "d": 2,
+     "bp": 21,
+     "bc": 16,
+     "elo": 1817,
+     "elo_septembre": 1763,
+     "derniers": [
+      {
+       "date": "2026-11-24",
+       "comp": "UCL",
+       "adv": "Slovan Bratislava",
+       "lieu": "ext",
+       "score": "2-0",
+       "res": "V"
+      }
+     ],
+     "buts_par_match": 2.85,
+     "jours_repos": 4
+    },
+    "ext": {
+     "rang": 15,
+     "pts": 12,
+     "j": 12,
+     "v": 3,
+     "n": 3,
+     "d": 6,
+     "bp": 15,
+     "bc": 22,
+     "elo": 1667,
+     "elo_septembre": 1682,
+     "derniers": [],
+     "buts_par_match": 3.08
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Betis Séville 1817, Rayo Vallecano 1667 (150 pts en faveur de Betis Séville).",
+    "Avantage du terrain pour Betis Séville (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Betis Séville en forme depuis septembre (+54 pts d'Elo).",
+    "Classement : Betis Séville 4e (27 pts en 13 matchs), Rayo Vallecano 15e (12 pts en 12 matchs)."
+   ],
+   "lecture": "Victoire du Betis (64 %), score probable 1-0. Le Betis a 150 points d'Elo de plus, a gagné 5 de ses 6 matchs à domicile, et le Rayo n'a pas encore gagné à l'extérieur. Sans Ceballos ni Lo Celso, le Betis peut manquer d'idées : un nul serre (22 %) n'est pas exclu.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Betis Séville",
+     "type": "physique",
+     "fait": "Dani Ceballos (dos) n'est pas convoqué et Lo Celso (contusion au genou) est forfait.",
+     "source": "https://www.comuniate.com/partido/26/7/14/betis-rayo-vallecano",
+     "date": "2026-11-28"
+    },
+    {
+     "equipe": "Betis Séville",
+     "type": "enjeu",
+     "fait": "Le Betis, 4e, a gagné 5 de ses 6 matchs à domicile (12 buts marqués, 8 encaissés).",
+     "source": "https://www.comuniate.com/partido/26/7/14/betis-rayo-vallecano",
+     "date": "2026-11-28"
+    },
+    {
+     "equipe": "Rayo Vallecano",
+     "type": "physique",
+     "fait": "Le gardien Batalla (fracture, absent jusqu'en janvier) et Luiz Felipe (ligament croisé) sont forfaits, Óscar Valentín est incertain (genou).",
+     "source": "https://www.comuniate.com/partido/26/7/14/betis-rayo-vallecano",
+     "date": "2026-11-28"
+    },
+    {
+     "equipe": "Rayo Vallecano",
+     "type": "enjeu",
+     "fait": "Le Rayo n'a gagné aucun de ses 6 matchs à l'extérieur (2 nuls, 4 défaites, 6 buts marqués, 14 encaissés).",
+     "source": "https://www.comuniate.com/partido/26/7/14/betis-rayo-vallecano",
+     "date": "2026-11-28"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-28-t1-samsunspor-genclerbirligi",
+   "date": "2026-11-28",
+   "heure": "14:00",
+   "comp": "T1",
+   "competition": "Süper Lig",
+   "tour": "13e journée",
+   "dom": "Samsunspor",
+   "ext": "Genclerbirligi",
+   "dom_affiche": "Samsunspor",
+   "ext_affiche": "Gençlerbirliği",
+   "neutre": false,
+   "p1": 0.456,
+   "pN": 0.285,
+   "p2": 0.259,
+   "pronostic": "1",
+   "favori": "Samsunspor",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.456,
+    "pN": 0.285,
+    "p2": 0.259
+   },
+   "proba_favori": 0.456,
+   "confiance": "Léger avantage",
+   "score_probable": "1-0",
+   "buts_dom": 1.56,
+   "buts_ext": 1.16,
+   "plus_2_5": 0.512,
+   "facteurs": {
+    "dom": {
+     "rang": 17,
+     "pts": 7,
+     "j": 12,
+     "v": 2,
+     "n": 1,
+     "d": 9,
+     "bp": 12,
+     "bc": 28,
+     "elo": 1330,
+     "elo_septembre": 1467,
+     "derniers": [],
+     "buts_par_match": 3.33
+    },
+    "ext": {
+     "rang": 12,
+     "pts": 14,
+     "j": 12,
+     "v": 4,
+     "n": 2,
+     "d": 6,
+     "bp": 13,
+     "bc": 21,
+     "elo": 1319,
+     "elo_septembre": 1359,
+     "derniers": [],
+     "buts_par_match": 2.83
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Samsunspor 1330, Gençlerbirliği 1319 (11 pts en faveur de Samsunspor).",
+    "Avantage du terrain pour Samsunspor (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Samsunspor en baisse depuis septembre (-137 pts d'Elo).",
+    "Gençlerbirliği en baisse depuis septembre (-40 pts d'Elo).",
+    "Classement : Samsunspor 17e (7 pts en 12 matchs), Gençlerbirliği 12e (14 pts en 12 matchs)."
+   ],
+   "lecture": "Léger avantage à Samsunspor (46 %), score probable 1-0. Les deux équipes ont un Elo presque égal : c'est surtout l'avantage du terrain qui fait pencher le pronostic. Samsunspor est 17e et a déjà changé d'entraîneur (Bjelica à la place de Fink) : Gençlerbirliği, 12e, peut tout à fait repartir avec un résultat (54 % de chances de ne pas perdre).",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Samsunspor",
+     "type": "coach",
+     "fait": "Samsunspor s'est séparé de Thorsten Fink et a nommé Nenad Bjelica entraîneur jusqu'à la fin de la saison.",
+     "source": "https://fanatik.com.tr/samsunspor/samsunspor-nenad-bjelica-ile-sozlesme-imzaladi-2641094",
+     "date": "2026-10-15"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-28-i1-frosinone-parme",
+   "date": "2026-11-28",
+   "heure": "15:00",
+   "comp": "I1",
+   "competition": "Serie A",
+   "tour": "13e journée",
+   "dom": "Frosinone",
+   "ext": "Parma",
+   "dom_affiche": "Frosinone",
+   "ext_affiche": "Parme",
+   "neutre": false,
+   "p1": 0.516,
+   "pN": 0.273,
+   "p2": 0.211,
+   "pronostic": "1",
+   "favori": "Frosinone",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.516,
+    "pN": 0.273,
+    "p2": 0.211
+   },
+   "proba_favori": 0.516,
+   "confiance": "Favori",
+   "score_probable": "1-0",
+   "buts_dom": 1.66,
+   "buts_ext": 1.0,
+   "plus_2_5": 0.497,
+   "facteurs": {
+    "dom": {
+     "rang": 6,
+     "pts": 20,
+     "j": 11,
+     "v": 6,
+     "n": 2,
+     "d": 3,
+     "bp": 24,
+     "bc": 15,
+     "elo": 1695,
+     "elo_septembre": 1591,
+     "derniers": [],
+     "buts_par_match": 3.55
+    },
+    "ext": {
+     "rang": 18,
+     "pts": 8,
+     "j": 11,
+     "v": 2,
+     "n": 2,
+     "d": 7,
+     "bp": 9,
+     "bc": 17,
+     "elo": 1610,
+     "elo_septembre": 1630,
+     "derniers": [],
+     "buts_par_match": 2.36
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Frosinone 1695, Parme 1610 (84 pts en faveur de Frosinone).",
+    "Avantage du terrain pour Frosinone (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Frosinone en forme depuis septembre (+103 pts d'Elo).",
+    "Classement : Frosinone 6e (20 pts en 11 matchs), Parme 18e (8 pts en 11 matchs)."
+   ],
+   "lecture": "Victoire de Frosinone (52 %), score probable 1-0. Le promu est 6e et a 84 points d'Elo de plus que Parme, 18e, qui a très peu gagné depuis l'arrivée de Gilardino en octobre. Parme reste une équipe de Serie A plus expérimentée : une surprise à 21 % est possible.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Parme",
+     "type": "coach",
+     "fait": "Parme s'est séparé de Carlos Cuesta le 27/09/2026 et a nommé Alberto Gilardino le 1er octobre.",
+     "source": "https://www.fantacalcio.it/news/calcio-italia/01_10_2026/parma-conferenza-stampa-presentazione-gilardino-498620",
+     "date": "2026-10-01"
+    },
+    {
+     "equipe": "Parme",
+     "type": "coach",
+     "fait": "Au 1er novembre, le nul contre l'Udinese était le premier point pris sous Gilardino.",
+     "source": "https://www.tuttomercatoweb.com/serie-a/parma-breve-conferenza-gilardino-vigilia-atalanta-2289480",
+     "date": "2026-11-01"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-28-d1-mayence-union-berlin",
+   "date": "2026-11-28",
+   "heure": "15:30",
+   "comp": "D1",
+   "competition": "Bundesliga",
+   "tour": "11e journée",
+   "dom": "Mainz",
+   "ext": "Union Berlin",
+   "dom_affiche": "Mayence",
+   "ext_affiche": "Union Berlin",
+   "neutre": false,
+   "p1": 0.581,
+   "pN": 0.235,
+   "p2": 0.184,
+   "pronostic": "1",
+   "favori": "Mayence",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.581,
+    "pN": 0.235,
+    "p2": 0.184
+   },
+   "proba_favori": 0.581,
+   "confiance": "Favori",
+   "score_probable": "2-1",
+   "buts_dom": 1.99,
+   "buts_ext": 1.05,
+   "plus_2_5": 0.588,
+   "facteurs": {
+    "dom": {
+     "rang": 12,
+     "pts": 10,
+     "j": 9,
+     "v": 3,
+     "n": 1,
+     "d": 5,
+     "bp": 18,
+     "bc": 19,
+     "elo": 1647,
+     "elo_septembre": 1673,
+     "derniers": [],
+     "buts_par_match": 4.11
+    },
+    "ext": {
+     "rang": 16,
+     "pts": 7,
+     "j": 10,
+     "v": 1,
+     "n": 4,
+     "d": 5,
+     "bp": 8,
+     "bc": 26,
+     "elo": 1537,
+     "elo_septembre": 1614,
+     "derniers": [],
+     "buts_par_match": 3.4
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Mayence 1647, Union Berlin 1537 (110 pts en faveur de Mayence).",
+    "Avantage du terrain pour Mayence (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Mayence en baisse depuis septembre (-26 pts d'Elo).",
+    "Union Berlin en baisse depuis septembre (-77 pts d'Elo).",
+    "Classement : Mayence 12e (10 pts en 9 matchs), Union Berlin 16e (7 pts en 10 matchs)."
+   ],
+   "lecture": "Victoire de Mayence (58 %), score probable 2-1. Le modèle se fie à l'Elo et à l'avantage du terrain, et Union arrive très diminué (Khedira, Skov, Uduokhai, Juranovic absents, Van den Bosch suspendu) avec 26 buts encaissés en 10 journées. Mais Mayence a perdu ses quatre derniers matchs et n'a encore jamais gagné chez lui : c'est ce qui pourrait faire mentir le pronostic.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Mayence",
+     "type": "mental",
+     "fait": "Mayence reste sur quatre défaites de suite en Bundesliga et n'a encore gagné aucun match à domicile cette saison.",
+     "source": "https://www.thestatszone.com/mainz-vs-union-berlin-preview-team-news-prediction-242690",
+     "date": "2026-11-27"
+    },
+    {
+     "equipe": "Mayence",
+     "type": "physique",
+     "fait": "Dominik Kohr et Silas Katompa Mvumpa sont forfaits.",
+     "source": "https://www.thestatszone.com/mainz-vs-union-berlin-preview-team-news-prediction-242690",
+     "date": "2026-11-27"
+    },
+    {
+     "equipe": "Union Berlin",
+     "type": "physique",
+     "fait": "Van den Bosch est suspendu ; Burcu, Markgraf, Nsoki, Skov, Uduokhai et Khedira sont blessés et Juranovic est malade.",
+     "source": "https://starting11.com/fixtures/fsv-mainz-05-vs-union-berlin",
+     "date": "2026-11-28"
+    },
+    {
+     "equipe": "Union Berlin",
+     "type": "mental",
+     "fait": "Union n'a gagné aucun de ses cinq derniers matchs (3 nuls, 2 défaites) et a encaissé 26 buts en 10 journées.",
+     "source": "https://www.thestatszone.com/mainz-vs-union-berlin-preview-team-news-prediction-242690",
+     "date": "2026-11-27"
+    },
+    {
+     "equipe": "Union Berlin",
+     "type": "coach",
+     "fait": "Mauro Lustrinelli entraîne Union depuis le 1er juillet 2026 ; il a succédé à l'intérimaire Marie-Louise Eta. Le changement a eu lieu avant la saison.",
+     "source": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Bundesliga",
+     "date": "2026-07-01"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-28-d1-hambourg-bayern-munich",
+   "date": "2026-11-28",
+   "heure": "15:30",
+   "comp": "D1",
+   "competition": "Bundesliga",
+   "tour": "11e journée",
+   "dom": "Hamburg",
+   "ext": "Bayern Munich",
+   "dom_affiche": "Hambourg",
+   "ext_affiche": "Bayern Munich",
+   "neutre": false,
+   "p1": 0.159,
+   "pN": 0.196,
+   "p2": 0.645,
+   "pronostic": "2",
+   "favori": "Bayern Munich",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.137,
+    "pN": 0.168,
+    "p2": 0.695
+   },
+   "proba_favori": 0.645,
+   "confiance": "Net favori",
+   "score_probable": "0-2",
+   "buts_dom": 0.84,
+   "buts_ext": 2.55,
+   "plus_2_5": 0.658,
+   "facteurs": {
+    "dom": {
+     "rang": 11,
+     "pts": 12,
+     "j": 9,
+     "v": 4,
+     "n": 0,
+     "d": 5,
+     "bp": 10,
+     "bc": 20,
+     "elo": 1601,
+     "elo_septembre": 1598,
+     "derniers": [],
+     "buts_par_match": 3.33
+    },
+    "ext": {
+     "rang": 2,
+     "pts": 22,
+     "j": 10,
+     "v": 6,
+     "n": 4,
+     "d": 0,
+     "bp": 30,
+     "bc": 10,
+     "elo": 1964,
+     "elo_septembre": 1972,
+     "derniers": [
+      {
+       "date": "2026-11-25",
+       "comp": "UCL",
+       "adv": "Lille",
+       "lieu": "ext",
+       "score": "1-2",
+       "res": "D"
+      }
+     ],
+     "buts_par_match": 4.0,
+     "jours_repos": 3
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Hambourg 1601, Bayern Munich 1964 (363 pts en faveur de Bayern Munich).",
+    "Avantage du terrain pour Hambourg (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Classement : Hambourg 11e (12 pts en 9 matchs), Bayern Munich 2e (22 pts en 10 matchs).",
+    "Bayern Munich a joué il y a 3 jours : peu de récupération."
+   ],
+   "lecture": "Victoire du Bayern (65 % après ajustement), score probable 0-2. Le Bayern reste bien plus fort (363 points d'Elo d'écart), mais Kompany est privé de Kane, Olise, Musiala et Neuer, et l'équipe sort d'une défaite à Lille : on a retiré 5 points à sa victoire. Hambourg, lui aussi décimé (Muheim, Remberg, Poulsen…), n'a pas les armes pour en profiter souvent.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Bayern Munich",
+     "type": "physique",
+     "fait": "En conférence de presse, Kompany a confirmé le forfait d'Olise (contusion au pied) ; Kane, Neuer, Saibari et Musiala (blessure musculaire, absent pour un moment) sont aussi absents.",
+     "source": "https://sports.yahoo.com/soccer/articles/bayern-looking-reaction-hamburg-155900975.html",
+     "date": "2026-11-27"
+    },
+    {
+     "equipe": "Bayern Munich",
+     "type": "physique",
+     "fait": "Davies et Gnabry sont donnés absents, mais un autre article (Bulinews/Yahoo) indique qu'ils ont repris l'entraînement collectif vendredi : leur présence reste incertaine.",
+     "source": "https://sports.yahoo.com/soccer/articles/michael-olise-ruled-bayerns-trip-102500982.html",
+     "date": "2026-11-27"
+    },
+    {
+     "equipe": "Bayern Munich",
+     "type": "physique",
+     "fait": "Jonas Urbig devrait garder les buts à la place de Manuel Neuer, blessé au pied.",
+     "source": "https://thehardtackle.com/round-up/2026/11/27/hamburg-vs-bayern-munich-preview-prediction-probable-lineups-tactics-team-news-stats/",
+     "date": "2026-11-27"
+    },
+    {
+     "equipe": "Bayern Munich",
+     "type": "logistique",
+     "fait": "Le Bayern a perdu 2-1 à Lille en Ligue des champions mercredi, sa première défaite de la saison ; Kompany parle de quatre matchs en neuf jours.",
+     "source": "https://sports.yahoo.com/soccer/articles/bayern-looking-reaction-hamburg-155900975.html",
+     "date": "2026-11-27"
+    },
+    {
+     "equipe": "Hambourg",
+     "type": "physique",
+     "fait": "Hambourg (entraîneur Merlin Polzin) est privé de Muheim, son meilleur buteur (mollet), ainsi que de Remberg, Nadir, Sambi Lokonga et Poulsen, et sort d'une lourde défaite dans le derby du Nord.",
+     "source": "https://sports.yahoo.com/soccer/articles/bayern-expect-hamburger-sv-180900053.html",
+     "date": "2026-11-26"
+    }
+   ],
+   "ajustement": 5,
+   "resultat": null,
+   "correct": null,
+   "ajustement_raison": "Bayern privé de quatre titulaires dont son gardien (Kane, Olise, Musiala, Neuer), confirmé par Kompany : -5 points sur la victoire du Bayern."
+  },
+  {
+   "id": "2026-11-28-d1-cologne-elversberg",
+   "date": "2026-11-28",
+   "heure": "15:30",
+   "comp": "D1",
+   "competition": "Bundesliga",
+   "tour": "11e journée",
+   "dom": "FC Koln",
+   "ext": "Elversberg",
+   "dom_affiche": "Cologne",
+   "ext_affiche": "Elversberg",
+   "neutre": false,
+   "p1": 0.428,
+   "pN": 0.29,
+   "p2": 0.282,
+   "pronostic": "1",
+   "favori": "Cologne",
+   "double_chance": {
+    "issue": "1N",
+    "proba": 0.718
+   },
+   "p_modele": {
+    "p1": 0.428,
+    "pN": 0.29,
+    "p2": 0.282
+   },
+   "proba_favori": 0.428,
+   "confiance": "Léger avantage",
+   "score_probable": "2-1",
+   "buts_dom": 1.62,
+   "buts_ext": 1.3,
+   "plus_2_5": 0.559,
+   "facteurs": {
+    "dom": {
+     "rang": 13,
+     "pts": 10,
+     "j": 10,
+     "v": 2,
+     "n": 4,
+     "d": 4,
+     "bp": 11,
+     "bc": 15,
+     "elo": 1561,
+     "elo_septembre": 1570,
+     "derniers": [],
+     "buts_par_match": 2.6
+    },
+    "ext": {
+     "rang": 8,
+     "pts": 13,
+     "j": 10,
+     "v": 4,
+     "n": 1,
+     "d": 5,
+     "bp": 17,
+     "bc": 19,
+     "elo": 1565,
+     "elo_septembre": 1548,
+     "derniers": [],
+     "buts_par_match": 3.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Cologne 1561, Elversberg 1565 (4 pts en faveur de Elversberg).",
+    "Avantage du terrain pour Cologne (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Classement : Cologne 13e (10 pts en 10 matchs), Elversberg 8e (13 pts en 10 matchs)."
+   ],
+   "lecture": "Match très ouvert, léger avantage à Cologne (43 %), double chance 1N à 72 %. Les deux Elo sont identiques : seul le terrain départage. Cologne a une infirmerie pleine (Skhiri, Dallinga…) et un match de coupe mardi ; Elversberg reste sur deux défaites.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Cologne",
+     "type": "physique",
+     "fait": "Skhiri, Castro-Montes, Dallinga, Rondic et Van den Berg sont blessés ; Ache revient mais est resté sur le banc le week-end dernier.",
+     "source": "https://sports.yahoo.com/soccer/articles/1-fc-k-ln-vs-181200473.html",
+     "date": "2026-11-27"
+    },
+    {
+     "equipe": "Cologne",
+     "type": "logistique",
+     "fait": "Cologne joue mardi à Holstein Kiel en huitième de finale de Coupe d'Allemagne ; Elversberg n'a pas de match de coupe cette semaine.",
+     "source": "https://sports.yahoo.com/soccer/articles/1-fc-k-ln-vs-181200473.html",
+     "date": "2026-11-27"
+    },
+    {
+     "equipe": "Cologne",
+     "type": "enjeu",
+     "fait": "Cologne, entraîné par René Wagner, n'a que trois points d'avance sur la zone de relégation et a fait nul contre le Bayern vendredi dernier.",
+     "source": "https://sports.yahoo.com/soccer/articles/1-fc-k-ln-vs-181200473.html",
+     "date": "2026-11-27"
+    },
+    {
+     "equipe": "Elversberg",
+     "type": "mental",
+     "fait": "Elversberg, promu et entraîné par Vincent Wagner, a perdu ses deux derniers matchs de championnat (Dortmund, Fribourg) ; Mickelson est forfait, et Darvich, Günther et Kristof sont incertains.",
+     "source": "https://sports.yahoo.com/soccer/articles/1-fc-k-ln-vs-181200473.html",
+     "date": "2026-11-27"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-28-d1-paderborn-schalke-04",
+   "date": "2026-11-28",
+   "heure": "15:30",
+   "comp": "D1",
+   "competition": "Bundesliga",
+   "tour": "11e journée",
+   "dom": "Paderborn",
+   "ext": "Schalke 04",
+   "dom_affiche": "Paderborn",
+   "ext_affiche": "Schalke 04",
+   "neutre": false,
+   "p1": 0.419,
+   "pN": 0.305,
+   "p2": 0.276,
+   "pronostic": "1",
+   "favori": "Paderborn",
+   "double_chance": {
+    "issue": "1N",
+    "proba": 0.724
+   },
+   "p_modele": {
+    "p1": 0.419,
+    "pN": 0.305,
+    "p2": 0.276
+   },
+   "proba_favori": 0.419,
+   "confiance": "Léger avantage",
+   "score_probable": "2-1",
+   "buts_dom": 1.64,
+   "buts_ext": 1.29,
+   "plus_2_5": 0.56,
+   "facteurs": {
+    "dom": {
+     "rang": 14,
+     "pts": 10,
+     "j": 10,
+     "v": 2,
+     "n": 4,
+     "d": 4,
+     "bp": 8,
+     "bc": 15,
+     "elo": 1547,
+     "elo_septembre": 1539,
+     "derniers": [],
+     "buts_par_match": 2.3
+    },
+    "ext": {
+     "rang": 17,
+     "pts": 7,
+     "j": 10,
+     "v": 1,
+     "n": 4,
+     "d": 5,
+     "bp": 5,
+     "bc": 11,
+     "elo": 1545,
+     "elo_septembre": 1535,
+     "derniers": [],
+     "buts_par_match": 1.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Paderborn 1547, Schalke 04 1545 (3 pts en faveur de Paderborn).",
+    "Avantage du terrain pour Paderborn (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Classement : Paderborn 14e (10 pts en 10 matchs), Schalke 04 17e (7 pts en 10 matchs)."
+   ],
+   "lecture": "Match ouvert, léger avantage à Paderborn (42 %), double chance 1N à 72 %. Duel de mal classés à Elo égal : le terrain fait la différence. Schalke n'a pas gagné depuis sept matchs et n'a marqué que cinq buts, mais Paderborn encaisse beaucoup ces derniers temps : le nul (31 %) est très plausible.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Paderborn",
+     "type": "mental",
+     "fait": "Paderborn (entraîneur Ralf Kettemann) n'a gagné aucun de ses trois derniers matchs et a encaissé six buts lors des deux derniers, dont un 4-0 à Leverkusen.",
+     "source": "https://www.thestatszone.com/paderborn-vs-schalke-04-preview-team-news-prediction-242712",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Paderborn",
+     "type": "physique",
+     "fait": "Awortwie-Grant et Gayret sont forfaits ; Hoffmeier est déclaré apte.",
+     "source": "https://www.thestatszone.com/paderborn-vs-schalke-04-preview-team-news-prediction-242712",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Schalke 04",
+     "type": "mental",
+     "fait": "Schalke (entraîneur Miron Muslic) n'a gagné aucun de ses sept derniers matchs et n'a marqué que cinq buts, la pire attaque de Bundesliga.",
+     "source": "https://www.thestatszone.com/paderborn-vs-schalke-04-preview-team-news-prediction-242712",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Schalke 04",
+     "type": "physique",
+     "fait": "T. Becker, Hojlund, Lasme, Schallenberg et Wöber sont blessés.",
+     "source": "https://www.thestatszone.com/paderborn-vs-schalke-04-preview-team-news-prediction-242712",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Paderborn",
+     "type": "enjeu",
+     "fait": "Duel direct pour le maintien : seulement trois points et une place séparent les deux équipes en bas de classement.",
+     "source": "https://www.thestatszone.com/paderborn-vs-schalke-04-preview-team-news-prediction-242712",
+     "date": "2026-11-26"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-28-e0-leeds-coventry",
+   "date": "2026-11-28",
+   "heure": "16:00",
+   "comp": "E0",
+   "competition": "Premier League",
+   "tour": "12e journée",
+   "dom": "Leeds",
+   "ext": "Coventry",
+   "dom_affiche": "Leeds",
+   "ext_affiche": "Coventry",
+   "neutre": false,
+   "p1": 0.62,
+   "pN": 0.223,
+   "p2": 0.157,
+   "pronostic": "1",
+   "favori": "Leeds",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.62,
+    "pN": 0.223,
+    "p2": 0.157
+   },
+   "proba_favori": 0.62,
+   "confiance": "Net favori",
+   "score_probable": "1-0",
+   "buts_dom": 1.97,
+   "buts_ext": 0.89,
+   "plus_2_5": 0.546,
+   "facteurs": {
+    "dom": {
+     "rang": 7,
+     "pts": 17,
+     "j": 11,
+     "v": 4,
+     "n": 5,
+     "d": 2,
+     "bp": 14,
+     "bc": 9,
+     "elo": 1821,
+     "elo_septembre": 1794,
+     "derniers": [],
+     "buts_par_match": 2.09
+    },
+    "ext": {
+     "rang": 13,
+     "pts": 12,
+     "j": 11,
+     "v": 4,
+     "n": 0,
+     "d": 7,
+     "bp": 13,
+     "bc": 21,
+     "elo": 1666,
+     "elo_septembre": 1621,
+     "derniers": [],
+     "buts_par_match": 3.09
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Leeds 1821, Coventry 1666 (155 pts en faveur de Leeds).",
+    "Avantage du terrain pour Leeds (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Leeds en forme depuis septembre (+27 pts d'Elo).",
+    "Coventry en forme depuis septembre (+44 pts d'Elo).",
+    "Classement : Leeds 7e (17 pts en 11 matchs), Coventry 13e (12 pts en 11 matchs)."
+   ],
+   "lecture": "Victoire de Leeds (62 %), score probable 1-0. Leeds a 155 points d'Elo de plus, est invaincu à domicile et a quasiment tout son effectif ; Coventry est privé de cinq joueurs dont ses attaquants Wright et Awoniyi. Le promu de Lampard a toutefois gagné 4 de ses 7 derniers matchs.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Leeds",
+     "type": "physique",
+     "fait": "Daniel Farke annonce un groupe au complet, seul Mateo Joseph (genou) reste indisponible.",
+     "source": "https://www.leedsunited.com/en/news/the-latest-team-news-and-daniel-farkes-coventry-expectations",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Leeds",
+     "type": "mental",
+     "fait": "Leeds n'a pas perdu en novembre (dont un 4-1 à Chelsea) et est invaincu à Elland Road (2 victoires, 3 nuls).",
+     "source": "https://thefalse9.com/2026/11/leeds-united-vs-coventry-city-predicted-lineup-team-news-28-november.html",
+     "date": "2026-11-27"
+    },
+    {
+     "equipe": "Coventry",
+     "type": "physique",
+     "fait": "Cinq joueurs manquent le match : Awoniyi, Haji Wright, Eccles, Amenda et Mason-Clark (Woolfenden aussi cité blessé au genou).",
+     "source": "https://www.goal.com/en-gb/news/leeds-united-v-coventry-city-preview-team-news-injury-latest/blt54f08fea8a825aaa",
+     "date": "2026-11-27"
+    },
+    {
+     "equipe": "Coventry",
+     "type": "enjeu",
+     "fait": "Coventry (promu, entraîné par Frank Lampard) a 3 points d'avance sur la zone rouge et a gagné 4 de ses 7 derniers matchs, dont le dernier contre Crystal Palace.",
+     "source": "https://thefalse9.com/2026/11/leeds-united-vs-coventry-city-predicted-lineup-team-news-28-november.html",
+     "date": "2026-11-27"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-28-e0-manchester-united-brentford",
+   "date": "2026-11-28",
+   "heure": "16:00",
+   "comp": "E0",
+   "competition": "Premier League",
+   "tour": "12e journée",
+   "dom": "Man United",
+   "ext": "Brentford",
+   "dom_affiche": "Manchester United",
+   "ext_affiche": "Brentford",
+   "neutre": false,
+   "p1": 0.4,
+   "pN": 0.281,
+   "p2": 0.319,
+   "pronostic": "1",
+   "favori": "Manchester United",
+   "double_chance": {
+    "issue": "1N",
+    "proba": 0.681
+   },
+   "p_modele": {
+    "p1": 0.4,
+    "pN": 0.281,
+    "p2": 0.319
+   },
+   "proba_favori": 0.4,
+   "confiance": "Léger avantage",
+   "score_probable": "1-0",
+   "buts_dom": 1.39,
+   "buts_ext": 1.28,
+   "plus_2_5": 0.498,
+   "facteurs": {
+    "dom": {
+     "rang": 19,
+     "pts": 8,
+     "j": 10,
+     "v": 1,
+     "n": 5,
+     "d": 4,
+     "bp": 14,
+     "bc": 19,
+     "elo": 1805,
+     "elo_septembre": 1889,
+     "derniers": [
+      {
+       "date": "2026-11-25",
+       "comp": "UCL",
+       "adv": "Sp Lisbon",
+       "lieu": "ext",
+       "score": "2-2",
+       "res": "N"
+      }
+     ],
+     "buts_par_match": 3.3,
+     "jours_repos": 3
+    },
+    "ext": {
+     "rang": 6,
+     "pts": 17,
+     "j": 11,
+     "v": 4,
+     "n": 5,
+     "d": 2,
+     "bp": 20,
+     "bc": 11,
+     "elo": 1839,
+     "elo_septembre": 1828,
+     "derniers": [
+      {
+       "date": "2026-11-23",
+       "comp": "E0",
+       "adv": "Everton",
+       "lieu": "dom",
+       "score": "4-0",
+       "res": "V"
+      }
+     ],
+     "buts_par_match": 2.82,
+     "jours_repos": 5
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Manchester United 1805, Brentford 1839 (34 pts en faveur de Brentford).",
+    "Avantage du terrain pour Manchester United (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Manchester United en baisse depuis septembre (-84 pts d'Elo).",
+    "Classement : Manchester United 19e (8 pts en 10 matchs), Brentford 6e (17 pts en 11 matchs).",
+    "Manchester United a joué il y a 3 jours : peu de récupération.",
+    "Match serré : le nul est une vraie option (28 %)."
+   ],
+   "lecture": "Match ouvert, léger avantage à Manchester United (40 %), double chance 1N à 68 %. Brentford a un meilleur Elo, mais joue sans Igor Thiago (suspendu) ni trois défenseurs ; United, 19e, vient de changer d'entraîneur (Pochettino, depuis le 13/11) et attend Bruno Fernandes. Rappel du 23/11 : Brentford, déjà diminué, avait gagné 4-0.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Manchester United",
+     "type": "coach",
+     "fait": "Mauricio Pochettino a été nommé le 13/11/2026 après le limogeage de Michael Carrick (12/11) ; son premier match était à Anfield le 22/11.",
+     "source": "https://www.aljazeera.com/sports/2026/11/13/manchester-united-new-manager-mauricio-pochettino-usa-soccer",
+     "date": "2026-11-13"
+    },
+    {
+     "equipe": "Manchester United",
+     "type": "coach",
+     "fait": "Sous Pochettino : défaite 4-0 à Liverpool puis nul 2-2 contre le Sporting en Ligue des champions cette semaine.",
+     "source": "https://www.rotowire.com/betting/soccer/game/manchester-united-vs-brentford-odds-2026-11-28-2645312",
+     "date": "2026-11-28"
+    },
+    {
+     "equipe": "Manchester United",
+     "type": "physique",
+     "fait": "Bruno Fernandes (malade) sera évalué le matin du match ; Baleba (10-12 semaines) et Rashford sont absents.",
+     "source": "https://www.rotowire.com/betting/soccer/game/manchester-united-vs-brentford-odds-2026-11-28-2645312",
+     "date": "2026-11-28"
+    },
+    {
+     "equipe": "Brentford",
+     "type": "physique",
+     "fait": "Igor Thiago purge une suspension de 3 matchs qui inclut le déplacement à Old Trafford.",
+     "source": "https://dailycannon.com/2026/11/brentford-igor-thiago-arsenal-ban/",
+     "date": "2026-11-11"
+    },
+    {
+     "equipe": "Brentford",
+     "type": "physique",
+     "fait": "Keith Andrews est privé de Rico Henry, Aaron Hickey et Nathan Collins (blessés), mais Brentford sort d'un 4-0 contre Everton.",
+     "source": "https://www.rotowire.com/betting/soccer/game/manchester-united-vs-brentford-odds-2026-11-28-2645312",
+     "date": "2026-11-28"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-28-sp1-malaga-athletic-bilbao",
+   "date": "2026-11-28",
+   "heure": "16:15",
+   "comp": "SP1",
+   "competition": "Liga",
+   "tour": "14e journée",
+   "dom": "Malaga",
+   "ext": "Ath Bilbao",
+   "dom_affiche": "Málaga",
+   "ext_affiche": "Athletic Bilbao",
+   "neutre": false,
+   "p1": 0.277,
+   "pN": 0.263,
+   "p2": 0.46,
+   "pronostic": "2",
+   "favori": "Athletic Bilbao",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.277,
+    "pN": 0.263,
+    "p2": 0.46
+   },
+   "proba_favori": 0.46,
+   "confiance": "Léger avantage",
+   "score_probable": "0-1",
+   "buts_dom": 1.03,
+   "buts_ext": 1.53,
+   "plus_2_5": 0.473,
+   "facteurs": {
+    "dom": {
+     "rang": 20,
+     "pts": 5,
+     "j": 12,
+     "v": 0,
+     "n": 5,
+     "d": 7,
+     "bp": 9,
+     "bc": 23,
+     "elo": 1528,
+     "elo_septembre": 1558,
+     "derniers": [],
+     "buts_par_match": 2.67
+    },
+    "ext": {
+     "rang": 9,
+     "pts": 16,
+     "j": 12,
+     "v": 4,
+     "n": 4,
+     "d": 4,
+     "bp": 15,
+     "bc": 12,
+     "elo": 1715,
+     "elo_septembre": 1682,
+     "derniers": [],
+     "buts_par_match": 2.25
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Málaga 1528, Athletic Bilbao 1715 (187 pts en faveur de Athletic Bilbao).",
+    "Avantage du terrain pour Málaga (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Málaga en baisse depuis septembre (-30 pts d'Elo).",
+    "Athletic Bilbao en forme depuis septembre (+34 pts d'Elo).",
+    "Classement : Málaga 20e (5 pts en 12 matchs), Athletic Bilbao 9e (16 pts en 12 matchs)."
+   ],
+   "lecture": "Victoire de l'Athletic (46 %), score probable 0-1. L'Athletic a 187 points d'Elo de plus face au dernier de Liga, qui n'a toujours pas gagné. Mais Bilbao est privé de Vivian, Guruzeta et Sannadi : un nul (26 %) ou un premier succès de Málaga restent possibles.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Málaga",
+     "type": "coach",
+     "fait": "Juanfran Funes est toujours l'entraîneur, mais son maintien était discuté début novembre ; Málaga n'a toujours pas gagné en Liga.",
+     "source": "https://www.fichajes.net/noticias/nombres-banquillo-malaga-cf-20261107.html",
+     "date": "2026-11-07"
+    },
+    {
+     "equipe": "Málaga",
+     "type": "physique",
+     "fait": "Rafita Garrido (ischios), Aarón Ochoa (ménisque) et Lobete (ligament croisé) sont forfaits.",
+     "source": "https://www.comuniate.com/partido/26/6/14/malaga-athletic-club",
+     "date": "2026-11-28"
+    },
+    {
+     "equipe": "Málaga",
+     "type": "enjeu",
+     "fait": "Málaga, 20e avec 5 points, n'a gagné aucun de ses 6 matchs à domicile (3 nuls, 3 défaites).",
+     "source": "https://www.comuniate.com/partido/26/6/14/malaga-athletic-club",
+     "date": "2026-11-28"
+    },
+    {
+     "equipe": "Athletic Bilbao",
+     "type": "physique",
+     "fait": "L'Athletic est privé de Dani Vivian, Guruzeta (ligament croisé), Sannadi, Asier Hierro et Unai Egiluz.",
+     "source": "https://www.comuniate.com/partido/26/6/14/malaga-athletic-club",
+     "date": "2026-11-28"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-28-t1-gaziantep-amedspor",
+   "date": "2026-11-28",
+   "heure": "17:00",
+   "comp": "T1",
+   "competition": "Süper Lig",
+   "tour": "13e journée",
+   "dom": "Gaziantep",
+   "ext": "Amedspor",
+   "dom_affiche": "Gaziantep",
+   "ext_affiche": "Amedspor",
+   "neutre": false,
+   "p1": 0.237,
+   "pN": 0.232,
+   "p2": 0.531,
+   "pronostic": "2",
+   "favori": "Amedspor",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.237,
+    "pN": 0.232,
+    "p2": 0.531
+   },
+   "proba_favori": 0.531,
+   "confiance": "Favori",
+   "score_probable": "0-1",
+   "buts_dom": 1.01,
+   "buts_ext": 1.82,
+   "plus_2_5": 0.536,
+   "facteurs": {
+    "dom": {
+     "rang": 16,
+     "pts": 8,
+     "j": 12,
+     "v": 2,
+     "n": 2,
+     "d": 8,
+     "bp": 9,
+     "bc": 20,
+     "elo": 1318,
+     "elo_septembre": 1402,
+     "derniers": [],
+     "buts_par_match": 2.42
+    },
+    "ext": {
+     "rang": 3,
+     "pts": 23,
+     "j": 12,
+     "v": 7,
+     "n": 2,
+     "d": 3,
+     "bp": 28,
+     "bc": 17,
+     "elo": 1545,
+     "elo_septembre": 1501,
+     "derniers": [],
+     "buts_par_match": 3.75
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Gaziantep 1318, Amedspor 1545 (227 pts en faveur de Amedspor).",
+    "Avantage du terrain pour Gaziantep (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Gaziantep en baisse depuis septembre (-84 pts d'Elo).",
+    "Amedspor en forme depuis septembre (+44 pts d'Elo).",
+    "Classement : Gaziantep 16e (8 pts en 12 matchs), Amedspor 3e (23 pts en 12 matchs)."
+   ],
+   "lecture": "Victoire d'Amedspor (53 %), score probable 0-1. Amedspor, 3e, a 227 points d'Elo de plus que Gaziantep, qui sortait de six défaites de suite. Volkan Demirel dirige ici son premier match de championnat avec Gaziantep : l'effet « nouvel entraîneur » est la principale inconnue.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Gaziantep",
+     "type": "coach",
+     "fait": "Gaziantep a commencé avec Mirel Radoi, parti après la 3e journée, puis Orhan Ak ; l'équipe restait sur 6 défaites de suite.",
+     "source": "https://www.beinsports.com.tr/haber/gaziantep-fkdan-tarihindeki-en-kotu-baslangic?amp=1",
+     "date": "2026-11-09"
+    },
+    {
+     "equipe": "Gaziantep",
+     "type": "coach",
+     "fait": "Volkan Demirel a signé le 16/11/2026 comme nouvel entraîneur de Gaziantep : c'est son premier match de championnat sur le banc.",
+     "source": "https://beinsports.com.tr/haber/gaziantep-fkde-volkan-demirel-donemi-resmen-basladi",
+     "date": "2026-11-16"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-28-f1-angers-lens",
+   "date": "2026-11-28",
+   "heure": "17:15",
+   "comp": "F1",
+   "competition": "Ligue 1",
+   "tour": "12e journée",
+   "dom": "Angers",
+   "ext": "Lens",
+   "dom_affiche": "Angers",
+   "ext_affiche": "Lens",
+   "neutre": false,
+   "p1": 0.267,
+   "pN": 0.25,
+   "p2": 0.483,
+   "pronostic": "2",
+   "favori": "Lens",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.267,
+    "pN": 0.25,
+    "p2": 0.483
+   },
+   "proba_favori": 0.483,
+   "confiance": "Favori",
+   "score_probable": "0-1",
+   "buts_dom": 1.03,
+   "buts_ext": 1.59,
+   "plus_2_5": 0.487,
+   "facteurs": {
+    "dom": {
+     "rang": 16,
+     "pts": 8,
+     "j": 10,
+     "v": 2,
+     "n": 2,
+     "d": 6,
+     "bp": 9,
+     "bc": 19,
+     "elo": 1529,
+     "elo_septembre": 1572,
+     "derniers": [],
+     "buts_par_match": 2.8
+    },
+    "ext": {
+     "rang": 11,
+     "pts": 13,
+     "j": 10,
+     "v": 4,
+     "n": 1,
+     "d": 5,
+     "bp": 17,
+     "bc": 15,
+     "elo": 1710,
+     "elo_septembre": 1762,
+     "derniers": [
+      {
+       "date": "2026-11-24",
+       "comp": "UCL",
+       "adv": "RB Leipzig",
+       "lieu": "ext",
+       "score": "1-3",
+       "res": "D"
+      }
+     ],
+     "buts_par_match": 3.2,
+     "jours_repos": 4
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Angers 1529, Lens 1710 (181 pts en faveur de Lens).",
+    "Avantage du terrain pour Angers (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Angers en baisse depuis septembre (-42 pts d'Elo).",
+    "Lens en baisse depuis septembre (-52 pts d'Elo).",
+    "Classement : Angers 16e (8 pts en 10 matchs), Lens 11e (13 pts en 10 matchs)."
+   ],
+   "lecture": "Victoire de Lens (48 %), score probable 0-1. Lens a 181 points d'Elo de plus, mais il a joué à Leipzig mardi (défaite 3-1), il est privé d'Edouard et Aguilar, et Digard n'est arrivé que mi-novembre. Angers à domicile peut accrocher un nul (25 %).",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Lens",
+     "type": "coach",
+     "fait": "Didier Digard a remplacé Yannick Cahuzac le 14/11, lui-même successeur de Dino Toppmöller : 3e entraîneur de la saison.",
+     "source": "https://www.dhnet.be/dernieres-depeches/2026/11/14/ligue-1-didier-digard-remplace-yannick-cahuzac-sur-le-banc-lensois-NRBKZJCO3NAADNY6HTYGNYB5BM/",
+     "date": "2026-11-14"
+    },
+    {
+     "equipe": "Lens",
+     "type": "coach",
+     "fait": "Pour son premier match, Digard a obtenu un nul 1-1 contre Toulouse le 21/11.",
+     "source": "https://www.flashscore.fr/actualites/football-ligue-1-essayer-de-rouvrir-leurs-plaies-toulouse-veut-tester-le-rc-lens-de-digard/pp8cwspQ/",
+     "date": "2026-11-21"
+    },
+    {
+     "equipe": "Lens",
+     "type": "logistique",
+     "fait": "Lens a perdu 3-1 à Leipzig en Ligue des champions mardi.",
+     "source": "https://www.sportschau.de/live-und-ergebnisse/fussball/uefa-champions-league/ma12518001/rb-leipzig_rc-lens/spiel-spiele-und-ergebnisse",
+     "date": "2026-11-24"
+    },
+    {
+     "equipe": "Angers",
+     "type": "coach",
+     "fait": "Stéphane Gilli entraîne Angers depuis le 9 juin 2026.",
+     "source": "https://www.maxifoot.fr/info-457449_260609/football.php",
+     "date": "2026-06-09"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-28-i1-torino-lazio",
+   "date": "2026-11-28",
+   "heure": "18:00",
+   "comp": "I1",
+   "competition": "Serie A",
+   "tour": "13e journée",
+   "dom": "Torino",
+   "ext": "Lazio",
+   "dom_affiche": "Torino",
+   "ext_affiche": "Lazio",
+   "neutre": false,
+   "p1": 0.265,
+   "pN": 0.273,
+   "p2": 0.462,
+   "pronostic": "2",
+   "favori": "Lazio",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.25,
+    "pN": 0.258,
+    "p2": 0.492
+   },
+   "proba_favori": 0.462,
+   "confiance": "Léger avantage",
+   "score_probable": "0-1",
+   "buts_dom": 1.01,
+   "buts_ext": 1.66,
+   "plus_2_5": 0.499,
+   "facteurs": {
+    "dom": {
+     "rang": 12,
+     "pts": 14,
+     "j": 11,
+     "v": 4,
+     "n": 2,
+     "d": 5,
+     "bp": 15,
+     "bc": 17,
+     "elo": 1680,
+     "elo_septembre": 1641,
+     "derniers": [],
+     "buts_par_match": 2.91
+    },
+    "ext": {
+     "rang": 1,
+     "pts": 29,
+     "j": 11,
+     "v": 9,
+     "n": 2,
+     "d": 0,
+     "bp": 25,
+     "bc": 9,
+     "elo": 1863,
+     "elo_septembre": 1757,
+     "derniers": [],
+     "buts_par_match": 3.09
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Torino 1680, Lazio 1863 (183 pts en faveur de Lazio).",
+    "Avantage du terrain pour Torino (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Torino en forme depuis septembre (+39 pts d'Elo).",
+    "Lazio en forme depuis septembre (+107 pts d'Elo).",
+    "Classement : Torino 12e (14 pts en 11 matchs), Lazio 1e (29 pts en 11 matchs)."
+   ],
+   "lecture": "Victoire de la Lazio (46 % après ajustement), score probable 0-1. Le leader invaincu de Gattuso a 183 points d'Elo de plus qu'un Torino qui n'a gagné qu'une fois en cinq matchs. On a retiré 3 points à la Lazio, privée de Taylor, Tavares, Sutalo et Marusic : le nul (27 %) est l'alternative crédible.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Torino",
+     "type": "coach",
+     "fait": "Ignazio Abate entraîne le Torino depuis le 12/06/2026, où il a succédé à D'Aversa (avant la saison).",
+     "source": "https://www.corrieredellosport.it/news/calcio/serie-a/torino/2026/06/12-149150590/torino_ufficiale_l_addio_di_d_aversa_il_comunicato",
+     "date": "2026-06-12"
+    },
+    {
+     "equipe": "Torino",
+     "type": "mental",
+     "fait": "Le Torino a une seule victoire sur ses 5 derniers matchs et reste sur une défaite 1-0 contre Naples ; Ismajli, Israel et Belghali sont indisponibles.",
+     "source": "https://www.goal.com/it/notizie/torino-lazio-anteprime-ultime-notizie-indisponibili/blt8404cda48ca5a2da",
+     "date": "2026-11-27"
+    },
+    {
+     "equipe": "Lazio",
+     "type": "coach",
+     "fait": "Gennaro Gattuso entraîne la Lazio depuis le 23/06/2026 (après Sarri).",
+     "source": "https://www.corrieredellosport.it/news/calcio/serie-a/lazio/2026/06/23-149409161/gattuso_il_nuovo_allenatore_della_lazio_arriva_l_ufficialit_il_comunicato",
+     "date": "2026-06-23"
+    },
+    {
+     "equipe": "Lazio",
+     "type": "enjeu",
+     "fait": "La Lazio est leader invaincue (10 victoires, 2 nuls) et sort d'un 3-0 contre Lecce.",
+     "source": "https://www.lazionews.eu/notizie/probabili-formazioni-torino-lazio/",
+     "date": "2026-11-28"
+    },
+    {
+     "equipe": "Lazio",
+     "type": "physique",
+     "fait": "Taylor, Tavares, Sutalo et Marusic sont forfaits ; Dele-Bashiru remplace Taylor et Zaccagni revient.",
+     "source": "https://www.toro.it/toro/partite/torino-lazio-probabile-formazione-gattuso-26-27/1449325/",
+     "date": "2026-11-28"
+    }
+   ],
+   "ajustement": 3,
+   "resultat": null,
+   "correct": null,
+   "ajustement_raison": "Lazio privée de quatre titulaires (Taylor, Tavares, Sutalo, Marusic), annoncés par la presse spécialisée du club : -3 points sur la victoire de la Lazio."
+  },
+  {
+   "id": "2026-11-28-e0-ipswich-aston-villa",
+   "date": "2026-11-28",
+   "heure": "18:30",
+   "comp": "E0",
+   "competition": "Premier League",
+   "tour": "12e journée",
+   "dom": "Ipswich",
+   "ext": "Aston Villa",
+   "dom_affiche": "Ipswich",
+   "ext_affiche": "Aston Villa",
+   "neutre": false,
+   "p1": 0.244,
+   "pN": 0.232,
+   "p2": 0.523,
+   "pronostic": "2",
+   "favori": "Aston Villa",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.244,
+    "pN": 0.232,
+    "p2": 0.523
+   },
+   "proba_favori": 0.523,
+   "confiance": "Favori",
+   "score_probable": "0-1",
+   "buts_dom": 1.01,
+   "buts_ext": 1.76,
+   "plus_2_5": 0.524,
+   "facteurs": {
+    "dom": {
+     "rang": 15,
+     "pts": 11,
+     "j": 11,
+     "v": 3,
+     "n": 2,
+     "d": 6,
+     "bp": 15,
+     "bc": 22,
+     "elo": 1647,
+     "elo_septembre": 1634,
+     "derniers": [],
+     "buts_par_match": 3.36
+    },
+    "ext": {
+     "rang": 11,
+     "pts": 14,
+     "j": 11,
+     "v": 3,
+     "n": 5,
+     "d": 3,
+     "bp": 14,
+     "bc": 17,
+     "elo": 1854,
+     "elo_septembre": 1860,
+     "derniers": [
+      {
+       "date": "2026-11-24",
+       "comp": "UCL",
+       "adv": "Galatasaray",
+       "lieu": "ext",
+       "score": "0-1",
+       "res": "D"
+      }
+     ],
+     "buts_par_match": 2.82,
+     "jours_repos": 4
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Ipswich 1647, Aston Villa 1854 (206 pts en faveur de Aston Villa).",
+    "Avantage du terrain pour Ipswich (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Classement : Ipswich 15e (11 pts en 11 matchs), Aston Villa 11e (14 pts en 11 matchs)."
+   ],
+   "lecture": "Victoire d'Aston Villa (52 %), score probable 0-1. Villa a 206 points d'Elo de plus, mais sort d'une défaite à Galatasaray mardi et d'un 0-0 contre Sunderland. Ipswich récupère Leif Davis et Lukic : un résultat du promu (48 % de chances de ne pas perdre) n'aurait rien d'étonnant.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Ipswich",
+     "type": "coach",
+     "fait": "Gary O'Neil est l'entraîneur d'Ipswich depuis juin 2026, où il a succédé à Kieran McKenna (avant la saison).",
+     "source": "https://www.beinsports.com/en-us/soccer/premier-league/articles/ipswich-finalise-oneil-appointment-after-mckenna-exit-2026-06-23",
+     "date": "2026-06-23"
+    },
+    {
+     "equipe": "Ipswich",
+     "type": "physique",
+     "fait": "Leif Davis revient de blessure et sera titulaire selon O'Neil, Sasa Lukic est de nouveau apte. Ipswich reste sur une défaite 2-0 à Tottenham.",
+     "source": "https://www.rotowire.com/betting/soccer/game/ipswich-town-vs-aston-villa-odds-2026-11-28-2645310",
+     "date": "2026-11-28"
+    },
+    {
+     "equipe": "Aston Villa",
+     "type": "logistique",
+     "fait": "Villa a perdu 1-0 à Galatasaray en Ligue des champions le 24/11, après un 0-0 contre Sunderland.",
+     "source": "https://www.rotowire.com/betting/soccer/game/ipswich-town-vs-aston-villa-odds-2026-11-28-2645310",
+     "date": "2026-11-28"
+    },
+    {
+     "equipe": "Aston Villa",
+     "type": "physique",
+     "fait": "Amadou Onana (genou, retour visé au printemps) et Ruggeri sont absents, Matty Cash est disponible.",
+     "source": "https://www.rotowire.com/betting/soccer/game/ipswich-town-vs-aston-villa-odds-2026-11-28-2645310",
+     "date": "2026-11-28"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-28-sp1-elche-atletico-de-madrid",
+   "date": "2026-11-28",
+   "heure": "18:30",
+   "comp": "SP1",
+   "competition": "Liga",
+   "tour": "14e journée",
+   "dom": "Elche",
+   "ext": "Ath Madrid",
+   "dom_affiche": "Elche",
+   "ext_affiche": "Atlético de Madrid",
+   "neutre": false,
+   "p1": 0.237,
+   "pN": 0.241,
+   "p2": 0.522,
+   "pronostic": "2",
+   "favori": "Atlético de Madrid",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.237,
+    "pN": 0.241,
+    "p2": 0.522
+   },
+   "proba_favori": 0.522,
+   "confiance": "Favori",
+   "score_probable": "0-1",
+   "buts_dom": 0.94,
+   "buts_ext": 1.69,
+   "plus_2_5": 0.488,
+   "facteurs": {
+    "dom": {
+     "rang": 19,
+     "pts": 11,
+     "j": 13,
+     "v": 2,
+     "n": 5,
+     "d": 6,
+     "bp": 15,
+     "bc": 21,
+     "elo": 1622,
+     "elo_septembre": 1609,
+     "derniers": [
+      {
+       "date": "2026-11-23",
+       "comp": "SP1",
+       "adv": "Levante",
+       "lieu": "ext",
+       "score": "1-1",
+       "res": "N"
+      }
+     ],
+     "buts_par_match": 2.77,
+     "jours_repos": 5
+    },
+    "ext": {
+     "rang": 3,
+     "pts": 28,
+     "j": 12,
+     "v": 9,
+     "n": 1,
+     "d": 2,
+     "bp": 23,
+     "bc": 10,
+     "elo": 1859,
+     "elo_septembre": 1816,
+     "derniers": [
+      {
+       "date": "2026-11-25",
+       "comp": "UCL",
+       "adv": "Viking",
+       "lieu": "dom",
+       "score": "2-0",
+       "res": "V"
+      }
+     ],
+     "buts_par_match": 2.75,
+     "jours_repos": 3
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Elche 1622, Atlético de Madrid 1859 (237 pts en faveur de Atlético de Madrid).",
+    "Avantage du terrain pour Elche (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Atlético de Madrid en forme depuis septembre (+43 pts d'Elo).",
+    "Classement : Elche 19e (11 pts en 13 matchs), Atlético de Madrid 3e (28 pts en 12 matchs).",
+    "Atlético de Madrid a joué il y a 3 jours : peu de récupération."
+   ],
+   "lecture": "Victoire de l'Atlético (52 %), score probable 0-1. L'Atlético a 237 points d'Elo de plus et a gagné 6 de ses 7 déplacements ; Elche n'a pas gagné chez lui. Sans Sørloth, Lookman ni Romero, l'Atlético peut manquer de tranchant.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Elche",
+     "type": "physique",
+     "fait": "Rubén Sánchez est forfait (adducteur) et Lemar est incertain.",
+     "source": "https://www.comuniate.com/partido/26/3/14/elche-atletico",
+     "date": "2026-11-28"
+    },
+    {
+     "equipe": "Elche",
+     "type": "enjeu",
+     "fait": "Elche, 19e, n'a gagné aucun de ses 6 matchs à domicile (1 nul, 5 défaites, 4 buts marqués, 14 encaissés).",
+     "source": "https://www.comuniate.com/partido/26/3/14/elche-atletico",
+     "date": "2026-11-28"
+    },
+    {
+     "equipe": "Atlético de Madrid",
+     "type": "physique",
+     "fait": "Cuti Romero, Lookman (genou) et Sørloth (rechute musculaire du 25/11) sont forfaits.",
+     "source": "https://www.comuniate.com/partido/26/3/14/elche-atletico",
+     "date": "2026-11-28"
+    },
+    {
+     "equipe": "Atlético de Madrid",
+     "type": "enjeu",
+     "fait": "L'Atlético a gagné 6 de ses 7 matchs à l'extérieur.",
+     "source": "https://www.comuniate.com/partido/26/3/14/elche-atletico",
+     "date": "2026-11-28"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-28-d1-vfb-stuttgart-eintracht-francfort",
+   "date": "2026-11-28",
+   "heure": "18:30",
+   "comp": "D1",
+   "competition": "Bundesliga",
+   "tour": "11e journée",
+   "dom": "Stuttgart",
+   "ext": "Ein Frankfurt",
+   "dom_affiche": "VfB Stuttgart",
+   "ext_affiche": "Eintracht Francfort",
+   "neutre": false,
+   "p1": 0.5,
+   "pN": 0.268,
+   "p2": 0.232,
+   "pronostic": "1",
+   "favori": "VfB Stuttgart",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.5,
+    "pN": 0.268,
+    "p2": 0.232
+   },
+   "proba_favori": 0.5,
+   "confiance": "Favori",
+   "score_probable": "2-1",
+   "buts_dom": 1.79,
+   "buts_ext": 1.18,
+   "plus_2_5": 0.569,
+   "facteurs": {
+    "dom": {
+     "rang": 9,
+     "pts": 13,
+     "j": 10,
+     "v": 4,
+     "n": 1,
+     "d": 5,
+     "bp": 15,
+     "bc": 15,
+     "elo": 1732,
+     "elo_septembre": 1758,
+     "derniers": [
+      {
+       "date": "2026-11-25",
+       "comp": "UCL",
+       "adv": "Inter",
+       "lieu": "ext",
+       "score": "0-2",
+       "res": "D"
+      }
+     ],
+     "buts_par_match": 3.0,
+     "jours_repos": 3
+    },
+    "ext": {
+     "rang": 7,
+     "pts": 15,
+     "j": 10,
+     "v": 4,
+     "n": 3,
+     "d": 3,
+     "bp": 16,
+     "bc": 20,
+     "elo": 1681,
+     "elo_septembre": 1685,
+     "derniers": [],
+     "buts_par_match": 3.6
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : VfB Stuttgart 1732, Eintracht Francfort 1681 (51 pts en faveur de VfB Stuttgart).",
+    "Avantage du terrain pour VfB Stuttgart (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "VfB Stuttgart en baisse depuis septembre (-26 pts d'Elo).",
+    "Classement : VfB Stuttgart 9e (13 pts en 10 matchs), Eintracht Francfort 7e (15 pts en 10 matchs).",
+    "VfB Stuttgart a joué il y a 3 jours : peu de récupération."
+   ],
+   "lecture": "Victoire de Stuttgart (50 %), score probable 2-1. Stuttgart a un meilleur Elo et joue à domicile, mais il a joué à l'Inter mercredi alors que Francfort, sans Coupe d'Europe, est reposé et invaincu sur ses quatre derniers matchs. Match plus serré que l'écart d'Elo ne le dit.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "VfB Stuttgart",
+     "type": "logistique",
+     "fait": "Stuttgart a perdu 2-0 à l'Inter en Ligue des champions le mercredi 25 novembre.",
+     "source": "https://www.espn.com/soccer/match/_/gameId/401915376/vfb-stuttgart-internazionale",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "VfB Stuttgart",
+     "type": "mental",
+     "fait": "Stuttgart (entraîneur Sebastian Hoeneß) est invaincu lors de ses trois derniers matchs de Bundesliga, dont un 0-0 contre Schalke, et n'a pas de souci d'effectif signalé.",
+     "source": "https://footballwhispers.com/blog/stuttgart-vs-eintracht-frankfurt-prediction-28-11-2026/",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Eintracht Francfort",
+     "type": "coach",
+     "fait": "Adi Hütter entraîne Francfort depuis le 1er juillet 2026 ; il a succédé à Albert Riera, parti d'un commun accord le 17 mai 2026. Le changement a eu lieu avant la saison.",
+     "source": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Bundesliga",
+     "date": "2026-07-01"
+    },
+    {
+     "equipe": "Eintracht Francfort",
+     "type": "mental",
+     "fait": "Francfort reste sur quatre matchs sans défaite (3 victoires, 1 nul) et Can Uzun pourrait revenir après une maladie.",
+     "source": "https://footballwhispers.com/blog/stuttgart-vs-eintracht-frankfurt-prediction-28-11-2026/",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Eintracht Francfort",
+     "type": "logistique",
+     "fait": "Francfort ne dispute aucune coupe d'Europe en 2026-27 : il est reposé face à un Stuttgart qui a joué mercredi.",
+     "source": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Eintracht_Frankfurt_season",
+     "date": "2026-11-28"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-28-i1-inter-milan-genoa",
+   "date": "2026-11-28",
+   "heure": "20:45",
+   "comp": "I1",
+   "competition": "Serie A",
+   "tour": "13e journée",
+   "dom": "Inter",
+   "ext": "Genoa",
+   "dom_affiche": "Inter Milan",
+   "ext_affiche": "Genoa",
+   "neutre": false,
+   "p1": 0.767,
+   "pN": 0.157,
+   "p2": 0.076,
+   "pronostic": "1",
+   "favori": "Inter Milan",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.767,
+    "pN": 0.157,
+    "p2": 0.076
+   },
+   "proba_favori": 0.767,
+   "confiance": "Net favori",
+   "score_probable": "2-0",
+   "buts_dom": 2.51,
+   "buts_ext": 0.66,
+   "plus_2_5": 0.613,
+   "facteurs": {
+    "dom": {
+     "rang": 2,
+     "pts": 28,
+     "j": 11,
+     "v": 9,
+     "n": 1,
+     "d": 1,
+     "bp": 28,
+     "bc": 13,
+     "elo": 1967,
+     "elo_septembre": 1943,
+     "derniers": [
+      {
+       "date": "2026-11-25",
+       "comp": "UCL",
+       "adv": "Stuttgart",
+       "lieu": "dom",
+       "score": "2-0",
+       "res": "V"
+      }
+     ],
+     "buts_par_match": 3.73,
+     "jours_repos": 3
+    },
+    "ext": {
+     "rang": 13,
+     "pts": 13,
+     "j": 11,
+     "v": 4,
+     "n": 1,
+     "d": 6,
+     "bp": 11,
+     "bc": 16,
+     "elo": 1658,
+     "elo_septembre": 1633,
+     "derniers": [],
+     "buts_par_match": 2.45
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Inter Milan 1967, Genoa 1658 (310 pts en faveur de Inter Milan).",
+    "Avantage du terrain pour Inter Milan (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Classement : Inter Milan 2e (28 pts en 11 matchs), Genoa 13e (13 pts en 11 matchs).",
+    "Inter Milan a joué il y a 3 jours : peu de récupération."
+   ],
+   "lecture": "Victoire de l'Inter (77 %), score probable 2-0. L'Inter a 310 points d'Elo de plus et a battu Stuttgart mercredi. Il est privé de Calhanoglu, Bastoni et Bonny, et le Genoa de De Rossi a gagné 4 de ses 5 derniers matchs : c'est la seule raison de douter.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Inter Milan",
+     "type": "physique",
+     "fait": "Calhanoglu, Zielinski et Bonny sont blessés, et Bastoni serait forfait (problème musculaire).",
+     "source": "https://www.passioneinter.com/inter-news/inter-genoa-bastoni-calhanoglu-diouf-jones/",
+     "date": "2026-11-27"
+    },
+    {
+     "equipe": "Inter Milan",
+     "type": "logistique",
+     "fait": "L'Inter de Cristian Chivu a battu Stuttgart 2-0 en Ligue des champions mercredi.",
+     "source": "https://www.goal.com/it/notizie/inter-genoa-anteprime-match-ultime-notizie-indisponibili/bltc166ab6910d48894",
+     "date": "2026-11-27"
+    },
+    {
+     "equipe": "Genoa",
+     "type": "mental",
+     "fait": "Le Genoa de Daniele De Rossi a gagné 4 de ses 5 derniers matchs, dont un 2-0 contre la Juventus et un 2-0 à Sassuolo.",
+     "source": "https://www.goal.com/it/notizie/inter-genoa-anteprime-match-ultime-notizie-indisponibili/bltc166ab6910d48894",
+     "date": "2026-11-27"
+    },
+    {
+     "equipe": "Genoa",
+     "type": "physique",
+     "fait": "Colombo et Nuredini sont absents (blessés), aucun suspendu.",
+     "source": "https://www.goal.com/it/notizie/inter-genoa-anteprime-match-ultime-notizie-indisponibili/bltc166ab6910d48894",
+     "date": "2026-11-27"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-28-f1-le-havre-strasbourg",
+   "date": "2026-11-28",
+   "heure": "20:45",
+   "comp": "F1",
+   "competition": "Ligue 1",
+   "tour": "12e journée",
+   "dom": "Le Havre",
+   "ext": "Strasbourg",
+   "dom_affiche": "Le Havre",
+   "ext_affiche": "Strasbourg",
+   "neutre": false,
+   "p1": 0.285,
+   "pN": 0.249,
+   "p2": 0.465,
+   "pronostic": "2",
+   "favori": "Strasbourg",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.285,
+    "pN": 0.249,
+    "p2": 0.465
+   },
+   "proba_favori": 0.465,
+   "confiance": "Léger avantage",
+   "score_probable": "0-1",
+   "buts_dom": 1.06,
+   "buts_ext": 1.55,
+   "plus_2_5": 0.484,
+   "facteurs": {
+    "dom": {
+     "rang": 18,
+     "pts": 2,
+     "j": 10,
+     "v": 0,
+     "n": 2,
+     "d": 8,
+     "bp": 9,
+     "bc": 22,
+     "elo": 1497,
+     "elo_septembre": 1586,
+     "derniers": [],
+     "buts_par_match": 3.1
+    },
+    "ext": {
+     "rang": 13,
+     "pts": 10,
+     "j": 10,
+     "v": 3,
+     "n": 1,
+     "d": 6,
+     "bp": 18,
+     "bc": 22,
+     "elo": 1663,
+     "elo_septembre": 1718,
+     "derniers": [],
+     "buts_par_match": 4.0
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Le Havre 1497, Strasbourg 1663 (166 pts en faveur de Strasbourg).",
+    "Avantage du terrain pour Le Havre (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Le Havre en baisse depuis septembre (-89 pts d'Elo).",
+    "Strasbourg en baisse depuis septembre (-55 pts d'Elo).",
+    "Classement : Le Havre 18e (2 pts en 10 matchs), Strasbourg 13e (10 pts en 10 matchs)."
+   ],
+   "lecture": "Victoire de Strasbourg (47 %), score probable 0-1. Strasbourg a 166 points d'Elo de plus qu'un Havre dernier avec 2 points. Les deux clubs viennent de changer d'entraîneur (Ismaël au Havre le 12/11, Matos à Strasbourg le 18/11) et ont perdu leur premier match : le terrain reste incertain.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Le Havre",
+     "type": "coach",
+     "fait": "Le Havre a suspendu Didier Digard début novembre après un 5-1 contre le PSG ; le président a démissionné.",
+     "source": "https://www.clickorlando.com/sports/2026/11/03/le-havre-fans-call-for-american-owners-to-leave-after-coachs-suspension-and-presidents-exit/",
+     "date": "2026-11-03"
+    },
+    {
+     "equipe": "Le Havre",
+     "type": "coach",
+     "fait": "Valérien Ismaël a été nommé entraîneur le 12/11/2026 ; défaite 3-1 à Troyes pour son premier match.",
+     "source": "https://outremers360.com/bassin-atlantique-appli/football-le-guadeloupeen-valerien-ismael-nomme-entraineur-du-havre-en-ligue-1",
+     "date": "2026-11-13"
+    },
+    {
+     "equipe": "Le Havre",
+     "type": "physique",
+     "fait": "Enzo Koffi, exclu à Troyes, est suspendu.",
+     "source": "https://www.sportsmole.co.uk/football/ligue-1/troyes-vs-le-havre_game_263040.html",
+     "date": "2026-11-20"
+    },
+    {
+     "equipe": "Strasbourg",
+     "type": "coach",
+     "fait": "Strasbourg a remplacé Hugo Oliveira par Vítor Matos le 18/11/2026 (4e entraîneur du club en 2026).",
+     "source": "https://www.sudradio.fr/sport-rugby/sport/ligue-1-oliveira-sen-va-deja-et-matos-arrive-a-strasbourg",
+     "date": "2026-11-18"
+    },
+    {
+     "equipe": "Strasbourg",
+     "type": "coach",
+     "fait": "Pour le premier match de Matos, Strasbourg a perdu 0-1 à domicile contre Brest le 21/11.",
+     "source": "https://www.sportsmole.co.uk/football/ligue-1/strasbourg-vs-brest_game_263197.html",
+     "date": "2026-11-21"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-28-f1-le-mans-lille",
+   "date": "2026-11-28",
+   "heure": "20:45",
+   "comp": "F1",
+   "competition": "Ligue 1",
+   "tour": "12e journée",
+   "dom": "Le Mans",
+   "ext": "Lille",
+   "dom_affiche": "Le Mans",
+   "ext_affiche": "Lille",
+   "neutre": false,
+   "p1": 0.153,
+   "pN": 0.192,
+   "p2": 0.655,
+   "pronostic": "2",
+   "favori": "Lille",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.153,
+    "pN": 0.192,
+    "p2": 0.655
+   },
+   "proba_favori": 0.655,
+   "confiance": "Net favori",
+   "score_probable": "0-2",
+   "buts_dom": 0.79,
+   "buts_ext": 2.09,
+   "plus_2_5": 0.55,
+   "facteurs": {
+    "dom": {
+     "rang": 15,
+     "pts": 8,
+     "j": 10,
+     "v": 1,
+     "n": 5,
+     "d": 4,
+     "bp": 12,
+     "bc": 19,
+     "elo": 1496,
+     "elo_septembre": 1471,
+     "derniers": [],
+     "buts_par_match": 3.1
+    },
+    "ext": {
+     "rang": 2,
+     "pts": 21,
+     "j": 10,
+     "v": 6,
+     "n": 3,
+     "d": 1,
+     "bp": 14,
+     "bc": 7,
+     "elo": 1824,
+     "elo_septembre": 1789,
+     "derniers": [
+      {
+       "date": "2026-11-25",
+       "comp": "UCL",
+       "adv": "Bayern Munich",
+       "lieu": "dom",
+       "score": "2-1",
+       "res": "V"
+      }
+     ],
+     "buts_par_match": 2.1,
+     "jours_repos": 3
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Le Mans 1496, Lille 1824 (328 pts en faveur de Lille).",
+    "Avantage du terrain pour Le Mans (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Le Mans en forme depuis septembre (+25 pts d'Elo).",
+    "Lille en forme depuis septembre (+35 pts d'Elo).",
+    "Classement : Le Mans 15e (8 pts en 10 matchs), Lille 2e (21 pts en 10 matchs).",
+    "Lille a joué il y a 3 jours : peu de récupération."
+   ],
+   "lecture": "Victoire de Lille (66 %), score probable 0-2. Lille a 328 points d'Elo de plus que le promu manceau et vient de battre le Bayern. Le risque : la fatigue et la décompression trois jours après ce gros match européen.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Lille",
+     "type": "logistique",
+     "fait": "Lille a battu le Bayern 2-1 en Ligue des champions mercredi, trois jours avant ce déplacement.",
+     "source": "https://www.foxsports.com/soccer/champions-league-lille-vs-bayern-munich-nov-25-2026-game-boxscore-1003408",
+     "date": "2026-11-25"
+    },
+    {
+     "equipe": "Lille",
+     "type": "physique",
+     "fait": "Tiago Santos (ligaments croisés) et Hamza Igamane sont absents.",
+     "source": "https://www.sportsmole.co.uk/football/lille/preview/lille-vs-lyon-prediction-team-news-lineups_609412.html",
+     "date": "2026-11-19"
+    },
+    {
+     "equipe": "Lille",
+     "type": "coach",
+     "fait": "Davide Ancelotti entraîne le LOSC depuis juin 2026.",
+     "source": "https://info.fr/lille-davide-ancelotti-nomme-entraineur-losc/",
+     "date": "2026-06-01"
+    },
+    {
+     "equipe": "Le Mans",
+     "type": "coach",
+     "fait": "Patrick Videira, en poste depuis 2024 (deux montées de suite), a prolongé jusqu'en 2029.",
+     "source": "https://sports.orange.fr/football/mercato/article/le-mans-videira-a-prolonge-jusqu-en-2029-exclu-CNT000002pVz5G.html",
+     "date": "2026-06-12"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-28-f1-nice-troyes",
+   "date": "2026-11-28",
+   "heure": "20:45",
+   "comp": "F1",
+   "competition": "Ligue 1",
+   "tour": "12e journée",
+   "dom": "Nice",
+   "ext": "Troyes",
+   "dom_affiche": "Nice",
+   "ext_affiche": "Troyes",
+   "neutre": false,
+   "p1": 0.674,
+   "pN": 0.203,
+   "p2": 0.123,
+   "pronostic": "1",
+   "favori": "Nice",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.674,
+    "pN": 0.203,
+    "p2": 0.123
+   },
+   "proba_favori": 0.674,
+   "confiance": "Net favori",
+   "score_probable": "2-0",
+   "buts_dom": 2.1,
+   "buts_ext": 0.77,
+   "plus_2_5": 0.548,
+   "facteurs": {
+    "dom": {
+     "rang": 7,
+     "pts": 17,
+     "j": 10,
+     "v": 5,
+     "n": 2,
+     "d": 3,
+     "bp": 15,
+     "bc": 12,
+     "elo": 1693,
+     "elo_septembre": 1620,
+     "derniers": [],
+     "buts_par_match": 2.7
+    },
+    "ext": {
+     "rang": 17,
+     "pts": 8,
+     "j": 10,
+     "v": 2,
+     "n": 2,
+     "d": 6,
+     "bp": 7,
+     "bc": 17,
+     "elo": 1489,
+     "elo_septembre": 1533,
+     "derniers": [],
+     "buts_par_match": 2.4
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Nice 1693, Troyes 1489 (204 pts en faveur de Nice).",
+    "Avantage du terrain pour Nice (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Nice en forme depuis septembre (+73 pts d'Elo).",
+    "Troyes en baisse depuis septembre (-45 pts d'Elo).",
+    "Classement : Nice 7e (17 pts en 10 matchs), Troyes 17e (8 pts en 10 matchs)."
+   ],
+   "lecture": "Victoire de Nice (67 %), score probable 2-0. Nice a 204 points d'Elo de plus et Troyes n'a plus gagné à Nice depuis 2017. Nice est privé de Bombito, Abergel et Mendy, et Troyes vient de battre Le Havre 3-1.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Nice",
+     "type": "physique",
+     "fait": "Abergel et Antoine Mendy (genou) sont absents longtemps, Bombito est forfait, Abdelmonem et Wahi sont incertains.",
+     "source": "https://www.sportsmole.co.uk/football/nice/preview/nice-vs-troyes-prediction-team-news-lineups_609865.html",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Nice",
+     "type": "mental",
+     "fait": "Nice reste sur une défaite 2-3 contre le PSG, après trois victoires de suite.",
+     "source": "https://www.sportsmole.co.uk/football/nice/preview/nice-vs-troyes-prediction-team-news-lineups_609865.html",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Nice",
+     "type": "coach",
+     "fait": "Olivier Pantaloni entraîne Nice depuis juin 2026.",
+     "source": "https://www.beinsports.com/en-au/football/ligue-1/articles-video/nice-names-pantaloni-as-puel-s-replacement-2026-06-18",
+     "date": "2026-06-18"
+    },
+    {
+     "equipe": "Troyes",
+     "type": "physique",
+     "fait": "Gozzi et Yacouba Koné sont forfaits, Ifnaoui incertain.",
+     "source": "https://www.sportsmole.co.uk/football/nice/preview/nice-vs-troyes-prediction-team-news-lineups_609865.html",
+     "date": "2026-11-26"
+    },
+    {
+     "equipe": "Troyes",
+     "type": "enjeu",
+     "fait": "Le promu troyen a battu Le Havre 3-1, mettant fin à six matchs sans victoire.",
+     "source": "https://www.sportsmole.co.uk/football/nice/preview/nice-vs-troyes-prediction-team-news-lineups_609865.html",
+     "date": "2026-11-26"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-28-f1-paris-saint-germain-lorient",
+   "date": "2026-11-28",
+   "heure": "20:45",
+   "comp": "F1",
+   "competition": "Ligue 1",
+   "tour": "12e journée",
+   "dom": "Paris SG",
+   "ext": "Lorient",
+   "dom_affiche": "Paris Saint-Germain",
+   "ext_affiche": "Lorient",
+   "neutre": false,
+   "p1": 0.739,
+   "pN": 0.171,
+   "p2": 0.09,
+   "pronostic": "1",
+   "favori": "Paris Saint-Germain",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.739,
+    "pN": 0.171,
+    "p2": 0.09
+   },
+   "proba_favori": 0.739,
+   "confiance": "Net favori",
+   "score_probable": "2-0",
+   "buts_dom": 2.37,
+   "buts_ext": 0.68,
+   "plus_2_5": 0.588,
+   "facteurs": {
+    "dom": {
+     "rang": 1,
+     "pts": 23,
+     "j": 10,
+     "v": 7,
+     "n": 2,
+     "d": 1,
+     "bp": 22,
+     "bc": 10,
+     "elo": 1945,
+     "elo_septembre": 1920,
+     "derniers": [
+      {
+       "date": "2026-11-25",
+       "comp": "UCL",
+       "adv": "Roma",
+       "lieu": "dom",
+       "score": "2-2",
+       "res": "N"
+      }
+     ],
+     "buts_par_match": 3.2,
+     "jours_repos": 3
+    },
+    "ext": {
+     "rang": 10,
+     "pts": 15,
+     "j": 10,
+     "v": 4,
+     "n": 3,
+     "d": 3,
+     "bp": 9,
+     "bc": 8,
+     "elo": 1676,
+     "elo_septembre": 1631,
+     "derniers": [],
+     "buts_par_match": 1.7
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Paris Saint-Germain 1945, Lorient 1676 (269 pts en faveur de Paris Saint-Germain).",
+    "Avantage du terrain pour Paris Saint-Germain (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Paris Saint-Germain en forme depuis septembre (+25 pts d'Elo).",
+    "Lorient en forme depuis septembre (+45 pts d'Elo).",
+    "Classement : Paris Saint-Germain 1e (23 pts en 10 matchs), Lorient 10e (15 pts en 10 matchs).",
+    "Paris Saint-Germain a joué il y a 3 jours : peu de récupération."
+   ],
+   "lecture": "Victoire du PSG (74 %), score probable 2-0. Le leader a 269 points d'Elo de plus que Lorient. Sans Doué ni Kvaratskhelia (annoncés absents par API-Football), il peut manquer de percussion, et Lorient (10e) n'est pas une équipe de bas de tableau.",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Paris Saint-Germain",
+     "type": "mental",
+     "fait": "Le PSG s'est imposé 3-2 à Nice le 21/11.",
+     "source": "https://www.sportsmole.co.uk/football/ligue-1/nice-vs-troyes_game_263648.html",
+     "date": "2026-11-21"
+    },
+    {
+     "equipe": "Lorient",
+     "type": "coach",
+     "fait": "Alexandre Dujeux entraîne Lorient depuis le 9 juin 2026.",
+     "source": "https://sports.orange.fr/football/mercato/article/alexandre-dujeux-prend-les-renes-du-fc-lorient-officiel-exclu-CNT000002pRHOl.html",
+     "date": "2026-06-09"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  },
+  {
+   "id": "2026-11-28-sp1-real-madrid-alaves",
+   "date": "2026-11-28",
+   "heure": "21:00",
+   "comp": "SP1",
+   "competition": "Liga",
+   "tour": "14e journée",
+   "dom": "Real Madrid",
+   "ext": "Alaves",
+   "dom_affiche": "Real Madrid",
+   "ext_affiche": "Alavés",
+   "neutre": false,
+   "p1": 0.805,
+   "pN": 0.136,
+   "p2": 0.059,
+   "pronostic": "1",
+   "favori": "Real Madrid",
+   "double_chance": null,
+   "p_modele": {
+    "p1": 0.805,
+    "pN": 0.136,
+    "p2": 0.059
+   },
+   "proba_favori": 0.805,
+   "confiance": "Net favori",
+   "score_probable": "2-0",
+   "buts_dom": 2.64,
+   "buts_ext": 0.59,
+   "plus_2_5": 0.627,
+   "facteurs": {
+    "dom": {
+     "rang": 2,
+     "pts": 33,
+     "j": 13,
+     "v": 11,
+     "n": 0,
+     "d": 2,
+     "bp": 33,
+     "bc": 11,
+     "elo": 1959,
+     "elo_septembre": 1932,
+     "derniers": [
+      {
+       "date": "2026-11-24",
+       "comp": "UCL",
+       "adv": "PSV Eindhoven",
+       "lieu": "dom",
+       "score": "5-1",
+       "res": "V"
+      }
+     ],
+     "buts_par_match": 3.38,
+     "jours_repos": 4
+    },
+    "ext": {
+     "rang": 8,
+     "pts": 16,
+     "j": 13,
+     "v": 4,
+     "n": 4,
+     "d": 5,
+     "bp": 18,
+     "bc": 18,
+     "elo": 1635,
+     "elo_septembre": 1671,
+     "derniers": [],
+     "buts_par_match": 2.77
+    }
+   },
+   "raisons": [
+    "Écart d'Elo : Real Madrid 1959, Alavés 1635 (324 pts en faveur de Real Madrid).",
+    "Avantage du terrain pour Real Madrid (environ +65 pts d'Elo, soit 7 à 8 points de % en plus).",
+    "Real Madrid en forme depuis septembre (+27 pts d'Elo).",
+    "Alavés en baisse depuis septembre (-36 pts d'Elo).",
+    "Classement : Real Madrid 2e (33 pts en 13 matchs), Alavés 8e (16 pts en 13 matchs)."
+   ],
+   "lecture": "Victoire du Real Madrid (80 %), score probable 2-0. Le Real a 324 points d'Elo de plus et joue au Bernabéu. Sans Alexander-Arnold (grippe) ni Rodrygo, il reste très largement favori ; une surprise d'Alavés est peu probable (6 %).",
+   "repere_sportradar": null,
+   "contexte": [
+    {
+     "equipe": "Real Madrid",
+     "type": "physique",
+     "fait": "Mourinho a annoncé le retour de Mendy et l'absence d'Alexander-Arnold (grippe) et de Rodrygo ; Endrick et Asencio sont aussi forfaits.",
+     "source": "https://www.comuniate.com/partido/26/8/14/real-madrid-alaves",
+     "date": "2026-11-27"
+    },
+    {
+     "equipe": "Real Madrid",
+     "type": "coach",
+     "fait": "José Mourinho entraîne le Real Madrid depuis le 11 juin 2026, avant le début de la saison.",
+     "source": "https://www.infobae.com/espana/deportes/2026/06/11/el-real-madrid-hace-oficial-el-fichaje-de-jose-mourinho-como-nuevo-entrenador/",
+     "date": "2026-06-11"
+    },
+    {
+     "equipe": "Real Madrid",
+     "type": "logistique",
+     "fait": "Le Real a joué le PSV en Ligue des champions mardi.",
+     "source": "https://www.comuniate.com/partido/26/8/14/real-madrid-alaves",
+     "date": "2026-11-28"
+    },
+    {
+     "equipe": "Alavés",
+     "type": "physique",
+     "fait": "Alavés est privé de Hugo Novoa, Benavidez, Facundo Garcés et Mikel Rodríguez.",
+     "source": "https://www.comuniate.com/partido/26/8/14/real-madrid-alaves",
+     "date": "2026-11-28"
+    }
+   ],
+   "ajustement": 0,
+   "resultat": null,
+   "correct": null
+  }
+ ],
+ "meta": {
+  "test": {
+   "saisons": [
+    2023,
+    2024,
+    2025
+   ],
+   "matchs": 8813,
+   "reussite_modele": 0.53,
+   "logloss_modele": 0.9727,
+   "reussite_bookmakers": 0.544,
+   "logloss_bookmakers": 0.9605,
+   "reussite_toujours_domicile": 0.4332,
+   "taux_nuls": 0.2576,
+   "par_ligue": {
+    "Premier League": 0.53,
+    "Liga": 0.532,
+    "Serie A": 0.536,
+    "Ligue 1": 0.519,
+    "Bundesliga": 0.51,
+    "Süper Lig": 0.541,
+    "Eredivisie": 0.54,
+    "Liga Portugal": 0.562,
+    "Pro League": 0.501
+   }
+  }
+ }
+}
