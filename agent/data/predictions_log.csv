@@ -43,3 +43,5 @@ date,id,tour,tournoi,joueur_a,joueur_b,proba_a,proba_modele,ajustement,vainqueur
 2026-11-26,2026-11-26-atp-davis-schwaerzler-merida,atp,Coupe Davis,Joel Schwaerzler,Daniel Merida Aguilar,0.221,0.221,0,Daniel Merida Aguilar,6-4 6-4
 2026-11-26,2026-11-26-atp-davis-fery-zverev,atp,Coupe Davis,Arthur Fery,Alexander Zverev,0.106,0.106,0,Alexander Zverev,6-3 6-2
 2026-11-26,2026-11-26-atp-davis-norrie-struff,atp,Coupe Davis,Cameron Norrie,Jan Lennard Struff,0.483,0.483,0,Cameron Norrie,6-3 3-6 6-2
+2026-11-27,2026-11-27-atp-davis-musetti-machac,atp,Coupe Davis,Lorenzo Musetti,Tomas Machac,0.741,0.741,0,,non joué
+2026-11-27,2026-11-27-atp-davis-cobolli-lehecka,atp,Coupe Davis,Flavio Cobolli,Jiri Lehecka,0.322,0.322,0,Jiri Lehecka,6-2 1-6 6-3
